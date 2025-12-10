@@ -3,7 +3,7 @@ using NovellaMart.Core.BL.Data_Structures;
 
 namespace NovellaMart.Core.BL.Model_Classes
 {
-    internal class CategoryBL
+    public class CategoryBL
     {
         public int category_id { get; set; }
         public string name { get; set; }

@@ -3,7 +3,7 @@ using NovellaMart.Core.BL.Data_Structures;
 
 namespace NovellaMart.Core.BL.Model_Classes
 {
-    internal class FlashSaleBL
+    public class FlashSaleBL
     {
         public int flash_sale_id { get; set; }
         public string title { get; set; }

@@ -1119,4 +1119,71 @@ body {
         align-items: stretch;
         gap: 10px;
     }
+    /* =========================================
+   10. NEW ADDITIONS FOR CLEAN CART
+   ========================================= */
+
+    /* Title Styling */
+    .title-underline {
+        height: 4px;
+        width: 60px;
+        background: var(--nm-secondary);
+        margin: 0.5rem auto;
+        border-radius: 2px;
+    }
+
+    .title-subtext {
+        color: #777;
+        font-size: 0.9rem;
+    }
+
+    /* Table Spacing Overrides */
+    .cart-table th.pl-large,
+    .cart-table td.pl-large {
+        padding-left: 1.5rem;
+    }
+
+    /* Empty Cart State */
+    .empty-cart-cell {
+        text-align: center;
+        padding: 4rem;
+        color: #999;
+    }
+
+    .empty-cart-icon {
+        font-size: 3rem;
+        color: var(--nm-accent);
+        margin-bottom: 1rem;
+    }
+
+    /* Image Placeholder (No Image Available) */
+    .no-img-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f0f0;
+        color: #aaa;
+        width: 100%;
+        height: 100%;
+        font-size: 0.8rem;
+        border-radius: 8px;
+    }
+
+    /* Subtotal Column Highlight */
+    .col-subtotal {
+        font-weight: 700;
+        color: var(--nm-primary);
+        font-size: 1.1rem;
+    }
+
+    /* Payment Icons in Summary */
+    .payment-icons {
+        text-align: center;
+        margin-top: 1.5rem;
+        color: #aaa;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
 }

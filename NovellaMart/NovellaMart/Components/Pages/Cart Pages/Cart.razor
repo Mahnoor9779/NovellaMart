@@ -1,0 +1,151 @@
+﻿@page "/cart"
+@rendermode InteractiveServer
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Data_Structures
+@using NovellaMart.Core.BL.Services
+@inject NavigationManager NavManager
+@inject CartService CartService
+
+<div class="page-title">
+    <h1 style="color: var(--nm-primary);">Your Bag</h1>
+    <div class="title-underline"></div>
+    <p class="title-subtext">Review your favorites before they're gone!</p>
+</div>
+
+<div class="cart-container">
+
+    <!-- LEFT COLUMN: Cart Items Table -->
+    <div class="cart-items-section">
+        <div class="cart-card">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th class="pl-large">Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var cart = CartService.GetCart();
+                        var currentNode = cart.items.head;
+                    }
+
+                    @if (currentNode == null)
+                    {
+                        <tr>
+                            <td colspan="4" class="empty-cart-cell">
+                                <i class="fas fa-shopping-basket empty-cart-icon"></i>
+                                <br />
+                                Your cart is currently empty.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @while (currentNode != null)
+                        {
+                            var item = currentNode.Data;
+
+                            <tr>
+                                <td class="pl-large">
+                                    <div class="product-info">
+                                        <!-- Product Image -->
+                                        <div class="img-frame">
+                                            @if (item.Product.images != null && item.Product.images.Length > 0)
+                                            {
+                                                <img src="@item.Product.images[0]" class="product-img" alt="@item.Product.name" />
+                                            }
+                                            else
+                                            {
+                                                <div class="no-img-placeholder">No Img</div>
+                                            }
+                                        </div>
+
+                                        <div class="product-details">
+                                            <h4>@item.Product.name</h4>
+                                            <span style="background-color: var(--nm-bg); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">
+                                                @item.Product.category?.name
+                                            </span>
+
+                                            <div style="margin-top: 5px;">
+                                                <button type="button" class="btn-remove" style="font-size: 0.8rem; display: flex; align-items: center; gap: 4px;" @onclick="() => RemoveItem(item.Product.product_id)">
+                                                    <i class="fas fa-trash-alt"></i> Remove
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="font-weight: 500; color: #555;">$@item.Product.price</td>
+                                <td>
+                                    <div class="qty-control">
+                                        <button type="button" class="qty-btn" @onclick="() => UpdateQuantity(item.Product.product_id, -1)">-</button>
+                                        <span class="qty-val">@item.Quantity</span>
+                                        <button type="button" class="qty-btn" @onclick="() => UpdateQuantity(item.Product.product_id, 1)">+</button>
+                                    </div>
+                                </td>
+                                <td class="col-subtotal">
+                                    $@(item.Product.price* item.Quantity)
+                                </td>
+                            </tr>
+
+                            currentNode = currentNode.Next;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Coupon Section -->
+        <div class="coupon-section">
+            <input type="text" placeholder="Promo Code" class="coupon-input" />
+            <button type="button" class="btn-apply">Apply</button>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Order Summary -->
+    <div class="order-summary-wrapper">
+        <div class="summary-card">
+            <h3 style="margin-top:0; font-weight: 700; color: #333;">Order Summary</h3>
+            <p style="color: #888; font-size: 0.9rem; border-bottom: 2px dashed #eee; padding-bottom: 1rem;">Shipping and taxes calculated at checkout.</p>
+
+            <div class="summary-row" style="margin-top:1.5rem;">
+                <span style="color: #666;">Subtotal</span>
+                <span style="font-weight: 600;">$@CartService.GetTotalAmount()</span>
+            </div>
+
+            <div class="total-highlight summary-row">
+                <span style="font-weight: 700; color: #333;">Total</span>
+                <span style="font-weight: 800; color: var(--nm-primary); font-size: 1.3rem;">$@CartService.GetTotalAmount()</span>
+            </div>
+
+            <button type="button" class="btn-checkout-glow" @onclick="ProceedToCheckout">
+                Checkout Now <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 0.9rem;"></i>
+            </button>
+
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private void UpdateQuantity(int productId, int change)
+    {
+        CartService.UpdateQuantity(productId, change);
+    }
+
+    private void RemoveItem(int productId)
+    {
+        CartService.RemoveItem(productId);
+    }
+
+    private void ProceedToCheckout()
+    {
+        NavManager.NavigateTo("/checkout");
+    }
+}

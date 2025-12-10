@@ -3,7 +3,7 @@ using NovellaMart.Core.BL.Data_Structures;
 
 namespace NovellaMart.Core.BL.Model_Classes
 {
-    internal class CartItemBL
+    public class CartItemBL
     {
         public ProductBL Product { get; set; }
         public int Quantity { get; set; }

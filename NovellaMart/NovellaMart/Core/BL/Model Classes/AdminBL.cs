@@ -2,7 +2,7 @@
 
 namespace NovellaMart.Core.BL.Model_Classes
 {
-    internal class AdminBL : UserBL
+    public class AdminBL : UserBL
     {
         public AdminBL() : base()
         {
