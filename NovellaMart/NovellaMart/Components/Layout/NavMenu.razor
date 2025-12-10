@@ -1,5 +1,4 @@
 ﻿<nav class="navbar navbar-expand-md navbar-dark" style="background-color: var(--nm-primary); box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-    <!-- CHANGE 1: Used 'container' instead of 'container-fluid' to restrict width -->
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand fw-bold" href="" style="font-size: 1.3rem;">
@@ -13,7 +12,6 @@
 
         <!-- Links Container -->
         <div class="@NavMenuCssClass navbar-collapse">
-            <!-- CHANGE 2: Used 'ms-auto' to push links to the RIGHT -->
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 <li class="nav-item">
                     <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
@@ -38,7 +36,7 @@
 @code {
     private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : "navbar-collapse";
 
     private void ToggleNavMenu()
     {
