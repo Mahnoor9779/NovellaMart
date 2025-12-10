@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NovellaMart\\NovellaMart\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NovellaMart\\NovellaMart\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\Program.cs",
+              "RelativeDocumentMoniker": "NovellaMart\\NovellaMart\\Program.cs",
+              "ToolTip": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\Program.cs",
+              "RelativeToolTip": "NovellaMart\\NovellaMart\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T03:56:24.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.css",
+              "DocumentMoniker": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "NovellaMart\\NovellaMart\\wwwroot\\app.css",
+              "ToolTip": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
+              "RelativeToolTip": "NovellaMart\\NovellaMart\\wwwroot\\app.css",
+              "ViewState": "AgIAAPsCAAAAAAAAAAAAAHkDAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-10T03:24:04.821Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
