@@ -2,7 +2,7 @@
 
 namespace NovellaMart.Core.BL.Model_Classes
 {
-    internal class CustomerRequestBL
+    public class CustomerRequestBL
     {
         public long request_id { get; set; }
         public CustomerBL customer { get; set; }

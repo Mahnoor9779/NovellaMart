@@ -1,16 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
+<div class="d-flex flex-column min-vh-100">
+    <!-- Top Horizontal Navbar -->
+    <div class="top-nav">
         <NavMenu />
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+    <!-- Main Content Area -->
+    <main class="flex-grow-1">
+        <article class="content px-4 py-4" @key="Body">
             @Body
         </article>
     </main>
@@ -21,3 +19,12 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code {
+    // Optional: Inject JS to debug memory if needed
+    // @inject IJSRuntime JS
+    // protected override async Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     if (firstRender) await JS.InvokeVoidAsync("console.log", "MainLayout rendered");
+    // }
+}

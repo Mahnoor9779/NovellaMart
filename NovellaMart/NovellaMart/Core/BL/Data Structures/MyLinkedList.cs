@@ -5,7 +5,7 @@ namespace NovellaMart.Core.BL.Data_Structures
 {
     public class MyLinkedList<type>
     {
-        private LinkedListNode<type> head;
+        public LinkedListNode<type> head;
         private int size;
 
         public MyLinkedList()

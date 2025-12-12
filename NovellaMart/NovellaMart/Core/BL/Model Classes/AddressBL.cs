@@ -2,7 +2,7 @@
 
 namespace NovellaMart.Core.BL.Model_Classes
 {
-    internal class AddressBL
+    public class AddressBL
     {
         public int address_id { get; set; }
         public CustomerBL customer { get; set; }
