@@ -1,0 +1,95 @@
+﻿@page "/product/{ProductId:int}"
+@rendermode InteractiveServer
+
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject ProductService ProductService
+@inject CartService CartService
+@inject NavigationManager NavManager
+
+@if (product == null)
+{
+    <p class="loading-text">Loading product...</p>
+}
+else
+{
+    <div class="product-details-wrapper">
+
+        <!-- LEFT: Image Gallery -->
+        <div class="product-images-panel">
+            <div class="product-image-frame">
+                <img src="@product.images[selectedImage]" alt="@product.name" />
+            </div>
+
+            <div class="thumbnail-row">
+                @for (int i = 0; i < product.images.Length; i++)
+                {
+                    <img src="@product.images[i]"
+                         class="thumbnail @(i == selectedImage ? "active-thumb" : "")"
+                         @onclick="() => selectedImage = i" />
+                }
+            </div>
+        </div>
+
+        <!-- RIGHT: Product Info -->
+        <div class="product-info-card">
+            <h1 class="product-title">@product.name</h1>
+
+            <span class="product-category">@product.category?.name</span>
+
+            <p class="product-desc">@product.description</p>
+
+            <div class="price-stock">
+                <span class="price">Rs. @product.price</span>
+                <span class="stock @(product.stock > 0 ? "in-stock" : "out-stock")">
+                    @(product.stock > 0 ? "In Stock" : "Out of Stock")
+                </span>
+            </div>
+
+            <div class="quantity-selector">
+                <button @onclick="() => ChangeQty(-1)">-</button>
+                <span>@quantity</span>
+                <button @onclick="() => ChangeQty(1)">+</button>
+            </div>
+
+            <button class="btn-add-cart" @onclick="AddToCart" disabled="@(product.stock == 0)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+
+            <button class="btn-buy-now" @onclick="  BuyNow  ">
+                Buy Now
+            </button>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int ProductId { get; set; }
+
+    private ProductBL product;
+    private int selectedImage = 0;
+    private int quantity = 1;
+
+    protected override void OnInitialized()
+    {
+        product = ProductService.GetProductById(ProductId);
+    }
+
+    private void ChangeQty(int value)
+    {
+        if (quantity + value > 0)
+            quantity += value;
+    }
+
+    private void AddToCart()
+    {
+        CartService.AddToCart(product, quantity);
+    }
+
+    private void BuyNow()
+    {
+        CartService.AddToCart(product, quantity);
+        NavManager.NavigateTo("/cart");
+    }
+}
