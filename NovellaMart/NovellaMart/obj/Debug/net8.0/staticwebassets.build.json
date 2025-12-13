@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PchJ8fKKmqoFP84GO8dA4ws5V0jOSTHLZXIagaPFn9o=",
+  "Hash": "C9pP/MVDNlurwhKLyLzOkKPdcuz4800zuWiwy93VtKI=",
   "Source": "NovellaMart",
   "BasePath": "_content/NovellaMart",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "NovellaMart\\wwwroot",
       "Source": "NovellaMart",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
       "BasePath": "_content/NovellaMart",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css",
       "SourceId": "NovellaMart",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "NovellaMart#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -31,17 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "l2v9h5gjw3",
-      "Integrity": "c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg=",
+      "Fingerprint": "yohtfenu60",
+      "Integrity": "LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css"
+      "OriginalItemSpec": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css"
     },
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css",
       "SourceId": "NovellaMart",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "NovellaMart#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -52,17 +52,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "l2v9h5gjw3",
-      "Integrity": "c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg=",
+      "Fingerprint": "yohtfenu60",
+      "Integrity": "LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css"
+      "OriginalItemSpec": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css"
     },
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
       "SourceId": "NovellaMart",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "NovellaMart",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "NovellaMart",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\checkoutMap.js",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\checkoutMap.js",
       "SourceId": "NovellaMart",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "checkoutMap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\checkoutMap.js"
     },
     {
-      "Identity": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\favicon.png",
+      "Identity": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\favicon.png",
       "SourceId": "NovellaMart",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
+      "ContentRoot": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\",
       "BasePath": "_content/NovellaMart",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -167,7 +167,7 @@
   "Endpoints": [
     {
       "Route": "app.8t3pmxf01f.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -188,7 +188,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 16:54:50 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -212,7 +212,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -233,7 +233,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 16:54:50 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -249,7 +249,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -270,7 +270,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -294,7 +294,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -315,7 +315,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -331,7 +331,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -352,7 +352,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -376,7 +376,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -397,7 +397,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -413,7 +413,7 @@
     },
     {
       "Route": "checkoutMap.js",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\checkoutMap.js",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\checkoutMap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -434,7 +434,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -450,7 +450,7 @@
     },
     {
       "Route": "checkoutMap.piklvl0pdg.js",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\checkoutMap.js",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\checkoutMap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -471,7 +471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -495,7 +495,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\favicon.png",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -516,7 +516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -540,7 +540,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\favicon.png",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -561,7 +561,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 21:55:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -577,7 +577,7 @@
     },
     {
       "Route": "NovellaMart.bundle.scp.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -586,7 +586,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5905"
+          "Value": "8117"
         },
         {
           "Name": "Content-Type",
@@ -594,11 +594,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg=\""
+          "Value": "\"LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 22:01:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -608,13 +608,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg="
+          "Value": "sha256-LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw="
         }
       ]
     },
     {
-      "Route": "NovellaMart.l2v9h5gjw3.bundle.scp.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css",
+      "Route": "NovellaMart.styles.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -623,7 +623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5905"
+          "Value": "8117"
         },
         {
           "Name": "Content-Type",
@@ -631,11 +631,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg=\""
+          "Value": "\"LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 22:01:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw="
+        }
+      ]
+    },
+    {
+      "Route": "NovellaMart.yohtfenu60.bundle.scp.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NovellaMart.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Dec 2025 22:01:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -645,7 +682,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "l2v9h5gjw3"
+          "Value": "yohtfenu60"
         },
         {
           "Name": "label",
@@ -653,13 +690,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg="
+          "Value": "sha256-LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw="
         }
       ]
     },
     {
-      "Route": "NovellaMart.l2v9h5gjw3.styles.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css",
+      "Route": "NovellaMart.yohtfenu60.styles.css",
+      "AssetFile": "E:\\DSA Project\\Project\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -668,7 +705,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5905"
+          "Value": "8117"
         },
         {
           "Name": "Content-Type",
@@ -676,11 +713,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg=\""
+          "Value": "\"LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
+          "Value": "Sat, 13 Dec 2025 22:01:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -690,7 +727,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "l2v9h5gjw3"
+          "Value": "yohtfenu60"
         },
         {
           "Name": "label",
@@ -698,44 +735,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg="
-        }
-      ]
-    },
-    {
-      "Route": "NovellaMart.styles.css",
-      "AssetFile": "D:\\UET CS3\\DSA\\DSAL\\Finals Project\\FinalRepo\\DSA-Finals\\NovellaMart\\NovellaMart\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NovellaMart.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5905"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 14:01:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-c1VEFA4ZkdHWZfFxz8B7WocOmnb1o04jdEGKnFIRgfg="
+          "Value": "sha256-LqqZNXX8Kszfr55x6RbZ+Mo87yrFkyxezTXTmsAj+sw="
         }
       ]
     }

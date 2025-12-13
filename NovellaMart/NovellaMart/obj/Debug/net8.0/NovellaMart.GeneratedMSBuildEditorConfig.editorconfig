@@ -9,57 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NovellaMart
 build_property.RootNamespace = NovellaMart
-build_property.ProjectDir = D:\UET CS3\DSA\DSAL\Finals Project\FinalRepo\DSA-Finals\NovellaMart\NovellaMart\
+build_property.ProjectDir = E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\UET CS3\DSA\DSAL\Finals Project\FinalRepo\DSA-Finals\NovellaMart\NovellaMart
+build_property.MSBuildProjectDirectory = E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/App.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Cart Pages/Cart.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Cart Pages/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJ0IFBhZ2VzXENhcnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Cart Pages/Checkout.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Cart Pages/Checkout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJ0IFBhZ2VzXENoZWNrb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Cart Pages/OrderConfirmation.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Cart Pages/OrderConfirmation.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJ0IFBhZ2VzXE9yZGVyQ29uZmlybWF0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Error.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Home.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Product Pages/ProductDetails.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Pages/Product Pages/ProductDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9kdWN0IFBhZ2VzXFByb2R1Y3REZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Routes.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/_Imports.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Layout/MainLayout.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Layout/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRm9vdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-zj0dwyr59m
+
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-uvx9d30sma
 
-[D:/UET CS3/DSA/DSAL/Finals Project/FinalRepo/DSA-Finals/NovellaMart/NovellaMart/Components/Layout/NavMenu.razor]
+[E:/DSA Project/Project/DSA-Finals/NovellaMart/NovellaMart/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-qrdck5c8jy
