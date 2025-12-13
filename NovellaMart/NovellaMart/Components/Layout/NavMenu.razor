@@ -1,50 +1,55 @@
-﻿<nav class="navbar navbar-expand-md navbar-dark" style="background-color: var(--nm-primary); box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-    <div class="container">
-        <!-- Brand -->
-        <a class="navbar-brand fw-bold" href="" style="font-size: 1.3rem;">
-            <i class="fas fa-gem me-2"></i> NovellaMart
+﻿@inject NavigationManager NavigationManager
+
+<div class="top-announcement">
+    ✨ Free Shipping on Orders Over $50 | Shop the New Collection ✨
+</div>
+
+<nav class="navbar-custom">
+    <div class="nav-container">
+
+        <a class="brand-logo" href="">
+            <i class="fas fa-gem me-2"></i>NovellaMart
         </a>
 
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Links Container -->
-        <div class="@NavMenuCssClass navbar-collapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <div class="center-menu-container">
+            <ul class="center-menu">
                 <li class="nav-item">
-                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                        <i class="fas fa-home me-1"></i> Home
-                    </NavLink>
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" href="cart">
-                        <i class="fas fa-shopping-cart me-1"></i> Cart
-                    </NavLink>
+                    <NavLink class="nav-link" href="skincare">Skincare</NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" href="checkout">
-                        <i class="fas fa-credit-card me-1"></i> Checkout
-                    </NavLink>
+                    <NavLink class="nav-link" href="cosmetics">Cosmetics</NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" href="product/101">
-                        <i class="fas fa-store me-1"></i> Products
-                    </NavLink>
+                    <NavLink class="nav-link" href="woman-wear">Woman Wear</NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="jewellery">Jewellery</NavLink>
                 </li>
             </ul>
         </div>
+
+        <div class="nav-right">
+            <button class="btn-icon">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <a href="wishlist" class="btn-icon"><i class="far fa-heart"></i></a>
+            <a href="account" class="btn-icon"><i class="far fa-user"></i></a>
+
+            <a href="cart" class="btn-icon position-relative">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge">2</span>
+            </a>
+
+            <a href="login" class="btn-login">Login</a>
+        </div>
+
     </div>
 </nav>
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : "navbar-collapse";
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    // No C# logic needed
 }
