@@ -1,3 +1,4 @@
+Components\Pages\Home.razor.js
 wwwroot\app.css
 wwwroot\bootstrap\bootstrap.min.css
 wwwroot\bootstrap\bootstrap.min.css.map

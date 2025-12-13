@@ -3,7 +3,48 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "NovellaMart.6y4ska0fe1.styles.css",
+      "Route": "Components/Pages/Home.razor.js",
+      "AssetFile": "Components/Pages/Home.razor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1560"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ha8JLrp5DDMBDK3fSxqDyohUWGgQ0Hw905tA4K8+dTI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Dec 2025 22:20:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ha8JLrp5DDMBDK3fSxqDyohUWGgQ0Hw905tA4K8+dTI="
+        },
+        {
+          "Name": "script-type",
+          "Value": "module"
+        }
+      ]
+    },
+    {
+      "Route": "NovellaMart.bzl93fnkja.styles.css",
       "AssetFile": "NovellaMart.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -17,7 +58,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9099"
+          "Value": "21066"
         },
         {
           "Name": "Content-Type",
@@ -25,21 +66,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DsS2/X79OnZFeDaxhfY0kkBrT7No13Mn7h0IJkFojSw=\""
+          "Value": "\"h8aFecwMClVYqZZzVrk8Dpr445TJiD2gl8LA25mUo4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 22:11:51 GMT"
+          "Value": "Sat, 13 Dec 2025 22:20:49 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6y4ska0fe1"
+          "Value": "bzl93fnkja"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DsS2/X79OnZFeDaxhfY0kkBrT7No13Mn7h0IJkFojSw="
+          "Value": "sha256-h8aFecwMClVYqZZzVrk8Dpr445TJiD2gl8LA25mUo4Q="
         },
         {
           "Name": "label",
@@ -62,7 +103,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9099"
+          "Value": "21066"
         },
         {
           "Name": "Content-Type",
@@ -70,17 +111,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DsS2/X79OnZFeDaxhfY0kkBrT7No13Mn7h0IJkFojSw=\""
+          "Value": "\"h8aFecwMClVYqZZzVrk8Dpr445TJiD2gl8LA25mUo4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Dec 2025 22:11:51 GMT"
+          "Value": "Sat, 13 Dec 2025 22:20:49 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DsS2/X79OnZFeDaxhfY0kkBrT7No13Mn7h0IJkFojSw="
+          "Value": "sha256-h8aFecwMClVYqZZzVrk8Dpr445TJiD2gl8LA25mUo4Q="
         }
       ]
     },
