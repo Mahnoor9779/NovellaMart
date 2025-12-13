@@ -31,3 +31,39 @@ D:\Data\Semester 3\DSA\Final Project\Repo\NovellaMart\NovellaMart\obj\Debug\net8
 D:\Data\Semester 3\DSA\Final Project\Repo\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.pdb
 D:\Data\Semester 3\DSA\Final Project\Repo\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.genruntimeconfig.cache
 D:\Data\Semester 3\DSA\Final Project\Repo\NovellaMart\NovellaMart\obj\Debug\net8.0\ref\NovellaMart.dll
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\appsettings.Development.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\appsettings.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.staticwebassets.runtime.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.staticwebassets.endpoints.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.exe
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.deps.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.runtimeconfig.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.dll
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\bin\Debug\net8.0\NovellaMart.pdb
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.GeneratedMSBuildEditorConfig.editorconfig
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.AssemblyInfoInputs.cache
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.AssemblyInfo.cs
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.csproj.CoreCompileInputs.cache
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.MvcApplicationPartsAssemblyInfo.cache
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.sourcelink.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\bundle\NovellaMart.styles.css
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\projectbundle\NovellaMart.bundle.scp.css
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets.build.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets.development.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets\msbuild.NovellaMart.Microsoft.AspNetCore.StaticWebAssets.props
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets\msbuild.NovellaMart.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets\msbuild.build.NovellaMart.props
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NovellaMart.props
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NovellaMart.props
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets.pack.json
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.dll
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\refint\NovellaMart.dll
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.pdb
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.genruntimeconfig.cache
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\ref\NovellaMart.dll
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\Components\Layout\Footer.razor.rz.scp.css
