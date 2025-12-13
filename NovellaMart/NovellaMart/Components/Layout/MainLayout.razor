@@ -1,17 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="d-flex flex-column min-vh-100">
-    <!-- Top Horizontal Navbar -->
     <div class="top-nav">
-        <NavMenu />
+        <NavMenu @rendermode="InteractiveServer" />
     </div>
 
-    <!-- Main Content Area -->
     <main class="flex-grow-1">
-        <article class="content px-4 py-4" @key="Body">
+        <article @key="Body">
             @Body
         </article>
     </main>
+
+    <Footer />
 </div>
 
 <div id="blazor-error-ui">
@@ -22,9 +22,4 @@
 
 @code {
     // Optional: Inject JS to debug memory if needed
-    // @inject IJSRuntime JS
-    // protected override async Task OnAfterRenderAsync(bool firstRender)
-    // {
-    //     if (firstRender) await JS.InvokeVoidAsync("console.log", "MainLayout rendered");
-    // }
 }

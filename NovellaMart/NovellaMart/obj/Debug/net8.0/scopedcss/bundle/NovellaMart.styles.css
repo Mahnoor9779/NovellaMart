@@ -1,3 +1,100 @@
+/* _content/NovellaMart/Components/Layout/Footer.razor.rz.scp.css */
+.footer-section[b-zj0dwyr59m] {
+    font-size: 0.95rem;
+}
+
+/* === Top Feature Section === */
+.footer-top[b-zj0dwyr59m] {
+    background-color: #ffffff;
+    padding: 40px 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.feature-icon[b-zj0dwyr59m] {
+    font-size: 2rem;
+    color: var(--nm-primary); /* Theme pink color */
+}
+
+/* === Main Footer Section (Middle & Bottom) === */
+.footer-main[b-zj0dwyr59m],
+.footer-bottom[b-zj0dwyr59m] {
+    background-color: #222222; /* Dark background for contrast */
+    color: #bbbbbb; /* Light gray text */
+}
+
+/* Brand Styling */
+.brand-icon[b-zj0dwyr59m] {
+    color: var(--nm-primary);
+    font-size: 1.5rem;
+}
+
+.brand-text[b-zj0dwyr59m] {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* Social Buttons */
+.social-btn[b-zj0dwyr59m] {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .social-btn:hover[b-zj0dwyr59m] {
+        background-color: var(--nm-primary); /* Turn pink on hover */
+        transform: translateY(-3px);
+    }
+
+/* Footer Titles & Links */
+.footer-title[b-zj0dwyr59m] {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.footer-links li[b-zj0dwyr59m] {
+    margin-bottom: 12px;
+}
+
+.footer-links a[b-zj0dwyr59m] {
+    color: #bbbbbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+    .footer-links a:hover[b-zj0dwyr59m] {
+        color: var(--nm-primary);
+        padding-left: 5px; /* Subtle shift effect */
+    }
+
+/* Contact List */
+.footer-contact li[b-zj0dwyr59m] {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contact i[b-zj0dwyr59m] {
+    color: var(--nm-primary);
+    font-size: 1.1rem;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+/* === Bottom Copyright Section === */
+.footer-bottom[b-zj0dwyr59m] {
+    border-top: 1px solid #333333;
+}
 /* _content/NovellaMart/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-uvx9d30sma] {
     position: relative;
