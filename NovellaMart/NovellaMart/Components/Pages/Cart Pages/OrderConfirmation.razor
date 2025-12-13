@@ -1,0 +1,153 @@
+﻿@page "/order-confirmation/{OrderId:long}"
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+
+<div class="page-title">
+    <h1>Order Confirmed!</h1>
+    <div class="title-underline"></div>
+    <p class="title-subtext">Thank you for shopping with NovellaMart.</p>
+</div>
+
+@if (order == null)
+{
+    <p style="text-align:center; padding: 2rem;">Loading Order Details...</p>
+}
+else
+{
+    <div class="order-slip-overlay">
+        <div class="order-slip">
+            <!-- Header -->
+            <div class="slip-header">
+                <div>
+                    <div class="slip-brand">NovellaMart</div>
+                    <div style="color: #777; margin-top: 5px;">Premium Care Store</div>
+                </div>
+                <div style="text-align: right;">
+                    <div class="slip-title">Receipt</div>
+                    <div style="font-size: 0.9rem; color: #555;">#@order.order_id</div>
+                    <div style="font-size: 0.9rem; color: #555;">@order.orderTime.ToString("MMM dd, yyyy - hh:mm tt")</div>
+                </div>
+            </div>
+
+            <!-- Parallel Body: Details (Left) | Summary (Right) -->
+            <div class="slip-body">
+
+                <!-- LEFT COL: Customer & Shipping -->
+                <div class="slip-details-col">
+                    <div class="slip-details-group">
+                        <span class="slip-label">Billed To</span>
+                        <strong>@order.customer.firstName @order.customer.lastName</strong><br />
+                        @order.customer.email<br />
+                        @order.customer.contact
+                    </div>
+
+                    <div class="slip-details-group">
+                        <span class="slip-label">Shipped To</span>
+                        @order.address.street<br />
+                        <strong>@order.address.city.ToUpper()</strong>, @order.address.postalCode<br />
+                        Pakistan
+                    </div>
+
+                    <div class="slip-details-group">
+                        <span class="slip-label">Payment Method</span>
+                        @order.orderType
+                    </div>
+                </div>
+
+                <!-- RIGHT COL: Items & Totals -->
+                <div class="slip-summary-col">
+                    <table class="slip-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th style="text-align: center;">Qty</th>
+                                <th style="text-align: right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                var currentNode = order.items.head;
+                            }
+                            @while (currentNode != null)
+                            {
+                                <tr>
+                                    <td>@currentNode.Data.Product.name</td>
+                                    <td style="text-align: center;">@currentNode.Data.Quantity</td>
+                                    <td style="text-align: right;">Rs. @(currentNode.Data.Product.price* currentNode.Data.Quantity)</td>
+                                </tr>
+                                currentNode = currentNode.Next;
+                            }
+                        </tbody>
+                    </table>
+
+                    <div class="slip-totals">
+                        <div class="slip-row">
+                            <span>Subtotal</span>
+                            <span>Rs. @(order.totalAmount - shippingCost)</span>
+                        </div>
+                        <div class="slip-row">
+                            <span>Shipping (@order.address.city)</span>
+                            <span>Rs. @shippingCost</span>
+                        </div>
+                        <div class="slip-final-total">
+                            <span>Total Paid</span>
+                            <span>Rs. @order.totalAmount</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="action-row">
+                <button class="btn-print" @onclick="PrintSlip">
+                    <i class="fas fa-print"></i> Print Slip
+                </button>
+                <a href="/" class="btn-home">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public long OrderId { get; set; }
+
+    private OrderBL order;
+    private double shippingCost;
+
+    // In a real app, you'd inject an OrderService to fetching the specific order by ID.
+    // Since we are mocking the memory list in OrderService, we need a method to 'GetOrder'.
+    // For this specific interaction, I will assume the 'placedOrder' object
+    // is passed via a static state or fetched.
+
+    // To make this work smoothly with your existing setup, we need a way to retrieve the order.
+    // Ideally: OrderService.GetOrderById(OrderId)
+
+    // TEMPORARY FIX: Inject OrderService and assume we can fetch the last placed order or find it.
+    [Inject] NovellaMart.Core.BL.Services.OrderService OrderService { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Assuming OrderService has a method GetOrder(id).
+        // Since we didn't add that method yet, I'll add the method to OrderService below this block.
+        order = OrderService.GetOrderById(OrderId);
+
+        if (order != null)
+        {
+            // Reverse calculate shipping for display (Total - Item Sum)
+            double itemTotal = 0;
+            var node = order.items.head;
+            while (node != null) { itemTotal += (node.Data.Product.price * node.Data.Quantity); node = node.Next; }
+            shippingCost = order.totalAmount - itemTotal;
+        }
+    }
+
+    private async Task PrintSlip()
+    {
+        await JSRuntime.InvokeVoidAsync("print");
+    }
+}
