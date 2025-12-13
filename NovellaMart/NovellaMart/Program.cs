@@ -12,6 +12,8 @@ builder.Services.AddRazorComponents()
 //    'Scoped' means one cart instance per user connection.
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<NovellaMart.Core.BL.Services.OrderService>();
+builder.Services.AddScoped<ProductService>();
+
 
 // 2. Add Controller support (since you have Core/BL/Controllers)
 builder.Services.AddControllers();

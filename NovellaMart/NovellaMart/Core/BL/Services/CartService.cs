@@ -93,5 +93,26 @@ namespace NovellaMart.Core.BL.Services
                 index++;
             }
         }
+
+        public void AddToCart(ProductBL product, int quantity = 1)
+        {
+            if (product == null) return;
+
+            var current = _activeCart.items.head;
+
+            // If product already exists → increase quantity
+            while (current != null)
+            {
+                if (current.Data.Product.product_id == product.product_id)
+                {
+                    current.Data.Quantity += quantity;
+                    return;
+                }
+                current = current.Next;
+            }
+
+            // Else add new item
+            _activeCart.items.InsertAtEnd(new CartItemBL(product, quantity));
+        }
     }
 }
