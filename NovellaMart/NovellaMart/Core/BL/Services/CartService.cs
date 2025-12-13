@@ -1,7 +1,7 @@
 ﻿using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.BL.Data_Structures;
 
-namespace NovellaMart.Core.BL.Services // NEW NAMESPACE
+namespace NovellaMart.Core.BL.Services
 {
     public class CartService
     {
@@ -29,6 +29,12 @@ namespace NovellaMart.Core.BL.Services // NEW NAMESPACE
         }
 
         // --- BUSINESS LOGIC ---
+
+        public void ClearCart()
+        {
+            // DSA: Reset the Linked List
+            _activeCart.items = new MyLinkedList<CartItemBL>();
+        }
 
         public CartBL GetCart()
         {

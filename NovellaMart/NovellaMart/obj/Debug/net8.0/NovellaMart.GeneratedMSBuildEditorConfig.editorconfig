@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJ0IFBhZ2VzXENoZWNrb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Data/Semester 3/DSA/Final Project/Repo/NovellaMart/NovellaMart/Components/Pages/Cart Pages/OrderConfirmation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJ0IFBhZ2VzXE9yZGVyQ29uZmlybWF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Data/Semester 3/DSA/Final Project/Repo/NovellaMart/NovellaMart/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

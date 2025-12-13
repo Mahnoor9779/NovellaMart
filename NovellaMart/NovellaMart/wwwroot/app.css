@@ -388,6 +388,14 @@ body {
     border-radius: 50%;
     position: relative;
 }
+.map-container {
+    height: 280px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #eee;
+    overflow: hidden;
+}
 
 .payment-option.selected .radio-circle {
     border-color: var(--nm-primary);
@@ -404,6 +412,11 @@ body {
         background-color: var(--nm-primary);
         border-radius: 50%;
     }
+.payment-label-group {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between circle and text */
+}
 
 .card-details-form {
     margin-top: 1rem;
@@ -1432,8 +1445,8 @@ body {
 
     .price-row.total {
         border-top: 2px solid #f4f4f4;
-        padding: 1.5rem;
-        margin-top: 1rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
         font-weight: 800;
         font-size: 1.3rem;
         color: #333;
@@ -1475,3 +1488,420 @@ body {
         align-items: center;
         gap: 6px;
     }
+
+/* =========================================
+   13. FORM VALIDATION STYLES
+   ========================================= */
+
+/* Error Text */
+.validation-message {
+    color: #dc3545; /* Red */
+    font-size: 0.8rem;
+    margin-top: 4px;
+    font-weight: 500;
+    display: block;
+}
+
+/* Invalid Input Border */
+.form-input.invalid {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+/* Valid Input Border (Optional - gives instant feedback) */
+.form-input.modified.valid {
+    border-color: var(--nm-primary);
+}
+
+/* General Error Alert */
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+/* =========================================
+   14. ORDER SLIP / RECEIPT STYLES
+   ========================================= */
+
+.order-slip-overlay {
+    animation: slideUp 0.5s ease-out;
+    max-width: 1000px; /* Increased width for Side-by-Side layout */
+    margin: 2rem auto;
+}
+
+.order-slip {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-top: 6px solid var(--nm-primary);
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+/* Zig-zag bottom border effect */
+.order-slip::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(135deg, white 5px, transparent 0) 0 0,
+                linear-gradient(225deg, white 5px, transparent 0) 0 0;
+    background-size: 20px 10px;
+    background-repeat: repeat-x;
+}
+
+.slip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.slip-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--nm-primary);
+    line-height: 1;
+}
+
+.slip-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+/* NEW: Parallel Layout Container */
+.slip-body {
+    display: grid;
+    grid-template-columns: 35% 60%; /* Details Left | Summary Right */
+    gap: 5%;
+}
+
+.slip-details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 1.5rem;
+    border-right: 1px dashed #eee;
+}
+
+.slip-details-group {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.slip-label {
+    font-weight: 700;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Right Column (Summary) */
+.slip-summary-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.slip-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+.slip-table th {
+    text-align: left;
+    border-bottom: 2px solid #333;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.slip-table td {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #eee;
+    vertical-align: top;
+}
+
+.slip-totals {
+    margin-top: auto; /* Pushes totals to bottom if height varies */
+    border-top: 2px solid #333;
+    padding-top: 1rem;
+}
+
+.slip-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.slip-final-total {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px dashed #333;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Print Button Styles */
+.action-row {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-print {
+    background: var(--nm-secondary);
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-home {
+    background: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-home:hover {
+    background: black;
+    color: white;
+}
+
+/* Hide buttons when printing */
+@media print {
+    .action-row, .sidebar, .top-nav { display: none !important; }
+    .page-title { display: none; }
+    .order-slip-overlay { margin: 0; max-width: 100%; box-shadow: none; border: none; }
+    .order-slip { padding: 0; box-shadow: none; border: 1px solid #ddd; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   14. ORDER SLIP / RECEIPT STYLES (FIXED LAYOUT)
+   ========================================= */
+
+.order-slip-overlay {
+    animation: slideUp 0.5s ease-out;
+    max-width: 1000px; 
+    margin: 2rem auto;
+}
+
+.order-slip {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-top: 6px solid var(--nm-primary);
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+/* Zig-zag bottom border */
+.order-slip::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; left: 0; right: 0; height: 10px;
+    background: linear-gradient(135deg, white 5px, transparent 0) 0 0,
+                linear-gradient(225deg, white 5px, transparent 0) 0 0;
+    background-size: 20px 10px;
+    background-repeat: repeat-x;
+}
+
+.slip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.slip-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--nm-primary);
+    line-height: 1;
+}
+
+.slip-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+/* --- PARALLEL LAYOUT FIX --- */
+.slip-body {
+    display: flex; /* Forces side-by-side */
+    gap: 3rem;     /* Space between columns */
+    align-items: flex-start;
+}
+
+/* LEFT COLUMN: Customer & Shipping */
+.slip-details-col {
+    flex: 1;       /* Takes about 35-40% width */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 1.5rem;
+    border-right: 1px dashed #eee;
+}
+
+/* RIGHT COLUMN: Table & Totals */
+.slip-summary-col {
+    flex: 2;       /* Takes remaining 60% width */
+    display: flex;
+    flex-direction: column;
+}
+
+.slip-details-group {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.slip-label {
+    font-weight: 700;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.slip-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+.slip-table th {
+    text-align: left;
+    border-bottom: 2px solid #333;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.slip-table td {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #eee;
+    vertical-align: top;
+}
+
+.slip-totals {
+    margin-top: auto;
+    border-top: 2px solid #333;
+    padding-top: 1rem;
+}
+
+.slip-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.slip-final-total {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px dashed #333;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Print Button Styles */
+.action-row {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-print {
+    background: var(--nm-secondary);
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-home {
+    background: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-home:hover {
+    background: black;
+    color: white;
+}
+
+/* Print Mode Hiding */
+@media print {
+    .action-row, .sidebar, .top-nav, .page-title { display: none !important; }
+    .order-slip-overlay { margin: 0; max-width: 100%; box-shadow: none; border: none; }
+    .order-slip { padding: 0; box-shadow: none; border: 1px solid #ddd; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

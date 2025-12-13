@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovellaMart")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29094cea2e0c50f8cc8e41bbd17695d804d1c760")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de0b1277a0dd37dd31732f13ce4ac552aeea36cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovellaMart")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovellaMart")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

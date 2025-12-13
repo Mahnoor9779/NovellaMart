@@ -1,8 +1,10 @@
 ﻿@page "/checkout"
 @rendermode InteractiveServer
+@using System.ComponentModel.DataAnnotations
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
 @inject CartService CartService
+@inject OrderService OrderService
 @inject NavigationManager NavManager
 
 <div class="page-title">
@@ -11,177 +13,268 @@
     <p class="title-subtext">Finish your order to get your premium care.</p>
 </div>
 
-<div class="checkout-layout">
+<!-- FIX: EditForm must wrap the layout container, not be inside it -->
+<EditForm Model="@model" OnValidSubmit="HandleCheckout">
+    <DataAnnotationsValidator />
 
-    <!-- LEFT COLUMN: Input Forms -->
-    <div class="details-side">
+    <!-- This DIV applies the Grid Layout (Side-by-Side) -->
+    <div class="checkout-layout">
 
-        <!-- Billing Info (Default Cyan Accent) -->
-        <div class="checkout-card">
-            <div class="checkout-header">
-                <i class="fas fa-map-marker-alt"></i>
-                Shipping Information
-            </div>
+        <!-- LEFT COLUMN: Shipping & Payment -->
+        <div class="details-side">
 
-            <div class="form-row">
-                <div class="form-field">
-                    <label>First Name</label>
-                    <input type="text" placeholder="e.g. Sarah" class="form-input" />
+            <div class="checkout-card">
+                <div class="checkout-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Shipping Information
                 </div>
-                <div class="form-field">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="e.g. Jenkins" class="form-input" />
-                </div>
-            </div>
 
-            <div class="form-field mb-medium">
-                <label>Address</label>
-                <input type="text" placeholder="123 Wellness Blvd, Apt 4" class="form-input" />
-            </div>
-
-            <div class="form-row">
-                <div class="form-field">
-                    <label>City</label>
-                    <input type="text" placeholder="New York" class="form-input" />
-                </div>
-                <div class="form-field">
-                    <label>Postal Code</label>
-                    <input type="text" placeholder="10001" class="form-input" />
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-field">
-                    <label>Phone</label>
-                    <input type="text" placeholder="+1 (555) 000-0000" class="form-input" />
-                </div>
-                <div class="form-field">
-                    <label>Email</label>
-                    <input type="email" placeholder="sarah@example.com" class="form-input" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Payment Method (Yellow Accent) -->
-        <div class="checkout-card accent-yellow">
-            <div class="checkout-header">
-                <i class="fas fa-wallet"></i>
-                Payment Method
-            </div>
-
-            <div class="payment-selector">
-                <!-- Option 1: COD -->
-                <div class="payment-item @(paymentMethod == "cod" ? "active" : "")"
-                     @onclick='() => paymentMethod = "cod"'>
-                    <div style="display:flex; align-items:center;">
-                        <div class="radio-custom"></div>
-                        <span style="font-weight: 600;">Cash on Delivery</span>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>First Name</label>
+                        <InputText @bind-Value="model.FirstName" placeholder="e.g. Sarah" class="form-input" />
+                        <ValidationMessage For="@(() => model.FirstName)" />
                     </div>
-                    <i class="fas fa-money-bill-wave payment-icon-cod"></i>
+                    <div class="form-field">
+                        <label>Last Name</label>
+                        <InputText @bind-Value="model.LastName" placeholder="e.g. Jenkins" class="form-input" />
+                        <ValidationMessage For="@(() => model.LastName)" />
+                    </div>
                 </div>
 
-                <!-- Option 2: Card (Mock) -->
-                <div class="payment-item @(paymentMethod == "card" ? "active" : "")"
-                     @onclick='() => paymentMethod = "card"'>
-                    <div style="display:flex; align-items:center;">
-                        <div class="radio-custom"></div>
-                        <span style="font-weight: 600;">Credit / Debit Card</span>
+                <div class="form-field mb-medium">
+                    <label>Address</label>
+                    <InputText @bind-Value="model.Address" placeholder="123 Wellness Blvd, Apt 4" class="form-input" />
+                    <ValidationMessage For="@(() => model.Address)" />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>City (Calculates Delivery)</label>
+                        <InputText @bind-Value="model.City" @bind-Value:after="UpdateCityAndShipping" placeholder="e.g. Lahore" class="form-input" />
+                        <ValidationMessage For="@(() => model.City)" />
                     </div>
-                    <div class="payment-icon-card">
-                        <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
+                    <div class="form-field">
+                        <label>Postal Code</label>
+                        <InputText @bind-Value="model.Zip" placeholder="10001" class="form-input" />
+                        <ValidationMessage For="@(() => model.Zip)" />
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe width="100%" height="100%" frameborder="0" src="@mapUrl" allowfullscreen></iframe>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Phone</label>
+                        <InputText @bind-Value="model.Phone" placeholder="+92 300 0000000" class="form-input" />
+                        <ValidationMessage For="@(() => model.Phone)" />
+                    </div>
+                    <div class="form-field">
+                        <label>Email</label>
+                        <InputText @bind-Value="model.Email" placeholder="sarah@example.com" class="form-input" />
+                        <ValidationMessage For="@(() => model.Email)" />
                     </div>
                 </div>
             </div>
 
-            <!-- Fake Card Form (Shows if Card selected) -->
-            @if (paymentMethod == "card")
-            {
-                <div class="card-form-container">
-                    <div class="form-field mb-small">
-                        <label>Card Number</label>
-                        <input type="text" placeholder="0000 0000 0000 0000" class="form-input" />
-                    </div>
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label>Expiry</label>
-                            <input type="text" placeholder="MM/YY" class="form-input" />
+            <div class="checkout-card accent-yellow">
+                <div class="checkout-header">
+                    <i class="fas fa-wallet"></i> Payment Method
+                </div>
+
+                <div class="payment-selector">
+                    <div class="payment-item @(model.PaymentMethod == "cod" ? "active" : "")"
+                         @onclick='() => model.PaymentMethod = "cod"'>
+                        <div class="payment-label-group">
+                            <div class="radio-custom"></div>
+                            <span>Cash on Delivery</span>
                         </div>
-                        <div class="form-field">
-                            <label>CVC</label>
-                            <input type="text" placeholder="123" class="form-input" />
+                        <i class="fas fa-money-bill-wave payment-icon-cod"></i>
+                    </div>
+
+                    <div class="payment-item @(model.PaymentMethod == "card" ? "active" : "")"
+                         @onclick='() => model.PaymentMethod = "card"'>
+                        <div class="payment-label-group">
+                            <div class="radio-custom"></div>
+                            <span>Credit / Debit Card</span>
+                        </div>
+                        <div class="payment-icon-card">
+                            <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
                         </div>
                     </div>
                 </div>
-            }
-        </div>
-    </div>
 
-    <!-- RIGHT COLUMN: Order Summary (Yellow Accent) -->
-    <div class="summary-side">
-        <div class="checkout-card accent-yellow">
-            <h3 style="margin-top:0; font-size: 1.2rem; font-weight: 700;">Order Summary</h3>
-
-            <div class="summary-product-list">
-                @{
-                    var cart = CartService.GetCart();
-                    var node = cart.items.head;
-                }
-
-                @while (node != null)
+                @if (model.PaymentMethod == "card")
                 {
-                    var item = node.Data;
-                    <div class="mini-product">
-                        @if (item.Product.images.Length > 0)
-                        {
-                            <img src="@item.Product.images[0]" class="mini-img" />
-                        }
-                        <div class="mini-details">
-                            <div class="mini-name">@item.Product.name</div>
-                            <div class="mini-qty">Qty: @item.Quantity</div>
+                    <div class="card-form-container">
+                        <div class="form-field mb-small">
+                            <label>Card Number</label>
+                            <InputText @bind-Value="model.CardNumber" placeholder="0000 0000 0000 0000" class="form-input" />
                         </div>
-                        <div class="mini-price">$@(item.Product.price* item.Quantity)</div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label>Expiry Date</label>
+                                <InputText @bind-Value="model.Expiry" placeholder="MM/YY" class="form-input" />
+                            </div>
+                            <div class="form-field">
+                                <label>CVC / CVV</label>
+                                <InputText @bind-Value="model.CVC" placeholder="123" class="form-input" />
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label>Card Holder Name</label>
+                            <InputText @bind-Value="model.CardHolder" placeholder="e.g. Sarah Jenkins" class="form-input" />
+                        </div>
                     </div>
-                    node = node.Next;
+                }
+
+                @if (!string.IsNullOrEmpty(paymentError))
+                {
+                    <div class="alert alert-danger mt-3">@paymentError</div>
                 }
             </div>
+        </div>
 
-            <div class="price-row">
-                <span>Subtotal</span>
-                <span style="font-weight: 600;">$@CartService.GetTotalAmount()</span>
-            </div>
-            <div class="price-row">
-                <span>Shipping</span>
-                <span class="text-free">Free</span>
-            </div>
-            <div class="price-row">
-                <span>Tax (Estimated)</span>
-                <span>$0.00</span>
-            </div>
+        <!-- RIGHT COLUMN: Order Summary -->
+        <div class="summary-side">
+            <div class="checkout-card accent-yellow">
+                <h3 style="margin-top:0; font-size: 1.2rem; font-weight: 700;">Order Summary</h3>
 
-            <div class="price-row total">
-                <span>Total</span>
-                <span>$@CartService.GetTotalAmount()</span>
-            </div>
+                <div class="summary-product-list">
+                    @{
+                        var cart = CartService.GetCart();
+                        var node = cart.items.head;
+                    }
+                    @while (node != null)
+                    {
+                        var item = node.Data;
+                        <div class="mini-product">
+                            @if (item.Product.images.Length > 0)
+                            {
+                                <img src="@item.Product.images[0]" class="mini-img" />
+                            }
+                            <div class="mini-details">
+                                <div class="mini-name">@item.Product.name</div>
+                                <div class="mini-qty">Qty: @item.Quantity</div>
+                            </div>
+                            <div class="mini-price">Rs. @(item.Product.price* item.Quantity)</div>
+                        </div>
+                        node = node.Next;
+                    }
+                </div>
 
-            <button type="button" class="btn-place-order" @onclick="PlaceOrder">
-                Place Order <i class="fas fa-check-circle icon-spacing"></i>
-            </button>
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span style="font-weight: 600;">Rs. @CartService.GetTotalAmount()</span>
+                </div>
+                <div class="price-row">
+                    <span>Shipping</span>
+                    @if (shippingCost == 0 && !string.IsNullOrEmpty(model.City) && model.City.ToLower() == "lahore")
+                    {
+                        <span class="text-free">Free (Lahore)</span>
+                    }
+                    else if (shippingCost > 0)
+                    {
+                        <span style="font-weight:600;">Rs. @shippingCost</span>
+                    }
+                    else
+                    {
+                        <span style="color:#aaa;">Enter City</span>
+                    }
+                </div>
 
-            <div class="secure-footer">
-                <i class="fas fa-lock"></i> Secure SSL Encryption
+                <div class="price-row total">
+                    <span>Total</span>
+                    <span>Rs. @(CartService.GetTotalAmount() + shippingCost)</span>
+                </div>
+
+                <button type="submit" class="btn-place-order">
+                    @if (isProcessing)
+                    {
+                        <span>Processing...</span>
+                    }
+                    else
+                    {
+
+                        <span>Place Order <i class="fas fa-check-circle icon-spacing"></i></span>
+                    }
+                </button>
+
+                <div class="secure-footer">
+                    @* <i class="fas fa-lock"></i> Secure SSL Encryption *@
+                </div>
             </div>
         </div>
     </div>
-
-</div>
+</EditForm>
 
 @code {
-    private string paymentMethod = "cod"; // Default
+    private CheckoutModel model = new CheckoutModel();
+    private string mapUrl = "https://maps.google.com/maps?q=Pakistan&t=&z=5&ie=UTF8&iwloc=&output=embed";
+    private bool isProcessing = false;
+    private string paymentError = "";
 
-    private async Task PlaceOrder()
+    private OrderBL placedOrder;
+    private double shippingCost = 0;
+
+    private void UpdateCityAndShipping()
     {
-        // Frontend Only logic for now
-        await Task.Delay(500);
-        NavManager.NavigateTo("/");
+        if (!string.IsNullOrWhiteSpace(model.City))
+        {
+            mapUrl = $"https://maps.google.com/maps?q={model.City}&t=&z=13&ie=UTF8&iwloc=&output=embed";
+            shippingCost = OrderService.CalculateShipping(model.City);
+        }
+    }
+
+    private async Task HandleCheckout()
+    {
+        paymentError = "";
+
+        if (model.PaymentMethod == "card")
+        {
+            if (string.IsNullOrWhiteSpace(model.CardNumber) ||
+                string.IsNullOrWhiteSpace(model.Expiry) ||
+                string.IsNullOrWhiteSpace(model.CVC))
+            {
+                paymentError = "Please fill in all credit card details.";
+                return;
+            }
+        }
+
+        isProcessing = true;
+        await Task.Delay(1500);
+
+        placedOrder = OrderService.PlaceOrder(
+            model.FirstName, model.LastName, model.Address,
+            model.City, model.Email, model.PaymentMethod, shippingCost
+        );
+
+        if (placedOrder != null)
+        {
+            NavManager.NavigateTo($"/order-confirmation/{placedOrder.order_id}");
+        }
+        else
+        {
+            paymentError = "Cart is empty or error occurred.";
+            isProcessing = false;
+        }
+    }
+
+    public class CheckoutModel
+    {
+        [Required] public string FirstName { get; set; } = "";
+        [Required] public string LastName { get; set; } = "";
+        [Required] public string Address { get; set; } = "";
+        [Required] public string City { get; set; } = "";
+        [Required] public string Zip { get; set; } = "";
+        [Required] public string Phone { get; set; } = "";
+        [Required, EmailAddress] public string Email { get; set; } = "";
+        public string PaymentMethod { get; set; } = "cod";
+        public string CardNumber { get; set; } = "";
+        public string Expiry { get; set; } = "";
+        public string CVC { get; set; } = "";
+        public string CardHolder { get; set; } = "";
     }
 }
