@@ -1,7 +1,248 @@
 ﻿@page "/"
+@implements IAsyncDisposable
+@inject IJSRuntime JSRuntime
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Home - NovellaMart</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="home-container">
 
-Welcome to your new app.
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-subtitle">UP TO 30% OFF NEW ARRIVALS</span>
+            <h1 class="hero-title">Find Your Sparkle. <br /> Own Your Style.</h1>
+            <p class="hero-text">Discover the latest trends in women's fashion and accessories, curated just for you.</p>
+            <a href="shop" class="btn btn-primary btn-lg hero-btn">SHOP NOW</a>
+        </div>
+    </section>
+
+
+    <section class="section-pad categories-section">
+        <h3 class="section-title text-center">Shop By Category</h3>
+        <div class="categories-grid">
+            <a href="skincare" class="cat-circle-item">
+                <img src="https://via.placeholder.com/300x300/f17fb2/ffffff?text=Skincare" alt="Skincare" class="cat-img">
+                <div class="cat-overlay">
+                    <span class="cat-name">Skincare</span>
+                </div>
+            </a>
+            <a href="cosmetics" class="cat-circle-item">
+                <img src="https://via.placeholder.com/300x300/5ff4ef/ffffff?text=Makeup" alt="Makeup" class="cat-img">
+                <div class="cat-overlay">
+                    <span class="cat-name">Makeup</span>
+                </div>
+            </a>
+            <a href="woman-wear" class="cat-circle-item">
+                <img src="https://via.placeholder.com/300x300/f1ee56/333333?text=Wear" alt="Woman Wear" class="cat-img">
+                <div class="cat-overlay">
+                    <span class="cat-name">Woman Wear</span>
+                </div>
+            </a>
+            <a href="jewellery" class="cat-circle-item">
+                <img src="https://via.placeholder.com/300x300/f17fb2/ffffff?text=Jewellery" alt="Jewellery" class="cat-img">
+                <div class="cat-overlay">
+                    <span class="cat-name">Jewellery</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="section-pad trending-section bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="section-title mb-0">Trending Now</h3>
+                <a href="shop" class="btn-link-pink">View All <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="product-grid-4">
+                @foreach (var product in TrendingProducts)
+                {
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            @if (!string.IsNullOrEmpty(product.Badge))
+                            {
+                                <span class="product-badge badge-@product.Badge.ToLower()">@product.Badge</span>
+                            }
+                            <img src="@product.ImageUrl" alt="@product.Name" class="product-img">
+                            <div class="product-actions">
+                                <button class="btn-action" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                <button class="btn-action" title="Quick View"><i class="far fa-eye"></i></button>
+                            </div>
+                            <button class="btn-add-to-cart">ADD TO CART</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">@product.Category</span>
+                            <h4 class="product-title"><a href="product/@product.Id">@product.Name</a></h4>
+                            <div class="product-price">
+                                @if (product.OldPrice.HasValue)
+                                {
+                                    <span class="text-muted text-decoration-line-through me-2">$@product.OldPrice</span>
+                                }
+                                <span class="text-primary fw-bold">$@product.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-pad shop-section">
+        <div class="container">
+            <h3 class="section-title text-center mb-5">Explore All Products</h3>
+
+            <div class="shop-layout">
+                <aside class="shop-sidebar">
+                    <div class="filter-header d-flex justify-content-between align-items-center mb-3 d-lg-none">
+                        <h5 class="mb-0">Filters</h5>
+                        <button class="btn-close-filters"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="filter-group active">
+                        <div class="filter-title">
+                            Categories <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li><a href="#">Dresses <span>(12)</span></a></li>
+                                <li><a href="#">Tops <span>(24)</span></a></li>
+                                <li><a href="#">Skirts <span>(8)</span></a></li>
+                                <li><a href="#">Jackets <span>(15)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filter-group active">
+                        <div class="filter-title">
+                            Price <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-content">
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="number" class="form-control form-control-sm" placeholder="Min">
+                                <span>-</span>
+                                <input type="number" class="form-control form-control-sm" placeholder="Max">
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group active">
+                        <div class="filter-title">
+                            Color <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-content">
+                            <div class="color-swatches">
+                                <span class="swatch" style="background: #f17fb2;"></span>
+                                <span class="swatch" style="background: #5ff4ef;"></span>
+                                <span class="swatch" style="background: #000000;"></span>
+                                <span class="swatch" style="background: #ffffff; border: 1px solid #ddd;"></span>
+                                <span class="swatch" style="background: red;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="shop-grid">
+                    <div class="shop-toolbar mb-4 d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Showing 1–12 of 60 results</span>
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-outline-secondary d-lg-none" id="toggleFiltersBtn">
+                                <i class="fas fa-sliders-h me-2"></i> Filters
+                            </button>
+                            <select class="form-select w-auto">
+                                <option>Sort by: Popularity</option>
+                                <option>Sort by: Newest</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-grid-3">
+                        @foreach (var product in AllProducts.Take(6))
+                        {
+                            <div class="product-card">
+                                <div class="product-img-wrapper" style="background: #f9f9f9; height: 250px; display: flex; align-items: center; justify-content: center;">
+                                    <img src="@product.ImageUrl" style="max-height: 200px;">
+                                    <button class="btn-add-to-cart">ADD TO CART</button>
+                                </div>
+                                <div class="product-info text-center mt-3">
+                                    <span class="text-muted small">@product.Category</span>
+                                    <h5 class="product-title mb-1">@product.Name</h5>
+                                    <span class="text-primary fw-bold">$@product.Price</span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <nav class="mt-5 d-flex justify-content-center">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </nav>
+
+                </main>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+@code {
+    // --- DUMMY DATA MODELS ---
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public decimal Price { get; set; }
+        public decimal? OldPrice { get; set; }
+        public string ImageUrl { get; set; }
+        public string Badge { get; set; } // e.g., "Sale", "New"
+    }
+
+    private List<Product> TrendingProducts = new();
+    private List<Product> AllProducts = new();
+    private IJSObjectReference? module;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate fetching data
+        TrendingProducts = new List<Product>
+        {
+            new Product { Id=1, Name="Rose Gold Serum", Category="Skincare", Price=45.00m, Badge="New", ImageUrl="https://via.placeholder.com/300x400/fbe8f1/333?text=Serum" },
+            new Product { Id=2, Name="Floral Summer Dress", Category="Woman Wear", Price=89.99m, OldPrice=120.00m, Badge="Sale", ImageUrl="https://via.placeholder.com/300x400/f1ee56/333?text=Dress" },
+            new Product { Id=3, Name="Crystal Pendant Necklace", Category="Jewellery", Price=35.50m, ImageUrl="https://via.placeholder.com/300x400/e0f7fa/333?text=Necklace" },
+            new Product { Id=4, Name="Matte Lipstick Set", Category="Cosmetics", Price=25.00m, Badge="-15%", ImageUrl="https://via.placeholder.com/300x400/f8bbd0/333?text=Lipstick" },
+        };
+
+        // Generate more for the "All Products" section
+        AllProducts.AddRange(TrendingProducts);
+        AllProducts.Add(new Product { Id = 5, Name = "Denim Jacket", Category = "Woman Wear", Price = 65.00m, ImageUrl = "https://via.placeholder.com/300x400/e3f2fd/333?text=Jacket" });
+        AllProducts.Add(new Product { Id = 6, Name = "Hydrating Moisturizer", Category = "Skincare", Price = 30.00m, ImageUrl = "https://via.placeholder.com/300x400/e8f5e9/333?text=Cream" });
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Import the JS file located next to this component
+            module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./Components/Pages/Home.razor.js");
+            // Initialize the filter accordion functionality
+            await module.InvokeVoidAsync("initFilterAccordions");
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}

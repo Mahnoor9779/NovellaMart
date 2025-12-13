@@ -100,3 +100,4 @@ E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\refin
 E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.pdb
 E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\NovellaMart.genruntimeconfig.cache
 E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\ref\NovellaMart.dll
+E:\DSA Project\Project\DSA-Finals\NovellaMart\NovellaMart\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
