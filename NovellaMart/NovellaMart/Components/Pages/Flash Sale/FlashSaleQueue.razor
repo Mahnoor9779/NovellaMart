@@ -1,0 +1,162 @@
+﻿@page "/flash-sale-queue"
+@rendermode InteractiveServer
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject FlashSaleService FlashSaleService
+@inject NavigationManager NavManager
+
+<div class="page-title">
+    <h1 style="color: var(--nm-primary);">Flash Sale Queue</h1>
+    <div class="title-underline"></div>
+    <p class="title-subtext">Join the rush for exclusive deals!</p>
+</div>
+
+<div class="flash-queue-container">
+    @if (sale == null)
+    {
+        <div style="text-align:center; padding: 3rem; color: #888;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <br /><br />
+            Loading Flash Sale Engine...
+        </div>
+    }
+    else
+    {
+        <!-- Active Sale Header -->
+        <div class="sale-header-card">
+            <div class="sale-status-badge">@sale.status</div>
+            <h2>@sale.title</h2>
+            <div class="timer-display">
+                <i class="fas fa-clock"></i> Ends in: <strong>01:59:45</strong>
+            </div>
+        </div>
+
+        <div class="queue-layout">
+            <!-- LEFT: Product & Join Action -->
+            <div class="queue-product-section">
+                @{
+                    var node = sale.fs_items.head;
+                }
+                @while (node != null)
+                {
+                    var item = node.Data;
+                    <div class="cart-card flash-mode" style="margin-bottom: 2rem;">
+                        <div class="flash-tag">70% OFF</div>
+
+                        <div class="img-frame" style="width: 100%; height: 250px; text-align: center; border:none;">
+                            @if (item.images.Length > 0)
+                            {
+                                <img src="@item.images[0]" style="height: 100%; object-fit: contain;" />
+                            }
+                            else
+                            {
+                                <div class="no-img-placeholder">No Image</div>
+                            }
+                        </div>
+
+                        <div class="product-details" style="text-align:center; margin-top:1rem;">
+                            <h4 style="font-size: 1.5rem;">@item.name</h4>
+                            <div style="margin: 0.5rem 0;">
+                                <span class="old-price">Rs. @(item.price * 2)</span>
+                                <span class="new-price">Rs. @item.price</span>
+                            </div>
+
+                            <div class="stock-indicator">
+                                <div class="stock-bar">
+                                    <div class="stock-fill" style="width: 20%;"></div>
+                                </div>
+                                <span style="color: #d32f2f; font-weight:600; font-size:0.9rem;">
+                                    Only @item.stock items left!
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Queue Interaction -->
+                        <div style="margin-top: 2rem;">
+                            @if (hasJoined)
+                            {
+                                <div class="queue-ticket">
+                                    <div class="ticket-header">YOU ARE IN LINE</div>
+                                    <div class="ticket-number">#@myQueuePosition</div>
+                                    <div class="ticket-status">Please wait for allocation...</div>
+                                </div>
+                            }
+                            else
+                            {
+                                <button class="btn-join-queue" @onclick="() => JoinQueue(item.product_id)">
+                                    <i class="fas fa-bolt"></i> JOIN QUEUE NOW
+                                </button>
+                            }
+
+                            @if (!string.IsNullOrEmpty(message))
+                            {
+                                <div style="margin-top:10px; text-align:center; color: @(isError ? "red" : "green"); font-weight:600;">
+                                    @message
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    node = node.Next;
+                }
+            </div>
+
+            <!-- RIGHT: Live Stats -->
+            <div class="queue-stats-section">
+                <h3 style="margin-top:0;">Live Queue Status</h3>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">@sale.request_queue.Size()</span>
+                        <span class="stat-label">Users Waiting</span>
+                    </div>
+                </div>
+
+                <div class="live-activity-log">
+                    <h4 style="border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 0.5rem;">Activity Log</h4>
+                    <ul class="log-list">
+                        <li><span class="time">10:00:05</span> User #102 joined queue</li>
+                        <li><span class="time">10:00:02</span> User #450 joined queue</li>
+                        <li><span class="time">09:59:58</span> User #099 joined queue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private FlashSaleBL sale;
+    private string message = "";
+    private bool isError = false;
+    private bool hasJoined = false;
+    private int myQueuePosition = 0;
+
+    protected override void OnInitialized()
+    {
+        sale = FlashSaleService.GetActiveSale();
+    }
+
+    private void JoinQueue(int productId)
+    {
+        // Mock User for Demo
+        var user = new CustomerBL { user_id = new Random().Next(1000, 9999), firstName = "Guest" };
+
+        string result = FlashSaleService.JoinFlashSaleQueue(user, productId);
+
+        if (result == "Success" || result == "Queued" || result == "Allocated")
+        {
+            hasJoined = true;
+            myQueuePosition = FlashSaleService.GetQueuePosition(user.user_id, productId);
+            message = "Successfully joined the queue!";
+            isError = false;
+        }
+        else
+        {
+            message = result;
+            isError = true;
+        }
+    }
+}
