@@ -2096,3 +2096,350 @@ body {
 .qty-control span {
     font-weight: 600;
 }
+/* =========================================
+   15. ORDER HISTORY PAGE
+   ========================================= */
+
+.orders-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.orders-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    padding: 2rem;
+    border-top: 5px solid var(--nm-secondary); /* Yellow Top Bar */
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Space between rows */
+}
+
+    .orders-table th {
+        text-align: left;
+        padding: 1rem;
+        color: #888;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .orders-table td {
+        background: #fff;
+        padding: 1.2rem 1rem;
+        vertical-align: middle;
+        border-top: 1px solid #f9f9f9;
+        border-bottom: 1px solid #f9f9f9;
+    }
+
+    /* Row Hover Effect */
+    .orders-table tbody tr:hover td {
+        background-color: #fffde7; /* Very Light Yellow Hover */
+        cursor: pointer;
+    }
+
+    /* Rounded Row Ends */
+    .orders-table td:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-left: 1px solid #f9f9f9;
+    }
+
+    .orders-table td:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-right: 1px solid #f9f9f9;
+    }
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-confirmed {
+    background-color: #e3f9e5;
+    color: #1f7a26; /* Green */
+}
+
+.status-pending {
+    background-color: #fff8e1;
+    color: #fbc02d; /* Yellow */
+}
+
+.status-cancelled {
+    background-color: #ffebee;
+    color: #c62828; /* Red */
+}
+
+/* Action Button */
+.btn-view-order {
+    background-color: white;
+    border: 2px solid var(--nm-primary);
+    color: var(--nm-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .btn-view-order:hover {
+        background-color: var(--nm-primary);
+        color: white;
+    }
+
+.empty-history {
+    text-align: center;
+    padding: 4rem;
+    color: #aaa;
+}
+
+    .empty-history i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--nm-secondary);
+    }
+/* =========================================
+   16. FLASH SALE QUEUE COMPONENT
+   ========================================= */
+
+.flash-queue-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header with Timer */
+.sale-header-card {
+    background: linear-gradient(135deg, #222, #333);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-bottom: 5px solid var(--nm-secondary); /* Yellow bottom bar */
+}
+
+.sale-status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #d32f2f; /* Standard Red for "LIVE" */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    animation: pulse 2s infinite;
+}
+
+.sale-header-card h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timer-display {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Layout: Product Left | Stats Right */
+.queue-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+/* Product Card Flash Mode */
+.product-card.flash-mode {
+    border: 2px solid var(--nm-accent); /* Cyan Border */
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.flash-tag {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: var(--nm-secondary);
+    color: #333;
+    font-weight: 800;
+    padding: 5px 15px;
+    transform: rotate(-5deg);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: var(--nm-primary);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Stock Bar */
+.stock-indicator {
+    margin-top: 1rem;
+}
+
+.stock-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.stock-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--nm-primary), var(--nm-accent));
+}
+
+/* Join Button */
+.btn-join-queue {
+    background: var(--nm-primary);
+    color: white;
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.1s;
+    box-shadow: 0 5px 15px rgba(241, 127, 178, 0.4);
+}
+
+    .btn-join-queue:active {
+        transform: scale(0.98);
+    }
+
+/* Queue Ticket (After Joining) */
+.queue-ticket {
+    background: #fff5fa;
+    border: 2px dashed var(--nm-primary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.ticket-header {
+    color: var(--nm-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.ticket-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.ticket-status {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Stats Side */
+.queue-stats-section {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    height: fit-content;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fbfbfe;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f0f0f0;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: var(--nm-accent);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.log-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+    .log-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .log-list .time {
+        color: var(--nm-primary);
+        font-weight: 600;
+        margin-right: 8px;
+    }
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

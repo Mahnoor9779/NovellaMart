@@ -13,6 +13,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<NovellaMart.Core.BL.Services.OrderService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<FlashSaleService>();
 
 
 // 2. Add Controller support (since you have Core/BL/Controllers)
