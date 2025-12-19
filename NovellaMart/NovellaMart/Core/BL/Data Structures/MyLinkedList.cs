@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Drawing;
+using System.Collections;
+using System.Collections.Generic;
+
 
 namespace NovellaMart.Core.BL.Data_Structures
 {
-    public class MyLinkedList<type>
+    public class MyLinkedList<type> : IEnumerable<type>
     {
         public LinkedListNode<type> head;
         private int size;
@@ -198,5 +201,46 @@ namespace NovellaMart.Core.BL.Data_Structures
             }
             Console.WriteLine();
         }
+
+        public bool Remove(type value)
+        {
+            if (head == null)
+            {
+                return false;
+            }
+
+            if (head.Data.Equals(value))
+            {
+                head = head.Next;
+                size = size - 1;
+                return true;
+            }
+
+            LinkedListNode<type> tempNode = head;
+            while (tempNode.Next != null)
+            {
+                if (tempNode.Next.Data.Equals(value))
+                {
+                    tempNode.Next = tempNode.Next.Next;
+                    size = size - 1;
+                    return true;
+                }
+                tempNode = tempNode.Next;
+            }
+
+            return false;
+        }
+
+        public IEnumerator<type> GetEnumerator()
+        {
+            var current = head;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
