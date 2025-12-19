@@ -13,6 +13,8 @@ builder.Services.AddRazorComponents()
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<NovellaMart.Core.BL.Services.OrderService>();
 builder.Services.AddScoped<ProductService>();
+// CRITICAL: Must be Singleton so ALL users share the SAME stock and queue.
+builder.Services.AddSingleton<FlashSaleService>();
 
 
 // 2. Add Controller support (since you have Core/BL/Controllers)

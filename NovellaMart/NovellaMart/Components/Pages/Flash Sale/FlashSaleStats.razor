@@ -1,0 +1,138 @@
+﻿@page "/admin/flash-sale-stats"
+@rendermode InteractiveServer
+@using NovellaMart.Core.BL.Services
+@using NovellaMart.Core.BL.Model_Classes
+@inject FlashSaleService FlashSaleService
+
+<div class="page-title">
+    <h1 style="color: var(--nm-primary);"><i class="fas fa-shield-alt me-2"></i>Flash Sale Admin</h1>
+    <div class="title-underline"></div>
+    <p class="title-subtext">Manage live product queues and monitor customer demand.</p>
+</div>
+
+<div class="container admin-container" style="max-width: 900px; padding-bottom: 80px;">
+
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+        <h5 class="fw-bold mb-0" style="color: #333;">Active Sale Items</h5>
+        <span class="badge bg-success shadow-sm">
+            <i class="fas fa-circle me-1" style="font-size: 0.5rem;"></i> Live System
+        </span>
+    </div>
+
+    <div class="row">
+        @{
+            var sale = FlashSaleService.GetActiveSale();
+            var node = sale?.fs_items?.head;
+        }
+        @while (node != null)
+        {
+            var p = node.Data;
+            bool isExpanded = expandedProductId == p.product_id;
+
+            <div class="col-12 mb-3">
+                <div class="checkout-card p-0 overflow-hidden shadow-sm @(isExpanded ? "admin-card-expanded" : "admin-card-default")"
+                     style="transition: all 0.3s ease;">
+
+                    <!-- Product Row -->
+                    <div class="d-flex align-items-center justify-content-between p-3"
+                         style="background: transparent; cursor: pointer;"
+                         @onclick="() => ToggleQueue(p.product_id)">
+
+                        <div class="d-flex align-items-center">
+                            <div class="admin-product-img-wrapper me-3">
+                                <img src="@p.images[0]" alt="@p.name" />
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold" style="color: #333;">@p.name</h6>
+                                <div class="d-flex gap-2 mt-1">
+                                    <span class="badge bg-light text-muted border">Stock: @p.stock</span>
+                                    <span class="badge badge-queue-count">Queue: @FlashSaleService.GetQueuePosition(0, p.product_id)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="text-end d-none d-md-block">
+                                <small class="load-meter-label d-block">Current Load</small>
+                                <span class="fw-bold" style="color: var(--nm-primary);">@((new Random().Next(10, 95)))%</span>
+                            </div>
+                            <button class="btn @(isExpanded ? "btn-admin-close" : "btn-admin-toggle")">
+                                <i class="fas @(isExpanded ? "fa-times" : "fa-users") me-1"></i>
+                                @(isExpanded ? "Close" : "View Queue")
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- DROPDOWN CONTENT -->
+                    @if (isExpanded)
+                    {
+                        <div class="p-4 bg-white border-top animate-dropdown" style="border-top: 1px dashed var(--nm-secondary) !important;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h6 class="queue-table-header mb-0" style="font-size: 0.8rem; color: var(--nm-primary);">
+                                    <i class="fas fa-list-ol me-2"></i> People currently in line
+                                </h6>
+                                <span class="badge bg-light text-dark border">@FlashSaleService.GetQueuePosition(0, p.product_id) Total</span>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0" style="font-size: 0.85rem;">
+                                    <thead class="admin-table-thead">
+                                        <tr>
+                                            <th class="ps-3">#</th>
+                                            <th>Customer ID</th>
+                                            <th>Join Time</th>
+                                            <th class="text-end pe-3">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold text-muted ps-3">1</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-user-circle me-2 icon-user-id"></i>
+                                                    <span style="font-weight: 600;">USR_4921</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">16:04:12</td>
+                                            <td class="text-end pe-3"><span class="badge rounded-pill bg-warning text-dark">Waiting</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold text-muted ps-3">2</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-user-circle me-2 icon-user-id"></i>
+                                                    <span style="font-weight: 600;">USR_8832</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">16:05:45</td>
+                                            <td class="text-end pe-3"><span class="badge rounded-pill bg-warning text-dark">Waiting</span></td>
+                                        </tr>
+                                        @if (FlashSaleService.GetQueuePosition(0, p.product_id) == 0)
+                                        {
+                                            <tr>
+                                                <td colspan="4" class="text-center py-4 text-muted">
+                                                    <i class="fas fa-inbox d-block mb-2" style="font-size: 1.5rem; opacity: 0.3;"></i>
+                                                    Queue is currently empty.
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            node = node.Next;
+        }
+    </div>
+</div>
+
+@code {
+    private int expandedProductId = -1;
+
+    private void ToggleQueue(int productId)
+    {
+        expandedProductId = (expandedProductId == productId) ? -1 : productId;
+    }
+}

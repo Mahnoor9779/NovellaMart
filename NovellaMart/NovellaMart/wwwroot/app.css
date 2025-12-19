@@ -2096,3 +2096,590 @@ body {
 .qty-control span {
     font-weight: 600;
 }
+/* --- Admin Flash Sale Dashboard Styles --- */
+
+.page-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f2f6;
+}
+
+.title-subtext {
+    color: #636e72;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+/* Main Card Container */
+.checkout-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .checkout-card:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+    }
+
+/* Product Image Wrapper */
+.admin-product-img-wrapper {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+    .admin-product-img-wrapper img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+/* Load Meter Labels */
+.load-meter-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #b2bec3;
+}
+
+/* Queue Table Styling */
+.queue-table-header {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #636e72;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Animations */
+.animate-dropdown {
+    animation: slideInDown 0.3s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .checkout-card {
+        border-left-width: 3px !important;
+    }
+}
+/* =========================================
+   17. FLASH SALE PAGE BEAUTIFICATION (REFINED)
+   ========================================= */
+
+/* Themed Header */
+.flash-page-header {
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+    .flash-page-header h1 {
+        color: var(--nm-primary); /* Pink */
+        font-weight: 800;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .flash-page-header i {
+        color: #fdd835; /* Bright Yellow Bolt */
+        filter: drop-shadow(0 0 5px rgba(253, 216, 53, 0.6));
+    }
+
+.title-subtext {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Container Spacing */
+.fs-container {
+    padding-bottom: 4rem;
+}
+
+/* Card Styling - Ensure uniform height */
+.fs-card-theme {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.05); /* Softer border initially */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    height: 100%; /* Force full height in grid */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+    .fs-card-theme:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(241, 127, 178, 0.15); /* Pink Shadow glow */
+        border-color: var(--nm-primary);
+    }
+
+/* Image Area - Fixed height for consistency */
+.fs-image-area {
+    height: 220px; /* Slightly taller */
+    background: radial-gradient(circle at center, #ffffff 0%, #f7f7f7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.5rem;
+}
+
+    .fs-image-area img {
+        max-height: 180px;
+        max-width: 90%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+        filter: drop-shadow(0 8px 15px rgba(0,0,0,0.08)); /* Subtle drop shadow on product */
+    }
+
+.fs-card-theme:hover .fs-image-area img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+/* Badges */
+.badge-hot {
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Moved to Left for better balance */
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    color: white;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    z-index: 5;
+    text-transform: uppercase;
+}
+
+/* Product Info Area */
+.fs-info-area {
+    padding: 1.5rem;
+    flex: 1; /* Pushes button to bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+.fs-product-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+}
+
+.fs-price-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    gap: 8px;
+}
+
+.fs-price-text {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--nm-primary); /* Pink Price */
+}
+
+.fs-old-price {
+    text-decoration: line-through;
+    color: #b2bec3;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Stock Indicator */
+.fs-stock-wrapper {
+    margin-top: auto; /* Pushes to bottom of info area */
+    margin-bottom: 1rem;
+}
+
+.stock-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #636e72;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stock-count {
+    color: #e17055;
+    font-weight: 800;
+}
+
+.fs-progress-container {
+    height: 6px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fs-progress-fill {
+    background: linear-gradient(90deg, var(--nm-primary), var(--nm-secondary)); /* Pink to Yellow Gradient */
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Action Button */
+.btn-flash-action {
+    background: linear-gradient(45deg, #2d3436, #000); /* Sleek Black */
+    color: white;
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+    .btn-flash-action:hover:not(:disabled) {
+        background: var(--nm-primary); /* Pink on Hover */
+        box-shadow: 0 8px 20px rgba(241, 127, 178, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-flash-action:disabled {
+        background: #dfe6e9;
+        color: #b2bec3;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+/* Joined Overlay */
+.joined-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85); /* Slightly more transparent */
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.joined-icon {
+    font-size: 3rem;
+    color: #00b894; /* Green Checkmark */
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 4px 6px rgba(0, 184, 148, 0.2));
+}
+
+.joined-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #2d3436;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.queue-badge {
+    background: #2d3436;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* --- Flash Sale Live Dashboard --- */
+
+.flash-sale-header h1 {
+    color: #ff3333;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Flash Sale Card Enhancements */
+.fs-card {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .fs-card:hover {
+        transform: translateY(-8px);
+    }
+
+.fs-img-container {
+    background: #fdfdfd;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+    padding: 1.5rem;
+}
+
+    .fs-img-container img {
+        max-height: 130px;
+        max-width: 90%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+.fs-card:hover .fs-img-container img {
+    transform: scale(1.08);
+}
+
+/* Status Overlays */
+.fs-joined-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.fs-hot-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(45deg, #ff3333, #ff6b6b);
+    box-shadow: 0 4px 10px rgba(255, 51, 51, 0.3);
+    padding: 0.4rem 0.8rem;
+    font-weight: 700;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    z-index: 5;
+}
+
+/* Pricing and Progress */
+.fs-price {
+    color: #ff3333;
+    font-weight: 900;
+    font-size: 1.35rem;
+}
+
+.fs-stock-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fs-progress {
+    height: 6px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Call to Action */
+.btn-join {
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.75rem;
+    transition: all 0.2s ease;
+    border: none;
+    background: linear-gradient(135deg, #ff3333, #d63031);
+}
+
+    .btn-join:hover:not(:disabled) {
+        box-shadow: 0 6px 15px rgba(214, 48, 49, 0.4);
+        transform: scale(1.02);
+    }
+
+    .btn-join:disabled {
+        background: #dfe6e9;
+        color: #b2bec3;
+    }
+/* --- Admin Dashboard Theme Overrides --- */
+
+/* Expanded Card Border - Pink */
+.admin-card-expanded {
+    border-left: 5px solid var(--nm-primary) !important;
+    background-color: #fff5fa !important; /* Very light pink bg */
+}
+
+/* Default Card Border - Dark Grey */
+.admin-card-default {
+    border-left: 5px solid #dee2e6 !important;
+}
+
+/* Admin Toggle Button - Dark */
+.btn-admin-toggle {
+    background-color: var(--nm-secondary); /* Yellow */
+    color: #333; /* Dark Text for readability on yellow */
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+    .btn-admin-toggle:hover {
+        background-color: #000;
+        transform: translateY(-2px);
+    }
+
+/* Admin Close Button - Pink */
+.btn-admin-close {
+    background-color: var(--nm-primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(241, 127, 178, 0.4);
+}
+
+    .btn-admin-close:hover {
+        background-color: #d15c92;
+    }
+
+/* Queue Count Badge - Cyan */
+.badge-queue-count {
+    background-color: var(--nm-accent);
+    color: #005f5f; /* Darker Cyan text for contrast */
+    font-weight: 700;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Table Header - Yellow Highlight */
+.admin-table-thead {
+    background-color: #fff9c4; /* Light Yellow */
+    border-bottom: 2px solid var(--nm-secondary);
+}
+
+    .admin-table-thead th {
+        color: #555;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+/* User Icon - Pink */
+.icon-user-id {
+    color: var(--nm-primary);
+}
+
+/* =========================================
+   ADMIN DASHBOARD THEME OVERRIDES
+   ========================================= */
+
+/* Expanded Card Border - Pink */
+.admin-card-expanded {
+    border-left: 5px solid var(--nm-primary) !important;
+    background-color: #fff5fa !important; /* Very light pink bg */
+}
+
+/* Default Card Border - Dark Grey */
+.admin-card-default {
+    border-left: 5px solid var(--nm-accent) !important;
+}
+
+/* Admin Toggle Button - Dark */
+.btn-admin-toggle {
+    background-color: darkkhaki;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+    .btn-admin-toggle:hover {
+        background-color:antiquewhite;
+        transform: translateY(-2px);
+    }
+
+/* Admin Close Button - Pink */
+.btn-admin-close {
+    background-color: var(--nm-primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(241, 127, 178, 0.4);
+}
+
+    .btn-admin-close:hover {
+        background-color: #d15c92;
+    }
+
+/* Queue Count Badge - Cyan */
+.badge-queue-count {
+    background-color: var(--nm-accent);
+    color: #005f5f; /* Darker Cyan text for contrast */
+    font-weight: 700;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Table Header - Yellow Highlight */
+.admin-table-thead {
+    background-color: #fff9c4; /* Light Yellow */
+    border-bottom: 2px solid var(--nm-secondary);
+}
+
+    .admin-table-thead th {
+        color: #555;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+/* User Icon - Pink */
+.icon-user-id {
+    color: var(--nm-primary);
+}
