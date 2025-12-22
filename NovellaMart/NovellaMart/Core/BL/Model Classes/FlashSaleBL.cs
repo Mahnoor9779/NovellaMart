@@ -10,7 +10,7 @@ namespace NovellaMart.Core.BL.Model_Classes
         public string description { get; set; }
         public DateTime startTime { get; set; }
         public DateTime endTime { get; set; }
-        public string status { get; set; }           // SCHEDULED, ACTIVE, ENDED, CANCELLED
+        public string status { get; set; }           // SCHEDULED, ACTIVE, ENDED
         public MyLinkedList<ProductBL> fs_items { get; set; }
         public CircularQueue<CustomerRequestBL> request_queue { get; set; }
         public PriorityQueue<CustomerRequestBL> allocation_heap { get; set; }
@@ -40,5 +40,18 @@ namespace NovellaMart.Core.BL.Model_Classes
             request_queue = new CircularQueue<CustomerRequestBL>(100);
             allocation_heap = new PriorityQueue<CustomerRequestBL>();
         }
+
+        public void UpdateStatus()
+        {
+            DateTime now = DateTime.Now;
+
+            if (now < startTime)
+                status = "SCHEDULED";
+            else if (now >= startTime && now <= endTime)
+                status = "ACTIVE";
+            else
+                status = "ENDED";
+        }
+
     }
 }
