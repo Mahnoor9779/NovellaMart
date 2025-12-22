@@ -1,0 +1,227 @@
+﻿@page "/flash-sales"
+@rendermode InteractiveServer
+
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject FlashSaleCrudService FlashSaleService
+@inject ProductService ProductService
+@using NovellaMart.Core.BL.UI_Extensions
+
+
+
+<h1 class="page-title"><b>Flash Sale Management</b> </h1>
+
+<div class="flash-sale-layout">
+
+    <!-- LEFT: Create / Edit Flash Sale -->
+    <div class="flash-sale-form card">
+        <h3>@(isEdit ? "Edit Flash Sale" : "Create Flash Sale")</h3>
+
+        <input placeholder="Title" @bind="currentSale.title" />
+        <textarea placeholder="Description" @bind="currentSale.description"></textarea>
+
+        <h4>Flash Sale Products</h4>
+
+        <label>Select Category</label>
+        <select @onchange="OnCategoryChanged">
+            <option value="-1">-- Select Category --</option>
+            @foreach (var cat in categories)
+            {
+                <option value="@cat.category_id">@cat.name</option>
+            }
+        </select>
+
+        @if (filteredProducts.Count > 0)
+        {
+            <div class="product-scroll-box">
+                @foreach (var product in filteredProducts)
+                {
+                    <div class="product-select-row">
+                        <input class="product-checkbox"
+                               type="checkbox"
+                               checked="@selectedProductIds.Contains(product.product_id)"
+                               @onchange="e => ToggleProduct(product, e)" />
+
+                        <div class="product-text">
+                            <span class="product-name">@product.name</span>
+                            <span class="product-price">(Rs. @product.price)</span>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        }
+
+
+        <label>Start Time</label>
+        <input type="datetime-local" @bind="startTimeLocal" />
+
+        <label>End Time</label>
+        <input type="datetime-local" @bind="endTimeLocal" />
+
+        <div class="status-badge @currentSale.status.ToLower()">
+            @currentSale.status
+        </div>
+
+        <div class="form-actions">
+            <button class="btn-primary" @onclick="SaveFlashSale">
+                @(isEdit ? "Update" : "Create")
+            </button>
+
+            @if (isEdit)
+            {
+                <button class="btn-secondary" @onclick="ResetForm">
+                    Cancel
+                </button>
+            }
+        </div>
+
+    </div>
+
+    <!-- RIGHT: Flash Sale List -->
+    <div class="flash-sale-list card">
+        <h3>Existing Flash Sales</h3>
+
+        @if (flashSales.Count == 0)
+        {
+            <p class="empty-text">No flash sales created yet.</p>
+        }
+        else
+        {
+            @foreach (var sale in flashSales)
+            {
+                <div class="flash-sale-row">
+                    <div>
+                        <strong>@sale.title</strong>
+                        <div class="muted">@sale.status</div>
+                    </div>
+
+                    <div class="row-actions">
+                        <button @onclick="() => EditSale(sale)">Edit</button>
+                        <button class="danger" @onclick="() => DeleteSale(sale)">Delete</button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@code {
+    private List<ProductBL> allProducts = new();
+    private HashSet<int> selectedProductIds = new();
+
+    private List<FlashSaleBL> flashSales = new();
+    private FlashSaleBL currentSale = new();
+    private bool isEdit;
+
+    private List<CategoryBL> categories = new();
+    private int selectedCategoryId = -1;
+    private List<ProductBL> filteredProducts = new();
+
+    private DateTime startTimeLocal;
+    private DateTime endTimeLocal;
+
+    protected override void OnInitialized()
+    {
+        flashSales = FlashSaleService.GetAllFlashSales();
+        allProducts = ProductService.GetAllProducts().ToList();
+
+        categories = allProducts
+            .Where(p => p.category != null)
+            .Select(p => p.category)
+            .GroupBy(c => c.category_id)
+            .Select(g => g.First())
+            .ToList();
+
+        ResetForm();
+    }
+
+
+    private void SaveFlashSale()
+    {
+        if (currentSale.fs_items.Count() == 0)
+            return; // or show message
+
+        currentSale.startTime = startTimeLocal;
+        currentSale.endTime = endTimeLocal;
+        currentSale.UpdateStatus();
+
+        if (isEdit)
+            FlashSaleService.UpdateFlashSale(currentSale);
+        else
+            FlashSaleService.AddFlashSale(currentSale);
+
+        flashSales = FlashSaleService.GetAllFlashSales();
+        ResetForm();
+    }
+
+
+    private void EditSale(FlashSaleBL sale)
+    {
+        currentSale = sale;
+        startTimeLocal = sale.startTime;
+        endTimeLocal = sale.endTime;
+
+        selectedProductIds.Clear();
+        foreach (var p in sale.fs_items)
+            selectedProductIds.Add(p.product_id);
+
+        selectedCategoryId = -1;
+        filteredProducts.Clear();
+
+        isEdit = true;
+    }
+
+
+    private void DeleteSale(FlashSaleBL sale)
+    {
+        FlashSaleService.DeleteFlashSale(sale.flash_sale_id);
+        flashSales = FlashSaleService.GetAllFlashSales();
+    }
+
+    private void ResetForm()
+    {
+        currentSale = new FlashSaleBL();
+
+        selectedProductIds.Clear();
+
+        startTimeLocal = DateTime.Now;
+        endTimeLocal = DateTime.Now.AddHours(1);
+
+        currentSale.startTime = startTimeLocal;
+        currentSale.endTime = endTimeLocal;
+        currentSale.UpdateStatus();
+
+        isEdit = false;
+    }
+
+
+    private void ToggleProduct(ProductBL product, ChangeEventArgs e)
+    {
+        bool isChecked = e.Value is bool b && b;
+
+        if (isChecked)
+        {
+            if (!selectedProductIds.Contains(product.product_id))
+            {
+                selectedProductIds.Add(product.product_id);
+                currentSale.fs_items.InsertAtEnd(product);
+            }
+        }
+        else
+        {
+            selectedProductIds.Remove(product.product_id);
+            currentSale.fs_items.Remove(product);
+        }
+    }
+
+    private void OnCategoryChanged(ChangeEventArgs e)
+    {
+        selectedCategoryId = int.Parse(e.Value.ToString());
+
+        filteredProducts = allProducts
+            .Where(p => p.category != null && p.category.category_id == selectedCategoryId)
+            .ToList();
+    }
+
+}

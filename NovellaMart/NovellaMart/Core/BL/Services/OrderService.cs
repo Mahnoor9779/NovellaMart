@@ -14,6 +14,10 @@ namespace NovellaMart.Core.BL.Services
         {
             _cartService = cartService;
         }
+        public MyLinkedList<OrderBL> GetAllOrders()
+        {
+            return _allOrders;
+        }
 
         // Logic: Free in Lahore, increases with distance (Mock), Max 1000
         public double CalculateShipping(string city)

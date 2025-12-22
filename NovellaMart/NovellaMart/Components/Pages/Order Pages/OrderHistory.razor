@@ -1,0 +1,72 @@
+﻿@page "/orders"
+@rendermode InteractiveServer
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject OrderService OrderService
+@inject NavigationManager NavManager
+
+<div class="page-title">
+    <h1 style="color: black;">Your Orders</h1>
+    <div class="title-underline"></div>
+    <p class="title-subtext">Track your past purchases and status.</p>
+</div>
+
+<div class="orders-container">
+    <div class="orders-card">
+        @{
+            var allOrders = OrderService.GetAllOrders();
+            var currentNode = allOrders.head;
+        }
+
+        @if (currentNode == null)
+        {
+            <div class="empty-history">
+                <i class="fas fa-box-open"></i>
+                <h3>No orders yet</h3>
+                <p>Looks like you haven't placed any orders yet.</p>
+                <a href="/" class="btn-view-order" style="margin-top:1rem;">Start Shopping</a>
+            </div>
+        }
+        else
+        {
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date Placed</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @while (currentNode != null)
+                    {
+                        var order = currentNode.Data;
+
+                        <tr>
+                            <td style="font-weight:600; color:#555;">#@order.order_id</td>
+                            <td>
+                                <div>@order.orderTime.ToString("MMM dd, yyyy")</div>
+                                <div style="font-size:0.8rem; color:#999;">@order.orderTime.ToString("hh:mm tt")</div>
+                            </td>
+                            <td>
+                                <span class="status-badge status-@(order.status.ToLower())">
+                                    @order.status
+                                </span>
+                            </td>
+                            <td style="font-weight:700;">Rs. @order.totalAmount</td>
+                            <td>
+                                <a href="order-confirmation/@order.order_id" class="btn-view-order">
+                                    View Slip
+                                </a>
+                            </td>
+                        </tr>
+
+                        currentNode = currentNode.Next;
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
