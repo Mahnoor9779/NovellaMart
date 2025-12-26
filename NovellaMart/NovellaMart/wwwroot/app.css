@@ -2683,3 +2683,415 @@ body {
 .icon-user-id {
     color: var(--nm-primary);
 }
+
+
+
+/*alizaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+/* ===================================
+   3. SIGNUP PAGE STYLES
+   =================================== */
+
+.signup-page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    /* IMAGE SETTINGS */
+    background-image: url('signup-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Spacing from the left wall */
+    padding-left: 15%;
+}
+
+.signup-card {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(214, 77, 125, 0.15);
+    width: 100%;
+    max-width: 420px;
+}
+
+.signup-title {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    /* Title is CENTERED */
+    text-align: center;
+}
+
+/* FORM INPUTS */
+.form-group-flat {
+    margin-bottom: 25px;
+}
+
+.form-input-flat {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid var(--border-light);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background: transparent;
+}
+
+    .form-input-flat:focus {
+        border-bottom-color: var(--primary-color);
+    }
+
+    .form-input-flat::placeholder {
+        color: #a0aec0;
+    }
+
+/* SIGN UP BUTTON */
+.btn-signup-flat {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(214, 77, 125, 0.4);
+}
+
+    .btn-signup-flat:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+    }
+
+/* LOGIN LINK */
+.login-link {
+    margin-top: 20px;
+    /* ? UPDATED: Aligned CENTER (Mid) */
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+    .login-link a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+/* ERROR MESSAGES */
+.validation-message {
+    font-size: 13px;
+    color: var(--error-color);
+    margin-top: 5px;
+    display: block;
+}
+/* ===================================
+   4. VALIDATION STYLES (New)
+   =================================== */
+
+/* This class is automatically added by Blazor when a field is invalid */
+.form-input-flat.invalid {
+    border-bottom-color: var(--error-color); /* Turns the line RED */
+    color: var(--error-color); /* Turns the typed text RED */
+}
+
+/* Style the error text below the input */
+.validation-message {
+    font-size: 13px;
+    color: var(--error-color);
+    margin-top: 5px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Force Autofill to accept our styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+/* ===================================
+   5. ANIMATIONS (ADD TO BOTTOM)
+   =================================== */
+
+/* Define the Slide Up Animation */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Starts lower down */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends in original position */
+    }
+}
+
+/* Apply it to the card */
+.signup-card {
+    /* Runs for 0.8 seconds, smooth start/end */
+    animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation-fill-mode: both; /* Ensures it stays visible after moving */
+}
+
+/* Button Hover Animation */
+.btn-signup-flat:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px) scale(1.02); /* Moves up and grows slightly */
+    box-shadow: 0 8px 20px rgba(214, 77, 125, 0.3);
+}
+
+/* Error Message Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.validation-message {
+    animation: fadeIn 0.4s ease-out;
+}
+/* ===================================
+   6. PROFILE PAGE (NOVELLAMART THEME) 🎀
+   =================================== */
+
+/* --- LAYOUT & BACKGROUND --- */
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    /* Soft pink gradient */
+    background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 0;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 30px 20px;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+/* User Mini Profile (In Sidebar) */
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #ec4899; /* Pink Border */
+}
+
+.user-info h4 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+}
+
+.user-info p {
+    font-size: 13px;
+    margin: 0;
+    color: #888;
+}
+
+/* Sidebar Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+    .nav-item:hover {
+        color: #ec4899;
+        background-color: #fff0f5;
+    }
+
+    .nav-item.active {
+        color: #ec4899;
+        background-color: #fff0f5;
+        font-weight: 700;
+    }
+
+/* --- MAIN CONTENT AREA --- */
+.profile-content {
+    flex: 1;
+    padding: 0 40px;
+    padding-bottom: 50px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+}
+
+/* White Form Card */
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f8f8f8;
+}
+
+/* --- AVATAR & BUTTONS --- */
+
+/* Large Avatar in Content Area */
+.large-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px #ec4899;
+}
+
+/* Camera Upload Button (New) */
+.camera-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ec4899;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid white;
+    transition: 0.2s;
+}
+
+    .camera-upload:hover {
+        transform: scale(1.1);
+    }
+
+/* Edit Profile Button */
+.edit-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    transition: 0.3s;
+}
+
+    .edit-btn:hover {
+        background-color: #555;
+        transform: translateY(-2px);
+    }
+
+/* Save Changes Button */
+.save-btn {
+    background: linear-gradient(135deg, #ec4899 0%, #d63384 100%);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+    transition: 0.3s;
+}
+
+    .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
+    }
+
+/* --- FORM INPUTS --- */
+
+.input-group label {
+    color: #444;
+    font-weight: 600;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    color: #333;
+    transition: 0.3s;
+}
+
+    .input-field:focus {
+        border-color: #ec4899;
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.1);
+        outline: none;
+    }
+
+    /* Disabled State (Read-Only) */
+    .input-field:disabled {
+        background-color: #f9f9f9;
+        border: 1px solid transparent;
+        color: #333;
+        font-weight: 500;
+        cursor: default;
+    }
+
+.section-label {
+    color: #ec4899;
+    font-size: 18px;
+    margin-top: 20px;
+    border-bottom: 2px solid #fce7f3;
+    padding-bottom: 5px;
+    display: inline-block;
+}
