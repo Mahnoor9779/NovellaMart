@@ -1,0 +1,74 @@
+﻿@page "/login"
+@using System.IO
+@using System.Text.Json
+@using NovellaMart
+@using NovellaMart.Core.BL.Model_Classes
+@inject NavigationManager Nav
+@inject IJSRuntime JSRuntime
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Login - NovellaMart</PageTitle>
+
+<div class="signup-page-wrapper">
+    <div class="signup-card">
+        <h2 class="signup-title">Login</h2>
+        <div class="form-content">
+            <div class="form-group-flat">
+                @* 👇 Added autocomplete="off" *@
+                <input type="text" class="form-input-flat" placeholder="Username"
+                       @bind="username" autocomplete="off" />
+            </div>
+            <div class="form-group-flat">
+                @* 👇 Added autocomplete="new-password" to stop autofill *@
+                <input type="password" class="form-input-flat" placeholder="Password"
+                       @bind="password" autocomplete="new-password" />
+            </div>
+
+            @if (!string.IsNullOrEmpty(loginError))
+            {
+                <div style="color:red; margin-bottom:10px;">@loginError</div>
+            }
+
+            <button class="btn-signup-flat" @onclick="AttemptLogin">Login</button>
+        </div>
+        <div class="login-link">
+            Don't have an account? <a href="/signup">Sign up</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string username = "";
+    private string password = "";
+    private string loginError = "";
+    private string filePath = "wwwroot/Files/users.json";
+
+    private async Task AttemptLogin()
+    {
+        loginError = "";
+
+        if (!File.Exists(filePath))
+        {
+            loginError = "No users found. Please Sign Up.";
+            return;
+        }
+
+        var json = await File.ReadAllTextAsync(filePath);
+        // Using UserBL to match your new structure
+        var users = JsonSerializer.Deserialize<List<UserBL>>(json);
+        var user = users?.FirstOrDefault(u => u.username == username && u.password == password);
+
+        if (user != null)
+        {
+            // Save user to browser memory
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "currentUser", user.username);
+
+            await Task.Delay(100);
+            Nav.NavigateTo("/profile");
+        }
+        else
+        {
+            loginError = "Invalid Credentials";
+        }
+    }
+}

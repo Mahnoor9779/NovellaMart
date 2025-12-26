@@ -15,13 +15,20 @@ namespace NovellaMart.Core.BL.Model_Classes
         public DateTime createdAt { get; set; }
         public bool isActive { get; set; }
 
+        // Contact Fields
+        public string phoneNumber { get; set; } = "";
+        public string address { get; set; } = "";
+        public string city { get; set; } = "";
+        public string zipCode { get; set; } = "";
+
+        // 1. Default Constructor
         public UserBL()
         {
             user_id = 0;
             username = "";
             email = "";
             password = "";
-            role = "";
+            role = "Member";
             firstName = "";
             lastName = "";
             profilePicture = "";
@@ -29,6 +36,7 @@ namespace NovellaMart.Core.BL.Model_Classes
             isActive = true;
         }
 
+        // 2. 👇 ADD THIS CONSTRUCTOR BACK (This fixes the AdminBL error)
         public UserBL(int user_id, string username, string email, string password,
                       string role, string firstName, string lastName, string profilePicture)
         {
