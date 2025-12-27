@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Components;
 using NovellaMart.Components;
 using NovellaMart.Core.BL.Services; // CRITICAL: Import the Service Namespace
 
@@ -7,14 +8,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.Services.AddScoped(sp =>
+{
+    var navigationManager = sp.GetRequiredService<NavigationManager>();
+    return new HttpClient { BaseAddress = new Uri(navigationManager.BaseUri) };
+});
+
 // --- REGISTER SERVICES ---
 // 1. Register CartService so Cart.razor can use it.
 //    'Scoped' means one cart instance per user connection.
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<NovellaMart.Core.BL.Services.OrderService>();
 builder.Services.AddScoped<ProductService>();
+
 // CRITICAL: Must be Singleton so ALL users share the SAME stock and queue.
 builder.Services.AddSingleton<FlashSaleService>();
+builder.Services.AddScoped<ProductCatalogService>();
 
 
 // 2. Add Controller support (since you have Core/BL/Controllers)
