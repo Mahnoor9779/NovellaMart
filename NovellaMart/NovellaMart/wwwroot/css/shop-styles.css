@@ -1,0 +1,313 @@
+﻿/* =========================================
+   GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    --nm-primary: ##d64d7d; /* NovellaMart Pink */
+    --nm-primary-dark: #d65a8d; /* Darker Pink for Hover */
+    --nm-dark: #333333; /* Main Text Color */
+    --nm-light: #f8f9fa; /* Light Backgrounds */
+    --nm-border: #e9ecef; /* Border Colors */
+    --nm-text-muted: #6c757d; /* Muted Text */
+}
+
+.shop-container {
+    padding: 40px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif; /* Ensure font matches your site */
+}
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+.page-header {
+    background: var(--nm-light);
+    padding: 40px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-title {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--nm-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* =========================================
+   LAYOUT GRID (Sidebar + Main)
+   ========================================= */
+.shop-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+@media (max-width: 992px) {
+    .shop-layout {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+
+    .filters-sidebar {
+        display: none; /* Hide sidebar on small screens (or make it toggleable) */
+    }
+}
+
+/* =========================================
+   SIDEBAR FILTERS
+   ========================================= */
+.filters-sidebar {
+    background: #fff;
+    padding-right: 10px;
+}
+
+.filter-group {
+    margin-bottom: 35px;
+}
+
+.filter-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: block;
+    color: var(--nm-dark);
+    border-bottom: 2px solid var(--nm-primary);
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+/* Sub-Category Buttons */
+.sub-cat-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    color: #555;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+    .sub-cat-btn:hover {
+        background: #fff0f6;
+        color: var(--nm-primary);
+        padding-left: 18px; /* Slide animation */
+    }
+
+    .sub-cat-btn.active {
+        background: var(--nm-primary);
+        color: white;
+        font-weight: 600;
+    }
+
+/* Color Circles */
+.color-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.color-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .color-circle:hover, .color-circle.selected {
+        transform: scale(1.15);
+        border-color: var(--nm-dark);
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--nm-primary);
+    }
+
+/* =========================================
+   PRODUCT GRID & CARD UI
+   ========================================= */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid var(--nm-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+    .product-card:hover {
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        transform: translateY(-5px);
+        border-color: transparent;
+    }
+
+/* Image Area */
+.img-wrapper {
+    height: 300px;
+    background: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.5s ease;
+    object-fit: contain;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.08); /* Zoom in effect */
+}
+
+/* Top Right Buttons (Eye/Heart) */
+.product-actions {
+    position: absolute;
+    top: 15px;
+    right: -50px; /* Hidden off-screen initially */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: right 0.3s ease;
+    z-index: 10;
+}
+
+.product-card:hover .product-actions {
+    right: 15px; /* Slide in on hover */
+}
+
+.btn-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: var(--nm-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+    .btn-action:hover {
+        background: var(--nm-primary);
+        color: white;
+    }
+
+/* Add To Cart Button (Slides Up) */
+.btn-add-to-cart {
+    position: absolute;
+    bottom: -50px; /* Hidden below image */
+    left: 0;
+    width: 100%;
+    background: var(--nm-dark);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: bottom 0.3s ease, background 0.2s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    .btn-add-to-cart:hover {
+        background: var(--nm-primary);
+    }
+
+.product-card:hover .btn-add-to-cart {
+    bottom: 0; /* Slides up to cover bottom of image */
+}
+
+/* Info Section */
+.product-info {
+    padding: 20px;
+    text-align: center;
+    background: white;
+    position: relative;
+    z-index: 20; /* Keep above image hover effects if needed */
+}
+
+.p-cat {
+    color: var(--nm-text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.p-name {
+    font-weight: 700;
+    margin: 5px 0;
+    font-size: 1.05rem;
+    color: var(--nm-dark);
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s;
+}
+
+    .p-name:hover {
+        color: var(--nm-primary);
+    }
+
+.p-price {
+    color: var(--nm-primary);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* =========================================
+   PAGINATION
+   ========================================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 60px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--nm-border);
+    background: white;
+    color: var(--nm-dark);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .page-btn:hover, .page-btn.active {
+        background: var(--nm-primary);
+        color: white;
+        border-color: var(--nm-primary);
+    }

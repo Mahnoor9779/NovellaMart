@@ -3,7 +3,8 @@
    ========================================= */
 :root {
     --nm-bg: #fbfbfe;
-    --nm-primary: #f17fb2; /* Pink */
+/*    --nm-primary: #f17fb2;*/
+    --nm-primary: #d64d7d;
     --nm-secondary: #f1ee56; /* Yellow */
     --nm-accent: #5ff4ef; /* Cyan */
     --nm-text: #333333;

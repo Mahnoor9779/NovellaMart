@@ -1,0 +1,2021 @@
+[
+    {
+        "id": 1,
+        "name": "Gentle Foam Cleanser",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 2,
+        "name": "Deep Pore Scrub",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f0f8ff" ],
+        "isTrending": true
+    },
+    {
+        "id": 3,
+        "name": "Oil Control Wash",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#e0ffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 4,
+        "name": "Hydrating Milk Cleanser",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 5,
+        "name": "Micellar Water",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 950,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": true
+    },
+    {
+        "id": 6,
+        "name": "Salicylic Acid Cleanser",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 7,
+        "name": "Green Tea Gel Wash",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 1600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 8,
+        "name": "Charcoal Detox Bar",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 9,
+        "name": "Rose Water Toner",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 1100,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffc0cb" ],
+        "isTrending": true
+    },
+    {
+        "id": 10,
+        "name": "Exfoliating Face Wash",
+        "category": "Skincare",
+        "subCategory": "Cleansers",
+        "price": 1900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#87ceeb" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 11,
+        "name": "Vitamin C Glow Serum",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffa500" ],
+        "isTrending": true
+    },
+    {
+        "id": 12,
+        "name": "Hyaluronic Acid Serum",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#e0ffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 13,
+        "name": "Retinol Anti-Aging Serum",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 5000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": true
+    },
+    {
+        "id": 14,
+        "name": "Niacinamide Spot Corrector",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 2800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 15,
+        "name": "Peptide Complex",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 4200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5f5" ],
+        "isTrending": false
+    },
+    {
+        "id": 16,
+        "name": "Snail Mucin Essence",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 3800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": true
+    },
+    {
+        "id": 17,
+        "name": "Tea Tree Oil Serum",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 18,
+        "name": "Brightening Arbutin",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 3200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 19,
+        "name": "Collagen Booster",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffc0cb" ],
+        "isTrending": false
+    },
+    {
+        "id": 20,
+        "name": "Pore Minimizing Serum",
+        "category": "Skincare",
+        "subCategory": "Serums",
+        "price": 2700,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#e0ffff" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 21,
+        "name": "Daily Gel Moisturizer",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f0ffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 22,
+        "name": "Rich Night Cream",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#fffacd" ],
+        "isTrending": true
+    },
+    {
+        "id": 23,
+        "name": "Oil-Free Lotion",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 24,
+        "name": "Shea Butter Cream",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffe4c4" ],
+        "isTrending": false
+    },
+    {
+        "id": 25,
+        "name": "Aloe Vera Soothing Gel",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 1000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": true
+    },
+    {
+        "id": 26,
+        "name": "Water Sleeping Mask",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 2800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#87ceeb" ],
+        "isTrending": false
+    },
+    {
+        "id": 27,
+        "name": "Ceramide Barrier Cream",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 28,
+        "name": "Rose Hip Oil",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 2400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 29,
+        "name": "Ultra Repair Cream",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 30,
+        "name": "Lightweight Day Cream",
+        "category": "Skincare",
+        "subCategory": "Moisturizers",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5f5" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 31,
+        "name": "Invisible SPF 50",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": true
+    },
+    {
+        "id": 32,
+        "name": "Tinted Sunblock",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#d2b48c" ],
+        "isTrending": false
+    },
+    {
+        "id": 33,
+        "name": "Mineral Sunscreen",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 34,
+        "name": "Sport Sun Spray",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#87ceeb" ],
+        "isTrending": false
+    },
+    {
+        "id": 35,
+        "name": "Kids Gentle SPF",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 36,
+        "name": "Matte Finish Sunscreen",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 2400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": true
+    },
+    {
+        "id": 37,
+        "name": "Watery Sun Gel",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 2100,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#e0ffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 38,
+        "name": "Sun Stick SPF 50",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 1600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 39,
+        "name": "After Sun Cooling Gel",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 40,
+        "name": "Daily Defense SPF 30",
+        "category": "Skincare",
+        "subCategory": "Sunscreen",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 41,
+        "name": "Charcoal Detox Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 42,
+        "name": "Gold Peel-Off Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 43,
+        "name": "Clay Mud Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": false
+    },
+    {
+        "id": 44,
+        "name": "Sheet Mask Set (5pc)",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": true
+    },
+    {
+        "id": 45,
+        "name": "Sleeping Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#e6e6fa" ],
+        "isTrending": false
+    },
+    {
+        "id": 46,
+        "name": "Hydrating Gel Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#87ceeb" ],
+        "isTrending": false
+    },
+    {
+        "id": 47,
+        "name": "Brightening Lemon Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1100,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 48,
+        "name": "Anti-Acne Sulfur Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 49,
+        "name": "Bubble Mask",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 1400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#808080" ],
+        "isTrending": false
+    },
+    {
+        "id": 50,
+        "name": "Eye Mask Patches",
+        "category": "Skincare",
+        "subCategory": "Masks",
+        "price": 900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": true
+    },
+
+    {
+        "id": 51,
+        "name": "Matte Liquid Foundation",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5deb3" ],
+        "isTrending": true
+    },
+    {
+        "id": 52,
+        "name": "Full Coverage Concealer",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffe4c4" ],
+        "isTrending": false
+    },
+    {
+        "id": 53,
+        "name": "Setting Powder",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 54,
+        "name": "Rose Blush Palette",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 2800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": true
+    },
+    {
+        "id": 55,
+        "name": "Highlighter Stick",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 56,
+        "name": "BB Cream SPF 30",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#d2b48c" ],
+        "isTrending": false
+    },
+    {
+        "id": 57,
+        "name": "Makeup Primer",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 58,
+        "name": "Contour Kit",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 3200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": false
+    },
+    {
+        "id": 59,
+        "name": "Setting Spray",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 1600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": true
+    },
+    {
+        "id": 60,
+        "name": "Color Correcting Palette",
+        "category": "Cosmetics",
+        "subCategory": "Face",
+        "price": 2400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 61,
+        "name": "Volumizing Mascara",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 62,
+        "name": "Waterproof Eyeliner",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 63,
+        "name": "Nude Eyeshadow Palette",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": true
+    },
+    {
+        "id": 64,
+        "name": "Brow Pomade",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#552e1f" ],
+        "isTrending": false
+    },
+    {
+        "id": 65,
+        "name": "False Lashes Set",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 66,
+        "name": "Glitter Eye Topper",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 67,
+        "name": "Gel Eyeliner Pot",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1300,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 68,
+        "name": "Eye Primer",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 1100,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5deb3" ],
+        "isTrending": false
+    },
+    {
+        "id": 69,
+        "name": "Smokey Eye Palette",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 3800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#808080" ],
+        "isTrending": false
+    },
+    {
+        "id": 70,
+        "name": "White Kohl Pencil",
+        "category": "Cosmetics",
+        "subCategory": "Eyes",
+        "price": 800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 71,
+        "name": "Red Velvet Lipstick",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": true
+    },
+    {
+        "id": 72,
+        "name": "Nude Gloss",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffc0cb" ],
+        "isTrending": false
+    },
+    {
+        "id": 73,
+        "name": "Lip Liner Pencil",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#800000" ],
+        "isTrending": false
+    },
+    {
+        "id": 74,
+        "name": "Matte Lip Stain",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c71585" ],
+        "isTrending": true
+    },
+    {
+        "id": 75,
+        "name": "Lip Balm",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 76,
+        "name": "Lip Plumper",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 77,
+        "name": "Berry Tint",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#800080" ],
+        "isTrending": false
+    },
+    {
+        "id": 78,
+        "name": "Lip Scrub",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffc0cb" ],
+        "isTrending": false
+    },
+    {
+        "id": 79,
+        "name": "Metallic Lipstick",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 80,
+        "name": "Clear Lip Oil",
+        "category": "Cosmetics",
+        "subCategory": "Lips",
+        "price": 1400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 81,
+        "name": "Gel Nail Polish Red",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": false
+    },
+    {
+        "id": 82,
+        "name": "French Tip Kit",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 83,
+        "name": "Nail Hardener",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 84,
+        "name": "Glitter Polish",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": true
+    },
+    {
+        "id": 85,
+        "name": "Acetone Remover",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 86,
+        "name": "Nail Art Stickers",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 87,
+        "name": "Cuticle Oil",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 700,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 88,
+        "name": "Black Matte Polish",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 850,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 89,
+        "name": "UV Gel Lamp",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 90,
+        "name": "Glass Nail File",
+        "category": "Cosmetics",
+        "subCategory": "Nails",
+        "price": 600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 91,
+        "name": "Pro Brush Set (12pc)",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 92,
+        "name": "Makeup Sponge",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 93,
+        "name": "Eyelash Curler",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 94,
+        "name": "Tweezers",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 400,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 95,
+        "name": "Vanity Mirror",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 96,
+        "name": "Brush Cleaner Mat",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 97,
+        "name": "Cosmetic Bag",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 98,
+        "name": "Face Roller",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 99,
+        "name": "Cotton Pads (100pc)",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 300,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 100,
+        "name": "Sharpener",
+        "category": "Cosmetics",
+        "subCategory": "Tools",
+        "price": 200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 101,
+        "name": "Floral Summer Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 6500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f1ee56" ],
+        "isTrending": true
+    },
+    {
+        "id": 102,
+        "name": "Evening Maxi Gown",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 12000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 103,
+        "name": "Casual Midi Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 104,
+        "name": "Bodycon Party Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 5500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": false
+    },
+    {
+        "id": 105,
+        "name": "Boho Beach Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 106,
+        "name": "Little Black Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 7000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 107,
+        "name": "Wrap Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 5000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 108,
+        "name": "Shirt Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 4800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#87ceeb" ],
+        "isTrending": false
+    },
+    {
+        "id": 109,
+        "name": "Velvet Cocktail Dress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 8500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#800000" ],
+        "isTrending": true
+    },
+    {
+        "id": 110,
+        "name": "Linen Sundress",
+        "category": "Woman Wear",
+        "subCategory": "Dresses",
+        "price": 3800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5dc" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 111,
+        "name": "Silk Blouse",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 112,
+        "name": "Cotton Graphic Tee",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 113,
+        "name": "Chiffon Shirt",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffc0cb" ],
+        "isTrending": false
+    },
+    {
+        "id": 114,
+        "name": "Knitted Sweater",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": false
+    },
+    {
+        "id": 115,
+        "name": "Crop Top",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 116,
+        "name": "Denim Shirt",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 2800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 117,
+        "name": "Off-Shoulder Top",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 118,
+        "name": "Tank Top",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 119,
+        "name": "Turtleneck",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 2600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 120,
+        "name": "Lace Camisole",
+        "category": "Woman Wear",
+        "subCategory": "Tops",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#fffdd0" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 121,
+        "name": "Classic Denim Jeans",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 5000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": true
+    },
+    {
+        "id": 122,
+        "name": "High Waist Trousers",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 123,
+        "name": "Pleated Skirt",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 124,
+        "name": "Linen Shorts",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5dc" ],
+        "isTrending": false
+    },
+    {
+        "id": 125,
+        "name": "Cargo Pants",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#556b2f" ],
+        "isTrending": true
+    },
+    {
+        "id": 126,
+        "name": "Skinny Jeans",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 4800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 127,
+        "name": "Wide Leg Pants",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 4200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5dc" ],
+        "isTrending": false
+    },
+    {
+        "id": 128,
+        "name": "Denim Skirt",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 129,
+        "name": "Leather Leggings",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 130,
+        "name": "Palazzo Pants",
+        "category": "Woman Wear",
+        "subCategory": "Bottoms",
+        "price": 3800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 131,
+        "name": "Winter Trench Coat",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 15000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#d2b48c" ],
+        "isTrending": true
+    },
+    {
+        "id": 132,
+        "name": "Leather Jacket",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 12000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 133,
+        "name": "Denim Jacket",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 6000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 134,
+        "name": "Puffer Vest",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": false
+    },
+    {
+        "id": 135,
+        "name": "Formal Blazer",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 7500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 136,
+        "name": "Faux Fur Coat",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 9000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 137,
+        "name": "Raincoat",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 5000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 138,
+        "name": "Bomber Jacket",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 5500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#556b2f" ],
+        "isTrending": false
+    },
+    {
+        "id": 139,
+        "name": "Cardigan",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 3200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#808080" ],
+        "isTrending": false
+    },
+    {
+        "id": 140,
+        "name": "Wool Peacoat",
+        "category": "Woman Wear",
+        "subCategory": "Outerwear",
+        "price": 11000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000080" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 141,
+        "name": "Yoga Leggings",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 142,
+        "name": "Sports Bra",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff00ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 143,
+        "name": "Running Shorts",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 144,
+        "name": "Tracksuit Set",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 6000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#808080" ],
+        "isTrending": false
+    },
+    {
+        "id": 145,
+        "name": "Gym Tank Top",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 146,
+        "name": "Compression Tights",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 147,
+        "name": "Zip-Up Hoodie",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 148,
+        "name": "Joggers",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 2800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#808080" ],
+        "isTrending": false
+    },
+    {
+        "id": 149,
+        "name": "Tennis Skirt",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 150,
+        "name": "Seamless Crop Top",
+        "category": "Woman Wear",
+        "subCategory": "Activewear",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#00ff00" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 151,
+        "name": "Gold Pendant Necklace",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": true
+    },
+    {
+        "id": 152,
+        "name": "Silver Hoop Earrings",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 153,
+        "name": "Crystal Bracelet",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 154,
+        "name": "Pearl Ring",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 155,
+        "name": "Anklet Chain",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 1000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 156,
+        "name": "Choker Necklace",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 157,
+        "name": "Stud Earrings Set",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 900,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 158,
+        "name": "Bangle Bracelet",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 1600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 159,
+        "name": "Statement Necklace",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": true
+    },
+    {
+        "id": 160,
+        "name": "Toe Ring",
+        "category": "Accessories",
+        "subCategory": "Jewellery",
+        "price": 500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 161,
+        "name": "Rose Gold Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 8500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#b76e79" ],
+        "isTrending": true
+    },
+    {
+        "id": 162,
+        "name": "Leather Strap Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 6000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": false
+    },
+    {
+        "id": 163,
+        "name": "Silver Mesh Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 7000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 164,
+        "name": "Digital Sport Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 165,
+        "name": "Minimalist Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 5000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 166,
+        "name": "Smart Fitness Band",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 167,
+        "name": "Gold Chain Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 9000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": true
+    },
+    {
+        "id": 168,
+        "name": "Vintage Pocket Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 12000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#cd7f32" ],
+        "isTrending": false
+    },
+    {
+        "id": 169,
+        "name": "Rubber Strap Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 170,
+        "name": "Luxury Diamond Watch",
+        "category": "Accessories",
+        "subCategory": "Watches",
+        "price": 25000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": true
+    },
+
+    {
+        "id": 171,
+        "name": "Leather Handbag",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 12000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": true
+    },
+    {
+        "id": 172,
+        "name": "Canvas Tote Bag",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5dc" ],
+        "isTrending": false
+    },
+    {
+        "id": 173,
+        "name": "Crossbody Purse",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 174,
+        "name": "Evening Clutch",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 175,
+        "name": "Travel Backpack",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 5500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#808080" ],
+        "isTrending": false
+    },
+    {
+        "id": 176,
+        "name": "Mini Wallet",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 177,
+        "name": "Laptop Bag",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 7000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 178,
+        "name": "Straw Beach Bag",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5dc" ],
+        "isTrending": false
+    },
+    {
+        "id": 179,
+        "name": "Duffle Bag",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 6000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 180,
+        "name": "Fanny Pack",
+        "category": "Accessories",
+        "subCategory": "Bags",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff00ff" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 181,
+        "name": "Aviator Sunglasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 182,
+        "name": "Cat Eye Glasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": false
+    },
+    {
+        "id": 183,
+        "name": "Round Metal Frames",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffd700" ],
+        "isTrending": false
+    },
+    {
+        "id": 184,
+        "name": "Oversized Shades",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 2800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 185,
+        "name": "Blue Light Glasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 2000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    },
+    {
+        "id": 186,
+        "name": "Wayfarer Sunglasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 3200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 187,
+        "name": "Rimless Glasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 4000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+    {
+        "id": 188,
+        "name": "Sport Sunglasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 189,
+        "name": "Reading Glasses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 1200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#8b4513" ],
+        "isTrending": false
+    },
+    {
+        "id": 190,
+        "name": "Mirrored Lenses",
+        "category": "Accessories",
+        "subCategory": "Eyewear",
+        "price": 2600,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#c0c0c0" ],
+        "isTrending": false
+    },
+
+    {
+        "id": 191,
+        "name": "Silk Scarf",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 2500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff69b4" ],
+        "isTrending": false
+    },
+    {
+        "id": 192,
+        "name": "Wool Winter Scarf",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 3000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#800000" ],
+        "isTrending": true
+    },
+    {
+        "id": 193,
+        "name": "Cotton Bandana",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": false
+    },
+    {
+        "id": 194,
+        "name": "Cashmere Wrap",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 8000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f5f5dc" ],
+        "isTrending": false
+    },
+    {
+        "id": 195,
+        "name": "Infinity Scarf",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 2200,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#0000ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 196,
+        "name": "Printed Stole",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 1800,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffff00" ],
+        "isTrending": false
+    },
+    {
+        "id": 197,
+        "name": "Chiffon Hijab",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 1500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#f0f8ff" ],
+        "isTrending": false
+    },
+    {
+        "id": 198,
+        "name": "Pashmina Shawl",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 4500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#000000" ],
+        "isTrending": true
+    },
+    {
+        "id": 199,
+        "name": "Neck Kerchief",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 1000,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ff0000" ],
+        "isTrending": false
+    },
+    {
+        "id": 200,
+        "name": "Faux Fur Collar",
+        "category": "Accessories",
+        "subCategory": "Scarves",
+        "price": 3500,
+        "imageUrl": "/Images/image.jpg",
+        "colors": [ "#ffffff" ],
+        "isTrending": false
+    }
+]
