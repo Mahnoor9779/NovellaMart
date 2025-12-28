@@ -149,6 +149,13 @@ namespace NovellaMart.Core.BL.Services
             return total;
         }
 
+        public int GetQueueCount(int productId)
+        {
+            if (_productQueues.ContainsKey(productId))
+                return _productQueues[productId].Size();
+            return 0;
+        }
+
         public List<string> GetActivityLogs()
         {
             return _activityLogs;

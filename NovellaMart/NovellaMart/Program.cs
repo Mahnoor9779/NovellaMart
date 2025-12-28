@@ -25,6 +25,9 @@ builder.Services.AddScoped<ProductService>();
 builder.Services.AddSingleton<FlashSaleService>();
 builder.Services.AddScoped<ProductCatalogService>();
 
+builder.Services.AddSingleton<FlashSaleCrudService>();
+builder.Services.AddScoped<FlashSaleAllocationService>();
+
 
 // 2. Add Controller support (since you have Core/BL/Controllers)
 builder.Services.AddControllers();
