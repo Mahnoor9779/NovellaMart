@@ -88,6 +88,21 @@ namespace NovellaMart.Core.BL.Data_Structures
             }
             Console.WriteLine();
         }
+
+        public PriorityQueue<type> Clone()
+        {
+            PriorityQueue<type> copy = new PriorityQueue<type>();
+
+            PriorityQueueNode<type> current = front;
+
+            while (current != null)
+            {
+                copy.Enqueue(current.Data, current.Priority);
+                current = current.Next;
+            }
+
+            return copy;
+        }
     }
 
     

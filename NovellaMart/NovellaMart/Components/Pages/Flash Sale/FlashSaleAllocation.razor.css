@@ -1,0 +1,118 @@
+﻿/* =========================================
+   FLASH SALE ALLOCATION PAGE - ADMIN THEME
+   ========================================= */
+
+.admin-container {
+    margin: 0 auto; /* center horizontally */
+    display: block;
+}
+
+.allocation-card {
+    margin: 0 auto;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-left: 5px solid #dee2e6;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+    .allocation-card.expanded {
+        border-left-color: var(--nm-primary);
+        background: rgba(0,0,0,0.05);
+    }
+
+.allocation-header {
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+    .allocation-header h6 {
+        margin: 0;
+        font-weight: 700;
+        color: #333;
+    }
+
+.checkout-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background: transparent; /* no color */
+}
+
+.admin-card-default {
+    border: 1px solid #dee2e6;
+}
+
+.admin-card-expanded {
+    border: 1px solid var(--nm-primary);
+    background: rgba(0,0,0,0.03); /* optional subtle highlight */
+}
+
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.btn-toggle {
+    border: none;
+    background-color: var(--nm-secondary);
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .btn-toggle:hover {
+        background-color: #000;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+/* Allocation Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+thead {
+    background-color: #fff9c4;
+    border-bottom: 2px solid var(--nm-secondary);
+}
+
+th, td {
+    padding: 0.6rem;
+    text-align: left;
+}
+
+.status {
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+    .status.allocated {
+        background: #d1f5e0;
+        color: #047857;
+    }
+
+    .status.rejected {
+        background: #ffe4e6;
+        color: #9f1239;
+    }
+
+.empty {
+    text-align: center;
+    color: #999;
+    padding: 1rem;
+}
