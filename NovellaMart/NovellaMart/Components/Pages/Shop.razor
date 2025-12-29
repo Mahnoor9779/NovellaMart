@@ -1,4 +1,5 @@
 ﻿@page "/shop/{Category?}"
+@rendermode InteractiveServer
 @inject NavigationManager Nav
 @inject NovellaMart.Core.BL.Services.ProductCatalogService CatalogService
 @inject NovellaMart.Core.BL.Services.CartService CartService
@@ -81,10 +82,13 @@
                     var node = PagedProducts.head;
                     while (node != null)
                     {
-                        var p = node.Data; // Capture variable for closure
-                                           <div class="product-card">
-                                               <div class="img-wrapper">
-                                                   <img src="@(p.images.Length > 0 ? p.images[0] : "")" alt="@p.name" class="product-img" />
+                        var p = node.Data;
+                        bool isAdded = addedStates.ContainsKey(p.product_id) && addedStates[p.product_id];
+
+                        <div class="product-card">
+                            <!-- Image Section -->
+                            <div class="img-wrapper">
+                                <img src="@(p.images.Length > 0 ? p.images[0] : "")" alt="@p.name" class="product-img" />
 
                                 <div class="product-actions">
                                     <a href="product/@p.product_id" class="btn-action" title="View Details">
@@ -94,16 +98,27 @@
                                         <i class="far fa-heart"></i>
                                     </button>
                                 </div>
-
-                                <button class="btn-add-to-cart" @onclick="() => AddToCart(p)">
-                                    <i class="fas fa-shopping-bag me-2"></i> Add To Cart
-                                </button>
                             </div>
 
+                            <!-- Content Section -->
                             <div class="product-info">
                                 <div class="p-cat">@p.category.name</div>
                                 <a href="product/@p.product_id" class="p-name">@p.name</a>
                                 <div class="p-price">PKR @p.price.ToString("N0")</div>
+
+                                <!-- FIXED: Button is explicitly here in the flow, not hidden in image -->
+                                <button class="btn-add-to-cart @(isAdded ? "btn-success" : "")"
+                                        @onclick="() => AddToCart(p)"
+                                        disabled="@isAdded">
+                                    @if (isAdded)
+                                    {
+                                        <span><i class="fas fa-check me-2"></i> Added</span>
+                                    }
+                                    else
+                                    {
+                                        <span><i class="fas fa-shopping-bag me-2"></i> Add To Cart</span>
+                                    }
+                                </button>
                             </div>
                         </div>
                         node = node.Next;
@@ -131,21 +146,19 @@
 @code {
     [Parameter] public string? Category { get; set; }
 
-    // --- LOGIC ---
     private MyLinkedList<ProductBL> FilteredList = new MyLinkedList<ProductBL>();
     private MyLinkedList<ProductBL> PagedProducts = new MyLinkedList<ProductBL>();
+    private Dictionary<int, bool> addedStates = new Dictionary<int, bool>();
 
     private string DisplayTitle => string.IsNullOrEmpty(Category) ? "All Products" : Category;
     private List<string> CurrentSubCategories = new();
 
-    // Filters
     private string? selectedSubCat;
     private double? minPrice;
     private double? maxPrice;
     private string? selectedColor;
     private string sortOption = "default";
 
-    // Pagination
     private int ResultCount = 0;
     private int currentPage = 1;
     private int pageSize = 12;
@@ -173,22 +186,23 @@
         ResetFilters();
     }
 
-    // --- NEW: ADD TO CART METHOD ---
-    private void AddToCart(ProductBL product)
+    private async Task AddToCart(ProductBL product)
     {
-        // Assuming CartService has an AddItem method.
-        // If your method is named differently (e.g., AddProduct), change it here.
-        // CartService.AddItem(product);
+        await CartService.AddToCart(product, 1);
 
-        // Optional: You could show a Toast notification here later
-        Console.WriteLine($"Added {product.name} to cart.");
+        if (addedStates.ContainsKey(product.product_id)) addedStates[product.product_id] = true;
+        else addedStates.Add(product.product_id, true);
+
+        StateHasChanged();
+        await Task.Delay(2000);
+
+        if (addedStates.ContainsKey(product.product_id)) addedStates[product.product_id] = false;
+        StateHasChanged();
     }
 
     private void ApplyFilters()
     {
         List<ProductBL> candidateList = new List<ProductBL>();
-
-        // 1. AVL TREE (Price)
         if (CatalogService.PriceTree.Root != null && (minPrice.HasValue || maxPrice.HasValue))
         {
             double min = minPrice ?? 0;
@@ -203,7 +217,6 @@
             while (node != null) { candidateList.Add(node.Data); node = node.Next; }
         }
 
-        // 2. LINEAR FILTER
         List<ProductBL> refinedList = new List<ProductBL>();
         foreach (var p in candidateList)
         {
@@ -211,16 +224,11 @@
             if (!string.IsNullOrEmpty(Category) && !p.tags.FindNode(Category)) isMatch = false;
             if (isMatch && selectedSubCat != null && !p.tags.FindNode(selectedSubCat)) isMatch = false;
             if (isMatch && selectedColor != null && !p.tags.FindNode(selectedColor)) isMatch = false;
-
             if (isMatch) refinedList.Add(p);
         }
 
-        // 3. SORTING
         FilteredList.Clear();
-        if (sortOption == "default")
-        {
-            foreach (var item in refinedList) FilteredList.InsertAtEnd(item);
-        }
+        if (sortOption == "default") foreach (var item in refinedList) FilteredList.InsertAtEnd(item);
         else
         {
             PriorityQueue<ProductBL> pq = new PriorityQueue<ProductBL>();
@@ -231,36 +239,12 @@
             }
             while (!pq.IsEmpty()) FilteredList.InsertAtEnd(pq.Dequeue());
         }
-
         ResultCount = FilteredList.Count();
         CalculatePagination();
     }
 
-    private void CalculatePagination()
-    {
-        TotalPages = (int)Math.Ceiling((double)ResultCount / pageSize);
-        if (TotalPages < 1) TotalPages = 1;
-        currentPage = 1;
-        LoadCurrentPage();
-    }
-
-    private void LoadCurrentPage()
-    {
-        PagedProducts.Clear();
-        var node = FilteredList.head;
-        int skip = (currentPage - 1) * pageSize;
-        int count = 0;
-        int added = 0;
-
-        while (node != null && added < pageSize)
-        {
-            if (count >= skip) { PagedProducts.InsertAtEnd(node.Data); added++; }
-            count++;
-            node = node.Next;
-        }
-        StateHasChanged();
-    }
-
+    private void CalculatePagination() { TotalPages = (int)Math.Ceiling((double)ResultCount / pageSize); if (TotalPages < 1) TotalPages = 1; currentPage = 1; LoadCurrentPage(); }
+    private void LoadCurrentPage() { PagedProducts.Clear(); var node = FilteredList.head; int skip = (currentPage - 1) * pageSize; int count = 0; int added = 0; while (node != null && added < pageSize) { if (count >= skip) { PagedProducts.InsertAtEnd(node.Data); added++; } count++; node = node.Next; } StateHasChanged(); }
     private void ChangePage(int page) { currentPage = page; LoadCurrentPage(); }
     private void FilterBySubCat(string? subCat) { selectedSubCat = subCat; ApplyFilters(); }
     private void FilterByColor(string color) { selectedColor = (selectedColor == color) ? null : color; ApplyFilters(); }

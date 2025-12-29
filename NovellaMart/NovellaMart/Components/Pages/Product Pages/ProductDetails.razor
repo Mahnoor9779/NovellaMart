@@ -18,15 +18,19 @@ else
         <!-- LEFT: Image Gallery -->
         <div class="product-images-panel">
             <div class="product-image-frame">
-                <img src="@product.images[selectedImage]" alt="@product.name" />
+                @if (product.images.Length > 0)
+                {
+                    <img src="@product.images[selectedImage]" alt="@product.name" />
+                }
             </div>
 
             <div class="thumbnail-row">
                 @for (int i = 0; i < product.images.Length; i++)
                 {
+                    int localIndex = i;
                     <img src="@product.images[i]"
                          class="thumbnail @(i == selectedImage ? "active-thumb" : "")"
-                         @onclick="() => selectedImage = i" />
+                         @onclick="() => selectedImage = localIndex" />
                 }
             </div>
         </div>
@@ -52,16 +56,37 @@ else
                 <button @onclick="() => ChangeQty(1)">+</button>
             </div>
 
-            <button class="btn-add-cart" @onclick="AddToCart" disabled="@(product.stock == 0)">
-                <i class="fas fa-shopping-cart"></i> Add to Cart
+            <!-- Updated Add to Cart Button with UX Feedback -->
+            <button class="btn-add-cart @(isAdded ? "btn-success-anim" : "")"
+                    @onclick="AddToCart"
+                    disabled="@(product.stock == 0 || isAdded)">
+                @if (isAdded)
+                {
+                    <span><i class="fas fa-check-circle"></i> Added Successfully</span>
+                }
+                else
+                {
+                    <span><i class="fas fa-shopping-cart"></i> Add to Cart</span>
+                }
             </button>
 
-            <button class="btn-buy-now" @onclick="  BuyNow  ">
+            <button class="btn-buy-now" @onclick="BuyNow">
                 Buy Now
             </button>
         </div>
     </div>
 }
+
+<style>
+    /* Local style for the success animation */
+    .btn-success-anim {
+        background-color: #28a745 !important; /* Green */
+        color: white !important;
+        border-color: #28a745 !important;
+        transition: all 0.3s ease;
+        transform: scale(1.02);
+    }
+</style>
 
 @code {
     [Parameter]
@@ -70,6 +95,7 @@ else
     private ProductBL product;
     private int selectedImage = 0;
     private int quantity = 1;
+    private bool isAdded = false;
 
     protected override void OnInitialized()
     {
@@ -82,14 +108,24 @@ else
             quantity += value;
     }
 
-    private void AddToCart()
+    private async Task AddToCart()
     {
-        CartService.AddToCart(product, quantity);
+        // 1. Add to Cart Logic
+        await CartService.AddToCart(product, quantity);
+
+        // 2. Trigger UI Feedback
+        isAdded = true;
+        StateHasChanged();
+
+        // 3. Revert after 2 seconds
+        await Task.Delay(2000);
+        isAdded = false;
+        StateHasChanged();
     }
 
-    private void BuyNow()
+    private async Task BuyNow()
     {
-        CartService.AddToCart(product, quantity);
+        await CartService.AddToCart(product, quantity);
         NavManager.NavigateTo("/cart");
     }
 }

@@ -1,6 +1,8 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 @inject NavigationManager Nav
 @inject NovellaMart.Core.BL.Services.ProductCatalogService CatalogService
+@inject NovellaMart.Core.BL.Services.CartService CartService
 @using NovellaMart.Core.BL.Data_Structures
 @using NovellaMart.Core.BL.Model_Classes
 
@@ -19,21 +21,24 @@
     </section>
 
     <section class="section-pad categories-section">
-        <h3 class="section-title text-center">Shop By Category</h3>
+        <div class="text-center mb-5">
+            <h3 class="section-title d-inline-block">Shop By Category</h3>
+        </div>
+
         <div class="categories-grid">
-            <a href="skincare" class="cat-circle-item">
+            <a href="shop/Skincare" class="cat-circle-item">
                 <img src="https://via.placeholder.com/300x300/f17fb2/ffffff?text=Skincare" class="cat-img">
                 <div class="cat-overlay"><span class="cat-name">Skincare</span></div>
             </a>
-            <a href="cosmetics" class="cat-circle-item">
+            <a href="shop/Cosmetics" class="cat-circle-item">
                 <img src="https://via.placeholder.com/300x300/5ff4ef/ffffff?text=Makeup" class="cat-img">
                 <div class="cat-overlay"><span class="cat-name">Makeup</span></div>
             </a>
-            <a href="woman-wear" class="cat-circle-item">
+            <a href="shop/Woman Wear" class="cat-circle-item">
                 <img src="https://via.placeholder.com/300x300/f1ee56/333333?text=Wear" class="cat-img">
                 <div class="cat-overlay"><span class="cat-name">Woman Wear</span></div>
             </a>
-            <a href="accessories" class="cat-circle-item">
+            <a href="shop/Accessories" class="cat-circle-item">
                 <img src="https://via.placeholder.com/300x300/D4AF37/ffffff?text=Accessories" class="cat-img">
                 <div class="cat-overlay"><span class="cat-name">Accessories</span></div>
             </a>
@@ -42,9 +47,11 @@
 
     <section class="section-pad trending-section bg-light">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3 class="section-title mb-0">Trending Now</h3>
-                <a href="shop" class="btn-link-pink">View All <i class="fas fa-arrow-right ms-1"></i></a>
+            <div class="position-relative text-center mb-5">
+                <h3 class="section-title d-inline-block mb-0">Trending Now</h3>
+                <a href="shop" class="btn-link-pink position-absolute end-0 top-50 translate-middle-y d-none d-md-block">
+                    View All <i class="fas fa-arrow-right ms-1"></i>
+                </a>
             </div>
 
             <div class="product-grid-4">
@@ -54,19 +61,31 @@
                     while (currentNode != null)
                     {
                         var p = currentNode.Data;
+                        bool isAdded = addedStates.ContainsKey(p.product_id) && addedStates[p.product_id];
+
                         <div class="product-card">
                             <div class="product-img-wrapper">
                                 <img src="@(p.images != null && p.images.Length > 0 ? p.images[0] : "https://via.placeholder.com/300?text=No+Image")"
                                      alt="@p.name" class="product-img">
-                                <button class="btn-add-to-cart">ADD TO CART</button>
                             </div>
 
                             <div class="product-info">
-                                <span class="product-cat">@p.category.name</span>
-                                <h4 class="product-title"><a href="product/@p.product_id">@p.name</a></h4>
-                                <div class="product-price">
-                                    <span class="text-primary fw-bold">PKR @p.price.ToString("N0")</span>
-                                </div>
+                                <div class="p-cat">@p.category.name</div>
+                                <a href="product/@p.product_id" class="p-name">@p.name</a>
+                                <div class="p-price">Rs. @p.price.ToString("N0")</div>
+
+                                <button class="btn-add-to-cart @(isAdded ? "btn-success" : "")"
+                                        @onclick="() => AddToCart(p)"
+                                        disabled="@isAdded">
+                                    @if (isAdded)
+                                    {
+                                        <span><i class="fas fa-check me-2"></i> Added</span>
+                                    }
+                                    else
+                                    {
+                                        <span>ADD TO CART</span>
+                                    }
+                                </button>
                             </div>
                         </div>
                         currentNode = currentNode.Next;
@@ -77,12 +96,17 @@
                     <p class="text-center w-100 py-5">Loading trending styles...</p>
                 }
             </div>
+
+            <div class="text-center d-md-none mt-4">
+                <a href="shop" class="btn btn-outline-dark rounded-pill px-4">View All Products</a>
+            </div>
         </div>
     </section>
 </div>
 
 @code {
     private MyLinkedList<ProductBL> TrendingList = new MyLinkedList<ProductBL>();
+    private Dictionary<int, bool> addedStates = new Dictionary<int, bool>();
 
     protected override async Task OnInitializedAsync()
     {
@@ -102,5 +126,19 @@
             }
             node = node.Next;
         }
+    }
+
+    private async Task AddToCart(ProductBL product)
+    {
+        await CartService.AddToCart(product, 1);
+
+        if (addedStates.ContainsKey(product.product_id)) addedStates[product.product_id] = true;
+        else addedStates.Add(product.product_id, true);
+
+        StateHasChanged();
+
+        await Task.Delay(2000);
+        addedStates[product.product_id] = false;
+        StateHasChanged();
     }
 }
