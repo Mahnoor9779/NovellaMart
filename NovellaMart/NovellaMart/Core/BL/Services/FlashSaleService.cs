@@ -9,12 +9,13 @@ namespace NovellaMart.Core.BL.Services
         private Dictionary<int, CircularQueue<CustomerRequestBL>> _productQueues;
         private Dictionary<string, string> _userRequestStatus;
 
-        // NEW: Store activity logs for Admin Panel
+        // In-memory logs only (No File Handling)
         private List<string> _activityLogs;
 
         public FlashSaleService()
         {
             InitializeMockSale();
+            _activityLogs = new List<string>();
         }
 
         private void InitializeMockSale()
@@ -30,7 +31,6 @@ namespace NovellaMart.Core.BL.Services
 
             _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
             _userRequestStatus = new Dictionary<string, string>();
-            _activityLogs = new List<string>(); // Initialize Log
 
             var catTech = new CategoryBL(5, "Tech", 0);
             var p1 = new ProductBL(999, "Gaming Headset", "Pro Noise Cancelling", new[] { "https://placehold.co/200" }, 5000.00, 3, catTech);
@@ -65,7 +65,6 @@ namespace NovellaMart.Core.BL.Services
 
             var targetQueue = _productQueues[productId];
 
-            // ... (Find product logic omitted for brevity, same as before) ...
             ProductBL saleItem = null;
             var node = _activeSale.fs_items.head;
             while (node != null) { if (node.Data.product_id == productId) { saleItem = node.Data; break; } node = node.Next; }
@@ -82,13 +81,25 @@ namespace NovellaMart.Core.BL.Services
             targetQueue.Enqueue(request);
             _userRequestStatus.Add(statusKey, "Queued");
 
-            // NEW: Add to Activity Log
-            _activityLogs.Insert(0, $"[{DateTime.Now.ToLongTimeString()}] User {customer.user_id} joined queue for {saleItem.name}");
-            if (_activityLogs.Count > 20) _activityLogs.RemoveAt(_activityLogs.Count - 1); // Keep last 20
+            AddLog($"[{DateTime.Now.ToLongTimeString()}] User {customer.user_id} joined queue for {saleItem.name}");
 
             ProcessAllocationForProduct(productId);
 
             return _userRequestStatus[statusKey];
+        }
+
+        // --- UNJOIN LOGIC ---
+        public void LeaveFlashSaleQueue(int userId, int productId)
+        {
+            string statusKey = $"{userId}_{productId}";
+
+            // Lazy Deletion: We remove the user's status key.
+            // They remain in the CircularQueue structure but will be skipped during allocation.
+            if (_userRequestStatus.ContainsKey(statusKey))
+            {
+                _userRequestStatus.Remove(statusKey);
+                AddLog($"[{DateTime.Now.ToLongTimeString()}] User {userId} LEFT queue for Product {productId}");
+            }
         }
 
         private void ProcessAllocationForProduct(int productId)
@@ -107,6 +118,9 @@ namespace NovellaMart.Core.BL.Services
                 CustomerRequestBL request = queue.Dequeue();
                 string statusKey = $"{request.customer.user_id}_{productId}";
 
+                // SKIP CHECK: If user removed from status map (Unjoined), skip allocation
+                if (!_userRequestStatus.ContainsKey(statusKey)) continue;
+
                 if (liveProduct.stock > 0)
                 {
                     liveProduct.stock--;
@@ -114,8 +128,7 @@ namespace NovellaMart.Core.BL.Services
                     _activeSale.allocation_heap.Enqueue(request, 1);
                     if (_userRequestStatus.ContainsKey(statusKey)) _userRequestStatus[statusKey] = "Allocated";
 
-                    // Log Allocation
-                    _activityLogs.Insert(0, $"[{DateTime.Now.ToLongTimeString()}] ✅ Allocation SUCCESS for User {request.customer.user_id}");
+                    AddLog($"[{DateTime.Now.ToLongTimeString()}] ✅ Allocation SUCCESS for User {request.customer.user_id}");
                 }
                 else
                 {
@@ -123,6 +136,13 @@ namespace NovellaMart.Core.BL.Services
                     if (_userRequestStatus.ContainsKey(statusKey)) _userRequestStatus[statusKey] = "Sold Out";
                 }
             }
+        }
+
+        private void AddLog(string message)
+        {
+            _activityLogs.Insert(0, message);
+            if (_activityLogs.Count > 50) _activityLogs.RemoveAt(_activityLogs.Count - 1);
+            // File saving removed
         }
 
         public string GetUserStatus(int userId, int productId)
@@ -138,7 +158,6 @@ namespace NovellaMart.Core.BL.Services
             return 0;
         }
 
-        // NEW: Methods for Admin Stats
         public int GetTotalQueueCount()
         {
             int total = 0;

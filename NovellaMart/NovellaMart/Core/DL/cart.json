@@ -1,0 +1,360 @@
+{
+  "cart_id": 0,
+  "customer": null,
+  "items": [
+    {
+      "Product": {
+        "product_id": 5,
+        "name": "Micellar Water",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 950,
+        "stock": 20,
+        "category": {
+          "category_id": 100,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "products": [
+            {
+              "product_id": 1,
+              "name": "Gentle Foam Cleanser",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 2,
+              "name": "Deep Pore Scrub",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1800,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "Trending",
+                "#f0f8ff"
+              ]
+            },
+            {
+              "product_id": 3,
+              "name": "Oil Control Wash",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1200,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#e0ffff"
+              ]
+            },
+            {
+              "product_id": 4,
+              "name": "Hydrating Milk Cleanser",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 2000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#ffffff"
+              ]
+            },
+            null,
+            {
+              "product_id": 6,
+              "name": "Salicylic Acid Cleanser",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 2200,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 7,
+              "name": "Green Tea Gel Wash",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1600,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#00ff00"
+              ]
+            },
+            {
+              "product_id": 8,
+              "name": "Charcoal Detox Bar",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 800,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#000000"
+              ]
+            },
+            {
+              "product_id": 9,
+              "name": "Rose Water Toner",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1100,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "Trending",
+                "#ffc0cb"
+              ]
+            },
+            {
+              "product_id": 10,
+              "name": "Exfoliating Face Wash",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1900,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#87ceeb"
+              ]
+            }
+          ],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Trending",
+          "#ffffff"
+        ]
+      },
+      "Quantity": 1
+    },
+    {
+      "Product": {
+        "product_id": 2,
+        "name": "Deep Pore Scrub",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 1800,
+        "stock": 20,
+        "category": {
+          "category_id": 100,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "products": [
+            {
+              "product_id": 1,
+              "name": "Gentle Foam Cleanser",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#ffffff"
+              ]
+            },
+            null,
+            {
+              "product_id": 3,
+              "name": "Oil Control Wash",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1200,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#e0ffff"
+              ]
+            },
+            {
+              "product_id": 4,
+              "name": "Hydrating Milk Cleanser",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 2000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 5,
+              "name": "Micellar Water",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 950,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "Trending",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 6,
+              "name": "Salicylic Acid Cleanser",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 2200,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 7,
+              "name": "Green Tea Gel Wash",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1600,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#00ff00"
+              ]
+            },
+            {
+              "product_id": 8,
+              "name": "Charcoal Detox Bar",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 800,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#000000"
+              ]
+            },
+            {
+              "product_id": 9,
+              "name": "Rose Water Toner",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1100,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "Trending",
+                "#ffc0cb"
+              ]
+            },
+            {
+              "product_id": 10,
+              "name": "Exfoliating Face Wash",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 1900,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Skincare",
+                "Cleansers",
+                "#87ceeb"
+              ]
+            }
+          ],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Trending",
+          "#f0f8ff"
+        ]
+      },
+      "Quantity": 1
+    }
+  ]
+}

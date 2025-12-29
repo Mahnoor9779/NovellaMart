@@ -1,5 +1,8 @@
 ﻿using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.BL.Data_Structures;
+using NovellaMart.Core.DL;
+using System;
+using System.Threading.Tasks;
 
 namespace NovellaMart.Core.BL.Services
 {
@@ -7,33 +10,58 @@ namespace NovellaMart.Core.BL.Services
     {
         // Holds the state for the current user session
         private CartBL _activeCart = new CartBL();
+        private const string CartFileName = "cart.json";
 
         public CartService()
         {
-            // TEMPORARY: Initialize Mock Data
-            if (_activeCart.items == null || _activeCart.items.head == null)
+            // Initialize Cart: Try to load from file first
+            LoadCartFromFile();
+
+            // If file loading failed or returned null, ensure a fresh cart structure exists
+            // REMOVED: Mock Data Seeding
+            if (_activeCart == null)
             {
-                if (_activeCart.items == null) _activeCart.items = new MyLinkedList<CartItemBL>();
+                _activeCart = new CartBL();
+            }
 
-                var catSkin = new CategoryBL(1, "Skin Care", 0);
-                var catHair = new CategoryBL(2, "Hair Care", 0);
+            // Double check list initialization
+            if (_activeCart.items == null)
+            {
+                _activeCart.items = new MyLinkedList<CartItemBL>();
+            }
 
-                var p1 = new ProductBL(101, "SilkSculpt Serum", "Hydrating serum", new[] { "https://placehold.co/100" }, 35.00, 50, catSkin);
-                var p2 = new ProductBL(102, "Argan Glow Oil", "Shine for hair", new[] { "https://placehold.co/100" }, 63.00, 20, catHair);
-                var p3 = new ProductBL(103, "Rose Mist", "Refreshing mist", new[] { "https://placehold.co/100" }, 15.00, 100, catSkin);
+            // No initial Save needed if empty; save on first add.
+        }
 
-                _activeCart.items.InsertAtEnd(new CartItemBL(p1, 2));
-                _activeCart.items.InsertAtEnd(new CartItemBL(p2, 1));
-                _activeCart.items.InsertAtEnd(new CartItemBL(p3, 3));
+        // --- PERSISTENCE HELPER METHODS ---
+
+        private void SaveCartToFile()
+        {
+            FileHandler.SaveData(CartFileName, _activeCart);
+        }
+
+        private void LoadCartFromFile()
+        {
+            var loadedCart = FileHandler.LoadData<CartBL>(CartFileName);
+            if (loadedCart != null)
+            {
+                _activeCart = loadedCart;
+
+                // Safety check: ensure the linked list is initialized if deserialization left it null
+                if (_activeCart.items == null)
+                {
+                    _activeCart.items = new MyLinkedList<CartItemBL>();
+                }
             }
         }
 
-        // --- BUSINESS LOGIC ---
+        // --- BUSINESS LOGIC (With Auto-Save) ---
 
         public void ClearCart()
         {
             // DSA: Reset the Linked List
             _activeCart.items = new MyLinkedList<CartItemBL>();
+            SaveCartToFile(); // Persist change
         }
 
         public CartBL GetCart()
@@ -69,8 +97,10 @@ namespace NovellaMart.Core.BL.Services
                     }
                     else
                     {
-                        RemoveItem(productId);
+                        RemoveItem(productId); // RemoveItem handles its own saving
+                        return;
                     }
+                    SaveCartToFile(); // Persist change
                     return;
                 }
                 current = current.Next;
@@ -87,6 +117,7 @@ namespace NovellaMart.Core.BL.Services
                 if (current.Data.Product.product_id == productId)
                 {
                     _activeCart.items.DeleteAtIndex(index);
+                    SaveCartToFile(); // Persist change
                     return;
                 }
                 current = current.Next;
@@ -94,25 +125,25 @@ namespace NovellaMart.Core.BL.Services
             }
         }
 
-        public void AddToCart(ProductBL product, int quantity = 1)
+        public async Task AddToCart(ProductBL product, int quantity = 1)
         {
             if (product == null) return;
 
             var current = _activeCart.items.head;
 
-            // If product already exists → increase quantity
             while (current != null)
             {
                 if (current.Data.Product.product_id == product.product_id)
                 {
                     current.Data.Quantity += quantity;
+                    SaveCartToFile();
                     return;
                 }
                 current = current.Next;
             }
 
-            // Else add new item
             _activeCart.items.InsertAtEnd(new CartItemBL(product, quantity));
+            SaveCartToFile();
         }
     }
 }
