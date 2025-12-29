@@ -5,6 +5,7 @@
 @using NovellaMart.Core.BL.Services
 @inject FlashSaleCrudService FlashSaleService
 @inject ProductService ProductService
+@inject ProductCatalogService ProductCatalogService
 @using NovellaMart.Core.BL.UI_Extensions
 
 @* <h1 class="page-title"><b>Flash Sale Management</b> </h1> *@
@@ -19,10 +20,18 @@
 
     <!-- LEFT: Create / Edit Flash Sale -->
     <div class="flash-sale-form card">
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="danger">@errorMessage</div>
+        }
+
         <h3>@(isEdit ? "Edit Flash Sale" : "Create Flash Sale")</h3>
 
         <input placeholder="Title" @bind="currentSale.title" />
         <textarea placeholder="Description" @bind="currentSale.description"></textarea>
+        <label>Discount (%)</label>
+        <input type="number" min="1" max="90" @bind="currentSale.discount" />
+
 
         <h4>Flash Sale Products</h4>
 
@@ -35,6 +44,17 @@
             }
         </select>
 
+        <label>Select Subcategory</label>
+        <select @onchange="OnSubCategoryChanged" disabled="@(!subCategories.Any())">
+            <option value="-1">-- Select Subcategory --</option>
+            @foreach (var sub in subCategories)
+            {
+                <option value="@sub.category_id">@sub.name</option>
+            }
+        </select>
+
+
+
         @if (filteredProducts.Count > 0)
         {
             <div class="product-scroll-box">
@@ -42,9 +62,9 @@
                 {
                     <div class="product-select-row">
                         <input class="product-checkbox"
-                               type="checkbox"
-                               checked="@selectedProductIds.Contains(product.product_id)"
-                               @onchange="e => ToggleProduct(product, e)" />
+                        type="checkbox"
+                        checked="@selectedProductIds.Contains(product.product_id)"
+                        @onchange="e => ToggleProduct(product, e)" />
 
                         <div class="product-text">
                             <span class="product-name">@product.name</span>
@@ -102,7 +122,17 @@
 
                     <div class="row-actions">
                         <button @onclick="() => EditSale(sale)">Edit</button>
-                        <button class="danger" @onclick="() => DeleteSale(sale)">Delete</button>
+                        <button class="delete-btn" @onclick="() => AskDelete(sale)">Delete</button>
+                        @if (showDeleteConfirm && salePendingDelete == sale)
+                        {
+                            <div class="delete-confirm">
+                                <span>Are you sure?</span>
+                                <button class="btn-secondary" @onclick="ConfirmDelete">Yes</button>
+                                <button class="btn-secondary" @onclick="CancelDelete">No</button>
+                            </div>
+                        }
+
+
                     </div>
                 </div>
             }
@@ -125,26 +155,53 @@
     private DateTime startTimeLocal;
     private DateTime endTimeLocal;
 
-    protected override void OnInitialized()
-    {
-        flashSales = FlashSaleService.GetAllFlashSales();
-        allProducts = ProductService.GetAllProducts().ToList();
+    private FlashSaleBL salePendingDelete;
+    private bool showDeleteConfirm;
 
-        categories = allProducts
-            .Where(p => p.category != null)
-            .Select(p => p.category)
-            .GroupBy(c => c.category_id)
-            .Select(g => g.First())
-            .ToList();
+    private int selectedSubCategoryId = -1;
+    private List<CategoryBL> subCategories = new();
+
+
+
+    private string errorMessage = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ProductCatalogService.LoadProductsAsync();
+
+        allProducts = ProductCatalogService.MasterProductList.ToList();
+
+        flashSales = FlashSaleService.GetAllFlashSales();
+
+        // categories = allProducts
+        // .Where(p => p.category != null && p.category.parent_category_id == 0)
+        // .Select(p => p.category)
+        // .GroupBy(c => c.category_id)
+        // .Select(g => g.First())
+        // .ToList();
+
+        categories = ProductCatalogService.MasterCategoryList.ToList();
 
         ResetForm();
     }
 
-
     private void SaveFlashSale()
     {
-        if (currentSale.fs_items.Count() == 0)
-            return; // or show message
+        errorMessage = "";
+
+        if (string.IsNullOrWhiteSpace(currentSale.title))
+            errorMessage = "Title is required.";
+        else if (string.IsNullOrWhiteSpace(currentSale.description))
+            errorMessage = "Description is required.";
+        else if (startTimeLocal >= endTimeLocal)
+            errorMessage = "End time must be after start time.";
+        else if (currentSale.fs_items.Count() == 0)
+            errorMessage = "Please select at least one product.";
+        else if (currentSale.discount <= 0)
+            errorMessage = "Discount must be greater than 0.";
+
+        if (!string.IsNullOrEmpty(errorMessage))
+            return;
 
         currentSale.startTime = startTimeLocal;
         currentSale.endTime = endTimeLocal;
@@ -160,8 +217,13 @@
     }
 
 
+
     private void EditSale(FlashSaleBL sale)
     {
+        filteredProducts = allProducts
+    .Where(p => selectedProductIds.Contains(p.product_id))
+    .ToList();
+
         currentSale = sale;
         startTimeLocal = sale.startTime;
         endTimeLocal = sale.endTime;
@@ -176,6 +238,25 @@
         isEdit = true;
     }
 
+    private void AskDelete(FlashSaleBL sale)
+    {
+        salePendingDelete = sale;
+        showDeleteConfirm = true;
+    }
+
+    private void ConfirmDelete()
+    {
+        FlashSaleService.DeleteFlashSale(salePendingDelete.flash_sale_id);
+        flashSales = FlashSaleService.GetAllFlashSales();
+        salePendingDelete = null;
+        showDeleteConfirm = false;
+    }
+
+    private void CancelDelete()
+    {
+        salePendingDelete = null;
+        showDeleteConfirm = false;
+    }
 
     private void DeleteSale(FlashSaleBL sale)
     {
@@ -223,9 +304,44 @@
     {
         selectedCategoryId = int.Parse(e.Value.ToString());
 
-        filteredProducts = allProducts
-            .Where(p => p.category != null && p.category.category_id == selectedCategoryId)
-            .ToList();
+        var parentCategory = categories
+            .FirstOrDefault(c => c.category_id == selectedCategoryId);
+
+        subCategories = parentCategory != null
+            ? parentCategory.subcategories.ToList()
+            : new List<CategoryBL>();
+
+        filteredProducts.Clear();
     }
+
+
+    private void OnSubCategoryChanged(ChangeEventArgs e)
+    {
+        selectedSubCategoryId = int.Parse(e.Value.ToString());
+
+        if (selectedSubCategoryId == -1)
+        {
+            filteredProducts.Clear();
+            return;
+        }
+
+        var subCategory = subCategories
+            .FirstOrDefault(sc => sc.category_id == selectedSubCategoryId);
+
+        filteredProducts = subCategory != null
+            ? subCategory.products.ToList()
+            : new List<ProductBL>();
+    }
+
+//     private void OnSubCategoryChanged(ChangeEventArgs e)
+// {
+//     int subId = int.Parse(e.Value.ToString());
+
+//     var sub = selectedCategory.subcategories
+//         .FirstOrDefault(s => s.category_id == subId);
+
+//     filteredProducts = sub?.products.ToList() ?? new();
+// }
+
 
 }

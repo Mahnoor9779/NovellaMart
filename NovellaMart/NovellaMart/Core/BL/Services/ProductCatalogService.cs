@@ -7,16 +7,22 @@ namespace NovellaMart.Core.BL.Services
     public class ProductCatalogService
     {
         private readonly HttpClient _http;
+
         public MyLinkedList<ProductBL> MasterProductList { get; private set; }
+        public MyLinkedList<CategoryBL> MasterCategoryList { get; private set; }
         public AVLTreeGeneric<ProductBL> PriceTree { get; private set; }
 
         public ProductCatalogService(HttpClient http)
         {
             _http = http;
             MasterProductList = new MyLinkedList<ProductBL>();
+            MasterCategoryList = new MyLinkedList<CategoryBL>();
             PriceTree = new AVLTreeGeneric<ProductBL>();
         }
 
+        /* ===========================
+           Price Comparator
+           =========================== */
         public int PriceComparator(ProductBL a, ProductBL b)
         {
             int priceComp = a.price.CompareTo(b.price);
@@ -24,48 +30,123 @@ namespace NovellaMart.Core.BL.Services
             return a.product_id.CompareTo(b.product_id);
         }
 
+        /* ===========================
+           Load Products from JSON
+           =========================== */
         public async Task LoadProductsAsync()
         {
-            if (MasterProductList.Count() > 0) return;
+            if (MasterProductList.Count() > 0)
+                return;
 
-            try
+            var rawData = await _http.GetFromJsonAsync<List<ProductDto>>(
+                "sample-data/products.json"
+            );
+
+            if (rawData == null) return;
+
+            int categoryIdCounter = 1;
+            int subCategoryIdCounter = 100;
+
+            foreach (var item in rawData)
             {
-                var rawData = await _http.GetFromJsonAsync<List<ProductDto>>("sample-data/products.json");
+                /* ===========================
+                   MAIN CATEGORY
+                   =========================== */
+                CategoryBL mainCategory = FindCategoryByName(item.category);
 
-                if (rawData != null)
+                if (mainCategory == null)
                 {
-                    foreach (var item in rawData)
-                    {
-                        // 1. Map Categories
-                        CategoryBL cat = new CategoryBL(0, item.category, 0); // Main Category
-                        if (!string.IsNullOrEmpty(item.subCategory))
-                        {
-                            // We store SubCategory in the name, but track Parent via ID logic if needed
-                            cat.name = item.subCategory;
-                            cat.parent_category_id = 1;
-                        }
+                    mainCategory = new CategoryBL(categoryIdCounter++, item.category, 0);
+                    MasterCategoryList.InsertAtEnd(mainCategory);
+                }
 
-                        // 2. Create Product
-                        ProductBL product = new ProductBL(
-                            item.id, item.name, "Description...", new string[] { item.imageUrl },
-                            (double)item.price, 20, cat
+                /* ===========================
+                   SUB CATEGORY
+                   =========================== */
+                CategoryBL finalCategory = mainCategory;
+
+                if (!string.IsNullOrWhiteSpace(item.subCategory))
+                {
+                    CategoryBL subCategory = FindSubCategory(
+                        mainCategory,
+                        item.subCategory
+                    );
+
+                    if (subCategory == null)
+                    {
+                        subCategory = new CategoryBL(
+                            subCategoryIdCounter++,
+                            item.subCategory,
+                            mainCategory.category_id
                         );
 
-                        // 3. Add Tags for Filtering (Main Cat, Sub Cat, Colors, Trending)
-                        if (item.isTrending) product.tags.InsertAtEnd("Trending");
-                        product.tags.InsertAtEnd(item.category); // Tag for Main Category (e.g., "Skincare")
-                        if (!string.IsNullOrEmpty(item.subCategory)) product.tags.InsertAtEnd(item.subCategory); // Tag for Sub (e.g., "Serums")
-                        foreach (var c in item.colors) product.tags.InsertAtEnd(c);
-
-                        MasterProductList.InsertAtEnd(product);
-                        PriceTree.Insert(product, PriceComparator);
+                        mainCategory.subcategories.InsertAtEnd(subCategory);
                     }
+
+                    finalCategory = subCategory;
                 }
+
+                /* ===========================
+                   PRODUCT
+                   =========================== */
+                ProductBL product = new ProductBL(
+                    item.id,
+                    item.name,
+                    "Description...",
+                    new string[] { item.imageUrl },
+                    (double)item.price,
+                    20,
+                    finalCategory
+                );
+
+                /* ===========================
+                   TAGS
+                   =========================== */
+                product.tags.InsertAtEnd(item.category);
+
+                if (!string.IsNullOrEmpty(item.subCategory))
+                    product.tags.InsertAtEnd(item.subCategory);
+
+                if (item.isTrending)
+                    product.tags.InsertAtEnd("Trending");
+
+                foreach (var c in item.colors)
+                    product.tags.InsertAtEnd(c);
+
+                /* ===========================
+                   STORE
+                   =========================== */
+                MasterProductList.InsertAtEnd(product);
+                finalCategory.products.InsertAtEnd(product);
+                PriceTree.Insert(product, PriceComparator);
             }
-            catch (Exception ex) { Console.WriteLine($"Error: {ex.Message}"); }
         }
 
-        public class ProductDto
+        /* ===========================
+           Helpers
+           =========================== */
+        private CategoryBL FindCategoryByName(string name)
+        {
+            foreach (var cat in MasterCategoryList)
+                if (cat.name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                    return cat;
+
+            return null;
+        }
+
+        private CategoryBL FindSubCategory(CategoryBL parent, string name)
+        {
+            foreach (var sub in parent.subcategories)
+                if (sub.name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                    return sub;
+
+            return null;
+        }
+
+        /* ===========================
+           DTO (ONLY for JSON)
+           =========================== */
+        private class ProductDto
         {
             public int id { get; set; }
             public string name { get; set; }

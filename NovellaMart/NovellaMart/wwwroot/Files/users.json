@@ -62,5 +62,21 @@
     "address": "",
     "city": "",
     "zipCode": ""
+  },
+  {
+    "user_id": 0,
+    "username": "aliza",
+    "email": "alizajaved123@gmail.com",
+    "password": "aliza123",
+    "role": "Member",
+    "firstName": "Aliza",
+    "lastName": "Javed",
+    "profilePicture": "",
+    "createdAt": "2025-12-28T12:47:43.7814949+05:00",
+    "isActive": true,
+    "phoneNumber": "03213445594",
+    "address": "Khadija Hall, UET, Lahore",
+    "city": "Lahore",
+    "zipCode": "15400"
   }
 ]
