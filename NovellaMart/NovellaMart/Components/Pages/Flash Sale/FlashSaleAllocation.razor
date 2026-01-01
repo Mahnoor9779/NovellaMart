@@ -1,33 +1,129 @@
-﻿@page "/admin/flash-sale-allocation"
+﻿@page "/admin/flash-sale-allocation/{Id:int}"
 @rendermode InteractiveServer
-
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
 @inject FlashSaleAllocationService AllocationService
+@inject FlashSaleCrudService CrudService
+
+@* <div class="page-title"> *@
+@*     <h1 style="color: var(--nm-primary);">Flash Sale Allocation</h1> *@
+@*     <div class="title-underline"></div> *@
+@*     <p class="title-subtext">View allocation results for each flash sale product</p> *@
+@* </div> *@
+
+@* <div class="container admin-container" style="max-width: 900px; padding-bottom: 80px;"> *@
+
+@*     <div class="mb-4 d-flex justify-content-between align-items-center"> *@
+@*         <h5 class="fw-bold mb-0" style="color: #333;">Active Sale Items</h5> *@
+@*         <span class="badge bg-success shadow-sm"> *@
+@*             <i class="fas fa-circle me-1" style="font-size: 0.5rem;"></i> Live System *@
+@*         </span> *@
+@*     </div> *@
+
+@*     <div class="row"> *@
+@*         @foreach (var product in AllocationService.GetSaleProducts()) *@
+@*         { *@
+@*             bool isExpanded = expandedProductId == product.product_id; *@
+
+@*             <div class="col-12 mb-3"> *@
+@*                 <div class="checkout-card p-0 overflow-hidden shadow-sm @(isExpanded ? "admin-card-expanded" : "admin-card-default")" *@
+@*                      style="transition: all 0.3s ease; background: transparent;"> *@
+
+@*                     <!-- Product Row --> *@
+@*                     <div class="d-flex align-items-center justify-content-between p-3" *@
+@*                          style="cursor: pointer;" *@
+@*                          @onclick="() => Toggle(product.product_id)"> *@
+
+@*                         <div class="d-flex align-items-center"> *@
+@*                             <div class="admin-product-img-wrapper me-3"> *@
+@*                                 <img src="@product.images[0]" alt="@product.name" /> *@
+@*                             </div> *@
+@*                             <div> *@
+@*                                 <h6 class="mb-0 fw-bold" style="color: #333;">@product.name</h6> *@
+@*                                 <div class="d-flex gap-2 mt-1"> *@
+@*                                     <span class="badge bg-light text-muted border">Stock: @product.stock</span> *@
+@*                                     <span class="badge bg-light text-muted border">Queue: @AllocationService.GetQueueCountForProduct(product.product_id)</span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
+
+@*                         <div class="d-flex align-items-center gap-3"> *@
+@*                             <button class="btn @(isExpanded ? "btn-admin-close" : "btn-admin-toggle")"> *@
+@*                                 @(isExpanded ? "Close" : "View Allocations") *@
+@*                             </button> *@
+@*                         </div> *@
+@*                     </div> *@
+
+@*                     <!-- Expanded Allocations --> *@
+@*                     @if (isExpanded) *@
+@*                     { *@
+@*                         <div class="p-4 bg-white border-top animate-dropdown" style="border-top: 1px dashed var(--nm-secondary);"> *@
+@*                             <div class="table-responsive"> *@
+@*                                 <table class="table table-hover align-middle mb-0"> *@
+@*                                     <thead class="admin-table-thead"> *@
+@*                                         <tr> *@
+@*                                             <th>#</th> *@
+@*                                             <th>Customer ID</th> *@
+@*                                             <th>Request Time</th> *@
+@*                                             <th>Status</th> *@
+@*                                         </tr> *@
+@*                                     </thead> *@
+@*                                     <tbody> *@
+@*                                         @{ *@
+@*                                             var allocations = AllocationService.GetAllocationsForProduct(product.product_id); *@
+@*                                             int i = 1; *@
+@*                                         } *@
+
+@*                                         @if (allocations.Count == 0) *@
+@*                                         { *@
+@*                                             <tr> *@
+@*                                                 <td colspan="4" class="text-center text-muted py-4">No allocations yet</td> *@
+@*                                             </tr> *@
+@*                                         } *@
+@*                                         else *@
+@*                                         { *@
+@*                                             @foreach (var req in allocations) *@
+@*                                             { *@
+@*                                                 <tr> *@
+@*                                                     <td>@i</td> *@
+@*                                                     <td>@req.customer.user_id</td> *@
+@*                                                     <td>@req.requestTime.ToLongTimeString()</td> *@
+@*                                                     <td> *@
+@*                                                         <span class="status @(req.allocated ? "allocated" : "rejected")"> *@
+@*                                                             @(req.allocated ? "Allocated" : "Rejected") *@
+@*                                                         </span> *@
+@*                                                     </td> *@
+@*                                                 </tr> *@
+@*                                                 i++; *@
+@*                                             } *@
+@*                                         } *@
+@*                                     </tbody> *@
+@*                                 </table> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                     } *@
+@*                 </div> *@
+@*             </div> *@
+@*         } *@
+@*     </div> *@
+@* </div> *@
 
 <div class="page-title">
     <h1 style="color: var(--nm-primary);">Flash Sale Allocation</h1>
     <div class="title-underline"></div>
-    <p class="title-subtext">View allocation results for each flash sale product</p>
+    <p class="title-subtext">View results for: <b>@saleTitle</b></p>
 </div>
 
 <div class="container admin-container" style="max-width: 900px; padding-bottom: 80px;">
-
-    <div class="mb-4 d-flex justify-content-between align-items-center">
-        <h5 class="fw-bold mb-0" style="color: #333;">Active Sale Items</h5>
-        <span class="badge bg-success shadow-sm">
-            <i class="fas fa-circle me-1" style="font-size: 0.5rem;"></i> Live System
-        </span>
-    </div>
-
     <div class="row">
-        @foreach (var product in AllocationService.GetSaleProducts())
+        @foreach (var product in AllocationService.GetSaleProducts(Id))
         {
             bool isExpanded = expandedProductId == product.product_id;
+            var allocations = AllocationService.GetAllocationsForProduct(Id, product.product_id);
 
             <div class="col-12 mb-3">
                 <div class="checkout-card p-0 overflow-hidden shadow-sm @(isExpanded ? "admin-card-expanded" : "admin-card-default")"
-                     style="transition: all 0.3s ease; background: transparent;">
+                     style="transition: all 0.3s ease; background: white;">
 
                     <!-- Product Row -->
                     <div class="d-flex align-items-center justify-content-between p-3"
@@ -40,61 +136,63 @@
                             </div>
                             <div>
                                 <h6 class="mb-0 fw-bold" style="color: #333;">@product.name</h6>
-                                <div class="d-flex gap-2 mt-1">
-                                    <span class="badge bg-light text-muted border">Stock: @product.stock</span>
-                                    <span class="badge bg-light text-muted border">Queue: @AllocationService.GetQueueCountForProduct(product.product_id)</span>
-                                </div>
+                                <span class="badge bg-light text-muted border">Winners: @allocations.Count(a => a.allocated)</span>
                             </div>
                         </div>
 
-                        <div class="d-flex align-items-center gap-3">
-                            <button class="btn @(isExpanded ? "btn-admin-close" : "btn-admin-toggle")">
-                                @(isExpanded ? "Close" : "View Allocations")
-                            </button>
-                        </div>
+                        <button class="btn @(isExpanded ? "btn-admin-close" : "btn-admin-toggle")">
+                            @(isExpanded ? "Close" : "View Results")
+                        </button>
                     </div>
 
-                    <!-- Expanded Allocations -->
                     @if (isExpanded)
                     {
-                        <div class="p-4 bg-white border-top animate-dropdown" style="border-top: 1px dashed var(--nm-secondary);">
+                        <div class="p-0 bg-white border-top animate-dropdown">
                             <div class="table-responsive">
                                 <table class="table table-hover align-middle mb-0">
                                     <thead class="admin-table-thead">
                                         <tr>
-                                            <th>#</th>
+                                            <th class="col-serial">#</th>
                                             <th>Customer ID</th>
                                             <th>Request Time</th>
-                                            <th>Status</th>
+                                            <th class="col-status">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @{
-                                            var allocations = AllocationService.GetAllocationsForProduct(product.product_id);
-                                            int i = 1;
-                                        }
-
-                                        @if (allocations.Count == 0)
+                                        @if (!allocations.Any())
                                         {
                                             <tr>
-                                                <td colspan="4" class="text-center text-muted py-4">No allocations yet</td>
+                                                <td colspan="4">
+                                                    <div class="empty-queue-container">
+                                                        <i class="fas fa-inbox empty-drawer-icon"></i>
+                                                        <span class="empty-text">No users were allocated for this product.</span>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         }
                                         else
                                         {
-                                            @foreach (var req in allocations)
+                                            int rank = 1;
+                                            @foreach (var req in allocations.Where(a => a.allocated))
                                             {
                                                 <tr>
-                                                    <td>@i</td>
-                                                    <td>@req.customer.user_id</td>
-                                                    <td>@req.requestTime.ToLongTimeString()</td>
+                                                    <td class="col-serial">
+                                                        <span class="queue-serial">#@rank</span>
+                                                    </td>
                                                     <td>
-                                                        <span class="status @(req.allocated ? "allocated" : "rejected")">
-                                                            @(req.allocated ? "Allocated" : "Rejected")
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="fas fa-user-circle me-2 icon-user-id"></i>
+                                                            <span class="fw-bold">@req.customer.user_id</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="join-time-text">@req.requestTime.ToLongTimeString()</td>
+                                                    <td class="col-status">
+                                                        <span class="badge rounded-pill status-badge-allocated">
+                                                            <i class="fas fa-check me-1"></i> Allocated
                                                         </span>
                                                     </td>
                                                 </tr>
-                                                i++;
+                                                rank++;
                                             }
                                         }
                                     </tbody>
@@ -109,11 +207,16 @@
 </div>
 
 @code {
+    [Parameter] public int Id { get; set; }
     private int expandedProductId = -1;
+    private string saleTitle = "Loading...";
 
-    private void Toggle(int productId)
+    protected override void OnInitialized()
     {
-        expandedProductId = expandedProductId == productId ? -1 : productId;
+        var sale = CrudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id);
+        if (sale != null) saleTitle = sale.title;
     }
+
+    private void Toggle(int productId) => expandedProductId = expandedProductId == productId ? -1 : productId;
 }
 

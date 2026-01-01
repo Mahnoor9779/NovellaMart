@@ -116,3 +116,31 @@ th, td {
     color: #999;
     padding: 1rem;
 }
+
+/* =========================================
+   ALLOCATION TABLE SPECIFIC SPACING
+   ========================================= */
+
+/* Adjusting column widths to accommodate Request Time */
+.admin-table-thead th:nth-child(2) {
+    width: 25%; /* Customer ID */
+}
+
+.admin-table-thead th:nth-child(3) {
+    width: 25%; /* Request Time */
+}
+
+.join-time-text {
+    font-family: 'Monaco', monospace;
+    font-size: 0.85rem;
+    color: #636e72;
+}
+
+/* Ensure the status badge doesn't touch the right border */
+.status-badge-allocated {
+    background-color: #ebfbee !important;
+    color: #2f9e44 !important;
+    border: 1px solid #b2f2bb;
+    padding: 6px 12px;
+    font-weight: 700;
+}

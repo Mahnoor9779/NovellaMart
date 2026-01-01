@@ -3,6 +3,7 @@
 
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
+@inject NavigationManager Nav
 @inject FlashSaleCrudService FlashSaleService
 @inject ProductService ProductService
 @inject ProductCatalogService ProductCatalogService
@@ -121,6 +122,14 @@
                     </div>
 
                     <div class="row-actions">
+                        <button class="btn-stat" @onclick='() => Nav.NavigateTo($"/admin/flash-sale-stats/{sale.flash_sale_id}")'>
+                            Stats
+                        </button>
+                        <button class="btn-stat" style="background-color: #5ff4ef; color: #005f5f; border: none; margin-left: 5px;"
+                                @onclick='() => Nav.NavigateTo($"/admin/flash-sale-allocation/{sale.flash_sale_id}")'>
+                             Results
+                        </button>
+                    
                         <button @onclick="() => EditSale(sale)">Edit</button>
                         <button class="delete-btn" @onclick="() => AskDelete(sale)">Delete</button>
                         @if (showDeleteConfirm && salePendingDelete == sale)
@@ -332,16 +341,5 @@
             ? subCategory.products.ToList()
             : new List<ProductBL>();
     }
-
-//     private void OnSubCategoryChanged(ChangeEventArgs e)
-// {
-//     int subId = int.Parse(e.Value.ToString());
-
-//     var sub = selectedCategory.subcategories
-//         .FirstOrDefault(s => s.category_id == subId);
-
-//     filteredProducts = sub?.products.ToList() ?? new();
-// }
-
 
 }

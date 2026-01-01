@@ -2671,21 +2671,189 @@ body {
     background-color: #fff9c4; /* Light Yellow */
     border-bottom: 2px solid var(--nm-secondary);
 }
-
     .admin-table-thead th {
-        color: #555;
-        font-weight: 700;
-        text-transform: uppercase;
+        background-color: #fff9c4; /* Light Yellow header highlight */
+        border-bottom: 2px solid var(--nm-secondary);
+        padding: 12px 15px;
         font-size: 0.75rem;
+        text-transform: uppercase;
         letter-spacing: 0.5px;
-    }
 
 /* User Icon - Pink */
-.icon-user-id {
+.icon-user-id 
+{
     color: var(--nm-primary);
 }
 
+/* =========================================
+   REFINED COUNTDOWN TIMER (FOR STATS/LIVE)
+   ========================================= */
+.stats-timer-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
+.timer-pill {
+    background: #ffffff;
+    border: 2px solid var(--nm-primary);
+    color: var(--nm-primary);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(241, 127, 178, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    .timer-pill i {
+        font-size: 0.9rem;
+    }
+
+/* =========================================
+   THEMED ALLOCATION BUTTON
+   ========================================= */
+.btn-allocate-themed {
+    background: linear-gradient(45deg, var(--nm-primary), #d15c92);
+    color: white !important;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(241, 127, 178, 0.3);
+    transition: all 0.3s ease;
+}
+
+    .btn-allocate-themed:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(241, 127, 178, 0.5);
+        filter: brightness(1.1);
+    }
+
+    .btn-allocate-themed:disabled {
+        background: #dfe6e9;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+
+/* =========================================
+   REFINED TABLE SPACING & ALIGNMENT
+   ========================================= */
+
+/* Update this existing class to add side padding */
+.animate-dropdown {
+    padding: 1.5rem 2.5rem !important; /* This brings the table inward from the edges */
+    animation: slideInDown 0.3s ease-out;
+}
+
+/* Add these helper classes for column control */
+.col-serial {
+    width: 100px;
+    padding-left: 20px !important;
+    text-align: left;
+}
+
+.col-status {
+    width: 160px;
+    padding-right: 20px !important;
+    text-align: right;
+}
+
+/* Ensure the table stays centered and doesn't over-stretch */
+.table-responsive {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Themed Allocation Button */
+.btn-allocate-themed {
+    background: linear-gradient(45deg, var(--nm-primary), #d15c92);
+    color: white !important;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(241, 127, 178, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Timer Pill Styles */
+.stats-timer-container {
+    margin-bottom: 1rem;
+}
+
+.timer-pill {
+    background: #ffffff;
+    border: 2px solid var(--nm-primary);
+    color: var(--nm-primary);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================================
+   QUEUE TABLE & EMPTY STATE
+   ========================================= */
+.queue-serial {
+    font-family: 'Monaco', monospace;
+    font-weight: 700;
+    color: var(--nm-primary);
+    background: #fff5fa;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.join-time-text {
+    font-size: 0.85rem;
+    color: #636e72;
+    font-weight: 500;
+}
+
+.status-badge-waiting {
+    background-color: #fff9db !important;
+    color: #f59f00 !important;
+    border: 1px solid #ffe066;
+    font-weight: 700;
+}
+
+.status-badge-allocated {
+    background-color: #ebfbee !important;
+    color: #2f9e44 !important;
+    border: 1px solid #b2f2bb;
+    font-weight: 700;
+}
+
+/* Empty Drawer Styling */
+.empty-queue-container {
+    padding: 40px 0;
+    text-align: center;
+    color: #b2bec3;
+}
+
+.empty-drawer-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+    opacity: 0.4;
+    background: linear-gradient(to bottom, #dfe6e9, #b2bec3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.empty-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
 
 /*alizaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 
