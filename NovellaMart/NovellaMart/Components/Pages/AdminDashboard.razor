@@ -5,22 +5,51 @@
 @inject ProductCatalogService ProductService
 @inject OrderService OrderService
 @inject PromoCodeService PromoService
+@inject NavigationManager Nav
 
 <PageTitle>Admin Dashboard</PageTitle>
 
+<div class="admin-sidebar-left @(isSidebarOpen ? "open" : "")">
+    <div class="sidebar-header">
+        <h3 class="sidebar-logo">NovellaMart</h3>
+        <button class="btn-close-sidebar" @onclick="ToggleSidebar">×</button>
+    </div>
+    <div class="sidebar-links">
+        <div class="menu-section">Sales Management</div>
+        <a href="/flash-sale" class="sidebar-link"><i class="fas fa-bolt"></i> Flash Sale Dashboard</a>
+        <a href="/admin/flash-sale-allocation" class="sidebar-link"><i class="fas fa-tasks"></i> Allocation Manager</a>
+        <a href="/flash-sales" class="sidebar-link"><i class="fas fa-edit"></i> Create/Edit Sales</a>
+        <a href="/admin/flash-sale-stats" class="sidebar-link"><i class="fas fa-chart-line"></i> Sale Statistics</a>
+
+        <div class="menu-section mt-4">General</div>
+        <a href="/orders" class="sidebar-link"><i class="fas fa-shopping-cart"></i> All Orders</a>
+        <a href="/profile" class="sidebar-link"><i class="fas fa-user-circle"></i> My Profile</a>
+    </div>
+</div>
+
+@if (isSidebarOpen)
+{
+    <div class="sidebar-overlay" @onclick="ToggleSidebar"></div>
+}
+
 <div class="container my-5">
-    <!-- Header -->
-    <div class="page-title">
-        <h1>Admin Dashboard</h1>
-        <div class="title-underline"></div>
-        <p class="title-subtext">Overview of store performance & settings</p>
+    <div class="admin-header-flex">
+        <button class="btn-sidebar-toggle" @onclick="ToggleSidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="admin-title-group">
+            <h1 class="mb-0">Admin Dashboard</h1>
+            <div class="title-underline"></div>
+            <p class="title-subtext mb-0">Overview of store performance & settings</p>
+        </div>
     </div>
 
-    <!-- STATS GRID -->
+
+
     <div class="row g-4 mb-5">
         <div class="col-md-3">
             <div class="stat-card">
-                <div class="icon-box" style="background: #fff5fa; color: var(--nm-primary);">💰</div>
+                <div class="icon-box" style="background: #fff5fa; color: #ec4899;">💰</div>
                 <div>
                     <h5 class="text-muted mb-1">Total Revenue</h5>
                     <h3 class="fw-bold mb-0">PKR @TotalRevenue.ToString("N0")</h3>
@@ -28,7 +57,7 @@
             </div>
         </div>
         <div class="col-md-3">
-             <div class="stat-card">
+            <div class="stat-card">
                 <div class="icon-box" style="background: #fff9c4; color: #fbc02d;">🛍️</div>
                 <div>
                     <h5 class="text-muted mb-1">Total Orders</h5>
@@ -37,8 +66,8 @@
             </div>
         </div>
         <div class="col-md-3">
-             <div class="stat-card">
-                <div class="icon-box" style="background: #e0f7fa; color: var(--nm-accent);">📦</div>
+            <div class="stat-card">
+                <div class="icon-box" style="background: #e0f7fa; color: #00bcd4;">📦</div>
                 <div>
                     <h5 class="text-muted mb-1">Products</h5>
                     <h3 class="fw-bold mb-0">@TotalProducts</h3>
@@ -46,7 +75,7 @@
             </div>
         </div>
         <div class="col-md-3">
-             <div class="stat-card">
+            <div class="stat-card">
                 <div class="icon-box" style="background: #f3e5f5; color: #ab47bc;">👥</div>
                 <div>
                     <h5 class="text-muted mb-1">Customers</h5>
@@ -57,21 +86,20 @@
     </div>
 
     <div class="row g-4">
-        <!-- RECENT ORDERS -->
         <div class="col-lg-8">
-            <div class="summary-card h-100">
+            <div class="summary-card h-100 p-4">
                 <h3 style="margin-top:0; font-weight: 700; color: #333;">Recent Orders</h3>
-                 <p style="color: #888; font-size: 0.9rem; border-bottom: 2px dashed #eee; padding-bottom: 1rem;">Latest customer transactions.</p>
-                
+                <p style="color: #888; font-size: 0.9rem; border-bottom: 2px dashed #eee; padding-bottom: 1rem;">Latest customer transactions.</p>
+
                 <div class="table-responsive mt-3">
-                    <table class="cart-table" style="font-size: 0.9rem;">
+                    <table class="table" style="font-size: 0.9rem;">
                         <thead>
-                            <tr>
-                                <th style="padding: 0.8rem;">Order ID</th>
-                                <th style="padding: 0.8rem;">Customer</th>
-                                <th style="padding: 0.8rem;">Date</th>
-                                <th style="padding: 0.8rem;">Amount</th>
-                                <th style="padding: 0.8rem;">Status</th>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 1rem;">Order ID</th>
+                                <th style="padding: 1rem;">Customer</th>
+                                <th style="padding: 1rem;">Date</th>
+                                <th style="padding: 1rem;">Amount</th>
+                                <th style="padding: 1rem;">Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,11 +108,11 @@
                                 @foreach (var order in RecentOrders)
                                 {
                                     <tr>
-                                        <td style="padding: 0.8rem;">#@order.order_id</td>
-                                        <td style="padding: 0.8rem;">@order.customer?.firstName @order.customer?.lastName</td>
-                                        <td style="padding: 0.8rem;">@order.orderTime.ToShortDateString()</td>
-                                        <td style="padding: 0.8rem;">PKR @order.totalAmount.ToString("N0")</td>
-                                        <td style="padding: 0.8rem;"><span class="badge rounded-pill @GetStatusClass(order.status)">@order.status</span></td>
+                                        <td style="padding: 1rem; font-weight:600;">#@order.order_id</td>
+                                        <td style="padding: 1rem;">@order.customer?.firstName @order.customer?.lastName</td>
+                                        <td style="padding: 1rem;">@order.orderTime.ToShortDateString()</td>
+                                        <td style="padding: 1rem; font-weight:600;">PKR @order.totalAmount.ToString("N0")</td>
+                                        <td style="padding: 1rem;"><span class="badge rounded-pill @GetStatusClass(order.status)">@order.status</span></td>
                                     </tr>
                                 }
                             }
@@ -100,42 +128,37 @@
             </div>
         </div>
 
-        <!-- PROMO CODE MANAGEMENT -->
         <div class="col-lg-4">
-            <div class="summary-card h-100" style="border-top-color: var(--nm-primary);">
+            <div class="summary-card h-100 p-4">
                 <h3 style="margin-top:0; font-weight: 700; color: #333;">Promo Codes</h3>
                 <p style="color: #888; font-size: 0.9rem; border-bottom: 2px dashed #eee; padding-bottom: 1rem;">Manage discounts.</p>
 
                 <div class="mt-4">
-                     <div class="d-flex gap-2 mb-4">
-                        <input @bind="NewPromoCode" placeholder="Code (e.g. SAVE10)" class="form-control" />
+                    <div class="d-flex gap-2 mb-4">
+                        <input @bind="NewPromoCode" placeholder="Code" class="form-control" />
                         <input @bind="NewDiscount" type="number" placeholder="%" class="form-control" style="width: 80px;" />
-                        <button class="btn btn-primary" style="background: var(--nm-primary); border: none;" @onclick="CreatePromo">
+                        <button class="btn btn-primary btn-add-promo" @onclick="CreatePromo">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
 
                     <div class="promo-list">
-                         @if (PromoList != null && PromoList.Any())
+                        @if (PromoList != null && PromoList.Any())
                         {
                             <ul class="list-group list-group-flush">
                                 @foreach (var promo in PromoList)
                                 {
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <div>
-                                            <strong style="color: var(--nm-primary);">@promo.Code</strong>
+                                            <strong style="color: #ec4899;">@promo.Code</strong>
                                             <span class="ms-2 badge bg-light text-dark border">@promo.DiscountPercentage% Off</span>
                                         </div>
-                                        <button class="btn btn-sm text-danger" @onclick="() => DeletePromo(promo.Id)" title="Delete">
+                                        <button class="btn btn-sm text-danger" @onclick="() => DeletePromo(promo.Id)">
                                             <i class="fas fa-trash-alt"></i>
                                         </button>
                                     </li>
                                 }
                             </ul>
-                        }
-                        else
-                        {
-                            <p class="text-muted text-center py-3">No active promo codes.</p>
                         }
                     </div>
                 </div>
@@ -144,91 +167,46 @@
     </div>
 </div>
 
-<style>
-    .stat-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        transition: transform 0.2s;
-        border: 1px solid rgba(0,0,0,0.02);
-        height: 100%;
-    }
-
-    .stat-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .icon-box {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-    }
-
-    .badge.confirmed { background-color: #e8f5e9; color: #2e7d32; }
-    .badge.pending { background-color: #fff8e1; color: #fbc02d; }
-    .badge.delivered { background-color: #e3f2fd; color: #1565c0; }
-    
-    .title-underline {
-        width: 80px;
-        height: 4px;
-        background: var(--nm-secondary);
-        margin: 10px auto;
-        border-radius: 2px;
-    }
-    .title-subtext { color: #777; font-size: 1.1rem; }
-</style>
-
 @code {
+    private bool isSidebarOpen = false;
+    private void ToggleSidebar() => isSidebarOpen = !isSidebarOpen;
+
     private int TotalProducts = 0;
     private int TotalOrders = 0;
     private double TotalRevenue = 0;
     private List<OrderBL> RecentOrders = new();
-    
-    // Promo Code Logic
     private List<PromoCodeBL> PromoList = new();
     private string NewPromoCode = "";
     private int NewDiscount = 0;
 
     protected override async Task OnInitializedAsync()
     {
-        // Load Products
         await ProductService.LoadProductsAsync();
         TotalProducts = ProductService.MasterProductList.Count();
 
-        // Load Orders
-        var orders = OrderService.GetAllOrders();
-        TotalOrders = orders.Count();
+        var ordersList = OrderService.GetAllOrders();
+        TotalOrders = ordersList.Count();
 
-        // Calculate Revenue and Get Recent Orders
-        var current = orders.head;
-        while(current != null)
+        var current = ordersList.head;
+        while (current != null)
         {
             TotalRevenue += current.Data.totalAmount;
             RecentOrders.Add(current.Data);
             current = current.Next;
         }
 
-        // Sort descending and take 5
-        RecentOrders.Reverse(); 
+        RecentOrders.Reverse();
         RecentOrders = RecentOrders.Take(5).ToList();
-        
+
         LoadPromos();
     }
-    
+
     private void LoadPromos()
     {
         PromoList.Clear();
         var promos = PromoService.GetAllPromoCodes();
         var current = promos.head;
-        while(current != null)
+        while (current != null)
         {
             PromoList.Add(current.Data);
             current = current.Next;
@@ -237,11 +215,10 @@
 
     private void CreatePromo()
     {
-        if(!string.IsNullOrWhiteSpace(NewPromoCode) && NewDiscount > 0 && NewDiscount <= 100)
+        if (!string.IsNullOrWhiteSpace(NewPromoCode) && NewDiscount > 0)
         {
             PromoService.CreatePromoCode(NewPromoCode, NewDiscount);
-            NewPromoCode = "";
-            NewDiscount = 0;
+            NewPromoCode = ""; NewDiscount = 0;
             LoadPromos();
         }
     }
@@ -252,13 +229,9 @@
         LoadPromos();
     }
 
-    private string GetStatusClass(string status)
+    private string GetStatusClass(string status) => status.ToLower() switch
     {
-        return status.ToLower() switch
-        {
-            "confirmed" => "confirmed",
-            "delivered" => "delivered",
-            _ => "pending"
-        };
-    }
+        "confirmed" => "bg-success-light text-success",
+        _ => "bg-warning-light text-warning"
+    };
 }
