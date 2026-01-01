@@ -1953,6 +1953,98 @@ body {
         transform: translateY(0);
     }
 }
+/* Sidebar Container */
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden by default on the right */
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+    z-index: 1050;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar.open {
+    right: 0; /* Slide in */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 1rem;
+}
+
+.sidebar-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+.btn-close-sidebar {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Sidebar Navigation */
+.menu-section {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #adb5bd;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 12px 15px;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.sidebar-link i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.sidebar-link:hover {
+    background: #fff5fa;
+    color: #ec4899;
+}
+
+/* Overlay Background */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
+}
+
+/* Status Badge Classes for the Table */
+.bg-success-light { background: #e8f5e9; color: #2e7d32; }
+.bg-warning-light { background: #fff8e1; color: #fbc02d; }
 
 /* =========================================
    15. PRODUCT DETAILS 
@@ -2109,6 +2201,149 @@ body {
     color: #636e72;
     font-size: 0.95rem;
     margin-top: 0.25rem;
+}
+
+/* --- PERFECT ALIGNMENT FOR HEADER --- */
+.admin-header-flex {
+    display: flex;
+    align-items: center; /* Vertically centers the button with the title */
+    gap: 20px; /* Sets a clean 20px space between button and text */
+    margin-bottom: 30px;
+}
+
+.admin-title-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ensure the toggle button has a fixed size so it stays a perfect square */
+.btn-sidebar-toggle {
+    flex-shrink: 0; /* Prevents the button from being squashed */
+    background: #ffffff;
+    border: 1px solid #fce7f3;
+    color: #ec4899;
+    width: 48px; /* Standardized size */
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.1);
+    transition: 0.3s;
+}
+
+/* Adjust the underline to align with the text start, not the button */
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: #ec4899;
+    margin: 5px 0; /* Changed from 'auto' to '0' to align left */
+    border-radius: 2px;
+}
+/* --- SIDEBAR TOGGLE BUTTON (On Dashboard) --- */
+.btn-sidebar-toggle {
+    background: #ffffff;
+    border: 1px solid #fce7f3;
+    color: #ec4899;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.1);
+    transition: 0.3s;
+}
+
+.btn-sidebar-toggle:hover {
+    background: #ec4899;
+    color: white;
+}
+
+/* --- POP-OUT SIDEBAR --- */
+.admin-sidebar-left {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Hidden off-screen to the left */
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.1);
+    z-index: 1050;
+    transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar-left.open {
+    left: 0; /* Slides into view */
+}
+
+/* SIDEBAR HEADER - FIXES CLOSE BUTTON PLACEMENT */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between; /* Pushes cross to the right */
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-logo {
+    color: #ec4899;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.btn-close-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-close-sidebar:hover {
+    color: #ec4899;
+}
+
+/* SIDEBAR LINKS STYLE */
+.sidebar-link {
+    display: block;
+    padding: 12px 15px;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.sidebar-link:hover {
+    background: #fff5fa;
+    color: #ec4899;
+    padding-left: 20px;
+}
+
+/* OVERLAY BACKGROUND */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
 }
 
 /* Main Card Container */
@@ -2689,26 +2924,165 @@ body {
 
 
 /*alizaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+/* --- GLOBAL LAYOUT OVERRIDES --- */
+/* Hides Navbar and Footer when Login/Signup is active */
+/*body:has(.signup-page-wrapper) .navbar-custom, 
+body:has(.signup-page-wrapper) .top-announcement,
+body:has(.signup-page-wrapper) footer {
+    display: none !important;
+}
 
-/* ===================================
-   3. SIGNUP PAGE STYLES
-   =================================== */
+body:has(.signup-page-wrapper) {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}*/
 
+/* --- PAGE WRAPPER --- */
+/*.signup-page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background-image: url('signup-bg.jpeg');*/ /* Ensure file is in wwwroot */
+    /*background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 10%; 
+}*/
+
+/* --- THE FORM CARD --- */
+/*.signup-card {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(214, 77, 125, 0.15);
+    width: 100%;
+    max-width: 420px;
+    animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.signup-title {
+    color: #ec4899;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}*/
+
+/* --- FORM INPUTS --- */
+/*.form-group-flat {
+    margin-bottom: 25px;
+}
+
+.form-input-flat {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #eee;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.form-input-flat:focus {
+    border-bottom-color: #ec4899;
+}
+
+.form-input-flat.invalid {
+    border-bottom-color: #dc3545;
+    color: #dc3545;
+}*/
+
+/* --- ACTION BUTTON --- */
+/*.btn-signup-flat {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #ec4899;
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(214, 77, 125, 0.4);
+    text-align: center;
+}
+
+.btn-signup-flat:hover {
+    background-color: #d63384;
+    transform: translateY(-3px) scale(1.02);
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-link a {
+    color: #ec4899;
+    text-decoration: none;
+    font-weight: 700;
+}*/
+
+/* --- ANIMATIONS --- */
+/*@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.validation-message {
+    font-size: 13px;
+    color: #dc3545;
+    margin-top: 5px;
+    display: block;
+}*/
+
+
+/* --- GLOBAL LAYOUT OVERRIDES --- */
+/* Hides Navbar and Footer when Login/Signup is active */
+body:has(.signup-page-wrapper) .navbar-custom,
+body:has(.signup-page-wrapper) .top-announcement,
+body:has(.signup-page-wrapper) footer {
+    display: none !important;
+}
+
+body:has(.signup-page-wrapper) {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* --- PAGE WRAPPER --- */
 .signup-page-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh;
-    width: 100%;
-    /* IMAGE SETTINGS */
-    background-image: url('signup-bg.jpeg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background-image: url('signup-bg.jpg'); /* Ensure file is in wwwroot */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Spacing from the left wall */
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
+/* --- THE FORM CARD --- */
 .signup-card {
     background-color: #ffffff;
     padding: 40px 50px;
@@ -2716,18 +3090,18 @@ body {
     box-shadow: 0 15px 35px rgba(214, 77, 125, 0.15);
     width: 100%;
     max-width: 420px;
+    animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .signup-title {
-    color: var(--primary-color);
+    color: #ec4899;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 30px;
-    /* Title is CENTERED */
     text-align: center;
 }
 
-/* FORM INPUTS */
+/* --- FORM INPUTS --- */
 .form-group-flat {
     margin-bottom: 25px;
 }
@@ -2736,7 +3110,7 @@ body {
     width: 100%;
     padding: 12px 0;
     border: none;
-    border-bottom: 2px solid var(--border-light);
+    border-bottom: 2px solid #eee;
     font-size: 16px;
     outline: none;
     transition: 0.3s;
@@ -2744,149 +3118,125 @@ body {
 }
 
     .form-input-flat:focus {
-        border-bottom-color: var(--primary-color);
+        border-bottom-color: #ec4899;
     }
 
-    .form-input-flat::placeholder {
-        color: #a0aec0;
+    .form-input-flat.invalid {
+        border-bottom-color: #dc3545;
+        color: #dc3545;
     }
 
-/* SIGN UP BUTTON */
+/* --- ACTION BUTTON --- */
+/* --- UPDATED LOGIN BUTTON COLOR --- */
 .btn-signup-flat {
     display: block;
     width: 100%;
     padding: 15px;
     margin-top: 30px;
-    background-color: var(--primary-color);
-    color: white;
+    /* This color matches your first sample image precisely */
+    background-color: #e94d89;
+    color: white !important;
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(214, 77, 125, 0.4);
+    /* Soft shadow using the same pink tone */
+    box-shadow: 0 5px 15px rgba(233, 77, 137, 0.4);
+    text-align: center;
 }
 
     .btn-signup-flat:hover {
-        background-color: var(--primary-hover);
-        transform: translateY(-2px);
+        /* Slightly darker shade for the hover effect */
+        background-color: #d63d76;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(233, 77, 137, 0.5);
     }
 
-/* LOGIN LINK */
+/* Also update the 'Sign up' link color to match */
+.login-link a {
+    color: #e94d89;
+    text-decoration: none;
+    font-weight: 700;
+}
+
 .login-link {
     margin-top: 20px;
-    /* ? UPDATED: Aligned CENTER (Mid) */
     text-align: center;
     font-size: 14px;
-    color: var(--text-secondary);
+    color: #666;
 }
 
-    .login-link a {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 600;
-    }
+   
 
-/* ERROR MESSAGES */
-.validation-message {
-    font-size: 13px;
-    color: var(--error-color);
-    margin-top: 5px;
-    display: block;
-}
-/* ===================================
-   4. VALIDATION STYLES (New)
-   =================================== */
-
-/* This class is automatically added by Blazor when a field is invalid */
-.form-input-flat.invalid {
-    border-bottom-color: var(--error-color); /* Turns the line RED */
-    color: var(--error-color); /* Turns the typed text RED */
-}
-
-/* Style the error text below the input */
-.validation-message {
-    font-size: 13px;
-    color: var(--error-color);
-    margin-top: 5px;
-    display: block;
-    font-weight: 500;
-}
-
-/* Force Autofill to accept our styling */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-    -webkit-text-fill-color: var(--text-primary) !important;
-    transition: background-color 5000s ease-in-out 0s;
-}
-/* ===================================
-   5. ANIMATIONS (ADD TO BOTTOM)
-   =================================== */
-
-/* Define the Slide Up Animation */
+/* --- ANIMATIONS --- */
 @keyframes slideUpFade {
     0% {
         opacity: 0;
-        transform: translateY(50px); /* Starts lower down */
+        transform: translateY(50px);
     }
 
     100% {
-        opacity: 1;
-        transform: translateY(0); /* Ends in original position */
-    }
-}
-
-/* Apply it to the card */
-.signup-card {
-    /* Runs for 0.8 seconds, smooth start/end */
-    animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    animation-fill-mode: both; /* Ensures it stays visible after moving */
-}
-
-/* Button Hover Animation */
-.btn-signup-flat:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-3px) scale(1.02); /* Moves up and grows slightly */
-    box-shadow: 0 8px 20px rgba(214, 77, 125, 0.3);
-}
-
-/* Error Message Fade In */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 .validation-message {
-    animation: fadeIn 0.4s ease-out;
+    font-size: 13px;
+    color: #dc3545;
+    margin-top: 5px;
+    display: block;
 }
+
+/* --- BACK ARROW STYLE --- */
+.back-arrow-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10000;
+}
+
+.btn-back-home {
+    background: white;
+    color: #ec4899;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+    .btn-back-home:hover {
+        background: #ec4899;
+        color: white;
+        transform: translateX(-5px);
+    }
 /* ===================================
    6. PROFILE PAGE (NOVELLAMART THEME) 🎀
    =================================== */
 
 /* --- LAYOUT & BACKGROUND --- */
-.profile-wrapper {
+/*.profile-wrapper {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh;*/
     /* Soft pink gradient */
-    background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+    /*background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
     font-family: 'Segoe UI', sans-serif;
     padding-top: 0;
-}
+}*/
 
 /* --- SIDEBAR --- */
-.sidebar {
+/*.sidebar {
     width: 260px;
     background-color: #ffffff;
     min-height: 100vh;
@@ -2894,10 +3244,10 @@ input:-webkit-autofill:active {
     border-right: 1px solid #eee;
     display: flex;
     flex-direction: column;
-}
+}*/
 
 /* User Mini Profile (In Sidebar) */
-.sidebar-user {
+/*.sidebar-user {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -2911,8 +3261,8 @@ input:-webkit-autofill:active {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 2px solid #ec4899; /* Pink Border */
-}
+    border: 2px solid #ec4899;*/ /* Pink Border */
+/*}
 
 .user-info h4 {
     font-size: 16px;
@@ -2925,10 +3275,10 @@ input:-webkit-autofill:active {
     font-size: 13px;
     margin: 0;
     color: #888;
-}
+}*/
 
 /* Sidebar Navigation Links */
-.nav-links {
+/*.nav-links {
     list-style: none;
     padding: 0;
 }
@@ -2955,7 +3305,238 @@ input:-webkit-autofill:active {
         color: #ec4899;
         background-color: #fff0f5;
         font-weight: 700;
+    }*/
+
+/* --- MAIN CONTENT AREA --- */
+/*.profile-content {
+    flex: 1;
+    padding: 0 40px;
+    padding-bottom: 50px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+}*/
+
+/* White Form Card */
+/*.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f8f8f8;
+}*/
+
+/* --- AVATAR & BUTTONS --- */
+
+/* Large Avatar in Content Area */
+/*.large-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px #ec4899;
+}*/
+
+/* Camera Upload Button (New) */
+/*.camera-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ec4899;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid white;
+    transition: 0.2s;
+}
+
+    .camera-upload:hover {
+        transform: scale(1.1);
+    }*/
+
+/* Edit Profile Button */
+/*.edit-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    transition: 0.3s;
+}
+
+    .edit-btn:hover {
+        background-color: #555;
+        transform: translateY(-2px);
+    }*/
+
+/* Save Changes Button */
+/*.save-btn {
+    background: linear-gradient(135deg, #ec4899 0%, #d63384 100%);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+    transition: 0.3s;
+}
+
+    .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
+    }*/
+
+/* --- FORM INPUTS --- */
+
+/*.input-group label {
+    color: #444;
+    font-weight: 600;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    color: #333;
+    transition: 0.3s;
+}
+
+    .input-field:focus {
+        border-color: #ec4899;
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.1);
+        outline: none;
+    }*/
+
+    /* Disabled State (Read-Only) */
+    /*.input-field:disabled {
+        background-color: #f9f9f9;
+        border: 1px solid transparent;
+        color: #333;
+        font-weight: 500;
+        cursor: default;
     }
+
+.section-label {
+    color: #ec4899;
+    font-size: 18px;
+    margin-top: 20px;
+    border-bottom: 2px solid #fce7f3;
+    padding-bottom: 5px;
+    display: inline-block;
+}*/
+
+
+/* --- HIDE NAV ON PROFILE PAGE --- */
+body:has(.profile-wrapper) .navbar-custom,
+body:has(.profile-wrapper) .top-announcement {
+    display: none !important;
+}
+
+/* --- LAYOUT & BACKGROUND --- */
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 30px 20px;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #ec4899;
+}
+
+.user-info h4 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+}
+
+.user-info p {
+    font-size: 13px;
+    margin: 0;
+    color: #888;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+    .nav-item:hover, .nav-item.active {
+        color: #ec4899;
+        background-color: #fff0f5;
+    }
+
+    .nav-item.active {
+        font-weight: 700;
+    }
+
+.logout-link {
+    color: #d63384;
+    margin-top: auto;
+    font-weight: bold;
+}
 
 /* --- MAIN CONTENT AREA --- */
 .profile-content {
@@ -2974,7 +3555,6 @@ input:-webkit-autofill:active {
     color: #333;
 }
 
-/* White Form Card */
 .profile-card {
     background: white;
     border-radius: 20px;
@@ -2984,19 +3564,15 @@ input:-webkit-autofill:active {
 }
 
 /* --- AVATAR & BUTTONS --- */
-
-/* Large Avatar in Content Area */
 .large-avatar {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-right: 20px;
     object-fit: cover;
     border: 4px solid #fff;
     box-shadow: 0 0 0 2px #ec4899;
 }
 
-/* Camera Upload Button (New) */
 .camera-upload {
     position: absolute;
     bottom: 0;
@@ -3018,7 +3594,6 @@ input:-webkit-autofill:active {
         transform: scale(1.1);
     }
 
-/* Edit Profile Button */
 .edit-btn {
     background-color: #333;
     color: white;
@@ -3027,7 +3602,6 @@ input:-webkit-autofill:active {
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    float: right;
     transition: 0.3s;
 }
 
@@ -3036,7 +3610,6 @@ input:-webkit-autofill:active {
         transform: translateY(-2px);
     }
 
-/* Save Changes Button */
 .save-btn {
     background: linear-gradient(135deg, #ec4899 0%, #d63384 100%);
     color: white;
@@ -3045,8 +3618,6 @@ input:-webkit-autofill:active {
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    float: right;
-    margin-top: 20px;
     box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
     transition: 0.3s;
 }
@@ -3057,10 +3628,11 @@ input:-webkit-autofill:active {
     }
 
 /* --- FORM INPUTS --- */
-
 .input-group label {
     color: #444;
     font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .input-field {
@@ -3080,7 +3652,6 @@ input:-webkit-autofill:active {
         outline: none;
     }
 
-    /* Disabled State (Read-Only) */
     .input-field:disabled {
         background-color: #f9f9f9;
         border: 1px solid transparent;
