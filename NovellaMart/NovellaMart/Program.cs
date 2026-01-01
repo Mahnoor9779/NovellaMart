@@ -20,6 +20,7 @@ builder.Services.AddScoped(sp =>
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<NovellaMart.Core.BL.Services.OrderService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<PromoCodeService>();
 
 // CRITICAL: Must be Singleton so ALL users share the SAME stock and queue.
 builder.Services.AddSingleton<FlashSaleService>();

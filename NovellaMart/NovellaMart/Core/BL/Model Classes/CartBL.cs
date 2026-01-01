@@ -8,6 +8,8 @@ namespace NovellaMart.Core.BL.Model_Classes
         public int cart_id { get; set; }
         public CustomerBL customer { get; set; }
         public MyLinkedList<CartItemBL> items { get; set; }   
+        public PromoCodeBL AppliedPromoCode { get; set; }
+        public double DiscountAmount { get; set; }
 
         public CartBL()
         {

@@ -79,7 +79,33 @@ namespace NovellaMart.Core.BL.Services
                 total += (current.Data.Product.price * current.Data.Quantity);
                 current = current.Next;
             }
+
+            // --- DISCOUNT LOGIC ---
+            if (_activeCart.AppliedPromoCode != null)
+            {
+                double discount = (total * _activeCart.AppliedPromoCode.DiscountPercentage) / 100.0;
+                _activeCart.DiscountAmount = discount;
+                return total - discount;
+            }
+            
+            _activeCart.DiscountAmount = 0;
             return total;
+        }
+
+        public void ApplyPromoCode(PromoCodeBL promo)
+        {
+            if(promo != null && promo.IsActive)
+            {
+                _activeCart.AppliedPromoCode = promo;
+                SaveCartToFile();
+            }
+        }
+
+        public void RemovePromoCode()
+        {
+            _activeCart.AppliedPromoCode = null;
+            _activeCart.DiscountAmount = 0;
+            SaveCartToFile();
         }
 
         public void UpdateQuantity(int productId, int change)

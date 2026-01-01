@@ -5,6 +5,7 @@
 @using NovellaMart.Core.BL.Services
 @inject NavigationManager NavManager
 @inject CartService CartService
+@inject PromoCodeService PromoService
 
 <div class="page-title">
     <h1 style="color: black;">Your Bag</h1>
@@ -100,9 +101,15 @@
         </div>
 
         <div class="coupon-section">
-            <input type="text" placeholder="Promo Code" class="coupon-input" />
-            <button type="button" class="btn-apply">Apply</button>
+            <input @bind="PromoCodeInput" type="text" placeholder="Promo Code" class="coupon-input" />
+            <button type="button" class="btn-apply" @onclick="ApplyPromo">Apply</button>
         </div>
+        @if (!string.IsNullOrEmpty(PromoMessage))
+        {
+            <div class="mt-2 text-@(PromoError ? "danger" : "success") fw-bold">
+                @PromoMessage
+            </div>
+        }
     </div>
 
     <!-- RIGHT COLUMN: Order Summary -->
@@ -113,8 +120,16 @@
 
             <div class="summary-row" style="margin-top:1.5rem;">
                 <span style="color: #666;">Subtotal</span>
-                <span style="font-weight: 600;">Rs. @CartService.GetTotalAmount()</span>
+                <span style="font-weight: 600;">Rs. @(CartService.GetTotalAmount() + CartService.GetCart().DiscountAmount)</span>
             </div>
+            
+            @if(CartService.GetCart().AppliedPromoCode != null)
+            {
+               <div class="summary-row text-success">
+                    <span>Discount (@CartService.GetCart().AppliedPromoCode.Code) <small style="cursor:pointer; text-decoration:underline;" @onclick="RemovePromo">(remove)</small></span>
+                    <span>- Rs. @CartService.GetCart().DiscountAmount.ToString("N0")</span>
+               </div> 
+            }
 
             <div class="total-highlight summary-row">
                 <span style="font-weight: 700; color: #333;">Total</span>
@@ -135,6 +150,43 @@
 </div>
 
 @code {
+    private string PromoCodeInput = "";
+    private string PromoMessage = "";
+    private bool PromoError = false;
+
+    protected override void OnInitialized()
+    {
+        // Simple initialization if needed, but CartService loading handles most.
+    }
+
+    private void ApplyPromo()
+    {
+        PromoMessage = "";
+        PromoError = false;
+
+        if (string.IsNullOrWhiteSpace(PromoCodeInput)) return;
+
+        var promo = PromoService.ValidatePromoCode(PromoCodeInput);
+        if (promo != null)
+        {
+            CartService.ApplyPromoCode(promo);
+            PromoMessage = $"Code '{promo.Code}' applied! ({promo.DiscountPercentage}% Off)";
+            PromoCodeInput = "";
+        }
+        else
+        {
+            PromoError = true;
+            PromoMessage = "Invalid or inactive promo code.";
+        }
+    }
+
+    private void RemovePromo()
+    {
+        CartService.RemovePromoCode();
+        PromoMessage = "";
+        PromoError = false;
+    }
+
     private void UpdateQuantity(int productId, int change)
     {
         CartService.UpdateQuantity(productId, change);
