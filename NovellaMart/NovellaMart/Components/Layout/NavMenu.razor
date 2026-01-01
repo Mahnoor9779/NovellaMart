@@ -1,4 +1,4 @@
-﻿@inject NavigationManager NavigationManager
+﻿@inject IJSRuntime JSRuntime
 
 <div class="top-announcement">
     ✨ Free Shipping on Orders Over 5000 | Shop the New Collection ✨
@@ -33,45 +33,45 @@
                 <i class="fas fa-box-open"></i>
             </a>
 
-            <a href="account" class="btn-icon"><i class="far fa-user"></i></a>
+            @if (string.IsNullOrEmpty(currentUser))
+            {
+                 <a href="login" class="btn-login">Login</a>
+            }
+            else
+            {
+                <a href="profile" class="btn-icon" title="My Profile"><i class="far fa-user"></i></a>
+            }
 
             <a href="cart" class="btn-icon position-relative">
                 <i class="fas fa-shopping-bag"></i>
                 <span class="cart-badge">2</span>
             </a>
-            <a href="flash-sale-queue" class="btn-icon" title="Flash Sale">
-                <i class="fas fa-bolt" style="color: #f1ee56;"></i> <!-- Yellow Bolt Icon -->
-            </a>
-
-            <a href="/login" class="btn-login">Login</a>
-
-            <a href="flash-sales" class="btn-icon" title="Flash Sale Management">
-                <i class="fas fa-bolt" style="color:aqua;"></i>
-            </a>
-
-            <a href="admin/flash-sale-allocation" class="btn-icon" title="Flash Sale">
-                <i class="fas fa-bolt" style="color: #f1ee56;"></i> <!-- Yellow Bolt Icon -->
-            </a>
-
-            <a href="admin/flash-sale-stats" class="btn-icon" title="Flash Sale Management">
-                <i class="fas fa-bolt" style="color:hotpink;"></i>
-            </a>
-
-            <a href="flash-sale" class="btn-icon" title="Flash Sale Management">
-                <i class="fas fa-bolt" style="color:green;"></i>
-            </a>
-
-            <a href="product" class="btn-icon" title="Flash Sale Management">
-                <i class="fas fa-bolt" style="color:aqua;"></i>
+            <!-- Admin Dashboard Link -->
+            <a href="admin" class="btn-icon" title="Admin Dashboard">
+                <i class="fas fa-user-shield" style="color: var(--nm-primary);"></i>
             </a>
 
         </div>
-
-        
 
     </div>
 </nav>
 
 @code {
-    // No C# logic needed
+    private string currentUser;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                currentUser = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "currentUser");
+                StateHasChanged();
+            }
+            catch
+            {
+                // Ignored - prevents erors during prerendering if any
+            }
+        }
+    }
 }

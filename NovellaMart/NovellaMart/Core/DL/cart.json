@@ -1,5 +1,12 @@
 {
   "cart_id": 0,
   "customer": null,
-  "items": []
+  "items": [],
+  "AppliedPromoCode": {
+    "Id": 1513196733,
+    "Code": "SAVE5",
+    "DiscountPercentage": 5,
+    "IsActive": true
+  },
+  "DiscountAmount": 40
 }
