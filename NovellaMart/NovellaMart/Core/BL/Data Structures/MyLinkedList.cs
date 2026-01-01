@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace NovellaMart.Core.BL.Data_Structures
 {
-    public class MyLinkedList<type> : IEnumerable<type>
+    public class MyLinkedList<type> : IEnumerable<type>, ICollection<type>
     {
         public LinkedListNode<type> head;
         private int size;
@@ -242,5 +242,35 @@ namespace NovellaMart.Core.BL.Data_Structures
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        // ICollection<type> Implementation
+        public void Add(type item)
+        {
+            InsertAtEnd(item);
+        }
+
+        public bool Contains(type item)
+        {
+            return FindNode(item);
+        }
+
+        public void CopyTo(type[] array, int arrayIndex)
+        {
+            if (array == null) throw new ArgumentNullException(nameof(array));
+            if (arrayIndex < 0) throw new ArgumentOutOfRangeException(nameof(arrayIndex));
+            if (array.Length - arrayIndex < size) throw new ArgumentException("Insufficient space in destination array.");
+
+            var current = head;
+            while (current != null)
+            {
+                array[arrayIndex++] = current.Data;
+                current = current.Next;
+            }
+        }
+
+        public bool IsReadOnly => false;
+
+        // Explicit implementation to avoid conflict with existing Count() method
+        int ICollection<type>.Count => size;
     }
 }
