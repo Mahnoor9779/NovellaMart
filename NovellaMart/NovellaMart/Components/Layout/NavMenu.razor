@@ -1,4 +1,5 @@
 ﻿@inject IJSRuntime JSRuntime
+@inject NavigationManager Nav
 
 <div class="top-announcement">
     ✨ Free Shipping on Orders Over 5000 | Shop the New Collection ✨
@@ -6,10 +7,7 @@
 
 <nav class="navbar-custom">
     <div class="nav-container">
-
-        <a class="brand-logo" href="">
-            <i class="fas fa-gem me-2"></i>NovellaMart
-        </a>
+        <a class="brand-logo" href=""><i class="fas fa-gem me-2"></i>NovellaMart</a>
 
         <div class="center-menu-container">
             <ul class="center-menu">
@@ -22,56 +20,62 @@
         </div>
 
         <div class="nav-right">
-            <button class="btn-icon">
-                <i class="fas fa-search"></i>
-            </button>
+            <button class="btn-icon"><i class="fas fa-search"></i></button>
 
-            <a href="wishlist" class="btn-icon"><i class="far fa-heart"></i></a>
-
-            <!-- NEW: Your Orders Link -->
-            <a href="orders" class="btn-icon" title="Your Orders">
-                <i class="fas fa-box-open"></i>
-            </a>
-
-            @if (string.IsNullOrEmpty(currentUser))
+            @if (!string.IsNullOrEmpty(currentUser))
             {
-                 <a href="login" class="btn-login">Login</a>
+                <a href="wishlist" class="btn-icon"><i class="far fa-heart"></i></a>
+                @* <a href="orders" class="btn-icon" title="Your Orders"><i class="fas fa-box-open"></i></a> *@
+                <a href="cart" class="btn-icon position-relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">2</span>
+                </a>
+
+                <button class="btn-icon" @onclick="HandleAccountRedirect">
+                    @if (userRole == "Admin")
+                    {
+                        <i class="fas fa-user-shield" style="color: var(--nm-primary);"></i>
+                    }
+                    else
+                    {
+                        <i class="far fa-user"></i>
+                    }
+                </button>
+
+                <button class="btn-login" style="background:#333; margin-left:10px;" @onclick="Logout">Logout</button>
             }
             else
             {
-                <a href="profile" class="btn-icon" title="My Profile"><i class="far fa-user"></i></a>
+                <a href="login" class="btn-login">Login</a>
             }
-
-            <a href="cart" class="btn-icon position-relative">
-                <i class="fas fa-shopping-bag"></i>
-                <span class="cart-badge">2</span>
-            </a>
-            <!-- Admin Dashboard Link -->
-            <a href="admin" class="btn-icon" title="Admin Dashboard">
-                <i class="fas fa-user-shield" style="color: var(--nm-primary);"></i>
-            </a>
-
         </div>
-
     </div>
 </nav>
 
 @code {
-    private string currentUser;
+    private string? currentUser;
+    private string? userRole;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            try
-            {
-                currentUser = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "currentUser");
-                StateHasChanged();
-            }
-            catch
-            {
-                // Ignored - prevents erors during prerendering if any
-            }
+            currentUser = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "currentUser");
+            userRole = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "userRole");
+            StateHasChanged();
         }
+    }
+
+    private void HandleAccountRedirect()
+    {
+        if (userRole == "Admin") Nav.NavigateTo("/admin");
+        else Nav.NavigateTo("/profile");
+    }
+
+    private async Task Logout()
+    {
+        await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "currentUser");
+        await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "userRole");
+        Nav.NavigateTo("/", forceLoad: true);
     }
 }

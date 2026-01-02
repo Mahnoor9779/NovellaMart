@@ -200,6 +200,9 @@
     private async Task Logout()
     {
         await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "currentUser");
-        Nav.NavigateTo("/login");
+        await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "userRole");
+
+        // Force reload back to Home so the Navbar resets to the guest state
+        Nav.NavigateTo("/", forceLoad: true);
     }
 }

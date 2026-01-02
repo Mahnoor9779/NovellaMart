@@ -62,5 +62,21 @@
     "address": "",
     "city": "",
     "zipCode": ""
+  },
+  {
+    "user_id": 0,
+    "username": "maryam",
+    "email": "maryam123@gmail.com",
+    "password": "maryam123",
+    "role": "Member",
+    "firstName": "",
+    "lastName": "",
+    "profilePicture": "",
+    "createdAt": "2026-01-02T19:15:42.3380462+05:00",
+    "isActive": true,
+    "phoneNumber": "",
+    "address": "",
+    "city": "",
+    "zipCode": ""
   }
 ]

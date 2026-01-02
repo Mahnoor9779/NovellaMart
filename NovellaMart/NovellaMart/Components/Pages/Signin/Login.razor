@@ -4,6 +4,7 @@
 @using NovellaMart.Core.BL.Model_Classes
 @inject NavigationManager Nav
 @inject IJSRuntime JSRuntime
+@inject NovellaMart.Core.BL.Services.AuthStateService AuthState
 @rendermode RenderMode.InteractiveServer
 
 <PageTitle>Login - NovellaMart</PageTitle>
@@ -54,10 +55,15 @@
         var user = users?.FirstOrDefault(u => u.username == username && u.password == password);
 
         if (user != null)
-        {
-            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "currentUser", user.username);
-            Nav.NavigateTo(user.role == "Admin" ? "/admin" : "/");
-        }
+    {
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "currentUser", user.username);
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "userRole", user.role);
+
+        if (user.role == "Admin") 
+            Nav.NavigateTo("/admin", forceLoad: true);
+        else 
+            Nav.NavigateTo("/profile", forceLoad: true);
+    }
         else { loginError = "Invalid Credentials"; }
     }
 }
