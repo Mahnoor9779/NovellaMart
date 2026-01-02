@@ -3,8 +3,10 @@
 @inject NavigationManager Nav
 @inject NovellaMart.Core.BL.Services.ProductCatalogService CatalogService
 @inject NovellaMart.Core.BL.Services.CartService CartService
+@inject NovellaMart.Core.BL.Services.FlashSaleCrudService FlashSaleService
 @using NovellaMart.Core.BL.Data_Structures
 @using NovellaMart.Core.BL.Model_Classes
+@using System.Timers
 
 <PageTitle>Home - NovellaMart</PageTitle>
 
@@ -44,6 +46,49 @@
             </a>
         </div>
     </section>
+
+    @if (ActiveFlashSales != null && ActiveFlashSales.Any())
+    {
+        <section class="container mt-5">
+            <div class="text-center mb-4">
+                <h3 class="section-title d-inline-block">Live Flash Sales</h3>
+            </div>
+
+            @foreach (var sale in ActiveFlashSales)
+            {
+                <a href="/flash-sale/@sale.flash_sale_id" class="flash-sale-banner mb-4">
+                    <div class="flash-sale-content">
+                        <span class="sale-badge">
+                            <i class="fas fa-bolt me-2"></i> @sale.discount% OFF
+                        </span>
+                        <h2>@sale.title</h2>
+                        <p class="mb-0">@sale.description</p>
+                    </div>
+
+                    <div class="timer-box">
+                        @{
+                            var timeLeft = sale.endTime - DateTime.Now;
+                            var hours = timeLeft.TotalHours > 0 ? ((int)timeLeft.TotalHours).ToString("D2") : "00";
+                            var mins = timeLeft.Minutes > 0 ? timeLeft.Minutes.ToString("D2") : "00";
+                            var secs = timeLeft.Seconds > 0 ? timeLeft.Seconds.ToString("D2") : "00";
+                        }
+                        <div class="timer-unit">
+                            <span class="timer-num">@hours</span>
+                            <span class="timer-label">Hours</span>
+                        </div>
+                        <div class="timer-unit">
+                            <span class="timer-num">@mins</span>
+                            <span class="timer-label">Mins</span>
+                        </div>
+                        <div class="timer-unit">
+                            <span class="timer-num">@secs</span>
+                            <span class="timer-label">Secs</span>
+                        </div>
+                    </div>
+                </a>
+            }
+        </section>
+    }
 
     <section class="section-pad trending-section bg-light">
         <div class="container">
@@ -107,10 +152,22 @@
 @code {
     private MyLinkedList<ProductBL> TrendingList = new MyLinkedList<ProductBL>();
     private Dictionary<int, bool> addedStates = new Dictionary<int, bool>();
+    private List<FlashSaleBL> ActiveFlashSales = new List<FlashSaleBL>();
+    private Timer _timer;
 
     protected override async Task OnInitializedAsync()
     {
         await CatalogService.LoadProductsAsync();
+
+        RefreshSales();
+
+        // Setup Timer to refresh every 1 second
+        _timer = new Timer(1000);
+        _timer.Elapsed += (s, e) => InvokeAsync(StateHasChanged);
+        _timer.Enabled = true;
+
+        var allSales = FlashSaleService.GetAllFlashSales();
+        ActiveFlashSales = allSales.Where(s => s.status == "ACTIVE").ToList();
 
         TrendingList.Clear();
         var node = CatalogService.MasterProductList.head;
@@ -126,6 +183,24 @@
             }
             node = node.Next;
         }
+    }
+
+    private string GetTimeRemaining(DateTime endTime)
+    {
+        var span = endTime - DateTime.Now;
+        if (span.Ticks < 0) return "00:00:00";
+        return $"{(int)span.TotalHours:D2}h {span.Minutes:D2}m {span.Seconds:D2}s";
+    }
+
+    private void RefreshSales()
+    {
+        var allSales = FlashSaleService.GetAllFlashSales();
+        ActiveFlashSales = allSales.Where(s => s.status == "ACTIVE").ToList();
+    }
+
+    public void Dispose()
+    {
+        _timer?.Dispose();
     }
 
     private async Task AddToCart(ProductBL product)

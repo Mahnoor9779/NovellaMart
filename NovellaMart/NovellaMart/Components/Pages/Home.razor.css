@@ -363,3 +363,95 @@
         padding: 20px;
     }
 }
+
+/* ================= SECTION: FLASH SALE ================= */
+.flash-sale-banner {
+    background: linear-gradient(45deg, #ff4e50, #f9d423); /* Orange Gradient */
+    /*  background: linear-gradient(45deg, #f17fb2, #d15c92);*/
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 78, 80, 0.3);
+    /*box-shadow: 0 10px 30px rgba(241, 127, 178, 0.3);*/ /* Pink Shadow */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none !important;
+}
+
+    .flash-sale-banner:hover {
+        transform: scale(1.01);
+    }
+
+.flash-sale-content h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sale-badge {
+    background: white;
+    color: #ff4e50;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.timer-box {
+    display: flex;
+    gap: 15px;
+}
+
+.timer-unit {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.timer-num {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.timer-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .flash-sale-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Styling for multiple banners in a list */
+.flash-sale-banner {
+    /* ... keep your existing styles ... */
+    min-height: 180px;
+}
+
+/* Alternate colors for every second sale banner */
+.flash-sale-banner:nth-child(even) {
+    background: linear-gradient(45deg, #8e44ad, #c33764); /* Purple Theme */
+    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.3);
+}
+
+.flash-sale-banner:nth-child(even) .sale-badge {
+    color: #8e44ad;
+}

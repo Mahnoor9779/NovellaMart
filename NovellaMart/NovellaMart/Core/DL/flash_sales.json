@@ -1,0 +1,359 @@
+[
+  {
+    "flash_sale_id": 1,
+    "title": "giuews",
+    "description": "whdqw",
+    "discount": 4,
+    "startTime": "2026-01-01T19:02:51.5654472+05:00",
+    "endTime": "2026-01-01T20:02:51.5654473+05:00",
+    "status": "ACTIVE",
+    "fs_items": [
+      {
+        "product_id": 131,
+        "name": "Winter Trench Coat",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 15000,
+        "stock": 20,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "products": [
+            null,
+            {
+              "product_id": 132,
+              "name": "Leather Jacket",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 12000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#000000"
+              ]
+            },
+            {
+              "product_id": 133,
+              "name": "Denim Jacket",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 6000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#0000ff"
+              ]
+            },
+            {
+              "product_id": 134,
+              "name": "Puffer Vest",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 4500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#ff0000"
+              ]
+            },
+            {
+              "product_id": 135,
+              "name": "Formal Blazer",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 7500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#000000"
+              ]
+            },
+            {
+              "product_id": 136,
+              "name": "Faux Fur Coat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 9000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 137,
+              "name": "Raincoat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 5000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#ffff00"
+              ]
+            },
+            {
+              "product_id": 138,
+              "name": "Bomber Jacket",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 5500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#556b2f"
+              ]
+            },
+            {
+              "product_id": 139,
+              "name": "Cardigan",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 3200,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#808080"
+              ]
+            },
+            {
+              "product_id": 140,
+              "name": "Wool Peacoat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 11000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#000080"
+              ]
+            }
+          ],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Trending",
+          "#d2b48c"
+        ]
+      },
+      {
+        "product_id": 132,
+        "name": "Leather Jacket",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 12000,
+        "stock": 20,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "products": [
+            {
+              "product_id": 131,
+              "name": "Winter Trench Coat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 15000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "Trending",
+                "#d2b48c"
+              ]
+            },
+            null,
+            {
+              "product_id": 133,
+              "name": "Denim Jacket",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 6000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#0000ff"
+              ]
+            },
+            {
+              "product_id": 134,
+              "name": "Puffer Vest",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 4500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#ff0000"
+              ]
+            },
+            {
+              "product_id": 135,
+              "name": "Formal Blazer",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 7500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#000000"
+              ]
+            },
+            {
+              "product_id": 136,
+              "name": "Faux Fur Coat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 9000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#ffffff"
+              ]
+            },
+            {
+              "product_id": 137,
+              "name": "Raincoat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 5000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#ffff00"
+              ]
+            },
+            {
+              "product_id": 138,
+              "name": "Bomber Jacket",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 5500,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#556b2f"
+              ]
+            },
+            {
+              "product_id": 139,
+              "name": "Cardigan",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 3200,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#808080"
+              ]
+            },
+            {
+              "product_id": 140,
+              "name": "Wool Peacoat",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 11000,
+              "stock": 20,
+              "category": null,
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#000080"
+              ]
+            }
+          ],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#000000"
+        ]
+      }
+    ],
+    "request_queue": {},
+    "allocation_heap": {}
+  }
+]

@@ -1,49 +1,49 @@
-﻿using NovellaMart.Core.BL.Model_Classes;
-using NovellaMart.Core.BL.Data_Structures;
+﻿
+using NovellaMart.Core.BL.Model_Classes;
 
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleAllocationService
     {
         private readonly FlashSaleService _flashSaleService;
+        private readonly FlashSaleCrudService _crudService;
 
-        public FlashSaleAllocationService(FlashSaleService flashSaleService)
+        public FlashSaleAllocationService(FlashSaleService flashSaleService, FlashSaleCrudService crudService)
         {
             _flashSaleService = flashSaleService;
+            _crudService = crudService;
         }
 
-        public List<ProductBL> GetSaleProducts()
+        // Get products for a SPECIFIC sale
+        public List<ProductBL> GetSaleProducts(int saleId)
         {
-            var sale = _flashSaleService.GetActiveSale();
+            var sale = _crudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == saleId);
             var list = new List<ProductBL>();
-
             var node = sale?.fs_items?.head;
             while (node != null)
             {
                 list.Add(node.Data);
                 node = node.Next;
             }
-
             return list;
         }
 
-        public List<CustomerRequestBL> GetAllocationsForProduct(int productId)
+        // Get results from the allocation heap
+        public List<CustomerRequestBL> GetAllocationsForProduct(int saleId, int productId)
         {
-            var sale = _flashSaleService.GetActiveSale();
+            var sale = _crudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == saleId);
             var results = new List<CustomerRequestBL>();
 
-            if (sale?.allocation_heap == null)
-                return results;
+            if (sale?.allocation_heap == null) return results;
 
+            // Use the Clone method from your PriorityQueue to avoid emptying the real heap
             var heapCopy = sale.allocation_heap.Clone();
-
             while (!heapCopy.IsEmpty())
             {
                 var req = heapCopy.Dequeue();
                 if (req.product.product_id == productId)
                     results.Add(req);
             }
-
             return results;
         }
 
@@ -51,7 +51,5 @@ namespace NovellaMart.Core.BL.Services
         {
             return _flashSaleService.GetQueueCount(productId);
         }
-
-
     }
 }

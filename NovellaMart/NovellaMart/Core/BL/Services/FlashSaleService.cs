@@ -14,39 +14,39 @@ namespace NovellaMart.Core.BL.Services
 
         public FlashSaleService()
         {
-            InitializeMockSale();
             _activityLogs = new List<string>();
         }
 
-        private void InitializeMockSale()
+        public void SetActiveSale(FlashSaleBL sale)
         {
-            _activeSale = new FlashSaleBL();
-            _activeSale.flash_sale_id = 101;
-            _activeSale.title = "Midnight Tech Rush";
-            _activeSale.status = "ACTIVE";
-            _activeSale.startTime = DateTime.Now;
-            _activeSale.endTime = DateTime.Now.AddHours(2);
+            // 1. Guard against null sale input
+            if (sale == null) return;
 
-            _activeSale.allocation_heap = new PriorityQueue<CustomerRequestBL>();
+            _activeSale = sale;
 
+            // 2. Fresh initialization is safer than .Clear() to avoid null refs
             _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
             _userRequestStatus = new Dictionary<string, string>();
 
-            var catTech = new CategoryBL(5, "Tech", 0);
-            var p1 = new ProductBL(999, "Gaming Headset", "Pro Noise Cancelling", new[] { "https://placehold.co/200" }, 5000.00, 3, catTech);
-            var p2 = new ProductBL(888, "Smart Watch", "Fitness Tracker", new[] { "https://placehold.co/200" }, 3000.00, 10, catTech);
-
-            if (_activeSale.fs_items == null) _activeSale.fs_items = new MyLinkedList<ProductBL>();
-            _activeSale.fs_items.InsertAtEnd(p1);
-            _activeSale.fs_items.InsertAtEnd(p2);
+            // 3. Ensure fs_items exists before iterating
+            if (_activeSale.fs_items == null) return;
 
             var node = _activeSale.fs_items.head;
             while (node != null)
             {
                 var product = node.Data;
-                _productQueues.Add(product.product_id, new CircularQueue<CustomerRequestBL>(50));
+
+                // 4. Initialize a dedicated CircularQueue for each product
+                // Using a capacity of 50 as per your previous requirement
+                if (product != null && !_productQueues.ContainsKey(product.product_id))
+                {
+                    _productQueues.Add(product.product_id, new CircularQueue<CustomerRequestBL>(50));
+                }
+
                 node = node.Next;
             }
+
+            AddLog($"[{DateTime.Now.ToLongTimeString()}] Live Context Set: {sale.title}");
         }
 
         public FlashSaleBL GetActiveSale() => _activeSale;
@@ -83,18 +83,80 @@ namespace NovellaMart.Core.BL.Services
 
             AddLog($"[{DateTime.Now.ToLongTimeString()}] User {customer.user_id} joined queue for {saleItem.name}");
 
-            ProcessAllocationForProduct(productId);
-
-            return _userRequestStatus[statusKey];
+            return "Queued";
         }
+
+        // NEW: Call this method when the Sale Ends to process the priority heap
+        public void FinalizeAllocations()
+        {
+            foreach (var productId in _productQueues.Keys)
+            {
+                var queue = _productQueues[productId];
+
+                // Find product to check stock
+                ProductBL liveProduct = null;
+                var node = _activeSale.fs_items.head;
+                while (node != null) 
+                { 
+                    if (node.Data.product_id == productId) 
+                    { 
+                        liveProduct = node.Data; break; 
+                    } 
+                    node = node.Next; 
+                }
+
+                if (liveProduct == null) continue;
+
+                // Move items from CircularQueue to PriorityQueue (Allocation Heap)
+                // STAGING: Move items from CircularQueue (Buffer) to PriorityQueue (Heap)
+                // This sorts the users by their Join Time before allocation begins.
+                while (!queue.IsEmpty())
+                {
+                    var request = queue.Dequeue();
+                    string statusKey = $"{request.customer.user_id}_{productId}";
+
+                    if (_userRequestStatus.ContainsKey(statusKey))
+                    {
+                        // HIGHEST PRIORITY = Earliest Ticks. 
+                        // Using long.MaxValue - Ticks converts the earliest time into the largest number 
+                        // for your Max-Heap implementation.
+                        long priorityValue = long.MaxValue - request.requestTime.Ticks;
+                        _activeSale.allocation_heap.Enqueue(request, (int)priorityValue);
+                    }
+                }
+
+                // 3. ALLOCATION LOOP: 
+                // This loop runs as long as there is stock AND people waiting in the heap.
+                while (liveProduct.stock > 0 && !_activeSale.allocation_heap.IsEmpty())
+                {
+                    // Get the person with the highest priority (Earliest Join Time)
+                    var winner = _activeSale.allocation_heap.Dequeue();
+                    string winnerKey = $"{winner.customer.user_id}_{productId}";
+
+                    // Only deduct stock if we are confirming a winner
+                    liveProduct.stock--;
+                    winner.allocated = true;
+                    _userRequestStatus[winnerKey] = "Allocated";
+
+                    AddLog($"[{DateTime.Now.ToLongTimeString()}] ✅ ALLOCATED: {winner.customer.user_id} gets {liveProduct.name}");
+                }
+
+                // 4. CLEANUP: Mark remaining people in the heap as Sold Out
+                while (!_activeSale.allocation_heap.IsEmpty())
+                {
+                    var loser = _activeSale.allocation_heap.Dequeue();
+                    string loserKey = $"{loser.customer.user_id}_{productId}";
+                    _userRequestStatus[loserKey] = "Sold Out";
+                }
+            }
+        }
+        
 
         // --- UNJOIN LOGIC ---
         public void LeaveFlashSaleQueue(int userId, int productId)
         {
             string statusKey = $"{userId}_{productId}";
 
-            // Lazy Deletion: We remove the user's status key.
-            // They remain in the CircularQueue structure but will be skipped during allocation.
             if (_userRequestStatus.ContainsKey(statusKey))
             {
                 _userRequestStatus.Remove(statusKey);

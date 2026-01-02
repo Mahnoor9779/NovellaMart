@@ -1,62 +1,65 @@
-﻿@page "/flash-sale"
+﻿@page "/flash-sale/{Id:int}"
 @rendermode InteractiveServer
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
-@inject FlashSaleService FlashSaleService
+@inject FlashSaleService LiveSaleService
+@inject FlashSaleCrudService CrudService
+@implements IDisposable
 
-<!-- 1. Header (Matches Cart Page) -->
 <div class="page-title">
-    <h1 style="color: var(--nm-primary);">Flash Sale Live</h1>
+    <h1 style="color: var(--nm-primary);">@currentSale?.title</h1>
     <div class="title-underline"></div>
     <p class="title-subtext">
-        <i class="fas fa-clock me-1"></i> Ends in: <span style="font-weight:700; color:#333;">01:45:22</span>
+        <i class="fas fa-bolt me-1" style="color: #f1ee56;"></i> @currentSale?.description |
+        <i class="fas fa-clock ms-3 me-1"></i> Ends in:
+        <span style="font-weight:700; color:#333;">@GetTimeRemaining()</span>
     </p>
 </div>
 
 <div class="container mb-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         @{
-            var sale = FlashSaleService.GetActiveSale();
+            var sale = LiveSaleService.GetActiveSale();
             var node = sale?.fs_items?.head;
         }
+
         @while (node != null)
         {
             var product = node.Data;
-
-            // Check status from backend directly to ensure sync
-            string myStatus = FlashSaleService.GetUserStatus(999, product.product_id);
+            // Uses the MockUserId (999) to check real-time queue status from the Live Service
+            string myStatus = LiveSaleService.GetUserStatus(MockUserId, product.product_id);
             bool isJoined = (myStatus == "Queued" || myStatus == "Allocated");
 
+            // Dynamic Price calculation based on the specific Flash Sale's discount
+            double discountedPrice = product.price * (1 - (currentSale.discount / 100.0));
+
             <div class="col">
-                <!-- 2. Card Style -->
+                @*  <!-- 2. Card Style --> *@
+
                 <div class="cart-card h-100 p-3 d-flex flex-column align-items-center position-relative"
                      style="padding: 1.5rem !important; transition: transform 0.2s;">
 
-                    <!-- 3. Image Frame -->
+                    @*  <!-- 3. Image Frame --> *@
                     <div class="img-frame mb-3" style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; background: white;">
-                        <img src="@product.images[0]" style="max-height: 140px; max-width: 90%; object-fit: contain;" />
+                        <img src="@(product.images != null && product.images.Length > 0 ? product.images[0] : "https://via.placeholder.com/140")"
+                             style="max-height: 140px; max-width: 90%; object-fit: contain;" />
 
-                        <!-- Hot Badge -->
                         <span class="badge rounded-pill"
                               style="position: absolute; top: 15px; right: 15px; background: linear-gradient(45deg, #ff3333, #ff6b6b); font-size: 0.7rem; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                             HOT
                         </span>
                     </div>
 
-                    <!-- Product Info -->
                     <div class="text-center w-100 d-flex flex-column flex-grow-1">
-                        <!-- Title -->
                         <h5 style="font-size: 1rem; font-weight: 700; color: #444; height: 2.4em; overflow: hidden; margin-bottom: 0.5rem;">
                             @product.name
                         </h5>
 
-                        <!-- Price -->
                         <div class="mb-2">
-                            <span style="text-decoration: line-through; color: #bbb; font-size: 0.9rem; margin-right: 5px;">Rs. @(product.price * 2)</span>
-                            <span style="color: #000; font-weight: 700; font-size: 1.2rem;">Rs. @product.price</span>
+                            <span style="text-decoration: line-through; color: #bbb; font-size: 0.9rem; margin-right: 5px;">Rs. @product.price.ToString("N0")</span>
+                            <span style="color: var(--nm-primary); font-weight: 700; font-size: 1.2rem;">Rs. @discountedPrice.ToString("N0")</span>
                         </div>
 
-                        <!-- Stock Bar -->
                         <div class="mt-auto w-100">
                             <div class="d-flex justify-content-between mb-1" style="font-size: 0.7rem; font-weight: 700; color: #666; text-transform: uppercase;">
                                 <span>Stock Left</span>
@@ -66,30 +69,30 @@
                                 <div class="progress-bar" style="width: @(product.stock > 0 ? "60%" : "0%"); background: linear-gradient(90deg, var(--nm-primary), var(--nm-accent)); border-radius: 10px;"></div>
                             </div>
 
-                            <!-- 4. Toggle Button Logic -->
                             @if (isJoined)
                             {
-                                <!-- LEAVE BUTTON (Shows when joined) -->
                                 <button class="btn w-100 py-2 btn-leave"
                                         @onclick="() => ToggleQueue(product.product_id)">
-                                    <i class="fas fa-times-circle me-1"></i> LEAVE QUEUE
+                                    <i class="fas fa-times-circle me-1"></i> UNJOIN QUEUE
                                 </button>
-                                @* <div class="mt-2 text-center" style="font-size: 0.7rem; color: #28a745; font-weight: 600;">
-                                    <i class="fas fa-check-circle"></i> You are in line (#@FlashSaleService.GetQueuePosition(999, product.product_id))
-                                </div> *@
+
+                                @* <div class="mt-2 text-center" style="font-size: 0.7rem; color: #28a745; font-weight: 600;"> *@
+                                @*     <i class="fas fa-check-circle"></i> Status: @myStatus *@
+                                @* </div> *@
                             }
                             else
                             {
-                                <!-- JOIN BUTTON (Shows when not joined) -->
                                 <button class="btn-checkout-glow w-100 py-2"
                                         style="margin-top: 0; font-size: 0.9rem; padding: 0.8rem;"
-                                        @onclick="() => ToggleQueue(product.product_id)">
-                                    <i class="fas fa-bolt me-1"></i> JOIN QUEUE
+                                        @onclick="() => ToggleQueue(product.product_id)"
+                                        disabled="@(product.stock <= 0)">
+                                    <i class="fas fa-bolt me-1"></i> @(product.stock > 0 ? "REQUEST PURCHASE" : "SOLD OUT")
                                 </button>
                             }
                         </div>
                     </div>
                 </div>
+                        @* <button class="btn btn-warning" @onclick="ProcessResults">End Sale & Allocate Stock</button> *@
             </div>
             node = node.Next;
         }
@@ -117,28 +120,54 @@
 </style>
 
 @code {
-    // We don't need a local list anymore, we check status from service directly
-    // Mock User ID for demonstration
-    const int MockUserId = 999;
+    [Parameter] public int Id { get; set; }
+    private FlashSaleBL currentSale;
+    private const int MockUserId = 999;
+    private System.Timers.Timer _refreshTimer;
+
+    protected override void OnInitialized()
+    {
+        // 1. Load the specific sale from the CRUD service using the URL ID
+        currentSale = CrudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id);
+
+        if (currentSale != null)
+        {
+            // 2. Initialize the queues in the Live service for this specific sale
+            LiveSaleService.SetActiveSale(currentSale);
+        }
+
+        // 3. Start a timer to update the countdown every second
+        _refreshTimer = new System.Timers.Timer(1000);
+        _refreshTimer.Elapsed += (s, e) => InvokeAsync(StateHasChanged);
+        _refreshTimer.Start();
+    }
+
+    private string GetTimeRemaining()
+    {
+        if (currentSale == null) return "00:00:00";
+        var span = currentSale.endTime - DateTime.Now;
+        return span.Ticks > 0
+            ? $"{(int)span.TotalHours:D2}:{span.Minutes:D2}:{span.Seconds:D2}"
+            : "ENDED";
+    }
 
     private void ToggleQueue(int productId)
     {
-        // Check current status
-        string currentStatus = FlashSaleService.GetUserStatus(MockUserId, productId);
+        string currentStatus = LiveSaleService.GetUserStatus(MockUserId, productId);
 
         if (currentStatus == "Queued" || currentStatus == "Allocated")
-        {
-            // ACTION: Leave Queue
-            FlashSaleService.LeaveFlashSaleQueue(MockUserId, productId);
-        }
+            LiveSaleService.LeaveFlashSaleQueue(MockUserId, productId);
         else
-        {
-            // ACTION: Join Queue
-            var user = new CustomerBL { user_id = MockUserId, firstName = "Test User" };
-            FlashSaleService.JoinFlashSaleQueue(user, productId);
-        }
+            LiveSaleService.JoinFlashSaleQueue(new CustomerBL { user_id = MockUserId }, productId);
 
-        // Trigger UI Update
+        StateHasChanged();
+    }
+
+    public void Dispose() => _refreshTimer?.Dispose();
+
+    private void ProcessResults()
+    {
+        LiveSaleService.FinalizeAllocations();
         StateHasChanged();
     }
 }
