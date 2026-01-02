@@ -3393,18 +3393,18 @@ body:has(.signup-page-wrapper) {
    =================================== */
 
 /* --- LAYOUT & BACKGROUND --- */
-/*.profile-wrapper {
+.profile-wrapper {
     display: flex;
     width: 100%;
-    min-height: 100vh;*/
-    /* Soft pink gradient */
-    /*background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+    min-height: 100vh;
+     Soft pink gradient 
+    background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
     font-family: 'Segoe UI', sans-serif;
     padding-top: 0;
-}*/
+}
 
 /* --- SIDEBAR --- */
-/*.sidebar {
+.sidebar {
     width: 260px;
     background-color: #ffffff;
     min-height: 100vh;
@@ -3412,10 +3412,10 @@ body:has(.signup-page-wrapper) {
     border-right: 1px solid #eee;
     display: flex;
     flex-direction: column;
-}*/
+}
 
 /* User Mini Profile (In Sidebar) */
-/*.sidebar-user {
+.sidebar-user {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -3429,8 +3429,8 @@ body:has(.signup-page-wrapper) {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 2px solid #ec4899;*/ /* Pink Border */
-/*}
+    border: 2px solid #ec4899;  Pink Border 
+}
 
 .user-info h4 {
     font-size: 16px;
@@ -3443,10 +3443,10 @@ body:has(.signup-page-wrapper) {
     font-size: 13px;
     margin: 0;
     color: #888;
-}*/
+}
 
 /* Sidebar Navigation Links */
-/*.nav-links {
+.nav-links {
     list-style: none;
     padding: 0;
 }
@@ -3473,10 +3473,10 @@ body:has(.signup-page-wrapper) {
         color: #ec4899;
         background-color: #fff0f5;
         font-weight: 700;
-    }*/
+    }
 
 /* --- MAIN CONTENT AREA --- */
-/*.profile-content {
+.profile-content {
     flex: 1;
     padding: 0 40px;
     padding-bottom: 50px;
@@ -3490,21 +3490,21 @@ body:has(.signup-page-wrapper) {
     font-size: 28px;
     font-weight: 800;
     color: #333;
-}*/
+}
 
 /* White Form Card */
-/*.profile-card {
+.profile-card {
     background: white;
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border: 1px solid #f8f8f8;
-}*/
+}
 
 /* --- AVATAR & BUTTONS --- */
 
 /* Large Avatar in Content Area */
-/*.large-avatar {
+.large-avatar {
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -3512,10 +3512,10 @@ body:has(.signup-page-wrapper) {
     object-fit: cover;
     border: 4px solid #fff;
     box-shadow: 0 0 0 2px #ec4899;
-}*/
+}
 
 /* Camera Upload Button (New) */
-/*.camera-upload {
+.camera-upload {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -3534,10 +3534,10 @@ body:has(.signup-page-wrapper) {
 
     .camera-upload:hover {
         transform: scale(1.1);
-    }*/
+    }
 
 /* Edit Profile Button */
-/*.edit-btn {
+.edit-btn {
     background-color: #333;
     color: white;
     border: none;
@@ -3552,10 +3552,10 @@ body:has(.signup-page-wrapper) {
     .edit-btn:hover {
         background-color: #555;
         transform: translateY(-2px);
-    }*/
+    }
 
 /* Save Changes Button */
-/*.save-btn {
+.save-btn {
     background: linear-gradient(135deg, #ec4899 0%, #d63384 100%);
     color: white;
     border: none;
@@ -3572,11 +3572,11 @@ body:has(.signup-page-wrapper) {
     .save-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
-    }*/
+    }
 
 /* --- FORM INPUTS --- */
 
-/*.input-group label {
+.input-group label {
     color: #444;
     font-weight: 600;
 }
@@ -3596,10 +3596,10 @@ body:has(.signup-page-wrapper) {
         background-color: #fff;
         box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.1);
         outline: none;
-    }*/
+    }
 
-    /* Disabled State (Read-Only) */
-    /*.input-field:disabled {
+/*     Disabled State (Read-Only) */
+    .input-field:disabled {
         background-color: #f9f9f9;
         border: 1px solid transparent;
         color: #333;
@@ -3614,7 +3614,7 @@ body:has(.signup-page-wrapper) {
     border-bottom: 2px solid #fce7f3;
     padding-bottom: 5px;
     display: inline-block;
-}*/
+}
 
 
 /* --- HIDE NAV ON PROFILE PAGE --- */
@@ -3835,4 +3835,34 @@ body:has(.profile-wrapper) .top-announcement {
     border-bottom: 2px solid #fce7f3;
     padding-bottom: 5px;
     display: inline-block;
+}
+/* Ensure the wrapper takes full height and shows background */
+.signup-page-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('signup-bg.jpg');
+    background-size: cover;
+    z-index: 1000;
+}
+
+.signup-card {
+    background: white !important;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Fix Profile Sidebar Layout */
+.profile-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: #fbfbfe;
 }
