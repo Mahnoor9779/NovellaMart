@@ -1,7 +1,6 @@
 ﻿@page "/signup"
 @using System.IO
 @using System.Text.Json
-@using NovellaMart
 @using NovellaMart.Core.BL.Model_Classes
 @rendermode RenderMode.InteractiveServer
 @inject NavigationManager Nav
@@ -9,14 +8,18 @@
 <PageTitle>Sign Up - NovellaMart</PageTitle>
 
 <div class="signup-page-wrapper">
+    <div class="back-arrow-container">
+        <button class="btn-back-home" @onclick='() => Nav.NavigateTo("/")' title="Back to Home">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+
     <div class="signup-card">
         <h2 class="signup-title">Sign up</h2>
-
         <div class="form-content">
             <div class="form-group-flat">
-                @* 👇 Added autocomplete="off" *@
-                <input type="text" class="form-input-flat" placeholder="Username"
-                       @bind="username" autocomplete="off" />
+                <input type="text" class="form-input-flat @(string.IsNullOrEmpty(usernameError) ? "" : "invalid")"
+                       placeholder="Username" @bind="username" autocomplete="off" />
                 @if (!string.IsNullOrEmpty(usernameError))
                 {
                     <span class="validation-message">@usernameError</span>
@@ -24,9 +27,8 @@
             </div>
 
             <div class="form-group-flat">
-                @* 👇 Added autocomplete="off" *@
-                <input type="email" class="form-input-flat" placeholder="Email"
-                       @bind="email" autocomplete="off" />
+                <input type="email" class="form-input-flat @(string.IsNullOrEmpty(emailError) ? "" : "invalid")"
+                       placeholder="Email" @bind="email" autocomplete="off" />
                 @if (!string.IsNullOrEmpty(emailError))
                 {
                     <span class="validation-message">@emailError</span>
@@ -34,9 +36,8 @@
             </div>
 
             <div class="form-group-flat">
-                @* 👇 Added autocomplete="new-password" (This stops password autofill) *@
-                <input type="password" class="form-input-flat" placeholder="Password"
-                       @bind="password" autocomplete="new-password" />
+                <input type="password" class="form-input-flat @(string.IsNullOrEmpty(passwordError) ? "" : "invalid")"
+                       placeholder="Password" @bind="password" autocomplete="new-password" />
                 @if (!string.IsNullOrEmpty(passwordError))
                 {
                     <span class="validation-message">@passwordError</span>
@@ -45,7 +46,6 @@
 
             <button class="btn-signup-flat" @onclick="AttemptSignup">Sign up</button>
         </div>
-
         <div class="login-link">
             Already have an account? <a href="/login">Login</a>
         </div>
@@ -53,13 +53,8 @@
 </div>
 
 @code {
-    private string username = "";
-    private string email = "";
-    private string password = "";
-    private string usernameError = "";
-    private string emailError = "";
-    private string passwordError = "";
-
+    private string username = "", email = "", password = "";
+    private string usernameError = "", emailError = "", passwordError = "";
     private string filePath = "Core/DL/users.json";
 
     private async Task AttemptSignup()
@@ -68,42 +63,19 @@
         bool isValid = true;
 
         if (string.IsNullOrWhiteSpace(username)) { usernameError = "Required"; isValid = false; }
-        if (string.IsNullOrWhiteSpace(email)) { emailError = "Required"; isValid = false; }
-        else if (!email.Contains("@") || !email.Contains(".")) { emailError = "Invalid Email"; isValid = false; }
+        if (string.IsNullOrWhiteSpace(email) || !email.Contains("@")) { emailError = "Invalid Email"; isValid = false; }
         if (string.IsNullOrWhiteSpace(password) || password.Length < 6) { passwordError = "Min 6 chars"; isValid = false; }
 
         if (isValid)
         {
-            List<UserBL> users = new();
+            List<UserBL> users = File.Exists(filePath)
+                ? JsonSerializer.Deserialize<List<UserBL>>(await File.ReadAllTextAsync(filePath)) ?? new()
+                : new();
 
-            if (File.Exists(filePath))
-            {
-                var json = await File.ReadAllTextAsync(filePath);
-                users = JsonSerializer.Deserialize<List<UserBL>>(json) ?? new List<UserBL>();
-            }
+            if (users.Any(u => u.username == username)) { usernameError = "User exists"; return; }
 
-            if (users.Any(u => u.username == username))
-            {
-                usernameError = "User already exists";
-                return;
-            }
-
-            // Using the new Constructor we added to UserBL
-            UserBL newUser = new UserBL
-            {
-                username = username,
-                email = email,
-                password = password,
-                role = "Member",
-                isActive = true
-            };
-
-            users.Add(newUser);
-
-            var newJson = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
-            await File.WriteAllTextAsync(filePath, newJson);
-
-            await Task.Delay(100);
+            users.Add(new UserBL { username = username, email = email, password = password, role = "Member", isActive = true });
+            await File.WriteAllTextAsync(filePath, JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true }));
             Nav.NavigateTo("/login");
         }
     }

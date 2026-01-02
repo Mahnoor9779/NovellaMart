@@ -2184,6 +2184,152 @@ body {
         border-left-width: 3px !important;
     }
 }
+/* --- ADMIN DASHBOARD GLOBAL --- */
+.summary-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+/* --- SIDEBAR TOGGLE BUTTON --- */
+.btn-sidebar-toggle {
+    background: #ffffff;
+    border: 1px solid #fce7f3;
+    color: #ec4899;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.1);
+    transition: 0.3s;
+}
+
+    .btn-sidebar-toggle:hover {
+        background: #ec4899;
+        color: white;
+    }
+
+/* --- LEFT SIDEBAR CONTAINER --- */
+.admin-sidebar-left {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.1);
+    z-index: 1050;
+    transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+    .admin-sidebar-left.open {
+        left: 0; /* Slide in */
+    }
+
+/* SIDEBAR HEADER - FIXES CLOSE BUTTON PLACEMENT */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between; /* Pushes close button to the right side */
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-logo {
+    color: #ec4899;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.btn-close-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #888;
+    cursor: pointer;
+}
+
+    .btn-close-sidebar:hover {
+        color: #ec4899;
+    }
+
+/* SIDEBAR LINKS */
+.sidebar-link {
+    display: block;
+    padding: 12px 15px;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+    .sidebar-link:hover {
+        background: #fff5fa;
+        color: #ec4899;
+        padding-left: 20px;
+    }
+
+/* OVERLAY */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
+}
+
+/* Badge Styling */
+.bg-success-light {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.bg-warning-light {
+    background: #fff8e1;
+    color: #fbc02d;
+}
+
+.btn-add-promo {
+    background: #ec4899;
+    border: none;
+    color: white;
+}
 /* =========================================
    17. FLASH SALE PAGE BEAUTIFICATION (REFINED)
    ========================================= */
@@ -2689,26 +2835,69 @@ body {
 
 
 /*alizaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+/* --- BACK ARROW STYLE --- */
+.back-arrow-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10000;
+}
 
-/* ===================================
-   3. SIGNUP PAGE STYLES
-   =================================== */
+.btn-back-home {
+    background: white;
+    color: #ec4899;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
 
+    .btn-back-home:hover {
+        background: #ec4899;
+        color: white;
+        transform: translateX(-5px);
+    }
+/* --- GLOBAL LAYOUT OVERRIDES --- */
+/* Hides Navbar and Footer when Login/Signup is active */
+body:has(.signup-page-wrapper) .navbar-custom,
+body:has(.signup-page-wrapper) .top-announcement,
+body:has(.signup-page-wrapper) footer {
+    display: none !important;
+}
+
+body:has(.signup-page-wrapper) {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* --- PAGE WRAPPER --- */
 .signup-page-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh;
-    width: 100%;
-    /* IMAGE SETTINGS */
-    background-image: url('signup-bg.jpeg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background-image: url('signup-bg.jpg'); /* Ensure file is in wwwroot */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Spacing from the left wall */
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
+/* --- THE FORM CARD --- */
 .signup-card {
     background-color: #ffffff;
     padding: 40px 50px;
@@ -2716,18 +2905,18 @@ body {
     box-shadow: 0 15px 35px rgba(214, 77, 125, 0.15);
     width: 100%;
     max-width: 420px;
+    animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .signup-title {
-    color: var(--primary-color);
+    color: #ec4899;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 30px;
-    /* Title is CENTERED */
     text-align: center;
 }
 
-/* FORM INPUTS */
+/* --- FORM INPUTS --- */
 .form-group-flat {
     margin-bottom: 25px;
 }
@@ -2736,7 +2925,7 @@ body {
     width: 100%;
     padding: 12px 0;
     border: none;
-    border-bottom: 2px solid var(--border-light);
+    border-bottom: 2px solid #eee;
     font-size: 16px;
     outline: none;
     transition: 0.3s;
@@ -2744,56 +2933,81 @@ body {
 }
 
     .form-input-flat:focus {
-        border-bottom-color: var(--primary-color);
+        border-bottom-color: #ec4899;
     }
 
-    .form-input-flat::placeholder {
-        color: #a0aec0;
+    .form-input-flat.invalid {
+        border-bottom-color: #dc3545;
+        color: #dc3545;
     }
 
-/* SIGN UP BUTTON */
+/* --- ACTION BUTTON --- */
+/* --- UPDATED LOGIN BUTTON COLOR --- */
 .btn-signup-flat {
     display: block;
     width: 100%;
     padding: 15px;
     margin-top: 30px;
-    background-color: var(--primary-color);
-    color: white;
+    /* This color matches your first sample image precisely */
+    background-color: #e94d89;
+    color: white !important;
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(214, 77, 125, 0.4);
+    /* Soft shadow using the same pink tone */
+    box-shadow: 0 5px 15px rgba(233, 77, 137, 0.4);
+    text-align: center;
 }
 
     .btn-signup-flat:hover {
-        background-color: var(--primary-hover);
-        transform: translateY(-2px);
+        /* Slightly darker shade for the hover effect */
+        background-color: #d63d76;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(233, 77, 137, 0.5);
     }
 
-/* LOGIN LINK */
-.login-link {
-    margin-top: 20px;
-    /* ? UPDATED: Aligned CENTER (Mid) */
-    text-align: center;
-    font-size: 14px;
-    color: var(--text-secondary);
+/* Also update the 'Sign up' link color to match */
+.login-link a {
+    color: #e94d89;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-    .login-link a {
-        color: var(--primary-color);
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/*    .login-link a {
+        color: #ec4899;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 700;
+    }*/
+
+/* --- ANIMATIONS --- */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
     }
 
-/* ERROR MESSAGES */
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .validation-message {
     font-size: 13px;
-    color: var(--error-color);
+    color: #dc3545;
     margin-top: 5px;
     display: block;
+}
 }
 /* ===================================
    4. VALIDATION STYLES (New)
@@ -2806,14 +3020,14 @@ body {
 }
 
 /* Style the error text below the input */
-.validation-message {
+/*.validation-message {
     font-size: 13px;
     color: var(--error-color);
     margin-top: 5px;
     display: block;
     font-weight: 500;
 }
-
+*/
 /* Force Autofill to accept our styling */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -2870,19 +3084,19 @@ input:-webkit-autofill:active {
 .validation-message {
     animation: fadeIn 0.4s ease-out;
 }
-/* ===================================
-   6. PROFILE PAGE (NOVELLAMART THEME) 🎀
-   =================================== */
+/* --- HIDE NAV ON PROFILE PAGE --- */
+body:has(.profile-wrapper) .navbar-custom,
+body:has(.profile-wrapper) .top-announcement {
+    display: none !important;
+}
 
 /* --- LAYOUT & BACKGROUND --- */
 .profile-wrapper {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    /* Soft pink gradient */
     background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
     font-family: 'Segoe UI', sans-serif;
-    padding-top: 0;
 }
 
 /* --- SIDEBAR --- */
@@ -2896,7 +3110,6 @@ input:-webkit-autofill:active {
     flex-direction: column;
 }
 
-/* User Mini Profile (In Sidebar) */
 .sidebar-user {
     display: flex;
     align-items: center;
@@ -2911,7 +3124,7 @@ input:-webkit-autofill:active {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 2px solid #ec4899; /* Pink Border */
+    border: 2px solid #ec4899;
 }
 
 .user-info h4 {
@@ -2927,7 +3140,6 @@ input:-webkit-autofill:active {
     color: #888;
 }
 
-/* Sidebar Navigation Links */
 .nav-links {
     list-style: none;
     padding: 0;
@@ -2946,16 +3158,20 @@ input:-webkit-autofill:active {
     font-weight: 500;
 }
 
-    .nav-item:hover {
+    .nav-item:hover, .nav-item.active {
         color: #ec4899;
         background-color: #fff0f5;
     }
 
     .nav-item.active {
-        color: #ec4899;
-        background-color: #fff0f5;
         font-weight: 700;
     }
+
+.logout-link {
+    color: #d63384;
+    margin-top: auto;
+    font-weight: bold;
+}
 
 /* --- MAIN CONTENT AREA --- */
 .profile-content {
@@ -2974,7 +3190,6 @@ input:-webkit-autofill:active {
     color: #333;
 }
 
-/* White Form Card */
 .profile-card {
     background: white;
     border-radius: 20px;
@@ -2984,19 +3199,15 @@ input:-webkit-autofill:active {
 }
 
 /* --- AVATAR & BUTTONS --- */
-
-/* Large Avatar in Content Area */
 .large-avatar {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-right: 20px;
     object-fit: cover;
     border: 4px solid #fff;
     box-shadow: 0 0 0 2px #ec4899;
 }
 
-/* Camera Upload Button (New) */
 .camera-upload {
     position: absolute;
     bottom: 0;
@@ -3018,7 +3229,6 @@ input:-webkit-autofill:active {
         transform: scale(1.1);
     }
 
-/* Edit Profile Button */
 .edit-btn {
     background-color: #333;
     color: white;
@@ -3027,7 +3237,6 @@ input:-webkit-autofill:active {
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    float: right;
     transition: 0.3s;
 }
 
@@ -3036,7 +3245,6 @@ input:-webkit-autofill:active {
         transform: translateY(-2px);
     }
 
-/* Save Changes Button */
 .save-btn {
     background: linear-gradient(135deg, #ec4899 0%, #d63384 100%);
     color: white;
@@ -3045,8 +3253,6 @@ input:-webkit-autofill:active {
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    float: right;
-    margin-top: 20px;
     box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
     transition: 0.3s;
 }
@@ -3057,10 +3263,11 @@ input:-webkit-autofill:active {
     }
 
 /* --- FORM INPUTS --- */
-
 .input-group label {
     color: #444;
     font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .input-field {
@@ -3080,7 +3287,6 @@ input:-webkit-autofill:active {
         outline: none;
     }
 
-    /* Disabled State (Read-Only) */
     .input-field:disabled {
         background-color: #f9f9f9;
         border: 1px solid transparent;

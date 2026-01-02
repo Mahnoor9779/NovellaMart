@@ -9,77 +9,116 @@
 
 <PageTitle>Profile - NovellaMart</PageTitle>
 
-@* ⚠️ KEEP THIS STYLE HERE 
-   If you move this to app.css, your Navbar will disappear 
-   from the Home page and Login page too! 
-*@
-<style>
-    .navbar-custom, .top-announcement {
-        display: none !important;
-    }
-</style>
-
 <div class="profile-wrapper">
     <aside class="sidebar">
         <div class="sidebar-user">
-            <img src="@GetProfileImage(50)" style="width:50px; height:50px; border-radius:50%; object-fit:cover; margin-right:15px;" />
+            <img src="@GetProfileImage(50)" class="sidebar-avatar" />
             <div class="user-info">
                 <h4>@username</h4>
                 <p>@role</p>
             </div>
         </div>
         <ul class="nav-links">
-            <li class="nav-item active"><i class="fas fa-user-circle me-2"></i> Profile</li>
-            <li class="nav-item"><i class="fas fa-shopping-bag me-2"></i> My Orders</li>
-            <li class="nav-item" @onclick="Logout" style="color:#d63384; margin-top: 30px; font-weight:bold; cursor:pointer;"><i class="fas fa-sign-out-alt me-2"></i> Logout</li>
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/")'>
+                <i class="fas fa-home me-2"></i> Home
+            </li>
+            <li class="nav-item active">
+                <i class="fas fa-user-circle me-2"></i> Profile
+            </li>
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/orders")'>
+                <i class="fas fa-shopping-bag me-2"></i> My Orders
+            </li>
+            <li class="nav-item logout-link" @onclick="Logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </li>
         </ul>
     </aside>
 
     <main class="profile-content">
-        <div class="page-header"><h2 class="page-title">My Profile</h2></div>
-        <div class="profile-card">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
-                <div style="position: relative; width: 100px; height: 100px;">
-                    <img src="@GetProfileImage(128)" style="width:100px; height:100px; border-radius:50%; object-fit:cover; border: 4px solid #fff; box-shadow: 0 0 0 2px #ec4899;" />
-                    @if (isEditing)
+        <div style="padding-top: 40px;">
+            <div class="page-header">
+                <h2 class="page-title">My Profile</h2>
+            </div>
+
+            <div class="profile-card">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:30px;">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="@GetProfileImage(128)" class="large-avatar" />
+                        @if (isEditing)
+                        {
+                            <label class="camera-upload">
+                                <i class="fas fa-camera" style="font-size: 14px;"></i>
+                                <InputFile OnChange="HandleFileSelected" style="display:none;" />
+                            </label>
+                        }
+                    </div>
+
+                    @if (!isEditing)
                     {
-                        <label class="camera-upload"><i class="fas fa-camera" style="font-size:14px;"></i><InputFile OnChange="HandleFileSelected" style="display:none;" /></label>
+                        <button class="edit-btn" @onclick="EnableEditMode">Edit Profile</button>
                     }
                 </div>
-                @if (!isEditing)
+
+                <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" class="input-field" @bind="username" disabled />
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" class="input-field" @bind="password" disabled="@(!isEditing)" />
+                    </div>
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" class="input-field" @bind="firstName" disabled="@(!isEditing)" />
+                    </div>
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" class="input-field" @bind="lastName" disabled="@(!isEditing)" />
+                    </div>
+                    <div class="input-group" style="grid-column: span 2;">
+                        <label>Email</label>
+                        <input type="email" class="input-field" @bind="email" disabled="@(!isEditing)" />
+                    </div>
+
+                    <div style="grid-column: span 2; cursor: pointer;" @onclick="ToggleContact">
+                        <div class="section-label" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Contact Details</span>
+                            <i class="fas @(showContact ? "fa-chevron-up" : "fa-chevron-down")" style="font-size: 14px;"></i>
+                        </div>
+                    </div>
+
+                    @if (showContact)
+                    {
+                        <div class="input-group" style="grid-column: span 2;">
+                            <label>Phone</label>
+                            <input type="text" class="input-field" @bind="phone" disabled="@(!isEditing)" />
+                        </div>
+                        <div class="input-group" style="grid-column: span 2;">
+                            <label>Address</label>
+                            <input type="text" class="input-field" @bind="address" disabled="@(!isEditing)" />
+                        </div>
+                        <div class="input-group">
+                            <label>City</label>
+                            <input type="text" class="input-field" @bind="city" disabled="@(!isEditing)" />
+                        </div>
+                        <div class="input-group">
+                            <label>Zip Code</label>
+                            <input type="text" class="input-field" @bind="zipCode" disabled="@(!isEditing)" />
+                        </div>
+                    }
+                </div>
+
+                @if (isEditing)
                 {
-                    <button class="edit-btn" @onclick="EnableEditMode">Edit Profile</button>
+                    <div style="margin-top: 30px; display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+                        <button style="background: none; border: none; color: #888; cursor: pointer; font-weight: 600;" @onclick="CancelEdit">Cancel</button>
+                        <button class="save-btn" @onclick="SaveChanges">
+                            @(isSaved ? "✔ Saved!" : "Save Changes")
+                        </button>
+                    </div>
                 }
             </div>
-
-            <div class="form-grid">
-                <div class="input-group"><label>Username</label><input type="text" class="input-field" @bind="username" disabled /></div>
-                <div class="input-group"><label>Password</label><input type="text" class="input-field" @bind="password" disabled="@(!isEditing)" /></div>
-                <div class="input-group"><label>First Name</label><input type="text" class="input-field" @bind="firstName" disabled="@(!isEditing)" /></div>
-                <div class="input-group"><label>Last Name</label><input type="text" class="input-field" @bind="lastName" disabled="@(!isEditing)" /></div>
-                <div class="input-group full-width"><label>Email</label><input type="email" class="input-field" @bind="email" disabled="@(!isEditing)" /></div>
-
-                <div class="section-label">Contact Details</div>
-                <div class="input-group full-width"><label>Phone</label><input type="text" class="input-field" @bind="phone" disabled="@(!isEditing)" /></div>
-                <div class="input-group full-width"><label>Address</label><input type="text" class="input-field" @bind="address" disabled="@(!isEditing)" /></div>
-                <div class="input-group"><label>City</label><input type="text" class="input-field" @bind="city" disabled="@(!isEditing)" /></div>
-                <div class="input-group"><label>Zip Code</label><input type="text" class="input-field" @bind="zipCode" disabled="@(!isEditing)" /></div>
-            </div>
-
-            @if (isEditing)
-            {
-                <button class="save-btn" @onclick="SaveChanges">@if (isSaved) {
-                <span>✔ Saved!</span>
-            }
-            else
-            {
-
-                <span>Save Changes</span>
-            }
-</button>
-            <button @onclick="CancelEdit" style="float:right; margin-top:20px; margin-right:10px; background:none; border:none; color:#666; font-weight:600;">Cancel</button>
-                        }
-            <div style="clear:both;"></div>
         </div>
     </main>
 </div>
@@ -87,7 +126,7 @@
 @code {
     private string username = "Guest", email = "", password = "", role = "Member";
     private string firstName = "", lastName = "", phone = "", address = "", city = "", zipCode = "", profilePicture = "";
-    private bool isEditing = false, isSaved = false;
+    private bool isEditing = false, isSaved = false, showContact = true;
     private string filePath = "Core/DL/users.json";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -100,6 +139,7 @@
     }
 
     private void EnableEditMode() => isEditing = true;
+    private void ToggleContact() => showContact = !showContact;
     private async Task CancelEdit() { await LoadUserData(); isEditing = false; }
 
     private string GetProfileImage(int size) => !string.IsNullOrEmpty(profilePicture) ? profilePicture : $"https://ui-avatars.com/api/?name={username}&background=fce7f3&color=ec4899&size={size}";
@@ -119,12 +159,7 @@
     private async Task LoadUserData()
     {
         string currentUser = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "currentUser");
-
-        if (string.IsNullOrEmpty(currentUser))
-        {
-            Nav.NavigateTo("/login");
-            return;
-        }
+        if (string.IsNullOrEmpty(currentUser)) { Nav.NavigateTo("/login"); return; }
 
         if (File.Exists(filePath))
         {

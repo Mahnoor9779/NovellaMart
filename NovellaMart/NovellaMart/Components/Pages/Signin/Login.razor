@@ -1,8 +1,6 @@
 ﻿@page "/login"
-@using System
 @using System.IO
 @using System.Text.Json
-@using NovellaMart
 @using NovellaMart.Core.BL.Model_Classes
 @inject NavigationManager Nav
 @inject IJSRuntime JSRuntime
@@ -11,23 +9,27 @@
 <PageTitle>Login - NovellaMart</PageTitle>
 
 <div class="signup-page-wrapper">
+    <div class="back-arrow-container">
+        <button class="btn-back-home" @onclick='() => Nav.NavigateTo("/")' title="Back to Home">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+
     <div class="signup-card">
         <h2 class="signup-title">Login</h2>
         <div class="form-content">
             <div class="form-group-flat">
-                @* 👇 Added autocomplete="off" *@
                 <input type="text" class="form-input-flat" placeholder="Username"
                        @bind="username" autocomplete="off" />
             </div>
             <div class="form-group-flat">
-                @* 👇 Added autocomplete="new-password" to stop autofill *@
                 <input type="password" class="form-input-flat" placeholder="Password"
                        @bind="password" autocomplete="new-password" />
             </div>
 
             @if (!string.IsNullOrEmpty(loginError))
             {
-                <div style="color:red; margin-bottom:10px;">@loginError</div>
+                <div class="validation-message">@loginError</div>
             }
 
             <button class="btn-signup-flat" @onclick="AttemptLogin">Login</button>
@@ -39,44 +41,23 @@
 </div>
 
 @code {
-    private string username = "";
-    private string password = "";
-    private string loginError = "";
+    private string username = "", password = "", loginError = "";
     private string filePath = "Core/DL/users.json";
 
     private async Task AttemptLogin()
     {
         loginError = "";
-
-        if (!File.Exists(filePath))
-        {
-            loginError = "No users found. Please Sign Up.";
-            return;
-        }
+        if (!File.Exists(filePath)) { loginError = "No users found."; return; }
 
         var json = await File.ReadAllTextAsync(filePath);
-        // Using UserBL to match your new structure
         var users = JsonSerializer.Deserialize<List<UserBL>>(json);
         var user = users?.FirstOrDefault(u => u.username == username && u.password == password);
 
         if (user != null)
         {
-            // Save user to browser memory
             await JSRuntime.InvokeVoidAsync("localStorage.setItem", "currentUser", user.username);
-
-            await Task.Delay(100);
-            if (string.Equals(user.role, "Admin", StringComparison.OrdinalIgnoreCase))
-            {
-                Nav.NavigateTo("/admin");
-            }
-            else
-            {
-                Nav.NavigateTo("/profile");
-            }
+            Nav.NavigateTo(user.role == "Admin" ? "/admin" : "/");
         }
-        else
-        {
-            loginError = "Invalid Credentials";
-        }
+        else { loginError = "Invalid Credentials"; }
     }
 }
