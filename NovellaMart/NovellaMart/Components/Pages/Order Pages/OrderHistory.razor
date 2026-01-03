@@ -3,70 +3,208 @@
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
 @inject OrderService OrderService
-@inject NavigationManager NavManager
+@inject NavigationManager Nav
+@inject NovellaMart.Core.BL.Services.FlashSaleService LiveSaleService
+@inject NovellaMart.Core.BL.Services.ProductCatalogService CatalogService
+@inject IJSRuntime JSRuntime
 
-<div class="page-title">
-    <h1 style="color: black;">Your Orders</h1>
-    <div class="title-underline"></div>
-    <p class="title-subtext">Track your past purchases and status.</p>
-</div>
-
-<div class="orders-container">
-    <div class="orders-card">
-        @{
-            var allOrders = OrderService.GetAllOrders();
-            var currentNode = allOrders.head;
-        }
-
-        @if (currentNode == null)
-        {
-            <div class="empty-history">
-                <i class="fas fa-box-open"></i>
-                <h3>No orders yet</h3>
-                <p>Looks like you haven't placed any orders yet.</p>
-                <a href="/" class="btn-view-order" style="margin-top:1rem;">Start Shopping</a>
+<div class="profile-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-user">
+            <img src="@GetProfileImage(50)" class="sidebar-avatar" />
+            <div class="user-info">
+                <h4>@username</h4>
+                <p>@role</p>
             </div>
-        }
-        else
-        {
-            <table class="orders-table">
-                <thead>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Date Placed</th>
-                        <th>Status</th>
-                        <th>Total</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @while (currentNode != null)
-                    {
-                        var order = currentNode.Data;
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/")'>
+                <i class="fas fa-home me-2"></i> Home
+            </li>
+            <li class="nav-item @(Nav.Uri.Contains("profile") ? "active" : "")" @onclick='() => Nav.NavigateTo("/profile")'>
+                <i class="fas fa-user-circle me-2"></i> Profile
+            </li>
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/orders")'>
+                <i class="fas fa-shopping-bag me-2"></i> My Orders
+            </li>
+            <li class="nav-item @(Nav.Uri.Contains("notifications") ? "active" : "")" @onclick='() => Nav.NavigateTo("/notifications")'>
+                <i class="fas fa-bell me-2"></i> Notifications
+                @if (userNotifications.Any())
+                {
+                    <span class="badge rounded-pill bg-danger ms-2" style="font-size: 0.6rem;">@userNotifications.Count</span>
+                }
+            </li>
+            <li class="nav-item logout-link" @onclick="Logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </li>
+        </ul>
+    </aside>
 
-                        <tr>
-                            <td style="font-weight:600; color:#555;">#@order.order_id</td>
-                            <td>
-                                <div>@order.orderTime.ToString("MMM dd, yyyy")</div>
-                                <div style="font-size:0.8rem; color:#999;">@order.orderTime.ToString("hh:mm tt")</div>
-                            </td>
-                            <td>
-                                <span class="status-badge status-@(order.status.ToLower())">
-                                    @order.status
-                                </span>
-                            </td>
-                            <td style="font-weight:700;">Rs. @order.totalAmount</td>
-                            <td>
-                                <a href="order-confirmation/@order.order_id" class="btn-view-order">
-                                    View Slip
-                                </a>
-                            </td>
-                        </tr>
+    <main class="profile-content">
+        <div class="page-title">
+            <h1 style="color: black;">Your Orders</h1>
+            <div class="title-underline"></div>
+            <p class="title-subtext">Track your past purchases and status.</p>
+        </div>
 
-                        currentNode = currentNode.Next;
-                    }
-                </tbody>
-            </table>
-        }
-    </div>
+        <div class="orders-container">
+            <div class="orders-card">
+                @{
+                    var userOrders = OrderService.GetOrdersByEmail(email);
+                    var currentNode = userOrders.head;
+                }
+
+                @if (currentNode == null)
+                {
+                    <div class="empty-history">
+                        <i class="fas fa-box-open"></i>
+                        <h3>No orders yet</h3>
+                        <p>Looks like you haven't placed any orders yet.</p>
+                        <a href="/" class="btn-view-order" style="margin-top:1rem;">Start Shopping</a>
+                    </div>
+                }
+                else
+                {
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date Placed</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @while (currentNode != null)
+                            {
+                                var order = currentNode.Data;
+
+                                <tr>
+                                    <td style="font-weight:600; color:#555;">#@order.order_id</td>
+                                    <td>
+                                        <div>@order.orderTime.ToString("MMM dd, yyyy")</div>
+                                        <div style="font-size:0.8rem; color:#999;">@order.orderTime.ToString("hh:mm tt")</div>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge status-@(order.status.ToLower())">
+                                            @order.status
+                                        </span>
+                                    </td>
+                                    <td style="font-weight:700;">Rs. @order.totalAmount</td>
+                                    <td>
+                                        <a href="order-confirmation/@order.order_id" class="btn-view-order">
+                                            View Slip
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                currentNode = currentNode.Next;
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </main>
 </div>
+
+@code {
+    private string username = "Guest", role = "Member", email = ""; // Added email here
+    private int userId;
+    private List<NotificationBL> userNotifications = new();
+    private System.Timers.Timer? _badgeTimer;
+    private string filePath = "Core/DL/users.json"; // Path to your users file
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            string currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
+            if (string.IsNullOrEmpty(currentUser)) { Nav.NavigateTo("/login"); return; }
+
+            // 1. Load User Data (including Email) from JSON
+            await LoadUserData();
+
+            username = currentUser;
+            role = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole") ?? "Member";
+
+            string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
+            int.TryParse(userIdStr, out userId);
+
+            await LoadNotifications();
+
+            _badgeTimer = new System.Timers.Timer(1000);
+            _badgeTimer.Elapsed += async (s, e) => await InvokeAsync(StateHasChanged);
+            _badgeTimer.Start();
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadUserData()
+    {
+        string currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
+
+        if (File.Exists(filePath))
+        {
+            var json = await File.ReadAllTextAsync(filePath);
+            var users = System.Text.Json.JsonSerializer.Deserialize<List<UserBL>>(json);
+            var myUser = users?.FirstOrDefault(u => u.username == currentUser);
+
+            if (myUser != null)
+            {
+                email = myUser.email ?? ""; // This is the email used to filter orders
+            }
+        }
+    }
+
+    private async Task LoadNotifications()
+    {
+        userNotifications.Clear();
+        // Use the class-level userId assigned in OnAfterRenderAsync
+        if (userId != 0)
+        {
+            var activeSale = LiveSaleService.GetActiveSale();
+            var node = activeSale?.fs_items?.head;
+            while (node != null)
+            {
+                // Check if user is allocated for this product
+                if (LiveSaleService.GetUserStatus(userId, node.Data.product_id) == "Allocated")
+                {
+                    userNotifications.Add(new NotificationBL
+                        {
+                            ProductId = node.Data.product_id,
+                            ExpiryTime = DateTime.Now.AddMinutes(2) // Standardize expiry time
+                        });
+                }
+                node = node.Next;
+            }
+        }
+    }
+
+    private string GetProfileImage(int size) => $"https://ui-avatars.com/api/?name={username}&background=fce7f3&color=ec4899&size={size}";
+
+    public void Dispose()
+    {
+        if (_badgeTimer != null)
+        {
+            _badgeTimer.Stop();
+            _badgeTimer.Dispose();
+        }
+    }
+
+    private async Task Logout()
+    {
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "currentUser");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "userRole");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "userId");
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+
+    public class NotificationBL
+    {
+        public int ProductId { get; set; }
+        public DateTime ExpiryTime { get; set; }
+    }
+}

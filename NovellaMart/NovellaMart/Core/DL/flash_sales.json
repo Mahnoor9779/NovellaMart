@@ -1,363 +1,744 @@
 [
   {
-    "flash_sale_id": 1,
-    "title": "Winter Sale!",
-    "description": "jsdxuisq",
-    "discount": 4,
-    "startTime": "2026-01-02T18:40:10.4082867+05:00",
-    "endTime": "2026-01-02T19:40:10.4082868+05:00",
+    "flash_sale_id": 3,
+    "title": "winter ",
+    "description": "jksjqc",
+    "discount": 70,
+    "startTime": "2026-01-03T19:12:11.3287939+05:00",
+    "endTime": "2026-01-03T19:20:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 3,
-        "name": "Oil Control Wash",
+        "product_id": 131,
+        "name": "Winter Trench Coat",
         "description": "Description...",
         "images": [
           "/Images/image.jpg"
         ],
-        "price": 1200,
-        "stock": 20,
+        "price": 15000,
+        "stock": 4,
         "category": {
-          "category_id": 100,
-          "name": "Cleansers",
-          "parent_category_id": 1,
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
-          "products": [
-            {
-              "product_id": 1,
-              "name": "Gentle Foam Cleanser",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1500,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 2,
-              "name": "Deep Pore Scrub",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1800,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "Trending",
-                "#f0f8ff"
-              ]
-            },
-            null,
-            {
-              "product_id": 4,
-              "name": "Hydrating Milk Cleanser",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 2000,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 5,
-              "name": "Micellar Water",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 950,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "Trending",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 6,
-              "name": "Salicylic Acid Cleanser",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 2200,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 7,
-              "name": "Green Tea Gel Wash",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1600,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#00ff00"
-              ]
-            },
-            {
-              "product_id": 8,
-              "name": "Charcoal Detox Bar",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 800,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#000000"
-              ]
-            },
-            {
-              "product_id": 9,
-              "name": "Rose Water Toner",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1100,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "Trending",
-                "#ffc0cb"
-              ]
-            },
-            {
-              "product_id": 10,
-              "name": "Exfoliating Face Wash",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1900,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#87ceeb"
-              ]
-            }
-          ],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Cleansers",
-          "#e0ffff"
+          "Woman Wear",
+          "Outerwear",
+          "Trending",
+          "#d2b48c"
         ]
       },
       {
-        "product_id": 4,
-        "name": "Hydrating Milk Cleanser",
+        "product_id": 132,
+        "name": "Leather Jacket",
         "description": "Description...",
         "images": [
           "/Images/image.jpg"
         ],
-        "price": 2000,
-        "stock": 20,
+        "price": 12000,
+        "stock": 2,
         "category": {
-          "category_id": 100,
-          "name": "Cleansers",
-          "parent_category_id": 1,
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
-          "products": [
-            {
-              "product_id": 1,
-              "name": "Gentle Foam Cleanser",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1500,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 2,
-              "name": "Deep Pore Scrub",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1800,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "Trending",
-                "#f0f8ff"
-              ]
-            },
-            {
-              "product_id": 3,
-              "name": "Oil Control Wash",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1200,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#e0ffff"
-              ]
-            },
-            null,
-            {
-              "product_id": 5,
-              "name": "Micellar Water",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 950,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "Trending",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 6,
-              "name": "Salicylic Acid Cleanser",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 2200,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#ffffff"
-              ]
-            },
-            {
-              "product_id": 7,
-              "name": "Green Tea Gel Wash",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1600,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#00ff00"
-              ]
-            },
-            {
-              "product_id": 8,
-              "name": "Charcoal Detox Bar",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 800,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#000000"
-              ]
-            },
-            {
-              "product_id": 9,
-              "name": "Rose Water Toner",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1100,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "Trending",
-                "#ffc0cb"
-              ]
-            },
-            {
-              "product_id": 10,
-              "name": "Exfoliating Face Wash",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 1900,
-              "stock": 20,
-              "category": null,
-              "tags": [
-                "Skincare",
-                "Cleansers",
-                "#87ceeb"
-              ]
-            }
-          ],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Cleansers",
+          "Woman Wear",
+          "Outerwear",
+          "#000000"
+        ]
+      },
+      {
+        "product_id": 133,
+        "name": "Denim Jacket",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 6000,
+        "stock": 4,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#0000ff"
+        ]
+      },
+      {
+        "product_id": 134,
+        "name": "Puffer Vest",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 4500,
+        "stock": 1,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#ff0000"
+        ]
+      },
+      {
+        "product_id": 135,
+        "name": "Formal Blazer",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 7500,
+        "stock": 0,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#000000"
+        ]
+      },
+      {
+        "product_id": 136,
+        "name": "Faux Fur Coat",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 9000,
+        "stock": 0,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
           "#ffffff"
+        ]
+      },
+      {
+        "product_id": 137,
+        "name": "Raincoat",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 5000,
+        "stock": 2,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#ffff00"
+        ]
+      },
+      {
+        "product_id": 138,
+        "name": "Bomber Jacket",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 5500,
+        "stock": 3,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#556b2f"
+        ]
+      },
+      {
+        "product_id": 139,
+        "name": "Cardigan",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 3200,
+        "stock": 0,
+        "category": {
+          "category_id": 113,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "#808080"
         ]
       }
     ],
     "request_queue": {},
-    "allocation_heap": {}
+    "allocation_heap": {
+      "heap": [
+        {
+          "Item1": {
+            "request_id": 639030644060652788,
+            "customer": {
+              "contact": "",
+              "Addresses": [],
+              "OrderHistory": [],
+              "Cart": {
+                "cart_id": 0,
+                "customer": null,
+                "items": [],
+                "AppliedPromoCode": null,
+                "DiscountAmount": 0
+              },
+              "user_id": 1,
+              "username": "",
+              "email": "",
+              "password": "",
+              "role": "Customer",
+              "firstName": "",
+              "lastName": "",
+              "profilePicture": "",
+              "createdAt": "2026-01-03T19:13:26.0652714+05:00",
+              "isActive": true,
+              "phoneNumber": "",
+              "address": "",
+              "city": "",
+              "zipCode": ""
+            },
+            "product": {
+              "product_id": 139,
+              "name": "Cardigan",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 3200,
+              "stock": 0,
+              "category": {
+                "category_id": 113,
+                "name": "Outerwear",
+                "parent_category_id": 3,
+                "subcategories": [],
+                "categoryTree": {
+                  "Root": null
+                }
+              },
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#808080"
+              ]
+            },
+            "requestTime": "2026-01-03T19:13:26.0652791+05:00",
+            "allocated": false
+          },
+          "Item2": -639030644060652791
+        },
+        {
+          "Item1": {
+            "request_id": 639030644060652788,
+            "customer": {
+              "contact": "",
+              "Addresses": [],
+              "OrderHistory": [],
+              "Cart": {
+                "cart_id": 0,
+                "customer": null,
+                "items": [],
+                "AppliedPromoCode": null,
+                "DiscountAmount": 0
+              },
+              "user_id": 1,
+              "username": "",
+              "email": "",
+              "password": "",
+              "role": "Customer",
+              "firstName": "",
+              "lastName": "",
+              "profilePicture": "",
+              "createdAt": "2026-01-03T19:13:26.0652714+05:00",
+              "isActive": true,
+              "phoneNumber": "",
+              "address": "",
+              "city": "",
+              "zipCode": ""
+            },
+            "product": {
+              "product_id": 139,
+              "name": "Cardigan",
+              "description": "Description...",
+              "images": [
+                "/Images/image.jpg"
+              ],
+              "price": 3200,
+              "stock": 0,
+              "category": {
+                "category_id": 113,
+                "name": "Outerwear",
+                "parent_category_id": 3,
+                "subcategories": [],
+                "categoryTree": {
+                  "Root": null
+                }
+              },
+              "tags": [
+                "Woman Wear",
+                "Outerwear",
+                "#808080"
+              ]
+            },
+            "requestTime": "2026-01-03T19:13:26.0652791+05:00",
+            "allocated": false
+          },
+          "Item2": -639030644060652791
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        }
+      ],
+      "size": 0
+    }
   }
 ]

@@ -113,5 +113,22 @@ namespace NovellaMart.Core.BL.Services
 
             return newOrder;
         }
+
+        public MyLinkedList<OrderBL> GetOrdersByEmail(string email)
+        {
+            var userOrders = new MyLinkedList<OrderBL>();
+            var current = _allOrders.head;
+
+            while (current != null)
+            {
+                // Check if the order's customer email matches the logged-in user
+                if (current.Data.customer?.email?.ToLower() == email?.ToLower())
+                {
+                    userOrders.InsertAtEnd(current.Data);
+                }
+                current = current.Next;
+            }
+            return userOrders;
+        }
     }
 }

@@ -4,5 +4,11 @@
     "Code": "SAVE5",
     "DiscountPercentage": 5,
     "IsActive": true
+  },
+  {
+    "Id": 1714769804,
+    "Code": "WINTER26",
+    "DiscountPercentage": 10,
+    "IsActive": true
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "user_id": 0,
+    "user_id": 1,
     "username": "aatika",
     "email": "aatika123@gmail.com",
     "password": "1234567",
@@ -16,7 +16,7 @@
     "zipCode": ""
   },
   {
-    "user_id": 0,
+    "user_id": 2,
     "username": "aliza",
     "email": "alizajaved123@gmail.com",
     "password": "aliza123",
@@ -48,7 +48,7 @@
     "zipCode": "0000"
   },
   {
-    "user_id": 0,
+    "user_id": 3,
     "username": "mahnoor",
     "email": "tulipkardo123@gmail.com",
     "password": "mahnoor1122",
@@ -64,7 +64,7 @@
     "zipCode": ""
   },
   {
-    "user_id": 0,
+    "user_id": 4,
     "username": "maryam",
     "email": "maryam123@gmail.com",
     "password": "maryam123",

@@ -4,6 +4,8 @@
 @using NovellaMart.Core.BL.Services
 @inject FlashSaleService LiveSaleService
 @inject FlashSaleCrudService CrudService
+@inject NavigationManager Nav
+@inject IJSRuntime JSRuntime
 @implements IDisposable
 
 <div class="page-title">
@@ -26,8 +28,8 @@
         @while (node != null)
         {
             var product = node.Data;
-            // Uses the MockUserId (999) to check real-time queue status from the Live Service
-            string myStatus = LiveSaleService.GetUserStatus(MockUserId, product.product_id);
+
+            string myStatus = LiveSaleService.GetUserStatus(currentUserId, product.product_id);
             bool isJoined = (myStatus == "Queued" || myStatus == "Allocated");
 
             // Dynamic Price calculation based on the specific Flash Sale's discount
@@ -122,24 +124,64 @@
 @code {
     [Parameter] public int Id { get; set; }
     private FlashSaleBL currentSale;
-    private const int MockUserId = 999;
+    private int currentUserId;
     private System.Timers.Timer _refreshTimer;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // FIX: Explicitly passing the string as an argument for the JS 'getItem' function
+            var storedId = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", new object[] { "userId" });
+
+            if (string.IsNullOrEmpty(storedId))
+            {
+                Nav.NavigateTo("/login");
+            }
+            else
+            {
+                // Parse to int to use with your services
+                if (int.TryParse(storedId, out int parsedId))
+                {
+                    currentUserId = parsedId;
+                    StateHasChanged(); // Refresh UI to show "Join" or "Joined" status
+                }
+            }
+        }
+    }
+
 
     protected override void OnInitialized()
     {
-        // 1. Load the specific sale from the CRUD service using the URL ID
         currentSale = CrudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id);
+        if (currentSale != null) LiveSaleService.SetActiveSale(currentSale);
 
-        if (currentSale != null)
-        {
-            // 2. Initialize the queues in the Live service for this specific sale
-            LiveSaleService.SetActiveSale(currentSale);
-        }
-
-        // 3. Start a timer to update the countdown every second
         _refreshTimer = new System.Timers.Timer(1000);
         _refreshTimer.Elapsed += (s, e) => InvokeAsync(StateHasChanged);
         _refreshTimer.Start();
+    }
+
+    // Inside FlashSale.razor @code block
+    private async Task ToggleQueue(int productId)
+    {
+        if (currentUserId == 0)
+        {
+            var storedId = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
+            if (string.IsNullOrEmpty(storedId)) { Nav.NavigateTo("/login"); return; }
+            currentUserId = int.Parse(storedId);
+        }
+
+        string status = LiveSaleService.GetUserStatus(currentUserId, productId);
+        if (status == "Queued" || status == "Allocated")
+        {
+            LiveSaleService.LeaveFlashSaleQueue(currentUserId, productId);
+        }
+        else
+        {
+            // Ensure this method in your service adds the user to the Circular Queue
+            LiveSaleService.JoinFlashSaleQueue(new CustomerBL { user_id = currentUserId }, productId);
+        }
+        StateHasChanged();
     }
 
     private string GetTimeRemaining()
@@ -149,18 +191,6 @@
         return span.Ticks > 0
             ? $"{(int)span.TotalHours:D2}:{span.Minutes:D2}:{span.Seconds:D2}"
             : "ENDED";
-    }
-
-    private void ToggleQueue(int productId)
-    {
-        string currentStatus = LiveSaleService.GetUserStatus(MockUserId, productId);
-
-        if (currentStatus == "Queued" || currentStatus == "Allocated")
-            LiveSaleService.LeaveFlashSaleQueue(MockUserId, productId);
-        else
-            LiveSaleService.JoinFlashSaleQueue(new CustomerBL { user_id = MockUserId }, productId);
-
-        StateHasChanged();
     }
 
     public void Dispose() => _refreshTimer?.Dispose();

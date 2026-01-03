@@ -1,8 +1,12 @@
-﻿namespace NovellaMart.Core.BL.Data_Structures
+﻿using System.Text.Json.Serialization;
+
+namespace NovellaMart.Core.BL.Data_Structures
 {
     public class HeapPriorityQueue<type>
     {
+        [JsonInclude]
         private (type Data, long Priority)[] heap;
+        [JsonInclude]
         private int size;
         private int capacity;
 
@@ -76,5 +80,21 @@
         }
 
         public bool IsEmpty() => size == 0;
+
+        public HeapPriorityQueue<type> Clone()
+        {
+            // Create a new instance
+            HeapPriorityQueue<type> copy = new HeapPriorityQueue<type>(this.capacity);
+
+            // Copy the internal array
+            // Since it's an array of value tuples (type Data, long Priority), 
+            // a shallow copy of the array works perfectly here.
+            Array.Copy(this.heap, copy.heap, this.size);
+
+            // Copy the metadata
+            copy.size = this.size;
+
+            return copy;
+        }
     }
 }
