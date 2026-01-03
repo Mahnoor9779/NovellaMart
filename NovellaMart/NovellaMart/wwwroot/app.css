@@ -4045,3 +4045,5 @@ body:has(.profile-wrapper) .top-announcement {
     /* Filled Cyan on Hover */
     color: white !important;
 }
+/* GLOBAL LOGIN BUTTON FIX */
+.btn-login { background-color: var(--nm-primary) !important; color: white !important; border-radius: 20px !important; padding: 8px 25px !important; font-size: 0.9rem !important; font-weight: 600 !important; text-decoration: none !important; transition: 0.3s !important; border: none !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; } .btn-login:hover { background-color: var(--nm-accent) !important; color: var(--nm-text) !important; }

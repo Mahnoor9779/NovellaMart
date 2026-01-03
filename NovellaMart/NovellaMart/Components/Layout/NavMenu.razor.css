@@ -14,8 +14,11 @@
     background-color: #ffffff;
     height: 80px;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    /* Bootstrap Header Z-Index */
     display: flex;
     justify-content: center;
 }
@@ -46,7 +49,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Keeps it dead center */
+    transform: translate(-50%, -50%);
+    /* Keeps it dead center */
     z-index: 10;
 }
 
@@ -59,63 +63,65 @@
     align-items: center;
 }
 
-    .center-menu .nav-item {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+.center-menu .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
-    /* =========================================================
+/* =========================================================
    HOVER EFFECTS FIX
    We use ::deep to penetrate the <NavLink> component 
    ========================================================= */
 
-    .center-menu ::deep .nav-link {
-        color: var(--nm-text) !important;
-        font-weight: 600;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 5px 0 !important;
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.2s ease;
-        background: transparent !important;
-        position: relative;
-        display: inline-block;
-    }
+.center-menu ::deep .nav-link {
+    color: var(--nm-text) !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 0 !important;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    background: transparent !important;
+    position: relative;
+    display: inline-block;
+}
 
-        /* The Animated Pink Underline */
-        .center-menu ::deep .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
-            background-color: var(--nm-primary);
-            transition: all 0.3s ease-in-out;
-        }
+/* The Animated Pink Underline */
+.center-menu ::deep .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--nm-primary);
+    transition: all 0.3s ease-in-out;
+}
 
-        /* --- THE HOVER STATE --- */
-        .center-menu ::deep .nav-link:hover {
-            color: var(--nm-primary) !important; /* Turns text pink */
-            transform: translateY(-2px); /* Lifts text slightly up */
-        }
+/* --- THE HOVER STATE --- */
+.center-menu ::deep .nav-link:hover {
+    color: var(--nm-primary) !important;
+    /* Turns text pink */
+    transform: translateY(-2px);
+    /* Lifts text slightly up */
+}
 
-            /* Expands the underline on hover */
-            .center-menu ::deep .nav-link:hover::after {
-                width: 100%;
-                left: 0;
-            }
+/* Expands the underline on hover */
+.center-menu ::deep .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
 
-        /* --- ACTIVE STATE (When you are on that page) --- */
-        .center-menu ::deep .nav-link.active {
-            color: var(--nm-primary) !important;
-        }
+/* --- ACTIVE STATE (When you are on that page) --- */
+.center-menu ::deep .nav-link.active {
+    color: var(--nm-primary) !important;
+}
 
-            .center-menu ::deep .nav-link.active::after {
-                width: 100%;
-                left: 0;
-            }
+.center-menu ::deep .nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
 
 /* 5. Right Icons */
 .nav-right {
@@ -138,11 +144,11 @@
     transition: transform 0.2s;
 }
 
-    /* Hover effect for icons */
-    .btn-icon:hover {
-        transform: scale(1.1);
-        color: var(--nm-primary);
-    }
+/* Hover effect for icons */
+.btn-icon:hover {
+    transform: scale(1.1);
+    color: var(--nm-primary);
+}
 
 .cart-badge {
     position: absolute;
@@ -167,10 +173,10 @@
     transition: 0.3s;
 }
 
-    .btn-login:hover {
-        background-color: var(--nm-accent);
-        color: var(--nm-text) !important;
-    }
+.btn-login:hover {
+    background-color: var(--nm-accent);
+    color: var(--nm-text) !important;
+}
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 992px) {

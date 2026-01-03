@@ -2,12 +2,12 @@
 
 namespace NovellaMart.Core.BL.Data_Structures
 {
-    public class LinkedListNode<type>
+    public class MyLinkedListNode<type>
     {
         public type Data;
-        public LinkedListNode<type> Next;
+        public MyLinkedListNode<type> Next;
 
-        public LinkedListNode(type value)
+        public MyLinkedListNode(type value)
         {
             Data = value;
             Next = null;

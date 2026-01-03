@@ -1,0 +1,183 @@
+@page "/orders"
+@using System.IO
+@using System.Text.Json
+@using NovellaMart
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Data_Structures
+@inject NavigationManager Nav
+@inject IJSRuntime JSRuntime
+@rendermode RenderMode.InteractiveServer
+@inject NovellaMart.Core.BL.Services.OrderService OrderService
+
+<PageTitle>My Orders - NovellaMart</PageTitle>
+
+<div class="profile-wrapper">
+    <!-- SIDEBAR (Replicated from Profile.razor for consistency) -->
+    <aside class="sidebar">
+        <div class="sidebar-user">
+            <img src="@GetProfileImage(50)" class="sidebar-avatar" />
+            <div class="user-info">
+                <h4>@username</h4>
+                <p>@role</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/")'>
+                <i class="fas fa-home me-2"></i> Home
+            </li>
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/profile")'>
+                <i class="fas fa-user-circle me-2"></i> Profile
+            </li>
+            <li class="nav-item active">
+                <i class="fas fa-shopping-bag me-2"></i> My Orders
+            </li>
+            <li class="nav-item @(Nav.Uri.Contains("notifications") ? "active" : "")" @onclick='() => Nav.NavigateTo("/notifications")'>
+                <i class="fas fa-bell me-2"></i> Notifications
+            </li>
+            <li class="nav-item logout-link" @onclick="Logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </li>
+        </ul>
+    </aside>
+
+    <main class="profile-content">
+        <div style="padding-top: 40px;">
+            <div class="page-header">
+                <h2 class="page-title">My Orders</h2>
+            </div>
+
+            <div class="profile-card">
+                @if (isLoading)
+                {
+                    <p>Loading orders...</p>
+                }
+                else if (myOrders == null || myOrders.head == null)
+                {
+                    <div style="text-align:center; padding: 2rem;">
+                        <i class="fas fa-box-open" style="font-size: 3rem; color: #eee; margin-bottom: 1rem;"></i>
+                        <h4 style="color: #555;">No orders yet</h4>
+                        <p style="color: #888;">Start shopping to see your history here.</p>
+                        <button class="btn-login" style="margin-top: 1rem;" @onclick='() => Nav.NavigateTo("/")'>Start Shopping</button>
+                    </div>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table" style="font-size: 0.9rem;">
+                            <thead>
+                                <tr style="background: #f8f9fa;">
+                                    <th style="padding: 1rem;">Order #</th>
+                                    <th style="padding: 1rem;">Date</th>
+                                    <th style="padding: 1rem;">Total</th>
+                                    <th style="padding: 1rem;">Status</th>
+                                    <th style="padding: 1rem;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var current = myOrders.head;
+                                }
+                                @while (current != null)
+                                {
+                                    var order = current.Data;
+                                    <tr>
+                                        <td style="padding: 1rem; font-weight:600;">#@order.order_id</td>
+                                        <td style="padding: 1rem;">@order.orderTime.ToString("MMM dd, yyyy")</td>
+                                        <td style="padding: 1rem; font-weight:600;">Rs. @order.totalAmount.ToString("N0")</td>
+                                        <td style="padding: 1rem;">
+                                            <span class="badge rounded-pill @GetStatusClass(order.status)">@order.status</span>
+                                        </td>
+                                        <td style="padding: 1rem;">
+                                            <button class="btn btn-sm btn-outline-primary" @onclick='() => Nav.NavigateTo($"/order-confirmation/{order.order_id}")'>
+                                                View Receipt
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    current = current.Next;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        </div>
+    </main>
+</div>
+
+@code {
+    private string username = "Guest";
+    private string email = "";
+    private string role = "Member";
+    private string profilePicture = "";
+    private bool isLoading = true;
+
+    private MyLinkedList<OrderBL> myOrders;
+    // Keeping users.json path for consistency if needed for extra user details, 
+    // but we use session for primary email retrieval.
+    private string userFilePath = "Core/DL/users.json"; 
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await LoadUserData();
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadUserData()
+    {
+        string currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
+        if (string.IsNullOrEmpty(currentUser)) { Nav.NavigateTo("/login"); return; }
+        
+        username = currentUser; // Default
+        
+        // 1. Fetch User Details to get Email
+        // (Reusing logic from Profile.razor to get full user object)
+        if (File.Exists(userFilePath))
+        {
+            var json = await File.ReadAllTextAsync(userFilePath);
+            var users = JsonSerializer.Deserialize<List<UserBL>>(json);
+            var myUser = users?.FirstOrDefault(u => u.username == currentUser);
+
+            if (myUser != null)
+            {
+                username = myUser.username ?? "";
+                email = myUser.email ?? "";
+                role = myUser.role ?? "Member";
+                profilePicture = myUser.profilePicture ?? "";
+            }
+        }
+
+        // 2. Fetch Orders using Email
+        if (!string.IsNullOrEmpty(email))
+        {
+            myOrders = OrderService.GetOrdersByEmail(email);
+        }
+        else 
+        {
+            // Fallback if no email found (shouldn't happen for valid users)
+            myOrders = new MyLinkedList<OrderBL>();
+        }
+
+        isLoading = false;
+        StateHasChanged();
+    }
+
+    private string GetProfileImage(int size) => !string.IsNullOrEmpty(profilePicture) ? profilePicture : $"https://ui-avatars.com/api/?name={username}&background=fce7f3&color=ec4899&size={size}";
+
+    private async Task Logout()
+    {
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "currentUser");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "userRole");
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+    
+    private string GetStatusClass(string status) => status.ToLower() switch
+    {
+        "confirmed" => "bg-success-light text-success",
+        "shipped" => "bg-info-light text-info",
+        "delivered" => "bg-primary-light text-primary",
+        _ => "bg-warning-light text-warning"
+    };
+}
