@@ -1,0 +1,247 @@
+﻿@page "/notifications"
+@rendermode InteractiveServer
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject NavigationManager Nav
+@inject IJSRuntime JSRuntime
+@inject ProductCatalogService CatalogService
+@inject CartService CartService
+@inject FlashSaleService LiveSaleService
+@implements IDisposable
+
+<div class="profile-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-user">
+            <img src="@GetProfileImage(50)" class="sidebar-avatar" />
+            <div class="user-info">
+                <h4>@username</h4>
+                <p>@role</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/")'>
+                <i class="fas fa-home me-2"></i> Home
+            </li>
+            <li class="nav-item active">
+                <i class="fas fa-user-circle me-2"></i> Profile
+            </li>
+            <li class="nav-item" @onclick='() => Nav.NavigateTo("/orders")'>
+                <i class="fas fa-shopping-bag me-2"></i> My Orders
+            </li>
+            <li class="nav-item @(Nav.Uri.Contains("notifications") ? "active" : "")" @onclick='() => Nav.NavigateTo("/notifications")'>
+                <i class="fas fa-bell me-2"></i> Notifications
+                @{
+                    // Only count active WINNER notifications that aren't in checkout yet
+                    var actionRequiredCount = userNotifications.Count(n =>
+                    n.IsWinner &&
+                    !LiveSaleService.IsAlreadyInCheckout(userId, n.ProductId) &&
+                    n.ExpiryTime > DateTime.Now);
+                }
+                @if (actionRequiredCount > 0)
+                {
+                    <span class="badge rounded-pill bg-danger ms-2" style="font-size: 0.6rem;">@actionRequiredCount</span>
+                }
+            </li>
+            <li class="nav-item logout-link" @onclick="Logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </li>
+        </ul>
+    </aside>
+
+    <main class="profile-content">
+        <div class="page-title">
+            <h1 style="color: var(--nm-primary);">Your Notifications</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="container" style="max-width: 800px; padding-bottom: 50px;">
+            <div class="notification-area">
+                <h3 class="mb-4">Flash Sale Alerts</h3>
+
+                @if (!userNotifications.Any())
+                {
+                    <div class="text-center py-5">
+                        <i class="fas fa-bell-slash fa-3x mb-3" style="color: #ddd;"></i>
+                        <p class="text-muted">You have no active notifications.</p>
+                    </div>
+                }
+                else
+                {
+                    @foreach (var note in userNotifications)
+                    {
+                        @if (!LiveSaleService.IsAlreadyInCheckout(userId, note.ProductId))
+                        {
+                            bool isExpired = note.ExpiryTime < DateTime.Now;
+                            <div class="flash-alert @(isExpired ? "expired" : (note.IsWinner ? "active" : "rejected"))">
+                                <div class="alert-content">
+                                    <h5>@(isExpired ? "Reservation Expired" : "Final Call!")</h5>
+                                    <p>@note.Message</p>
+                                    @if (!isExpired)
+                                    {
+                                        <small class="text-danger">
+                                            <i class="fas fa-clock"></i> Deadline: @note.ExpiryTime.ToString("HH:mm:ss")
+                                        </small>
+                                    }
+                                </div>
+                                @if (!isExpired)
+                                {
+                                    <button class="btn-proceed-checkout" @onclick="() => ProceedToFlashCheckout(note.ProductId)">
+                                        Checkout Now
+                                    </button>
+                                }
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </main>
+</div>
+
+@code {
+    private string username = "Guest", role = "Member", profilePicture = "";
+    private int userId; // Shared class-level variable
+    private List<NotificationBL> userNotifications = new();
+    private System.Timers.Timer? _badgeTimer;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            string currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
+            if (string.IsNullOrEmpty(currentUser)) { Nav.NavigateTo("/login"); return; }
+
+            username = currentUser;
+            role = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole") ?? "Member";
+
+            // Get and set the class-level userId
+            string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
+            int.TryParse(userIdStr, out userId);
+
+            // Now call the data loading methods
+            await LoadUserData();
+            await LoadNotifications();
+
+            // Refresh UI every second to handle badge updates and expiration
+            _badgeTimer = new System.Timers.Timer(1000);
+            _badgeTimer.Elapsed += async (s, e) => await InvokeAsync(StateHasChanged);
+            _badgeTimer.Start();
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadUserData()
+    {
+        username = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser") ?? "Guest";
+        role = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole") ?? "Member";
+
+        string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
+        int.TryParse(userIdStr, out userId); // Assign to the class field
+
+        if (string.IsNullOrEmpty(username) || username == "Guest") { Nav.NavigateTo("/login"); }
+    }
+
+    private async Task LoadNotifications()
+    {
+        userNotifications.Clear();
+        if (userId == 0) return;
+
+        var activeSale = LiveSaleService.GetActiveSale();
+        if (activeSale?.fs_items != null)
+        {
+            var node = activeSale.fs_items.head;
+            while (node != null)
+            {
+                var product = node.Data;
+                var status = LiveSaleService.GetUserStatus(userId, product.product_id);
+
+                if (status == "Allocated")
+                {
+                    // Only add if they haven't already locked it into checkout
+                    if (!LiveSaleService.IsAlreadyInCheckout(userId, product.product_id))
+                    {
+                        userNotifications.Add(new NotificationBL
+                            {
+                                Message = $"Congratulations! You were selected! Claim your {product.name} now.",
+                                ProductId = product.product_id,
+                                ExpiryTime = DateTime.Now.AddMinutes(2),
+                                IsWinner = true
+                            });
+                    }
+                }
+                else if (status == "Rejected")
+                {
+                    userNotifications.Add(new NotificationBL
+                        {
+                            Message = $"Sorry, the {product.name} is sold out. Better luck next time!",
+                            ProductId = product.product_id,
+                            IsWinner = false,
+                            // Rejected users don't need an expiry timer
+                            ExpiryTime = DateTime.MaxValue
+                        });
+                }
+
+                node = node.Next;
+            }
+        }
+    }
+
+    private async Task ProceedToFlashCheckout(int productId)
+    {
+        // Ensure we have the current userId
+        if (userId == 0)
+        {
+            string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
+            int.TryParse(userIdStr, out userId);
+        }
+
+        // Check if it's already in the cart/checkout process
+        if (LiveSaleService.IsAlreadyInCheckout(userId, productId))
+        {
+            // If already locked, just go to the page without adding again
+            Nav.NavigateTo("/checkout");
+            return;
+        }
+
+        // Logic for new checkout attempt
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Once you proceed, this reservation is locked to your cart. If you do not finish checkout within the time limit, the item will be reallocated. Continue?");
+        if (confirmed)
+        {
+            var product = CatalogService.MasterProductList.FirstOrDefault(p => p.product_id == productId);
+            if (product != null)
+            {
+                LiveSaleService.MarkAsInCheckout(userId, productId);
+                await CartService.AddToCart(product, 1);
+                Nav.NavigateTo("/checkout");
+            }
+        }
+    }
+
+    private string GetProfileImage(int size) => $"https://ui-avatars.com/api/?name={username}&background=fce7f3&color=ec4899&size={size}";
+
+    public void Dispose()
+    {
+        if (_badgeTimer != null)
+        {
+            _badgeTimer.Stop();
+            _badgeTimer.Dispose();
+        }
+    }
+
+    private async Task Logout()
+    {
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "currentUser");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "userRole");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "userId");
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+
+    public class NotificationBL
+    {
+        public string Message { get; set; } = "";
+        public int ProductId { get; set; }
+        public DateTime ExpiryTime { get; set; }
+        public bool IsWinner { get; set; } 
+    }
+}

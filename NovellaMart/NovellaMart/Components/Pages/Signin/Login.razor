@@ -55,15 +55,17 @@
         var user = users?.FirstOrDefault(u => u.username == username && u.password == password);
 
         if (user != null)
-    {
-        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "currentUser", user.username);
-        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "userRole", user.role);
+        {
+            // Use sessionStorage ONLY
+            await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", user.username);
+            await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "userRole", user.role);
+            await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "userId", user.user_id.ToString());
 
-        if (user.role == "Admin") 
-            Nav.NavigateTo("/admin", forceLoad: true);
-        else 
-            Nav.NavigateTo("/profile", forceLoad: true);
-    }
+            if (user.role == "Admin")
+                Nav.NavigateTo("/admin", forceLoad: true);
+            else
+                Nav.NavigateTo("/profile", forceLoad: true);
+        }
         else { loginError = "Invalid Credentials"; }
     }
 }

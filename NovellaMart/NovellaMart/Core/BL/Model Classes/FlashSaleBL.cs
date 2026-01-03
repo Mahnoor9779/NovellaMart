@@ -14,7 +14,7 @@ namespace NovellaMart.Core.BL.Model_Classes
         public string status { get; set; }           // SCHEDULED, ACTIVE, ENDED
         public MyLinkedList<ProductBL> fs_items { get; set; }
         public CircularQueue<CustomerRequestBL> request_queue { get; set; }
-        public PriorityQueue<CustomerRequestBL> allocation_heap { get; set; }
+        public HeapPriorityQueue<CustomerRequestBL> allocation_heap { get; set; }
 
         public FlashSaleBL()
         {
@@ -27,7 +27,7 @@ namespace NovellaMart.Core.BL.Model_Classes
             status = "DRAFT";
             fs_items = new MyLinkedList<ProductBL>();
             request_queue = new CircularQueue<CustomerRequestBL>(100);
-            allocation_heap = new PriorityQueue<CustomerRequestBL>();
+            allocation_heap = new HeapPriorityQueue<CustomerRequestBL>();
         }
 
         public FlashSaleBL(int flash_sale_id, string title, DateTime startTime, DateTime endTime)
@@ -41,7 +41,7 @@ namespace NovellaMart.Core.BL.Model_Classes
             this.status = "SCHEDULED";
             fs_items = new MyLinkedList<ProductBL>();
             request_queue = new CircularQueue<CustomerRequestBL>(100);
-            allocation_heap = new PriorityQueue<CustomerRequestBL>();
+            allocation_heap = new HeapPriorityQueue<CustomerRequestBL>();
         }
 
         public void UpdateStatus()

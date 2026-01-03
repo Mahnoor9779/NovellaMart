@@ -20,12 +20,15 @@ namespace NovellaMart.Core.BL.Services
             {
                 flashSales = FileHandler.LoadData<List<FlashSaleBL>>(FILE_NAME) ?? new List<FlashSaleBL>();
 
-                // Fix null references
                 foreach (var sale in flashSales)
                 {
+                    // Ensure status is fresh based on real time
+                    sale.UpdateStatus();
+
+                    // Re-initialize any structures that might have deserialized as null
                     sale.fs_items ??= new MyLinkedList<ProductBL>();
                     sale.request_queue ??= new CircularQueue<CustomerRequestBL>(100);
-                    sale.allocation_heap ??= new PriorityQueue<CustomerRequestBL>();
+                    sale.allocation_heap ??= new HeapPriorityQueue<CustomerRequestBL>();
                 }
 
                 if (flashSales.Count > 0)
@@ -40,7 +43,7 @@ namespace NovellaMart.Core.BL.Services
 
             sale.fs_items ??= new MyLinkedList<ProductBL>();
             sale.request_queue ??= new CircularQueue<CustomerRequestBL>(100);
-            sale.allocation_heap ??= new PriorityQueue<CustomerRequestBL>();
+            sale.allocation_heap ??= new HeapPriorityQueue<CustomerRequestBL>();
 
             flashSales.Add(sale);
             SaveToFile();

@@ -3,10 +3,10 @@
   "customer": null,
   "items": [],
   "AppliedPromoCode": {
-    "Id": 1513196733,
-    "Code": "SAVE5",
-    "DiscountPercentage": 5,
+    "Id": 1714769804,
+    "Code": "WINTER26",
+    "DiscountPercentage": 10,
     "IsActive": true
   },
-  "DiscountAmount": 40
+  "DiscountAmount": 750
 }

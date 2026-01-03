@@ -95,7 +95,7 @@ namespace NovellaMart.Core.BL.Services
                     "Description...",
                     new string[] { item.imageUrl },
                     (double)item.price,
-                    20,
+                    item.stock ?? new Random().Next(1, 5),
                     finalCategory
                 );
 
@@ -156,6 +156,7 @@ namespace NovellaMart.Core.BL.Services
             public string imageUrl { get; set; }
             public List<string> colors { get; set; } = new();
             public bool isTrending { get; set; }
+            public int? stock { get; set; }
         }
     }
 }

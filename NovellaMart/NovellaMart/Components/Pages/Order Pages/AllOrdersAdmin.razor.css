@@ -1,0 +1,125 @@
+﻿/* Container for the Admin Page (Full Width) */
+.orders-container {
+    padding: 1rem 0;
+}
+
+/* The Main Card (Matches Profile Card) */
+.orders-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 2rem;
+    border: 1px solid #f0f0f0;
+}
+
+/* Table Layout */
+.orders-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px; /* Adds the gap between rows */
+}
+
+    .orders-table th {
+        color: #888;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem;
+        border-bottom: 2px solid #f8f9fa;
+        font-weight: 600;
+    }
+
+    .orders-table td {
+        padding: 1.2rem 1rem;
+        background: #fff;
+        border-top: 1px solid #f8f9fa;
+        border-bottom: 1px solid #f8f9fa;
+        vertical-align: middle;
+    }
+
+    /* Row Styling (Alternating look via spacing) */
+    .orders-table tr td:first-child {
+        border-left: 1px solid #f8f9fa;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+
+    .orders-table tr td:last-child {
+        border-right: 1px solid #f8f9fa;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+/* Status Badge (Green/Yellow/Red) */
+.status-badge {
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Confirmed Status (Green) */
+.status-confirmed {
+    background-color: #ebfbee;
+    color: #2f9e44;
+}
+
+/* Pending Status (Yellow) */
+.status-pending {
+    background-color: #fff9db;
+    color: #f59f00;
+}
+
+/* Failed/Cancelled (Red) */
+.status-cancelled {
+    background-color: #fff5f5;
+    color: #fa5252;
+}
+
+/* Highlighted Column for Amounts (Pink) */
+.col-subtotal {
+    font-weight: 700;
+    color: var(--nm-primary); /* Uses your Pink Variable */
+    font-size: 1.1rem;
+}
+
+/* Action Button (Matches the Details Button) */
+.btn-view-order {
+    background-color: #f8f9fa;
+    color: var(--nm-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+    .btn-view-order:hover {
+        background-color: var(--nm-primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(214, 77, 125, 0.2);
+    }
+
+/* Padding Override for first column */
+.pl-large {
+    padding-left: 2rem !important;
+}
+
+/* Empty State UI */
+.empty-history {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: #adb5bd;
+}
+
+    .empty-history i {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.2;
+        color: var(--nm-primary);
+    }

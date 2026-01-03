@@ -1,0 +1,89 @@
+﻿@page "/admin/all-orders"
+@rendermode InteractiveServer
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Services
+@inject OrderService OrderService
+@inject NavigationManager Nav
+
+<PageTitle>All Customer Orders - NovellaMart</PageTitle>
+
+@* We use a standard container here instead of profile-wrapper to allow the admin table to expand *@
+<div class="container" style="max-width: 1200px; padding-top: 40px; padding-bottom: 80px;">
+
+    <div class="page-title">
+        <h1 style="color: var(--nm-primary);">Global Order History</h1>
+        <div class="title-underline"></div>
+        <p class="title-subtext">Admin Panel: Viewing every transaction in the system.</p>
+    </div>
+
+    <div class="orders-container">
+        <div class="orders-card">
+            @{
+                // travese the full Linked List for the Admin view
+                var allOrders = OrderService.GetAllOrders();
+                var currentNode = allOrders?.head;
+            }
+
+            @if (currentNode == null)
+            {
+                <div class="empty-history">
+                    <i class="fas fa-box-open"></i>
+                    <h3>No orders placed yet</h3>
+                    <p>The global linked list for orders is currently empty.</p>
+                    <a href="/admin" class="btn-view-order" style="margin-top:1rem; display: inline-block;">Back to Dashboard</a>
+                </div>
+            }
+            else
+            {
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th class="pl-large">Order ID</th>
+                            <th>Customer & Contact</th>
+                            <th>Date Placed</th>
+                            <th>Status</th>
+                            <th>Total Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @while (currentNode != null)
+                        {
+                            var order = currentNode.Data;
+
+                            <tr>
+                                <td class="pl-large" style="font-weight:600; color:#555;">
+                                    #@order.order_id
+                                </td>
+                                <td>
+                                    <div style="font-weight: 700; color: #333;">@order.customer?.firstName @order.customer?.lastName</div>
+                                    <div style="font-size: 0.8rem; color: #888;">@order.customer?.email</div>
+                                </td>
+                                <td>
+                                    <div>@order.orderTime.ToString("MMM dd, yyyy")</div>
+                                    <div style="font-size:0.8rem; color:#999;">@order.orderTime.ToString("hh:mm tt")</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge status-@(order.status.ToLower())">
+                                        @order.status
+                                    </span>
+                                </td>
+                                <td class="col-subtotal">
+                                    Rs. @order.totalAmount.ToString("N0")
+                                </td>
+                                <td>
+                                    @* Navigates to the same confirmation slip as the user for consistency *@
+                                    <a href="order-confirmation/@order.order_id" class="btn-view-order">
+                                        View Details
+                                    </a>
+                                </td>
+                            </tr>
+
+                            currentNode = currentNode.Next;
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>

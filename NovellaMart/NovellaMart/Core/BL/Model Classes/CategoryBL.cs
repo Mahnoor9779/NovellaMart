@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 using NovellaMart.Core.BL.Data_Structures;
 
 namespace NovellaMart.Core.BL.Model_Classes
@@ -9,6 +10,8 @@ namespace NovellaMart.Core.BL.Model_Classes
         public string name { get; set; }
         public int parent_category_id { get; set; }
         public MyLinkedList<CategoryBL> subcategories { get; set; }
+        
+        [JsonIgnore]
         public MyLinkedList<ProductBL> products { get; set; }
         public AVLTreeGeneric<CategoryBL> categoryTree { get; set; }
 

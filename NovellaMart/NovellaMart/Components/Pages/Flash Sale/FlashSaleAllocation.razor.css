@@ -111,18 +111,34 @@ th, td {
         color: #9f1239;
     }
 
-.empty {
+/* Empty Drawer Styling */
+.empty-queue-container {
+    padding: 40px 0;
     text-align: center;
-    color: #999;
-    padding: 1rem;
+    color: #b2bec3;
 }
 
-/* =========================================
+.empty-drawer-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+    opacity: 0.4;
+    background: linear-gradient(to bottom, #dfe6e9, #b2bec3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.empty-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+    /* =========================================
    ALLOCATION TABLE SPECIFIC SPACING
    ========================================= */
-
-/* Adjusting column widths to accommodate Request Time */
-.admin-table-thead th:nth-child(2) {
+    /* Adjusting column widths to accommodate Request Time */
+    .admin-table-thead th:nth-child(2) {
     width: 25%; /* Customer ID */
 }
 

@@ -31,20 +31,7 @@ namespace NovellaMart.Core.BL.Services
         // Get results from the allocation heap
         public List<CustomerRequestBL> GetAllocationsForProduct(int saleId, int productId)
         {
-            var sale = _crudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == saleId);
-            var results = new List<CustomerRequestBL>();
-
-            if (sale?.allocation_heap == null) return results;
-
-            // Use the Clone method from your PriorityQueue to avoid emptying the real heap
-            var heapCopy = sale.allocation_heap.Clone();
-            while (!heapCopy.IsEmpty())
-            {
-                var req = heapCopy.Dequeue();
-                if (req.product.product_id == productId)
-                    results.Add(req);
-            }
-            return results;
+            return _flashSaleService.GetQueueSnapshotAllocation(productId);
         }
 
         public int GetQueueCountForProduct(int productId)

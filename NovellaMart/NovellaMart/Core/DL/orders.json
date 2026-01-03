@@ -51,155 +51,6 @@
             "name": "Cleansers",
             "parent_category_id": 1,
             "subcategories": [],
-            "products": [
-              {
-                "product_id": 1,
-                "name": "Gentle Foam Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1500,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              null,
-              {
-                "product_id": 3,
-                "name": "Oil Control Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#e0ffff"
-                ]
-              },
-              {
-                "product_id": 4,
-                "name": "Hydrating Milk Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2000,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 5,
-                "name": "Micellar Water",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 950,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 6,
-                "name": "Salicylic Acid Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 7,
-                "name": "Green Tea Gel Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1600,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#00ff00"
-                ]
-              },
-              {
-                "product_id": 8,
-                "name": "Charcoal Detox Bar",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#000000"
-                ]
-              },
-              {
-                "product_id": 9,
-                "name": "Rose Water Toner",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1100,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffc0cb"
-                ]
-              },
-              {
-                "product_id": 10,
-                "name": "Exfoliating Face Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1900,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#87ceeb"
-                ]
-              }
-            ],
             "categoryTree": {
               "Root": null
             }
@@ -228,155 +79,6 @@
             "name": "Cleansers",
             "parent_category_id": 1,
             "subcategories": [],
-            "products": [
-              {
-                "product_id": 1,
-                "name": "Gentle Foam Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1500,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 2,
-                "name": "Deep Pore Scrub",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#f0f8ff"
-                ]
-              },
-              {
-                "product_id": 3,
-                "name": "Oil Control Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#e0ffff"
-                ]
-              },
-              {
-                "product_id": 4,
-                "name": "Hydrating Milk Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2000,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              null,
-              {
-                "product_id": 6,
-                "name": "Salicylic Acid Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 7,
-                "name": "Green Tea Gel Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1600,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#00ff00"
-                ]
-              },
-              {
-                "product_id": 8,
-                "name": "Charcoal Detox Bar",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#000000"
-                ]
-              },
-              {
-                "product_id": 9,
-                "name": "Rose Water Toner",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1100,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffc0cb"
-                ]
-              },
-              {
-                "product_id": 10,
-                "name": "Exfoliating Face Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1900,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#87ceeb"
-                ]
-              }
-            ],
             "categoryTree": {
               "Root": null
             }
@@ -449,155 +151,6 @@
             "name": "Cleansers",
             "parent_category_id": 1,
             "subcategories": [],
-            "products": [
-              {
-                "product_id": 1,
-                "name": "Gentle Foam Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1500,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 2,
-                "name": "Deep Pore Scrub",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#f0f8ff"
-                ]
-              },
-              {
-                "product_id": 3,
-                "name": "Oil Control Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#e0ffff"
-                ]
-              },
-              {
-                "product_id": 4,
-                "name": "Hydrating Milk Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2000,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              null,
-              {
-                "product_id": 6,
-                "name": "Salicylic Acid Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 7,
-                "name": "Green Tea Gel Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1600,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#00ff00"
-                ]
-              },
-              {
-                "product_id": 8,
-                "name": "Charcoal Detox Bar",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#000000"
-                ]
-              },
-              {
-                "product_id": 9,
-                "name": "Rose Water Toner",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1100,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffc0cb"
-                ]
-              },
-              {
-                "product_id": 10,
-                "name": "Exfoliating Face Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1900,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#87ceeb"
-                ]
-              }
-            ],
             "categoryTree": {
               "Root": null
             }
@@ -626,155 +179,6 @@
             "name": "Cleansers",
             "parent_category_id": 1,
             "subcategories": [],
-            "products": [
-              {
-                "product_id": 1,
-                "name": "Gentle Foam Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1500,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              null,
-              {
-                "product_id": 3,
-                "name": "Oil Control Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#e0ffff"
-                ]
-              },
-              {
-                "product_id": 4,
-                "name": "Hydrating Milk Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2000,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 5,
-                "name": "Micellar Water",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 950,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 6,
-                "name": "Salicylic Acid Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 7,
-                "name": "Green Tea Gel Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1600,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#00ff00"
-                ]
-              },
-              {
-                "product_id": 8,
-                "name": "Charcoal Detox Bar",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#000000"
-                ]
-              },
-              {
-                "product_id": 9,
-                "name": "Rose Water Toner",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1100,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffc0cb"
-                ]
-              },
-              {
-                "product_id": 10,
-                "name": "Exfoliating Face Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1900,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#87ceeb"
-                ]
-              }
-            ],
             "categoryTree": {
               "Root": null
             }
@@ -803,156 +207,6 @@
             "name": "Cleansers",
             "parent_category_id": 1,
             "subcategories": [],
-            "products": [
-              null,
-              {
-                "product_id": 2,
-                "name": "Deep Pore Scrub",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#f0f8ff"
-                ]
-              },
-              {
-                "product_id": 3,
-                "name": "Oil Control Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#e0ffff"
-                ]
-              },
-              {
-                "product_id": 4,
-                "name": "Hydrating Milk Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2000,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 5,
-                "name": "Micellar Water",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 950,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 6,
-                "name": "Salicylic Acid Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 7,
-                "name": "Green Tea Gel Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1600,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#00ff00"
-                ]
-              },
-              {
-                "product_id": 8,
-                "name": "Charcoal Detox Bar",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#000000"
-                ]
-              },
-              {
-                "product_id": 9,
-                "name": "Rose Water Toner",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1100,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffc0cb"
-                ]
-              },
-              {
-                "product_id": 10,
-                "name": "Exfoliating Face Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1900,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#87ceeb"
-                ]
-              }
-            ],
             "categoryTree": {
               "Root": null
             }
@@ -1024,156 +278,6 @@
             "name": "Cleansers",
             "parent_category_id": 1,
             "subcategories": [],
-            "products": [
-              {
-                "product_id": 1,
-                "name": "Gentle Foam Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1500,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 2,
-                "name": "Deep Pore Scrub",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1800,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#f0f8ff"
-                ]
-              },
-              {
-                "product_id": 3,
-                "name": "Oil Control Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#e0ffff"
-                ]
-              },
-              {
-                "product_id": 4,
-                "name": "Hydrating Milk Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2000,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 5,
-                "name": "Micellar Water",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 950,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 6,
-                "name": "Salicylic Acid Cleanser",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 2200,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#ffffff"
-                ]
-              },
-              {
-                "product_id": 7,
-                "name": "Green Tea Gel Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1600,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#00ff00"
-                ]
-              },
-              null,
-              {
-                "product_id": 9,
-                "name": "Rose Water Toner",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1100,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "Trending",
-                  "#ffc0cb"
-                ]
-              },
-              {
-                "product_id": 10,
-                "name": "Exfoliating Face Wash",
-                "description": "Description...",
-                "images": [
-                  "/Images/image.jpg"
-                ],
-                "price": 1900,
-                "stock": 20,
-                "category": null,
-                "tags": [
-                  "Skincare",
-                  "Cleansers",
-                  "#87ceeb"
-                ]
-              }
-            ],
             "categoryTree": {
               "Root": null
             }
@@ -1189,6 +293,694 @@
     ],
     "totalAmount": 960,
     "orderTime": "2026-01-01T15:47:50.0475964+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030497881925581,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T15:09:48.1925457+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 1,
+          "name": "Gentle Foam Cleanser",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 1500,
+          "stock": 2,
+          "category": {
+            "category_id": 100,
+            "name": "Cleansers",
+            "parent_category_id": 1,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Skincare",
+            "Cleansers",
+            "#ffffff"
+          ]
+        },
+        "Quantity": 1
+      },
+      {
+        "Product": {
+          "product_id": 2,
+          "name": "Deep Pore Scrub",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 1800,
+          "stock": 2,
+          "category": {
+            "category_id": 100,
+            "name": "Cleansers",
+            "parent_category_id": 1,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Skincare",
+            "Cleansers",
+            "Trending",
+            "#f0f8ff"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 3335,
+    "orderTime": "2026-01-03T15:09:48.1928342+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030554304318524,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T16:43:50.4318489+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 53,
+          "name": "Setting Powder",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 2200,
+          "stock": 1,
+          "category": {
+            "category_id": 105,
+            "name": "Face",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Face",
+            "#ffffff"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2290,
+    "orderTime": "2026-01-03T16:43:50.4319367+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030565875198722,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T17:03:07.5198683+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 82,
+          "name": "French Tip Kit",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 1500,
+          "stock": 2,
+          "category": {
+            "category_id": 108,
+            "name": "Nails",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Nails",
+            "#ffffff"
+          ]
+        },
+        "Quantity": 3
+      },
+      {
+        "Product": {
+          "product_id": 81,
+          "name": "Gel Nail Polish Red",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 800,
+          "stock": 2,
+          "category": {
+            "category_id": 108,
+            "name": "Nails",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Nails",
+            "#ff0000"
+          ]
+        },
+        "Quantity": 1
+      },
+      {
+        "Product": {
+          "product_id": 83,
+          "name": "Nail Hardener",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 1200,
+          "stock": 2,
+          "category": {
+            "category_id": 108,
+            "name": "Nails",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Nails",
+            "#ffffff"
+          ]
+        },
+        "Quantity": 1
+      },
+      {
+        "Product": {
+          "product_id": 84,
+          "name": "Glitter Polish",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 900,
+          "stock": 4,
+          "category": {
+            "category_id": 108,
+            "name": "Nails",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Nails",
+            "Trending",
+            "#ffd700"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 7230,
+    "orderTime": "2026-01-03T17:03:07.5199397+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030581946945255,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T17:29:54.6945216+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 137,
+          "name": "Raincoat",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 5000,
+          "stock": 2,
+          "category": {
+            "category_id": 113,
+            "name": "Outerwear",
+            "parent_category_id": 3,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Woman Wear",
+            "Outerwear",
+            "#ffff00"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 4950,
+    "orderTime": "2026-01-03T17:29:54.6946661+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030597109193336,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T17:55:10.9193267+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 137,
+          "name": "Raincoat",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 5000,
+          "stock": 2,
+          "category": {
+            "category_id": 113,
+            "name": "Outerwear",
+            "parent_category_id": 3,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Woman Wear",
+            "Outerwear",
+            "#ffff00"
+          ]
+        },
+        "Quantity": 1
+      },
+      {
+        "Product": {
+          "product_id": 138,
+          "name": "Bomber Jacket",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 5500,
+          "stock": 3,
+          "category": {
+            "category_id": 113,
+            "name": "Outerwear",
+            "parent_category_id": 3,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Woman Wear",
+            "Outerwear",
+            "#556b2f"
+          ]
+        },
+        "Quantity": 1
+      },
+      {
+        "Product": {
+          "product_id": 87,
+          "name": "Cuticle Oil",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 700,
+          "stock": 1,
+          "category": {
+            "category_id": 108,
+            "name": "Nails",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Nails",
+            "#ffd700"
+          ]
+        },
+        "Quantity": 1
+      },
+      {
+        "Product": {
+          "product_id": 88,
+          "name": "Black Matte Polish",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 850,
+          "stock": 0,
+          "category": {
+            "category_id": 108,
+            "name": "Nails",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Nails",
+            "#000000"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 11647.5,
+    "orderTime": "2026-01-03T17:55:10.9194473+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030619711103728,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T18:32:51.11037+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 123,
+          "name": "Pleated Skirt",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 3000,
+          "stock": 3,
+          "category": {
+            "category_id": 112,
+            "name": "Bottoms",
+            "parent_category_id": 3,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Woman Wear",
+            "Bottoms",
+            "#ff69b4"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2900,
+    "orderTime": "2026-01-03T18:32:51.1104501+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030645104606911,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "aatikayousuf127@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Aatika",
+      "lastName": "Yousuf",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T19:15:10.4606558+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 street ",
+      "city": "faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 135,
+          "name": "Formal Blazer",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 7500,
+          "stock": 1,
+          "category": {
+            "category_id": 113,
+            "name": "Outerwear",
+            "parent_category_id": 3,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Woman Wear",
+            "Outerwear",
+            "#000000"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 6950,
+    "orderTime": "2026-01-03T19:15:10.4607021+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
     "flash_reservation_id": 0

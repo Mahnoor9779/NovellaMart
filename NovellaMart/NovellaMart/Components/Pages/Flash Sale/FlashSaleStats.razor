@@ -36,8 +36,9 @@
             while (node != null)
             {
                 var p = node.Data;
+
                 bool isExpanded = expandedProductId == p.product_id;
-                int queueSize = LiveQueueService.GetQueueCount(p.product_id);
+                int queueSize = (p != null) ? LiveQueueService.GetQueueCount(p.product_id) : 0;
 
                 <div class="col-12 mb-3">
                     <div class="checkout-card p-0 overflow-hidden shadow-sm @(isExpanded ? "admin-card-expanded" : "admin-card-default")">
@@ -76,33 +77,60 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @if (queueSize == 0)
+                                            @{
+                                                // Fetch real-time snapshot for this specific product
+                                                var queueItems = LiveQueueService.GetQueueSnapshot(p.product_id);
+                                                int rank = 1;
+                                            }
+
+                                            @if (queueItems == null || !queueItems.Any())
                                             {
                                                 <tr>
                                                     <td colspan="4">
-                                                        <div class="empty-queue-container">
-                                                            <i class="fas fa-inbox empty-drawer-icon"></i>
-                                                            <span class="empty-text">Queue is currently empty.</span>
+                                                        <div class="empty-queue-container text-center py-4">
+                                                            <i class="fas fa-inbox mb-2" style="color: #ccc; font-size: 1.5rem;"></i>
+                                                            <p class="text-muted mb-0">No customers in line yet.</p>
                                                         </div>
                                                     </td>
                                                 </tr>
                                             }
                                             else
                                             {
-                                                @* Example row mapping real classes *@
-                                                <tr>
-                                                    <td class="col-serial"><span class="queue-serial">#1</span></td>
-                                                    <td>
-                                                        <div class="d-flex align-items-center">
-                                                            <i class="fas fa-user-circle me-2 icon-user-id"></i>
-                                                            <span class="fw-bold">USR_4921</span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="join-time-text">16:04:12</td>
-                                                    <td class="col-status">
-                                                        <span class="badge rounded-pill status-badge-waiting">Waiting</span>
-                                                    </td>
-                                                </tr>
+                                                @foreach (var request in queueItems)
+                                                {
+                                                    <tr>
+                                                        <td class="col-serial"><span class="queue-serial">#@rank</span></td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <i class="fas fa-user-circle me-2 text-primary"></i>
+                                                                <span class="fw-bold">User: @request.customer.user_id</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="join-time-text">@request.requestTime.ToString("HH:mm:ss")</td>
+                                                        <td class="col-status">
+                                                            @{
+                                                                var status = LiveQueueService.GetUserStatus(request.customer.user_id, p.product_id);
+                                                            }
+                                                            @if (status == "Allocated")
+                                                            {
+                                                                <span class="badge rounded-pill bg-success">Allocated</span>
+                                                            }
+                                                            else if (status == "Expired")
+                                                            {
+                                                                <span class="badge rounded-pill bg-secondary text-white">Expired (Stock Returned)</span>
+                                                            }
+                                                            else if (status == "Rejected")
+                                                            {
+                                                                <span class="badge rounded-pill bg-danger">Rejected</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge rounded-pill bg-warning text-dark">Waiting</span>
+                                                            }
+                                                        </td>
+                                                    </tr>
+                                                    rank++;
+                                                }
                                             }
                                         </tbody>
                                     </table>
@@ -125,6 +153,7 @@
 
     protected override void OnInitialized()
     {
+        // Load the current sale from the service
         currentSale = SaleDataService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id);
         if (currentSale != null)
         {
@@ -132,8 +161,42 @@
         }
 
         _refreshTimer = new System.Timers.Timer(1000);
-        _refreshTimer.Elapsed += (s, e) => InvokeAsync(StateHasChanged);
+
+        _refreshTimer.Elapsed += async (s, e) =>
+        {
+            // AUTOMATIC REALLOCATION: Check for expired users every second
+            LiveQueueService.ReleaseExpiredAllocations();
+
+            if (currentSale != null)
+            {
+                var span = currentSale.endTime - DateTime.Now;
+                if (span.Ticks <= 0 && currentSale.status == "ACTIVE")
+                {
+                    await FinalizeAllocations();
+                }
+            }
+            await InvokeAsync(StateHasChanged);
+        };
+
         _refreshTimer.Start();
+    }
+
+    private async Task FinalizeAllocations()
+    {
+        // 1. One last check for any expired users before we lock the sale
+        LiveQueueService.ReleaseExpiredAllocations();
+
+        // 2. Run the service logic to move users from Queue to Heap to Allocated status
+        LiveQueueService.FinalizeAllocations();
+
+        if (currentSale != null)
+        {
+            currentSale.status = "ENDED";
+            // Ensure the ENDED status and updated stock are saved to the JSON file
+            SaleDataService.UpdateFlashSale(currentSale);
+        }
+
+        await InvokeAsync(StateHasChanged);
     }
 
     private string GetTimeRemaining()
@@ -143,12 +206,7 @@
         return span.Ticks > 0 ? $"{(int)span.TotalHours:D2}h {span.Minutes:D2}m {span.Seconds:D2}s" : "ENDED";
     }
 
-    private void FinalizeAllocations()
-    {
-        LiveQueueService.FinalizeAllocations();
-        if (currentSale != null) currentSale.status = "ENDED";
-        StateHasChanged();
-    }
+    
 
     private void ToggleQueue(int productId)
     {
