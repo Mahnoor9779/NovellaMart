@@ -39,6 +39,8 @@ else
         <div class="product-info-card">
             <h1 class="product-title">@product.name</h1>
 
+
+
             <span class="product-category">@product.category?.name</span>
 
             <p class="product-desc">@product.description</p>
@@ -56,19 +58,28 @@ else
                 <button @onclick="() => ChangeQty(1)">+</button>
             </div>
 
-            <!-- Updated Add to Cart Button with UX Feedback -->
-            <button class="btn-add-cart @(isAdded ? "btn-success-anim" : "")"
-                    @onclick="AddToCart"
-                    disabled="@(product.stock == 0 || isAdded)">
-                @if (isAdded)
-                {
-                    <span><i class="fas fa-check-circle"></i> Added Successfully</span>
-                }
-                else
-                {
-                    <span><i class="fas fa-shopping-cart"></i> Add to Cart</span>
-                }
-            </button>
+            <!-- Updated Add to Cart Button with Undo Logic -->
+            @if (showUndo)
+            {
+                 <button class="btn-add-cart btn-undo-mode" @onclick="UndoAdd">
+                    <span><i class="fas fa-undo"></i> Undo Addition</span>
+                </button>
+            }
+            else
+            {
+                <button class="btn-add-cart @(isAdded ? "btn-success-anim" : "")"
+                        @onclick="AddToCart"
+                        disabled="@(product.stock == 0 || isAdded)">
+                    @if (isAdded)
+                    {
+                        <span><i class="fas fa-check-circle"></i> Added Successfully</span>
+                    }
+                    else
+                    {
+                        <span><i class="fas fa-shopping-cart"></i> Add to Cart</span>
+                    }
+                </button>
+            }
 
             <button class="btn-buy-now" @onclick="BuyNow">
                 Buy Now
@@ -86,6 +97,18 @@ else
         transition: all 0.3s ease;
         transform: scale(1.02);
     }
+    .btn-undo-mode {
+        background-color: #ffc107 !important; /* Yellow/Warning Color for Undo */
+        color: #333 !important;
+        border-color: #ffc107 !important;
+        /* Animation */
+        animation: pulse 2s infinite;
+    }
+    @@keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+    }
 </style>
 
 @code {
@@ -96,10 +119,25 @@ else
     private int selectedImage = 0;
     private int quantity = 1;
     private bool isAdded = false;
+    private bool showUndo = false;
 
     protected override void OnInitialized()
     {
         product = ProductService.GetProductById(ProductId);
+        CheckUndoState();
+    }
+
+    private void CheckUndoState()
+    {
+        // Verify if the last action was adding THIS product
+        if (CartService.CanUndo())
+        {
+            var lastAction = CartService.PeekLastAction();
+            if (lastAction != null && lastAction.Type == "Add" && lastAction.ProductId == product.product_id)
+            {
+                showUndo = true;
+            }
+        }
     }
 
     private void ChangeQty(int value)
@@ -113,12 +151,21 @@ else
         // 1. Add to Cart Logic
         await CartService.AddToCart(product, quantity);
 
-        // 2. Trigger UI Feedback
-        isAdded = true;
+        // 2. Update Local State
+        showUndo = true;
+        isAdded = true; // Trigger success animation momentarily
         StateHasChanged();
 
-        // 3. Revert after 2 seconds
-        await Task.Delay(2000);
+        // 3. Timeout for Undo Button
+        await Task.Delay(3500);
+        showUndo = false;
+        StateHasChanged();
+    }
+
+    private void UndoAdd()
+    {
+        CartService.UndoLastAction();
+        showUndo = false;
         isAdded = false;
         StateHasChanged();
     }

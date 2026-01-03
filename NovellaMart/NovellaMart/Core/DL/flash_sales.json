@@ -1,228 +1,60 @@
 [
   {
-    "flash_sale_id": 3,
-    "title": "winter ",
-    "description": "jksjqc",
-    "discount": 70,
-    "startTime": "2026-01-03T19:12:11.3287939+05:00",
-    "endTime": "2026-01-03T19:20:00",
+    "flash_sale_id": 1,
+    "title": "New Flash Sale",
+    "description": "new",
+    "discount": 50,
+    "startTime": "2026-01-03T21:07:40.1227657+05:00",
+    "endTime": "2026-01-03T22:07:40.1227658+05:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 131,
-        "name": "Winter Trench Coat",
+        "product_id": 21,
+        "name": "Daily Gel Moisturizer",
         "description": "Description...",
         "images": [
           "/Images/image.jpg"
         ],
-        "price": 15000,
-        "stock": 4,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "Trending",
-          "#d2b48c"
-        ]
-      },
-      {
-        "product_id": 132,
-        "name": "Leather Jacket",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 12000,
-        "stock": 2,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#000000"
-        ]
-      },
-      {
-        "product_id": 133,
-        "name": "Denim Jacket",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 6000,
-        "stock": 4,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#0000ff"
-        ]
-      },
-      {
-        "product_id": 134,
-        "name": "Puffer Vest",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 4500,
-        "stock": 1,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#ff0000"
-        ]
-      },
-      {
-        "product_id": 135,
-        "name": "Formal Blazer",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 7500,
-        "stock": 0,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#000000"
-        ]
-      },
-      {
-        "product_id": 136,
-        "name": "Faux Fur Coat",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 9000,
-        "stock": 0,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#ffffff"
-        ]
-      },
-      {
-        "product_id": 137,
-        "name": "Raincoat",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 5000,
-        "stock": 2,
-        "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#ffff00"
-        ]
-      },
-      {
-        "product_id": 138,
-        "name": "Bomber Jacket",
-        "description": "Description...",
-        "images": [
-          "/Images/image.jpg"
-        ],
-        "price": 5500,
+        "price": 2500,
         "stock": 3,
         "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
+          "category_id": 102,
+          "name": "Moisturizers",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#556b2f"
+          "Skincare",
+          "Moisturizers",
+          "#f0ffff"
         ]
       },
       {
-        "product_id": 139,
-        "name": "Cardigan",
+        "product_id": 22,
+        "name": "Rich Night Cream",
         "description": "Description...",
         "images": [
           "/Images/image.jpg"
         ],
-        "price": 3200,
+        "price": 3000,
         "stock": 0,
         "category": {
-          "category_id": 113,
-          "name": "Outerwear",
-          "parent_category_id": 3,
+          "category_id": 102,
+          "name": "Moisturizers",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "#808080"
+          "Skincare",
+          "Moisturizers",
+          "Trending",
+          "#fffacd"
         ]
       }
     ],
@@ -231,7 +63,7 @@
       "heap": [
         {
           "Item1": {
-            "request_id": 639030644060652788,
+            "request_id": 639030713814981250,
             "customer": {
               "contact": "",
               "Addresses": [],
@@ -243,7 +75,7 @@
                 "AppliedPromoCode": null,
                 "DiscountAmount": 0
               },
-              "user_id": 1,
+              "user_id": 3,
               "username": "",
               "email": "",
               "password": "",
@@ -251,7 +83,7 @@
               "firstName": "",
               "lastName": "",
               "profilePicture": "",
-              "createdAt": "2026-01-03T19:13:26.0652714+05:00",
+              "createdAt": "2026-01-03T21:09:41.498114+05:00",
               "isActive": true,
               "phoneNumber": "",
               "address": "",
@@ -259,91 +91,38 @@
               "zipCode": ""
             },
             "product": {
-              "product_id": 139,
-              "name": "Cardigan",
+              "product_id": 22,
+              "name": "Rich Night Cream",
               "description": "Description...",
               "images": [
                 "/Images/image.jpg"
               ],
-              "price": 3200,
+              "price": 3000,
               "stock": 0,
               "category": {
-                "category_id": 113,
-                "name": "Outerwear",
-                "parent_category_id": 3,
+                "category_id": 102,
+                "name": "Moisturizers",
+                "parent_category_id": 1,
                 "subcategories": [],
                 "categoryTree": {
                   "Root": null
                 }
               },
               "tags": [
-                "Woman Wear",
-                "Outerwear",
-                "#808080"
+                "Skincare",
+                "Moisturizers",
+                "Trending",
+                "#fffacd"
               ]
             },
-            "requestTime": "2026-01-03T19:13:26.0652791+05:00",
-            "allocated": false
+            "requestTime": "2026-01-03T21:09:41.4981256+05:00",
+            "allocated": true
           },
-          "Item2": -639030644060652791
+          "Item2": -639030713814981256
         },
         {
-          "Item1": {
-            "request_id": 639030644060652788,
-            "customer": {
-              "contact": "",
-              "Addresses": [],
-              "OrderHistory": [],
-              "Cart": {
-                "cart_id": 0,
-                "customer": null,
-                "items": [],
-                "AppliedPromoCode": null,
-                "DiscountAmount": 0
-              },
-              "user_id": 1,
-              "username": "",
-              "email": "",
-              "password": "",
-              "role": "Customer",
-              "firstName": "",
-              "lastName": "",
-              "profilePicture": "",
-              "createdAt": "2026-01-03T19:13:26.0652714+05:00",
-              "isActive": true,
-              "phoneNumber": "",
-              "address": "",
-              "city": "",
-              "zipCode": ""
-            },
-            "product": {
-              "product_id": 139,
-              "name": "Cardigan",
-              "description": "Description...",
-              "images": [
-                "/Images/image.jpg"
-              ],
-              "price": 3200,
-              "stock": 0,
-              "category": {
-                "category_id": 113,
-                "name": "Outerwear",
-                "parent_category_id": 3,
-                "subcategories": [],
-                "categoryTree": {
-                  "Root": null
-                }
-              },
-              "tags": [
-                "Woman Wear",
-                "Outerwear",
-                "#808080"
-              ]
-            },
-            "requestTime": "2026-01-03T19:13:26.0652791+05:00",
-            "allocated": false
-          },
-          "Item2": -639030644060652791
+          "Item1": null,
+          "Item2": 0
         },
         {
           "Item1": null,

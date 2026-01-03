@@ -984,5 +984,77 @@
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
     "flash_reservation_id": 0
+  },
+  {
+    "order_id": 639030704582583687,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "tulipkardo123@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "Mahnoor",
+      "lastName": "Shabbir",
+      "profilePicture": "",
+      "createdAt": "2026-01-03T20:54:18.2583277+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "409 E Block Sir Syed Town Faisalabad",
+      "city": "Faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 5,
+          "name": "Micellar Water",
+          "description": "Description...",
+          "images": [
+            "/Images/image.jpg"
+          ],
+          "price": 950,
+          "stock": 1,
+          "category": {
+            "category_id": 100,
+            "name": "Cleansers",
+            "parent_category_id": 1,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Skincare",
+            "Cleansers",
+            "Trending",
+            "#ffffff"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 1055,
+    "orderTime": "2026-01-03T20:54:18.2583735+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0
   }
 ]

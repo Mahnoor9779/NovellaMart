@@ -57,12 +57,7 @@ namespace NovellaMart.Core.BL.Services
 
         // --- BUSINESS LOGIC (With Auto-Save) ---
 
-        public void ClearCart()
-        {
-            // DSA: Reset the Linked List
-            _activeCart.items = new MyLinkedList<CartItemBL>();
-            SaveCartToFile(); // Persist change
-        }
+        // Old ClearCart removed, new one is below with Undo logic.
 
         public CartBL GetCart()
         {
@@ -151,6 +146,9 @@ namespace NovellaMart.Core.BL.Services
             }
         }
 
+        // Initialize StackArray with capacity 50
+        private StackArray<CartAction> _undoStack = new StackArray<CartAction>(50);
+
         public async Task AddToCart(ProductBL product, int quantity = 1)
         {
             if (product == null) return;
@@ -162,6 +160,8 @@ namespace NovellaMart.Core.BL.Services
                 if (current.Data.Product.product_id == product.product_id)
                 {
                     current.Data.Quantity += quantity;
+                    // Push "Add" Action (Undo will remove this quantity)
+                    _undoStack.Push(new CartAction { Type = "Add", ProductId = product.product_id, Quantity = quantity });
                     SaveCartToFile();
                     return;
                 }
@@ -169,7 +169,65 @@ namespace NovellaMart.Core.BL.Services
             }
 
             _activeCart.items.InsertAtEnd(new CartItemBL(product, quantity));
+            // Push "Add" Action
+            _undoStack.Push(new CartAction { Type = "Add", ProductId = product.product_id, Quantity = quantity });
             SaveCartToFile();
+        }
+
+        public void ClearCart()
+        {
+            // DSA: Save items for Undo before clearing
+            List<CartItemBL> itemsBackup = new List<CartItemBL>();
+            var node = _activeCart.items.head;
+            while (node != null)
+            {
+                itemsBackup.Add(node.Data);
+                node = node.Next;
+            }
+
+            // Push "Clear" Action
+            _undoStack.Push(new CartAction { Type = "Clear", RestoredItems = itemsBackup });
+
+            _activeCart.items = new MyLinkedList<CartItemBL>();
+            SaveCartToFile(); // Persist change
+        }
+
+        public void UndoLastAction()
+        {
+            if (_undoStack.IsEmpty()) return;
+
+            var action = _undoStack.Pop();
+
+            if (action.Type == "Add")
+            {
+                // Undo Add: Decrease quantity or remove item
+                UpdateQuantity(action.ProductId, -action.Quantity);
+            }
+            else if (action.Type == "Clear")
+            {
+                // Undo Clear: Restore items
+                _activeCart.items = new MyLinkedList<CartItemBL>();
+                foreach (var item in action.RestoredItems)
+                {
+                    _activeCart.items.InsertAtEnd(item);
+                }
+                SaveCartToFile();
+            }
+        }
+
+        public bool CanUndo()
+        {
+            return !_undoStack.IsEmpty();
+        }
+
+        public CartAction PeekLastAction()
+        {
+           return _undoStack.Peek();
+        }
+
+        public int GetStackSize()
+        {
+            return _undoStack.Size();
         }
     }
 }

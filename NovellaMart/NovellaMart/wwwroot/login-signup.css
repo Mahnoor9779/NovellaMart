@@ -1,0 +1,126 @@
+/* =========================================
+   9. LOGIN / SIGNUP PAGE STYLES
+   ========================================= */
+
+.signup-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    position: relative;
+}
+
+.signup-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(214, 77, 125, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border-top: 5px solid var(--nm-primary);
+}
+
+.signup-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--nm-text);
+    margin-bottom: 2rem;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group-flat {
+    position: relative;
+}
+
+.form-input-flat {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #fbfbfe;
+    transition: all 0.3s ease;
+}
+
+.form-input-flat:focus {
+    outline: none;
+    border-color: var(--nm-primary);
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(214, 77, 125, 0.1);
+}
+
+.validation-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    text-align: left;
+}
+
+.btn-signup-flat {
+    background-color: var(--nm-primary);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-signup-flat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(95, 244, 239, 0.4);
+    background-color: var(--nm-accent);
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login-link a {
+    color: var(--nm-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.back-arrow-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.btn-back-home {
+    background: white;
+    border: 2px solid #f0f0f0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+
+.btn-back-home:hover {
+    border-color: var(--nm-primary);
+    color: var(--nm-primary);
+    transform: translateX(-3px);
+}

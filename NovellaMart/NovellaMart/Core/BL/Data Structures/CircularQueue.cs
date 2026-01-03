@@ -4,11 +4,11 @@ namespace NovellaMart.Core.BL.Data_Structures
 {
     public class CircularQueue<type>
     {
-        private type[] arr;
-        private int front;
-        private int rear;
-        private int capacity;
-        private int size;
+        public type[] arr { get; set; }
+        public int front { get; set; }
+        public int rear { get; set; }
+        public int capacity { get; set; }
+        public int size { get; set; }
 
         public CircularQueue(int queueCapacity)
         {

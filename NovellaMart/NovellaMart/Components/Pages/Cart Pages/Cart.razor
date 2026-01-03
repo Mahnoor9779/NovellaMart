@@ -136,9 +136,23 @@
                 <span style="font-weight: 800; color: var(--nm-primary); font-size: 1.3rem;">Rs. @CartService.GetTotalAmount()</span>
             </div>
 
-            <button type="button" class="btn-checkout-glow" @onclick="ProceedToCheckout">
-                Checkout Now <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 0.9rem;"></i>
-            </button>
+            <div class="d-flex gap-2">
+                <button type="button" class="btn-checkout-glow" @onclick="ProceedToCheckout" style="flex: 1;">
+                    Checkout Now <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 0.9rem;"></i>
+                </button>
+            </div>
+            
+            <div class="mt-3 d-flex gap-2">
+                <button class="btn-clear-cart w-100" @onclick="ClearCart">
+                    <i class="fas fa-trash-alt me-2"></i> Clear Cart
+                </button>
+                @if(CartService.CanUndo())
+                {
+                    <button class="btn-undo-cart w-100" @onclick="UndoAction">
+                        <i class="fas fa-undo"></i> Undo
+                    </button>
+                }
+            </div>
 
             <div class="payment-icons">
                 <i class="fab fa-cc-visa"></i>
@@ -200,5 +214,15 @@
     private void ProceedToCheckout()
     {
         NavManager.NavigateTo("/checkout");
+    }
+
+    private void ClearCart()
+    {
+        CartService.ClearCart();
+    }
+
+    private void UndoAction()
+    {
+        CartService.UndoLastAction();
     }
 }

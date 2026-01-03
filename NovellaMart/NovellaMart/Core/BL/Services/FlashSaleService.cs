@@ -19,12 +19,41 @@ namespace NovellaMart.Core.BL.Services
         public FlashSaleService(FlashSaleCrudService crudService)
         {
             _crudService = crudService;
-            _activityLogs = new List<string>();
-            // FIX: Initialize here so they are never null
-            _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
-            _userRequestStatus = new Dictionary<string, string>();
-            _activeRequests = new Dictionary<string, CustomerRequestBL>();
-            _allocationExpiry = new Dictionary<string, DateTime>();
+            
+            // Try loading state from file
+            var loadedData = NovellaMart.Core.DL.FileHandler.LoadData<FlashSaleRuntimeData>("flash_sale_runtime.json");
+            
+            if (loadedData != null)
+            {
+                _productQueues = loadedData.ProductQueues ?? new Dictionary<int, CircularQueue<CustomerRequestBL>>();
+                _userRequestStatus = loadedData.UserRequestStatus ?? new Dictionary<string, string>();
+                _allocationExpiry = loadedData.AllocationExpiry ?? new Dictionary<string, DateTime>();
+                _inCheckoutProcess = loadedData.InCheckoutProcess ?? new HashSet<string>();
+                _activityLogs = loadedData.ActivityLogs ?? new List<string>();
+                _activeRequests = loadedData.ActiveRequests ?? new Dictionary<string, CustomerRequestBL>();
+            }
+            else
+            {
+                _activityLogs = new List<string>();
+                _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
+                _userRequestStatus = new Dictionary<string, string>();
+                _activeRequests = new Dictionary<string, CustomerRequestBL>();
+                _allocationExpiry = new Dictionary<string, DateTime>();
+            }
+        }
+
+        private void SaveRuntimeState()
+        {
+            var data = new FlashSaleRuntimeData 
+            {
+                ProductQueues = _productQueues,
+                UserRequestStatus = _userRequestStatus,
+                AllocationExpiry = _allocationExpiry,
+                InCheckoutProcess = _inCheckoutProcess,
+                ActivityLogs = _activityLogs,
+                ActiveRequests = _activeRequests
+            };
+            NovellaMart.Core.DL.FileHandler.SaveData("flash_sale_runtime.json", data);
         }
 
         public void SetActiveSale(FlashSaleBL sale)
@@ -87,6 +116,8 @@ namespace NovellaMart.Core.BL.Services
             targetQueue.Enqueue(request);
             _userRequestStatus.Add(statusKey, "Queued");
             _activeRequests.Add(statusKey, request);
+            
+            SaveRuntimeState(); // PERSISTENCE
 
             AddLog($"[{DateTime.Now.ToLongTimeString()}] User {customer.user_id} joined queue for {saleItem.name}");
 
@@ -153,7 +184,8 @@ namespace NovellaMart.Core.BL.Services
             if (_activeSale != null)
             {
                 _activeSale.status = "ENDED";
-                _crudService.UpdateFlashSale(_activeSale); // This will now work
+                _crudService.UpdateFlashSale(_activeSale); 
+                SaveRuntimeState(); // PERSISTENCE
                 AddLog($"[{DateTime.Now.ToShortTimeString()}] Sale Finalized and Persisted to File.");
             }
         }
@@ -168,6 +200,7 @@ namespace NovellaMart.Core.BL.Services
             {
                 _userRequestStatus.Remove(statusKey);
                 _activeRequests.Remove(statusKey);
+                SaveRuntimeState(); // PERSISTENCE
                 AddLog($"[{DateTime.Now.ToLongTimeString()}] User {userId} LEFT queue for Product {productId}");
             }
         }
@@ -253,6 +286,7 @@ namespace NovellaMart.Core.BL.Services
         {
             string key = $"{userId}_{productId}";
             _inCheckoutProcess.Add(key);
+            SaveRuntimeState(); // PERSISTENCE
         }
 
         public bool IsAlreadyInCheckout(int userId, int productId)
@@ -286,6 +320,7 @@ namespace NovellaMart.Core.BL.Services
                 // 3. Mark as Expired
                 _userRequestStatus[key] = "Expired";
             }
+            if(keysToRelease.Count > 0) SaveRuntimeState(); // PERSISTENCE
         }
     }
 }

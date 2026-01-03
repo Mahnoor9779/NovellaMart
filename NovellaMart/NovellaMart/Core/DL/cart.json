@@ -1,12 +1,92 @@
 {
   "cart_id": 0,
   "customer": null,
-  "items": [],
-  "AppliedPromoCode": {
-    "Id": 1714769804,
-    "Code": "WINTER26",
-    "DiscountPercentage": 10,
-    "IsActive": true
-  },
-  "DiscountAmount": 750
+  "items": [
+    {
+      "Product": {
+        "product_id": 9,
+        "name": "Rose Water Toner",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 1100,
+        "stock": 4,
+        "category": {
+          "category_id": 100,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Trending",
+          "#ffc0cb"
+        ]
+      },
+      "Quantity": 1
+    },
+    {
+      "Product": {
+        "product_id": 5,
+        "name": "Micellar Water",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 950,
+        "stock": 2,
+        "category": {
+          "category_id": 100,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Trending",
+          "#ffffff"
+        ]
+      },
+      "Quantity": 1
+    },
+    {
+      "Product": {
+        "product_id": 2,
+        "name": "Deep Pore Scrub",
+        "description": "Description...",
+        "images": [
+          "/Images/image.jpg"
+        ],
+        "price": 1800,
+        "stock": 3,
+        "category": {
+          "category_id": 100,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Trending",
+          "#f0f8ff"
+        ]
+      },
+      "Quantity": 1
+    }
+  ],
+  "AppliedPromoCode": null,
+  "DiscountAmount": 0
 }

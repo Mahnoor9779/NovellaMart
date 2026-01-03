@@ -119,18 +119,18 @@
                                 <a href="product/@p.product_id" class="p-name">@p.name</a>
                                 <div class="p-price">Rs. @p.price.ToString("N0")</div>
 
-                                <button class="btn-add-to-cart @(isAdded ? "btn-success" : "")"
-                                        @onclick="() => AddToCart(p)"
-                                        disabled="@isAdded">
-                                    @if (isAdded)
-                                    {
-                                        <span><i class="fas fa-check me-2"></i> Added</span>
-                                    }
-                                    else
-                                    {
+                                @if (CanUndo(p.product_id))
+                                {
+                                    <button class="btn-add-to-cart btn-undo-state" @onclick="UndoAdd">
+                                        <span><i class="fas fa-undo me-2"></i> Undo</span>
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button class="btn-add-to-cart" @onclick="() => AddToCart(p)">
                                         <span>ADD TO CART</span>
-                                    }
-                                </button>
+                                    </button>
+                                }
                             </div>
                         </div>
                         currentNode = currentNode.Next;
@@ -203,17 +203,36 @@
         _timer?.Dispose();
     }
 
+    private HashSet<int> undoVisible = new HashSet<int>();
+
+    private bool CanUndo(int productId)
+    {
+        return undoVisible.Contains(productId) &&
+               CartService.CanUndo() && 
+               CartService.PeekLastAction().Type == "Add" && 
+               CartService.PeekLastAction().ProductId == productId;
+    }
+
     private async Task AddToCart(ProductBL product)
     {
         await CartService.AddToCart(product, 1);
-
-        if (addedStates.ContainsKey(product.product_id)) addedStates[product.product_id] = true;
-        else addedStates.Add(product.product_id, true);
-
+        undoVisible.Add(product.product_id);
         StateHasChanged();
 
-        await Task.Delay(2000);
-        addedStates[product.product_id] = false;
+        await Task.Delay(3500);
+        
+        undoVisible.Remove(product.product_id);
+        StateHasChanged();
+    }
+
+    private void UndoAdd()
+    {
+        var action = CartService.PeekLastAction();
+        if(action != null)
+        {
+             undoVisible.Remove(action.ProductId);
+        }
+        CartService.UndoLastAction();
         StateHasChanged();
     }
 }
