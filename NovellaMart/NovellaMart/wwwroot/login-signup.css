@@ -1,25 +1,46 @@
+/* RESET for Full Screen Background */
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    /* height: 100% !important;  <-- Removed to fix sticky scroll */
+    /* overflow-x: hidden !important; <-- Removed to fix sticky scroll */
+}
+
 /* =========================================
    9. LOGIN / SIGNUP PAGE STYLES
    ========================================= */
 
 .signup-page-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Move to Left */
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
+    width: 100%;
     padding: 2rem;
+    padding-left: 10%;
+    /* Spacing from left edge */
     position: relative;
+    background-image: url('signup-bg.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
 }
 
 .signup-card {
     background: white;
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(214, 77, 125, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
     width: 100%;
     max-width: 450px;
     text-align: center;
-    border-top: 5px solid var(--nm-primary);
+    border-top: none !important;
+    /* Removed pink border */
 }
 
 .signup-title {
@@ -99,11 +120,11 @@
 }
 
 .back-arrow-container {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
+    display: none !important;
+    /* Hiding back button */
 }
 
+/* Kept just in case, though hidden */
 .btn-back-home {
     background: white;
     border: 2px solid #f0f0f0;

@@ -183,24 +183,31 @@
 
     protected override async Task OnInitializedAsync()
     {
+        Console.WriteLine("DEBUG ADMIN: Starting OnInitializedAsync");
         await ProductService.LoadProductsAsync();
-        TotalProducts = ProductService.MasterProductList.Count();
+        Console.WriteLine($"DEBUG ADMIN: Loaded Products. Count: {ProductService.MasterProductList.Count()}");
+        TotalProducts = ProductService.MasterProductList.Count(); // Fix: use .Count() method
 
         var ordersList = OrderService.GetAllOrders();
+        Console.WriteLine($"DEBUG ADMIN: Loaded Orders. Count: {ordersList.Count()}");
         TotalOrders = ordersList.Count();
 
         var current = ordersList.head;
+        int loopCount = 0;
         while (current != null)
         {
+            if (loopCount++ > 10000) { Console.WriteLine("DEBUG ADMIN: BREAKING INFINITE ORDER LOOP"); break; }
             TotalRevenue += current.Data.totalAmount;
             RecentOrders.Add(current.Data);
             current = current.Next;
         }
+        Console.WriteLine("DEBUG ADMIN: Finished Order Loop");
 
         RecentOrders.Reverse();
         RecentOrders = RecentOrders.Take(5).ToList();
-
+        
         LoadPromos();
+        Console.WriteLine("DEBUG ADMIN: Loaded Promos");
     }
 
     private void LoadPromos()

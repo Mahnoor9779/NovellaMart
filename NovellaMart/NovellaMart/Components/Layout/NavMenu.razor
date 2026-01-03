@@ -1,5 +1,10 @@
 ﻿@inject IJSRuntime JSRuntime
 @inject NavigationManager Nav
+@inject NovellaMart.Core.BL.Services.ProductCatalogService CatalogService
+@using NovellaMart.Core.BL.Model_Classes
+@using NovellaMart.Core.BL.Data_Structures
+@using System.Linq
+@using System.Collections.Generic
 
 <div class="top-announcement">
     ✨ Free Shipping on Orders Over 5000 | Shop the New Collection ✨
@@ -9,18 +14,52 @@
     <div class="nav-container">
         <a class="brand-logo" href=""><i class="fas fa-gem me-2"></i>NovellaMart</a>
 
-        <div class="center-menu-container">
-            <ul class="center-menu">
-                <li class="nav-item"><NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink></li>
-                <li class="nav-item"><NavLink class="nav-link" href="shop/Skincare">Skincare</NavLink></li>
-                <li class="nav-item"><NavLink class="nav-link" href="shop/Cosmetics">Cosmetics</NavLink></li>
-                <li class="nav-item"><NavLink class="nav-link" href="shop/Woman Wear">Woman Wear</NavLink></li>
-                <li class="nav-item"><NavLink class="nav-link" href="shop/Accessories">Accessories</NavLink></li>
-            </ul>
-        </div>
+        <!-- CENTER MENU -->
+        @if (!isSearchActive)
+        {
+            <div class="center-menu-container">
+                <ul class="center-menu">
+                    <li class="nav-item"><NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink></li>
+                    <li class="nav-item"><NavLink class="nav-link" href="shop/Skincare">Skincare</NavLink></li>
+                    <li class="nav-item"><NavLink class="nav-link" href="shop/Cosmetics">Cosmetics</NavLink></li>
+                    <li class="nav-item"><NavLink class="nav-link" href="shop/Woman Wear">Woman Wear</NavLink></li>
+                    <li class="nav-item"><NavLink class="nav-link" href="shop/Accessories">Accessories</NavLink></li>
+                </ul>
+            </div>
+        }
+        else
+        {
+            <!-- SEARCH BAR (Replaces Center Menu when active) -->
+            <div class="search-container" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 40%; z-index: 20;">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search products..." 
+                           @bind="searchQuery" @bind:event="oninput" @onkeyup="PerformSearch"
+                           style="border-radius: 8px 0 0 8px; border: 2px solid var(--nm-accent); background: #f0ffff;" auto-focus />
+                    <button class="btn btn-primary" @onclick="CloseSearch" style="border-radius: 0 8px 8px 0; background: var(--nm-accent); border:none;  color: #333;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                @if (searchResults.Count > 0)
+                {
+                    <div class="search-results-dropdown" style="position: absolute; top: 100%; left: 0; width: 100%; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px; margin-top: 10px; max-height: 300px; overflow-y: auto;">
+                        @foreach (var p in searchResults)
+                        {
+                            <div class="search-item" @onclick='() => NavigateToProduct(p.product_id)' style="padding: 8px; border-bottom: 1px solid #eee; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                                <img src="@p.images[0]" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;" />
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;">@p.name</div>
+                                    <div style="font-size: 0.8rem; color: #888;">Rs. @p.price</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
 
         <div class="nav-right">
-            <button class="btn-icon"><i class="fas fa-search"></i></button>
+            <button class="btn-icon" @onclick="ToggleSearch"><i class="fas fa-search"></i></button>
 
             @if (!string.IsNullOrEmpty(currentUser))
             {
@@ -55,6 +94,9 @@
 @code {
     private string? currentUser;
     private string? userRole;
+    private bool isSearchActive = false;
+    private string searchQuery = "";
+    private List<ProductBL> searchResults = new List<ProductBL>();
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -65,6 +107,67 @@
             userRole = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole");
             StateHasChanged();
         }
+    }
+
+    private void ToggleSearch()
+    {
+        isSearchActive = !isSearchActive;
+        if (isSearchActive) 
+        {
+            searchQuery = ""; 
+            searchResults.Clear();
+            // Ensure products are loaded (if not already)
+            // But usually products are loaded on Shop/Home. 
+            // We can assume they might be loaded, or trigger load.
+             _ = CatalogService.LoadProductsAsync();
+        }
+    }
+
+    private void CloseSearch()
+    {
+        isSearchActive = false;
+        searchQuery = "";
+        searchResults.Clear();
+    }
+
+    private void PerformSearch()
+    {
+        if (string.IsNullOrWhiteSpace(searchQuery))
+        {
+            searchResults.Clear();
+            return;
+        }
+
+        // AVL RANGE SEARCH
+        // We define a Prefix range.
+        // Min: "Query"
+        // Max: "Query" + char.MaxValue (lexically last possibiliby)
+        // Note: Our AVL stores ProductBL. We need dummy products for comparison.
+        
+        var minP = new ProductBL(0, searchQuery, "", new string[0], 0, 0, null);
+        
+        // Construct max string: e.g. "Lip" -> "Lip~" (tilde is > most alphabet chars) or use logical next.
+        // Simple trick: Query + "zzzz" or iterate.
+        // A robust prefix max is "Query" + char.MaxValue
+        var maxP = new ProductBL(0, searchQuery + char.MaxValue, "", new string[0], 0, 0, null);
+
+        searchResults.Clear();
+        CatalogService.NameTree.GetRange(
+            CatalogService.NameTree.Root, 
+            minP, 
+            maxP, 
+            searchResults, 
+            CatalogService.NameComparator
+        );
+        
+        // Limit results
+        searchResults = searchResults.Take(5).ToList();
+    }
+
+    private void NavigateToProduct(int id)
+    {
+        Nav.NavigateTo($"/product/{id}");
+        CloseSearch();
     }
 
     private void HandleAccountRedirect()

@@ -8,7 +8,7 @@ namespace NovellaMart.Core.BL.Data_Structures
 {
     public class MyLinkedList<type> : IEnumerable<type>, ICollection<type>
     {
-        public LinkedListNode<type> head;
+        public MyLinkedListNode<type> head;
         private int size;
 
         public MyLinkedList()
@@ -24,10 +24,10 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         public void Clear()
         {
-            LinkedListNode<type> currentNode = head;
+            MyLinkedListNode<type> currentNode = head;
             while (currentNode != null)
             {
-                LinkedListNode<type> nextNode = currentNode.Next;
+                MyLinkedListNode<type> nextNode = currentNode.Next;
                 currentNode = nextNode;
             }
             head = null;
@@ -35,7 +35,7 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         public void InsertAtHead(type value)
         {
-            LinkedListNode<type> newNode = new LinkedListNode<type>(value);
+            MyLinkedListNode<type> newNode = new MyLinkedListNode<type>(value);
             newNode.Next = head;
             head = newNode;
             size = size + 1;
@@ -43,7 +43,7 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         public void InsertAtEnd(type value)
         {
-            LinkedListNode<type> newNode = new LinkedListNode<type>(value);
+            MyLinkedListNode<type> newNode = new MyLinkedListNode<type>(value);
             if (head == null)
             {
                 head = newNode;
@@ -51,7 +51,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 return;
             }
 
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             while (tempNode.Next != null)
             {
                 tempNode = tempNode.Next;
@@ -73,7 +73,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 return true;
             }
 
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             int count = 0;
             while (tempNode != null && count < index - 1)
             {
@@ -86,7 +86,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 return false;
             }
 
-            LinkedListNode<type> newNode = new LinkedListNode<type>(value);
+            MyLinkedListNode<type> newNode = new MyLinkedListNode<type>(value);
             newNode.Next = tempNode.Next;
             tempNode.Next = newNode;
             return true;
@@ -116,7 +116,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 return true;
             }
 
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             while (tempNode.Next.Next != null)
             {
                 tempNode = tempNode.Next;
@@ -140,7 +140,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 return true;
             }
 
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             int count = 0;
             while (tempNode != null && count < index - 1)
             {
@@ -160,7 +160,7 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         public bool FindNode(type value)
         {
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             while (tempNode != null)
             {
                 if (tempNode.Data.Equals(value))
@@ -191,7 +191,7 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         public void Display()
         {
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             Console.Write("List elements: ");
             while (tempNode != null)
             {
@@ -216,7 +216,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 return true;
             }
 
-            LinkedListNode<type> tempNode = head;
+            MyLinkedListNode<type> tempNode = head;
             while (tempNode.Next != null)
             {
                 if (tempNode.Next.Data.Equals(value))

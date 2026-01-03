@@ -11,6 +11,7 @@ namespace NovellaMart.Core.BL.Services
         public MyLinkedList<ProductBL> MasterProductList { get; private set; }
         public MyLinkedList<CategoryBL> MasterCategoryList { get; private set; }
         public AVLTreeGeneric<ProductBL> PriceTree { get; private set; }
+        public AVLTreeGeneric<ProductBL> NameTree { get; private set; }
 
         public ProductCatalogService(HttpClient http)
         {
@@ -18,6 +19,7 @@ namespace NovellaMart.Core.BL.Services
             MasterProductList = new MyLinkedList<ProductBL>();
             MasterCategoryList = new MyLinkedList<CategoryBL>();
             PriceTree = new AVLTreeGeneric<ProductBL>();
+            NameTree = new AVLTreeGeneric<ProductBL>();
         }
 
         /* ===========================
@@ -119,7 +121,16 @@ namespace NovellaMart.Core.BL.Services
                 MasterProductList.InsertAtEnd(product);
                 finalCategory.products.InsertAtEnd(product);
                 PriceTree.Insert(product, PriceComparator);
+                NameTree.Insert(product, NameComparator);
             }
+        }
+
+        /* ===========================
+           Name Comparator
+           =========================== */
+        public int NameComparator(ProductBL a, ProductBL b)
+        {
+            return string.Compare(a.name, b.name, StringComparison.OrdinalIgnoreCase);
         }
 
         /* ===========================

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NovellaMart
+namespace NovellaMart.Core.BL.Data_Structures
 {
     public class AVLNodeGeneric<type>
     {
