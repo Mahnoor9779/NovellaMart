@@ -1,13 +1,14 @@
 ﻿using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.BL.Data_Structures;
 using NovellaMart.Core.DL;
+using System.Text.Json;
 
 namespace NovellaMart.Core.BL.Services
 {
     public class OrderService
     {
         private readonly CartService _cartService;
-        private const string FilePath = "orders.json";
+        private const string FilePath = "Core/DL/orders.json"; // Ensure path is correct
         private static MyLinkedList<OrderBL> _allOrders;
 
         public OrderService(CartService cartService)
@@ -16,7 +17,17 @@ namespace NovellaMart.Core.BL.Services
 
             if (_allOrders == null)
             {
-                _allOrders = FileHandler.LoadData<MyLinkedList<OrderBL>>(FilePath);
+                // Try to load using your FileHandler
+                try
+                {
+                    _allOrders = FileHandler.LoadData<MyLinkedList<OrderBL>>(FilePath);
+                }
+                catch
+                {
+                    // Fallback if file doesn't exist or handler fails
+                    _allOrders = new MyLinkedList<OrderBL>();
+                }
+
                 if (_allOrders == null)
                 {
                     _allOrders = new MyLinkedList<OrderBL>();
@@ -47,6 +58,8 @@ namespace NovellaMart.Core.BL.Services
         {
             if (string.IsNullOrWhiteSpace(city)) return 0;
             string lowerCity = city.Trim().ToLower();
+
+            // Lahore is Free
             if (lowerCity == "lahore") return 0;
 
             var cityRates = new Dictionary<string, double>
@@ -58,51 +71,48 @@ namespace NovellaMart.Core.BL.Services
             };
 
             if (cityRates.ContainsKey(lowerCity)) return cityRates[lowerCity];
+
+            // Default rate for other cities
             return 350;
         }
 
-        public OrderBL PlaceOrder(string firstName, string lastName, string address, string city, string email, string paymentMethod, double shippingCost)
+        public OrderBL PlaceOrder(string firstName, string lastName, string addressStr, string city, string email, string paymentMethod, double shippingCost)
         {
             var cart = _cartService.GetCart();
-            if (cart.items.head == null) return null;
+            if (cart.items.head == null) return null; // Cannot place empty order
 
-            AddressBL shippingAddress = new AddressBL(0, null, address, city, "00000", "Pakistan");
+            // 1. Create Address & Customer Objects
+            AddressBL shippingAddress = new AddressBL(0, null, addressStr, city, "00000", "Pakistan");
 
             CustomerBL customer = new CustomerBL();
             customer.firstName = firstName;
             customer.lastName = lastName;
             customer.email = email;
 
+            // 2. Create Order Object
             OrderBL newOrder = new OrderBL();
-            newOrder.order_id = DateTime.Now.Ticks;
+            newOrder.order_id = DateTime.Now.Ticks; // Use Ticks for unique Long ID
             newOrder.customer = customer;
             newOrder.address = shippingAddress;
-
-            // --- FIX: DEEP COPY ITEMS ---
-            // We must create a NEW list for the order. If we just say 'newOrder.items = cart.items',
-            // emptying the cart later would also empty this order record!
-            newOrder.items = new MyLinkedList<CartItemBL>();
-
-            var cartNode = cart.items.head;
-            while (cartNode != null)
-            {
-                // Add item to Order History
-                newOrder.items.InsertAtEnd(cartNode.Data);
-                cartNode = cartNode.Next;
-            }
-
             newOrder.totalAmount = _cartService.GetTotalAmount() + shippingCost;
             newOrder.orderTime = DateTime.Now;
             newOrder.status = "Confirmed";
             newOrder.orderType = paymentMethod == "cod" ? "Cash On Delivery" : "Card Payment";
 
-            // Save Order to History
+            // 3. Deep Copy Items (Move from Cart to Order)
+            newOrder.items = new MyLinkedList<CartItemBL>();
+            var cartNode = cart.items.head;
+            while (cartNode != null)
+            {
+                newOrder.items.InsertAtEnd(cartNode.Data);
+                cartNode = cartNode.Next;
+            }
+
+            // 4. Save Order
             _allOrders.InsertAtEnd(newOrder);
             FileHandler.SaveData(FilePath, _allOrders);
 
-            // --- REMOVE PRODUCTS FROM CART ---
-            // Requirement: "Remove those particular products from the cart"
-            // We iterate through the items we just ordered and remove them one by one.
+            // 5. Clear Purchased Items from Cart
             var orderNode = newOrder.items.head;
             while (orderNode != null)
             {
@@ -117,12 +127,16 @@ namespace NovellaMart.Core.BL.Services
         public MyLinkedList<OrderBL> GetOrdersByEmail(string email)
         {
             var userOrders = new MyLinkedList<OrderBL>();
-            var current = _allOrders.head;
+            if (string.IsNullOrEmpty(email)) return userOrders;
 
+            var current = _allOrders.head;
             while (current != null)
             {
-                // Check if the order's customer email matches the logged-in user
-                if (current.Data.customer?.email?.ToLower() == email?.ToLower())
+                // Safely check email match (case-insensitive)
+                string orderEmail = current.Data.customer?.email;
+
+                if (!string.IsNullOrEmpty(orderEmail) &&
+                    orderEmail.Equals(email, StringComparison.OrdinalIgnoreCase))
                 {
                     userOrders.InsertAtEnd(current.Data);
                 }

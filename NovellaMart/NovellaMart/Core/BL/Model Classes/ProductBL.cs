@@ -11,7 +11,10 @@ namespace NovellaMart.Core.BL.Model_Classes
         public string[] images { get; set; }         // array of image URLs
         public double price { get; set; }
         public int stock { get; set; }
+
+        // FIX: This is now an Object (CategoryBL), matching your JSON
         public CategoryBL category { get; set; }
+
         public MyLinkedList<string> tags { get; set; }
 
         public ProductBL()
@@ -22,7 +25,7 @@ namespace NovellaMart.Core.BL.Model_Classes
             images = new string[0];
             price = 0;
             stock = 0;
-            this.category = null;
+            this.category = new CategoryBL(); // Initialize to avoid null reference
             tags = new MyLinkedList<string>();
         }
 

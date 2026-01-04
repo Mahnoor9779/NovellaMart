@@ -78,5 +78,21 @@
     "address": "",
     "city": "",
     "zipCode": ""
+  },
+  {
+    "user_id": 0,
+    "username": "Mahnoor",
+    "email": "mahnoorshafiq212@gmail.com",
+    "password": "mahnoor",
+    "role": "Member",
+    "firstName": "Mahnoor",
+    "lastName": "Shafiq Ahmad",
+    "profilePicture": "",
+    "createdAt": "2026-01-04T19:45:04.9085013+05:00",
+    "isActive": true,
+    "phoneNumber": "03294197790",
+    "address": "Hakeem Garhi, Sharaqpur Sharif, District Sheikhupura",
+    "city": "SHEIKHUPURA",
+    "zipCode": "39460"
   }
 ]

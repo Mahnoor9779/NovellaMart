@@ -16,7 +16,7 @@
 
     <div class="shop-layout">
         <aside class="filters-sidebar">
-            @if (CurrentSubCategories.Count > 0)
+            @if (CurrentSubCategories.Count() > 0)
             {
                 <div class="filter-group">
                     <span class="filter-title">Sub Categories</span>
@@ -43,17 +43,6 @@
                     <input type="number" @bind="maxPrice" class="form-control" placeholder="Max" />
                 </div>
                 <button class="btn btn-dark w-100" @onclick="ApplyFilters">Apply</button>
-            </div>
-
-            <div class="filter-group">
-                <span class="filter-title">Colors</span>
-                <div class="color-options">
-                    @foreach (var color in AllColors)
-                    {
-                        <div class="color-circle @(selectedColor == color ? "selected" : "")"
-                             style="background-color: @color;" @onclick="() => FilterByColor(color)"></div>
-                    }
-                </div>
             </div>
 
             <button class="btn btn-outline-danger w-100 btn-sm" @onclick="ResetFilters">Reset All</button>
@@ -83,32 +72,28 @@
                     while (node != null)
                     {
                         var p = node.Data;
-                        bool isAdded = addedStates.ContainsKey(p.product_id) && addedStates[p.product_id];
-
                         <div class="product-card">
-                            <!-- Image Section -->
                             <div class="img-wrapper">
-                                <img src="@(p.images.Length > 0 ? p.images[0] : "")" alt="@p.name" class="product-img" />
+                                <a href="product/@p.product_id" style="display:block; width:100%; height:100%;">
+                                    <img src="@(p.images.Length > 0 ? p.images[0] : "https://via.placeholder.com/300")"
+                                         alt="@p.name" class="product-img" />
+                                </a>
 
                                 <div class="product-actions">
                                     <a href="product/@p.product_id" class="btn-action" title="View Details">
                                         <i class="far fa-eye"></i>
                                     </a>
-                                    <button class="btn-action" title="Add to Wishlist">
-                                        <i class="far fa-heart"></i>
-                                    </button>
                                 </div>
                             </div>
 
-                            <!-- Content Section -->
                             <div class="product-info">
-                                <div class="p-cat">@p.category.name</div>
+                                <div class="p-cat">@(Category ?? p.category?.name)</div>
+
                                 <a href="product/@p.product_id" class="p-name">@p.name</a>
+
                                 <div class="p-price">PKR @p.price.ToString("N0")</div>
 
-                                <!-- FIXED: Button is explicitly here in the flow, not hidden in image -->
-                                <!-- FIXED: Button with Undo Logic -->
-                                @if (CanUndo(p.product_id))
+                                @if (IsUndoVisible(p.product_id))
                                 {
                                     <button class="btn-add-to-cart btn-undo-state" @onclick="UndoAdd">
                                         <span><i class="fas fa-undo me-2"></i> Undo</span>
@@ -130,14 +115,76 @@
             @if (TotalPages > 1)
             {
                 <div class="pagination">
-                    @for (int i = 1; i <= TotalPages; i++)
+                    <button class="page-btn" @onclick="() => ChangePage(currentPage - 1)" disabled="@(currentPage == 1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    @{
+                        // Logic to show exactly 3 pages sliding window
+                        int startPage = currentPage - 1;
+                        int endPage = currentPage + 1;
+
+                        if (startPage < 1)
+                        {
+                            startPage = 1;
+                            endPage = Math.Min(3, TotalPages);
+                        }
+
+                        if (endPage > TotalPages)
+                        {
+                            endPage = TotalPages;
+                            startPage = Math.Max(1, TotalPages - 2);
+                        }
+                    }
+
+                    @if (startPage > 1)
                     {
-                        int pageNum = i;
-                        <button class="page-btn @(currentPage == pageNum ? "active" : "")"
-                                @onclick="() => ChangePage(pageNum)">
-                            @pageNum
+                        <span class="dots mx-2" style="align-self:end; padding-bottom:5px;">...</span>
+                    }
+
+                    @for (int i = startPage; i <= endPage; i++)
+                    {
+                        int p = i;
+                        <button class="page-btn @(currentPage == p ? "active" : "")"
+                                @onclick="() => ChangePage(p)">
+                            @p
                         </button>
                     }
+
+                    @if (endPage < TotalPages)
+                    {
+                        <span class="dots mx-2" style="align-self:end; padding-bottom:5px;">...</span>
+                    }
+
+                    <button class="page-btn" @onclick="() => ChangePage(currentPage + 1)" disabled="@(currentPage == TotalPages)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            }
+
+            @if (!RecentlyViewed.IsEmpty())
+            {
+                <div class="mt-5 pt-4 border-top">
+                    <h4 class="section-title mb-4" style="font-size:1.5rem;">Recently Viewed</h4>
+                    <div class="products-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+                        @for (int i = 0; i < RecentlyViewed.size; i++)
+                        {
+                            int idx = (RecentlyViewed.front + i) % RecentlyViewed.capacity;
+                            var rv = RecentlyViewed.arr[idx];
+                            if (rv != null)
+                            {
+                                <div class="product-card" style="border-top: none;">
+                                    <div class="img-wrapper" style="height: 180px;">
+                                        <img src="@(rv.images.Length > 0 ? rv.images[0] : "")" class="product-img" />
+                                    </div>
+                                    <div class="product-info p-2">
+                                        <div class="p-name" style="font-size:0.85rem; height:auto;">@rv.name</div>
+                                        <div class="p-price" style="font-size:0.9rem;">PKR @rv.price</div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
                 </div>
             }
         </main>
@@ -147,25 +194,23 @@
 @code {
     [Parameter] public string? Category { get; set; }
 
+    // CUSTOM DATA STRUCTURES
     private MyLinkedList<ProductBL> FilteredList = new MyLinkedList<ProductBL>();
     private MyLinkedList<ProductBL> PagedProducts = new MyLinkedList<ProductBL>();
-    private Dictionary<int, bool> addedStates = new Dictionary<int, bool>();
+    private MyLinkedList<string> CurrentSubCategories = new MyLinkedList<string>();
+    private MyLinkedList<int> undoVisibleIds = new MyLinkedList<int>();
+    private CircularQueue<ProductBL> RecentlyViewed = new CircularQueue<ProductBL>(5);
 
     private string DisplayTitle => string.IsNullOrEmpty(Category) ? "All Products" : Category;
-    private List<string> CurrentSubCategories = new();
-
     private string? selectedSubCat;
     private double? minPrice;
     private double? maxPrice;
-    private string? selectedColor;
     private string sortOption = "default";
 
     private int ResultCount = 0;
     private int currentPage = 1;
     private int pageSize = 12;
     private int TotalPages = 1;
-
-    private List<string> AllColors = new() { "#ffffff", "#000000", "#f17fb2", "#ff0000", "#0000ff", "#ffd700", "#8b4513", "#f5deb3", "#ff69b4" };
 
     private Dictionary<string, List<string>> SubCatMap = new()
     {
@@ -179,95 +224,160 @@
     {
         await CatalogService.LoadProductsAsync();
 
+        CurrentSubCategories.Clear();
         if (!string.IsNullOrEmpty(Category) && SubCatMap.ContainsKey(Category))
-            CurrentSubCategories = SubCatMap[Category];
-        else
-            CurrentSubCategories = new List<string>();
+        {
+            foreach (var sub in SubCatMap[Category])
+            {
+                CurrentSubCategories.InsertAtEnd(sub);
+            }
+        }
 
         ResetFilters();
     }
 
-    private HashSet<int> undoVisible = new HashSet<int>();
-
-    private bool CanUndo(int productId)
-    {
-        return undoVisible.Contains(productId) &&
-               CartService.CanUndo() && 
-               CartService.PeekLastAction().Type == "Add" && 
-               CartService.PeekLastAction().ProductId == productId;
-    }
-
     private async Task AddToCart(ProductBL product)
     {
+        RecentlyViewed.Enqueue(product);
         await CartService.AddToCart(product, 1);
-        undoVisible.Add(product.product_id);
+        if (!undoVisibleIds.FindNode(product.product_id)) undoVisibleIds.InsertAtEnd(product.product_id);
         StateHasChanged();
-
         await Task.Delay(3500);
-        
-        undoVisible.Remove(product.product_id);
+        undoVisibleIds.Remove(product.product_id);
         StateHasChanged();
     }
+
+    private void ViewProduct(ProductBL product)
+    {
+        RecentlyViewed.Enqueue(product);
+        Nav.NavigateTo($"product/{product.product_id}");
+    }
+
+    private bool IsUndoVisible(int id) => undoVisibleIds.FindNode(id) && CartService.CanUndo();
 
     private void UndoAdd()
     {
         var action = CartService.PeekLastAction();
-        if(action != null)
-        {
-             undoVisible.Remove(action.ProductId);
-        }
+        if (action != null) undoVisibleIds.Remove(action.ProductId);
         CartService.UndoLastAction();
         StateHasChanged();
     }
 
+    private void FilterBySubCat(string? subCat)
+    {
+        selectedSubCat = (selectedSubCat == subCat) ? null : subCat;
+        currentPage = 1;
+        ApplyFilters();
+    }
+
     private void ApplyFilters()
     {
-        List<ProductBL> candidateList = new List<ProductBL>();
-        if (CatalogService.PriceTree.Root != null && (minPrice.HasValue || maxPrice.HasValue))
-        {
-            double min = minPrice ?? 0;
-            double max = maxPrice ?? double.MaxValue;
-            ProductBL pMin = new ProductBL { price = min, product_id = int.MinValue };
-            ProductBL pMax = new ProductBL { price = max, product_id = int.MaxValue };
-            CatalogService.PriceTree.GetRange(CatalogService.PriceTree.Root, pMin, pMax, candidateList, CatalogService.PriceComparator);
-        }
-        else
-        {
-            var node = CatalogService.MasterProductList.head;
-            while (node != null) { candidateList.Add(node.Data); node = node.Next; }
-        }
-
-        List<ProductBL> refinedList = new List<ProductBL>();
-        foreach (var p in candidateList)
-        {
-            bool isMatch = true;
-            if (!string.IsNullOrEmpty(Category) && !p.tags.FindNode(Category)) isMatch = false;
-            if (isMatch && selectedSubCat != null && !p.tags.FindNode(selectedSubCat)) isMatch = false;
-            if (isMatch && selectedColor != null && !p.tags.FindNode(selectedColor)) isMatch = false;
-            if (isMatch) refinedList.Add(p);
-        }
-
         FilteredList.Clear();
-        if (sortOption == "default") foreach (var item in refinedList) FilteredList.InsertAtEnd(item);
-        else
+
+        MyLinkedList<ProductBL> candidateList = new MyLinkedList<ProductBL>();
+
+        // 1. Fetch Candidates (O(N))
+        var node = CatalogService.MasterProductList.head;
+        while (node != null)
         {
-            PriorityQueue<ProductBL> pq = new PriorityQueue<ProductBL>();
-            foreach (var item in refinedList)
-            {
-                int priority = (sortOption == "high-low") ? (int)item.price : -(int)item.price;
-                pq.Enqueue(item, priority);
-            }
-            while (!pq.IsEmpty()) FilteredList.InsertAtEnd(pq.Dequeue());
+            var p = node.Data;
+            bool priceMatch = true;
+
+            if (minPrice.HasValue && p.price < minPrice.Value) priceMatch = false;
+            if (maxPrice.HasValue && p.price > maxPrice.Value) priceMatch = false;
+
+            if (priceMatch) candidateList.InsertAtEnd(p);
+            node = node.Next;
         }
+
+        HeapPriorityQueue<ProductBL> sortQueue = new HeapPriorityQueue<ProductBL>(candidateList.Count() > 0 ? candidateList.Count() : 10);
+
+        var cNode = candidateList.head;
+        while (cNode != null)
+        {
+            var p = cNode.Data;
+            bool isMatch = true;
+
+            if (!string.IsNullOrEmpty(Category))
+            {
+                if (Category.Equals("Trending", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (p.tags == null || !p.tags.FindNode("Trending")) isMatch = false;
+                }
+                else if (p.tags == null || !p.tags.FindNode(Category))
+                {
+                    isMatch = false;
+                }
+            }
+
+            if (isMatch && selectedSubCat != null && (p.tags == null || !p.tags.FindNode(selectedSubCat))) isMatch = false;
+
+            if (isMatch)
+            {
+                long priority = 0;
+
+                if (sortOption == "high-low")
+                    priority = (long)(-p.price * 100);
+                else if (sortOption == "low-high")
+                    priority = (long)(p.price * 100);
+                else
+                    priority = p.product_id;
+
+                sortQueue.Enqueue(p, priority);
+            }
+            cNode = cNode.Next;
+        }
+
+        while (!sortQueue.IsEmpty())
+        {
+            FilteredList.InsertAtEnd(sortQueue.Dequeue());
+        }
+
         ResultCount = FilteredList.Count();
         CalculatePagination();
     }
 
-    private void CalculatePagination() { TotalPages = (int)Math.Ceiling((double)ResultCount / pageSize); if (TotalPages < 1) TotalPages = 1; currentPage = 1; LoadCurrentPage(); }
-    private void LoadCurrentPage() { PagedProducts.Clear(); var node = FilteredList.head; int skip = (currentPage - 1) * pageSize; int count = 0; int added = 0; while (node != null && added < pageSize) { if (count >= skip) { PagedProducts.InsertAtEnd(node.Data); added++; } count++; node = node.Next; } StateHasChanged(); }
-    private void ChangePage(int page) { currentPage = page; LoadCurrentPage(); }
-    private void FilterBySubCat(string? subCat) { selectedSubCat = subCat; ApplyFilters(); }
-    private void FilterByColor(string color) { selectedColor = (selectedColor == color) ? null : color; ApplyFilters(); }
+    private void CalculatePagination()
+    {
+        TotalPages = (int)Math.Ceiling((double)ResultCount / pageSize);
+        if (TotalPages < 1) TotalPages = 1;
+        if (currentPage > TotalPages) currentPage = 1;
+        LoadCurrentPage();
+    }
+
+    private void LoadCurrentPage()
+    {
+        PagedProducts.Clear();
+        var node = FilteredList.head;
+        int skip = (currentPage - 1) * pageSize;
+        int count = 0;
+        int added = 0;
+
+        while (node != null && added < pageSize)
+        {
+            if (count >= skip)
+            {
+                PagedProducts.InsertAtEnd(node.Data);
+                added++;
+            }
+            count++;
+            node = node.Next;
+        }
+        StateHasChanged();
+    }
+
+    private void ChangePage(int page)
+    {
+        if (page < 1 || page > TotalPages) return;
+        currentPage = page;
+        LoadCurrentPage();
+    }
+
     private void SortProducts(ChangeEventArgs e) { sortOption = e.Value?.ToString() ?? "default"; ApplyFilters(); }
-    private void ResetFilters() { selectedSubCat = null; minPrice = null; maxPrice = null; selectedColor = null; sortOption = "default"; ApplyFilters(); }
+
+    private void ResetFilters()
+    {
+        selectedSubCat = null; minPrice = null; maxPrice = null; sortOption = "default"; currentPage = 1;
+        ApplyFilters();
+    }
 }

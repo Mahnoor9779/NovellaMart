@@ -8,16 +8,14 @@
 @using NovellaMart.Core.BL.Model_Classes
 @using System.Timers
 
-<PageTitle>Home - NovellaMart</PageTitle>
+<link href="css/shop-styles.css" rel="stylesheet" />
 
 <div class="home-container">
-
     <section class="hero-section">
         <div class="hero-content">
             <span class="hero-subtitle">UP TO 30% OFF NEW ARRIVALS</span>
             <h1 class="hero-title">Find Your Sparkle. <br /> Own Your Style.</h1>
             <p class="hero-text">Discover the latest trends in women's fashion and accessories.</p>
-
             <a href="shop" class="btn btn-primary btn-lg hero-btn">SHOP NOW</a>
         </div>
     </section>
@@ -26,24 +24,17 @@
         <div class="text-center mb-5">
             <h3 class="section-title d-inline-block">Shop By Category</h3>
         </div>
-
         <div class="categories-grid">
-            <a href="shop/Skincare" class="cat-circle-item">
-                <img src="https://via.placeholder.com/300x300/f17fb2/ffffff?text=Skincare" class="cat-img">
-                <div class="cat-overlay"><span class="cat-name">Skincare</span></div>
-            </a>
-            <a href="shop/Cosmetics" class="cat-circle-item">
-                <img src="https://via.placeholder.com/300x300/5ff4ef/ffffff?text=Makeup" class="cat-img">
-                <div class="cat-overlay"><span class="cat-name">Makeup</span></div>
-            </a>
-            <a href="shop/Woman Wear" class="cat-circle-item">
-                <img src="https://via.placeholder.com/300x300/f1ee56/333333?text=Wear" class="cat-img">
-                <div class="cat-overlay"><span class="cat-name">Woman Wear</span></div>
-            </a>
-            <a href="shop/Accessories" class="cat-circle-item">
-                <img src="https://via.placeholder.com/300x300/D4AF37/ffffff?text=Accessories" class="cat-img">
-                <div class="cat-overlay"><span class="cat-name">Accessories</span></div>
-            </a>
+            @if (MainCategories != null && MainCategories.Any())
+            {
+                @foreach (var cat in MainCategories)
+                {
+                    <a href="shop/@cat.name" class="cat-circle-item">
+                        <img src="@GetCategoryImage(cat.name)" class="cat-img" alt="@cat.name">
+                        <div class="cat-overlay"><span class="cat-name">@cat.name</span></div>
+                    </a>
+                }
+            }
         </div>
     </section>
 
@@ -53,18 +44,14 @@
             <div class="text-center mb-4">
                 <h3 class="section-title d-inline-block">Live Flash Sales</h3>
             </div>
-
             @foreach (var sale in ActiveFlashSales)
             {
                 <a href="/flash-sale/@sale.flash_sale_id" class="flash-sale-banner mb-4">
                     <div class="flash-sale-content">
-                        <span class="sale-badge">
-                            <i class="fas fa-bolt me-2"></i> @sale.discount% OFF
-                        </span>
+                        <span class="sale-badge"><i class="fas fa-bolt me-2"></i> @sale.discount% OFF</span>
                         <h2>@sale.title</h2>
                         <p class="mb-0">@sale.description</p>
                     </div>
-
                     <div class="timer-box">
                         @{
                             var timeLeft = sale.endTime - DateTime.Now;
@@ -72,18 +59,9 @@
                             var mins = timeLeft.Minutes > 0 ? timeLeft.Minutes.ToString("D2") : "00";
                             var secs = timeLeft.Seconds > 0 ? timeLeft.Seconds.ToString("D2") : "00";
                         }
-                        <div class="timer-unit">
-                            <span class="timer-num">@hours</span>
-                            <span class="timer-label">Hours</span>
-                        </div>
-                        <div class="timer-unit">
-                            <span class="timer-num">@mins</span>
-                            <span class="timer-label">Mins</span>
-                        </div>
-                        <div class="timer-unit">
-                            <span class="timer-num">@secs</span>
-                            <span class="timer-label">Secs</span>
-                        </div>
+                        <div class="timer-unit"><span class="timer-num">@hours</span><span class="timer-label">Hours</span></div>
+                        <div class="timer-unit"><span class="timer-num">@mins</span><span class="timer-label">Mins</span></div>
+                        <div class="timer-unit"><span class="timer-num">@secs</span><span class="timer-label">Secs</span></div>
                     </div>
                 </a>
             }
@@ -94,30 +72,41 @@
         <div class="container">
             <div class="position-relative text-center mb-5">
                 <h3 class="section-title d-inline-block mb-0">Trending Now</h3>
-                <a href="shop" class="btn-link-pink position-absolute end-0 top-50 translate-middle-y d-none d-md-block">
+                <a href="shop/Trending" class="btn-link-pink position-absolute end-0 top-50 translate-middle-y d-none d-md-block text-decoration-none">
                     View All <i class="fas fa-arrow-right ms-1"></i>
                 </a>
             </div>
 
-            <div class="product-grid-4">
+            <div class="products-grid">
                 @if (TrendingList != null && !TrendingList.IsEmpty())
                 {
                     var currentNode = TrendingList.head;
+                    int displayCount = 0;
+
                     while (currentNode != null)
                     {
-                        var p = currentNode.Data;
-                        bool isAdded = addedStates.ContainsKey(p.product_id) && addedStates[p.product_id];
+                        if (!showAllTrending && displayCount >= 4) break;
 
+                        var p = currentNode.Data;
                         <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="@(p.images != null && p.images.Length > 0 ? p.images[0] : "https://via.placeholder.com/300?text=No+Image")"
-                                     alt="@p.name" class="product-img">
+                            <div class="img-wrapper">
+                                <a href="product/@p.product_id" style="display:block; width:100%; height:100%;">
+                                    <img src="@(p.images.Length > 0 ? p.images[0] : "")" alt="@p.name" class="product-img" />
+                                </a>
+
+                                <div class="product-actions">
+                                    <a href="product/@p.product_id" class="btn-action" title="View Details">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </div>
                             </div>
 
                             <div class="product-info">
-                                <div class="p-cat">@p.category.name</div>
+                                <div class="p-cat">@p.category?.name</div>
+
                                 <a href="product/@p.product_id" class="p-name">@p.name</a>
-                                <div class="p-price">Rs. @p.price.ToString("N0")</div>
+
+                                <div class="p-price">PKR @p.price.ToString("N0")</div>
 
                                 @if (CanUndo(p.product_id))
                                 {
@@ -128,111 +117,88 @@
                                 else
                                 {
                                     <button class="btn-add-to-cart" @onclick="() => AddToCart(p)">
-                                        <span>ADD TO CART</span>
+                                        <span><i class="fas fa-shopping-bag me-2"></i> Add To Cart</span>
                                     </button>
                                 }
                             </div>
                         </div>
                         currentNode = currentNode.Next;
+                        displayCount++;
                     }
-                }
-                else
-                {
-                    <p class="text-center w-100 py-5">Loading trending styles...</p>
                 }
             </div>
 
             <div class="text-center d-md-none mt-4">
-                <a href="shop" class="btn btn-outline-dark rounded-pill px-4">View All Products</a>
+                <button class="btn btn-outline-dark rounded-pill px-4" @onclick="ToggleTrendingView">
+                    @(showAllTrending ? "Show Less" : "View All Products")
+                </button>
             </div>
         </div>
     </section>
 </div>
 
 @code {
+    // ... [Copy the exact same C# logic for Home.razor as provided in the previous step] ...
+    // ... [MainCategories, TrendingList, PopulateTrendingProducts logic remains identical] ...
+
+    // (For brevity, assuming the backend logic from the previous Home.razor response is used here)
     private MyLinkedList<ProductBL> TrendingList = new MyLinkedList<ProductBL>();
+    private List<CategoryBL> MainCategories = new List<CategoryBL>();
     private Dictionary<int, bool> addedStates = new Dictionary<int, bool>();
     private List<FlashSaleBL> ActiveFlashSales = new List<FlashSaleBL>();
     private Timer _timer;
+    private HashSet<int> undoVisible = new HashSet<int>();
+    private bool showAllTrending = false;
 
     protected override async Task OnInitializedAsync()
     {
         await CatalogService.LoadProductsAsync();
-
+        InitializeCategories();
         RefreshSales();
-
-        // Setup Timer to refresh every 1 second
         _timer = new Timer(1000);
         _timer.Elapsed += (s, e) => InvokeAsync(StateHasChanged);
         _timer.Enabled = true;
+        PopulateTrendingProducts();
+    }
 
-        var allSales = FlashSaleService.GetAllFlashSales();
-        ActiveFlashSales = allSales.Where(s => s.status == "ACTIVE").ToList();
+    private void InitializeCategories()
+    {
+        MainCategories = new List<CategoryBL> {
+            new CategoryBL(1, "Skincare", 0), new CategoryBL(2, "Cosmetics", 0),
+            new CategoryBL(3, "Woman Wear", 0), new CategoryBL(4, "Accessories", 0)
+        };
+    }
 
+    private void PopulateTrendingProducts()
+    {
         TrendingList.Clear();
+        if (CatalogService.MasterProductList?.head == null) return;
         var node = CatalogService.MasterProductList.head;
-        int count = 0;
-
-        while (node != null && count < 4)
+        while (node != null)
         {
             var p = node.Data;
-            if (p.tags.FindNode("Trending"))
-            {
-                TrendingList.InsertAtEnd(p);
-                count++;
-            }
+            if (p.tags != null && p.tags.FindNode("Trending")) TrendingList.InsertAtEnd(p);
             node = node.Next;
         }
     }
 
-    private string GetTimeRemaining(DateTime endTime)
+    private void ToggleTrendingView() { showAllTrending = !showAllTrending; }
+
+    private string GetCategoryImage(string categoryName)
     {
-        var span = endTime - DateTime.Now;
-        if (span.Ticks < 0) return "00:00:00";
-        return $"{(int)span.TotalHours:D2}h {span.Minutes:D2}m {span.Seconds:D2}s";
-    }
-
-    private void RefreshSales()
-    {
-        var allSales = FlashSaleService.GetAllFlashSales();
-        ActiveFlashSales = allSales.Where(s => s.status == "ACTIVE").ToList();
-    }
-
-    public void Dispose()
-    {
-        _timer?.Dispose();
-    }
-
-    private HashSet<int> undoVisible = new HashSet<int>();
-
-    private bool CanUndo(int productId)
-    {
-        return undoVisible.Contains(productId) &&
-               CartService.CanUndo() && 
-               CartService.PeekLastAction().Type == "Add" && 
-               CartService.PeekLastAction().ProductId == productId;
-    }
-
-    private async Task AddToCart(ProductBL product)
-    {
-        await CartService.AddToCart(product, 1);
-        undoVisible.Add(product.product_id);
-        StateHasChanged();
-
-        await Task.Delay(3500);
-        
-        undoVisible.Remove(product.product_id);
-        StateHasChanged();
-    }
-
-    private void UndoAdd()
-    {
-        var action = CartService.PeekLastAction();
-        if(action != null)
+        return categoryName switch
         {
-             undoVisible.Remove(action.ProductId);
-        }
-        CartService.UndoLastAction();
-        StateHasChanged();
+            "Skincare" => "https://loremflickr.com/300/300/skincare,cream?lock=1",
+            "Cosmetics" => "https://loremflickr.com/300/300/makeup,lipstick?lock=2",
+            "Woman Wear" => "https://loremflickr.com/300/300/dress,fashion?lock=3",
+            "Accessories" => "https://loremflickr.com/300/300/jewelry,necklace?lock=4",
+            _ => "https://via.placeholder.com/300"
+        };
     }
-}
+
+    private void RefreshSales() { ActiveFlashSales = FlashSaleService.GetAllFlashSales().Where(s => s.status == "ACTIVE").ToList(); }
+    public void Dispose() { _timer?.Dispose(); }
+    private bool CanUndo(int productId) { return undoVisible.Contains(productId) && CartService.CanUndo() && CartService.PeekLastAction().Type == "Add" && CartService.PeekLastAction().ProductId == productId; }
+    private async Task AddToCart(ProductBL product) { await CartService.AddToCart(product, 1); undoVisible.Add(product.product_id); StateHasChanged(); await Task.Delay(3500); undoVisible.Remove(product.product_id); StateHasChanged(); }
+    private void UndoAdd() { var action = CartService.PeekLastAction(); if (action != null) undoVisible.Remove(action.ProductId); CartService.UndoLastAction(); StateHasChanged(); }
+}   

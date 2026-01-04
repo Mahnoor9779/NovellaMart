@@ -76,7 +76,7 @@
 
             users.Add(new UserBL { username = username, email = email, password = password, role = "Member", isActive = true });
             await File.WriteAllTextAsync(filePath, JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true }));
-            Nav.NavigateTo("/login");
+            Nav.NavigateTo("/");
         }
     }
 }
