@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NovellaMart.Core.BL.Data_Structures;
 using NovellaMart.Core.BL.Model_Classes;
 
+//Flash Sale Run Time Data
 namespace NovellaMart.Core.BL.Model_Classes
 {
     public class FlashSaleRuntimeData

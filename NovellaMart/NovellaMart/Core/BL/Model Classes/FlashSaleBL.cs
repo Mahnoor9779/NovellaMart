@@ -1,6 +1,7 @@
 ﻿using System;
 using NovellaMart.Core.BL.Data_Structures;
 
+//Flash Sale BL
 namespace NovellaMart.Core.BL.Model_Classes
 {
     public class FlashSaleBL

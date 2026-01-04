@@ -1,6 +1,7 @@
 ﻿using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.BL.Data_Structures;
 
+//FlashSaleBL Sale Service
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleService

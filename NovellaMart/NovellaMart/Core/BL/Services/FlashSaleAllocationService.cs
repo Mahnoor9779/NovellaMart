@@ -1,6 +1,7 @@
 ﻿
 using NovellaMart.Core.BL.Model_Classes;
 
+//FlashSale Allocation Service
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleAllocationService

@@ -1,1 +1,627 @@
-[]
+[
+  {
+    "flash_sale_id": 2,
+    "title": "Summer Sale",
+    "description": "Sale from all previous year stock.",
+    "discount": 15,
+    "startTime": "2026-01-05T01:37:18.5608074+05:00",
+    "endTime": "2026-01-06T02:37:00",
+    "status": "ACTIVE",
+    "fs_items": [
+      {
+        "product_id": 101,
+        "name": "Floral Summer Dress",
+        "description": "Light breezy cotton dress.",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=101",
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=201"
+        ],
+        "price": 4500,
+        "stock": 25,
+        "category": {
+          "category_id": 31,
+          "name": "Dresses",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Dresses",
+          "Summer",
+          "Trending"
+        ]
+      },
+      {
+        "product_id": 102,
+        "name": "Evening Gown",
+        "description": "Elegant black maxi dress.",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=102",
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=202"
+        ],
+        "price": 12000,
+        "stock": 15,
+        "category": {
+          "category_id": 31,
+          "name": "Dresses",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Dresses",
+          "Formal"
+        ]
+      },
+      {
+        "product_id": 103,
+        "name": "Bodycon Dress",
+        "description": "Fitted party dress.",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=103",
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=203"
+        ],
+        "price": 5500,
+        "stock": 30,
+        "category": {
+          "category_id": 31,
+          "name": "Dresses",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Dresses",
+          "Party"
+        ]
+      },
+      {
+        "product_id": 104,
+        "name": "Midi Dress",
+        "description": "Casual everyday wear.",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=104",
+          "https://loremflickr.com/500/500/woman%20wear,dress?lock=204"
+        ],
+        "price": 4000,
+        "stock": 35,
+        "category": {
+          "category_id": 31,
+          "name": "Dresses",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Dresses",
+          "Casual"
+        ]
+      }
+    ],
+    "request_queue": {
+      "arr": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "front": -1,
+      "rear": -1,
+      "capacity": 100,
+      "size": 0
+    },
+    "allocation_heap": {
+      "heap": [
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        }
+      ],
+      "size": 0
+    }
+  }
+]

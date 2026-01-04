@@ -9,35 +9,32 @@
 @inject ProductCatalogService ProductCatalogService
 @using NovellaMart.Core.BL.UI_Extensions
 
-@* <h1 class="page-title"><b>Flash Sale Management</b> </h1> *@
 <div class="page-title">
     <h1 style="color: var(--nm-primary);"><i class="fas fa-shield-alt me-2"></i>Flash Sale Management</h1>
     <div class="title-underline"></div>
     <p class="title-subtext">Manage Flash Sales.</p>
 </div>
 
-
 <div class="flash-sale-layout">
 
-    <!-- LEFT: Create / Edit Flash Sale -->
     <div class="flash-sale-form card">
         @if (!string.IsNullOrEmpty(errorMessage))
         {
-            <div class="danger">@errorMessage</div>
+            <div class="alert alert-danger">@errorMessage</div>
         }
 
         <h3>@(isEdit ? "Edit Flash Sale" : "Create Flash Sale")</h3>
 
-        <input placeholder="Title" @bind="currentSale.title" />
-        <textarea placeholder="Description" @bind="currentSale.description"></textarea>
-        <label>Discount (%)</label>
-        <input type="number" min="1" max="90" @bind="currentSale.discount" />
+        <input placeholder="Title" @bind="currentSale.title" class="form-control mb-2" />
+        <textarea placeholder="Description" @bind="currentSale.description" class="form-control mb-2"></textarea>
 
+        <label>Discount (%)</label>
+        <input type="number" min="1" max="90" @bind="currentSale.discount" class="form-control mb-3" />
 
         <h4>Flash Sale Products</h4>
 
         <label>Select Category</label>
-        <select @onchange="OnCategoryChanged">
+        <select @onchange="OnCategoryChanged" class="form-select mb-2">
             <option value="-1">-- Select Category --</option>
             @foreach (var cat in categories)
             {
@@ -46,15 +43,13 @@
         </select>
 
         <label>Select Subcategory</label>
-        <select @onchange="OnSubCategoryChanged" disabled="@(!subCategories.Any())">
+        <select @onchange="OnSubCategoryChanged" disabled="@(!subCategories.Any())" class="form-select mb-3">
             <option value="-1">-- Select Subcategory --</option>
             @foreach (var sub in subCategories)
             {
                 <option value="@sub.category_id">@sub.name</option>
             }
         </select>
-
-
 
         @if (filteredProducts.Count > 0)
         {
@@ -63,32 +58,36 @@
                 {
                     <div class="product-select-row">
                         <input class="product-checkbox"
-                        type="checkbox"
-                        checked="@selectedProductIds.Contains(product.product_id)"
-                        @onchange="e => ToggleProduct(product, e)" />
+                               type="checkbox"
+                               checked="@selectedProductIds.Contains(product.product_id)"
+                               @onchange="e => ToggleProduct(product, e)" />
 
                         <div class="product-text">
                             <span class="product-name">@product.name</span>
                             <span class="product-price">(Rs. @product.price)</span>
                         </div>
                     </div>
-
                 }
             </div>
         }
+        else if (selectedCategoryId != -1)
+        {
+            <p class="text-muted mt-2" style="font-size:0.9rem;">
+                @(subCategories.Any() ? "Please select a subcategory." : "No products found in this category.")
+            </p>
+        }
 
-
-        <label>Start Time</label>
-        <input type="datetime-local" @bind="startTimeLocal" />
+        <label class="mt-3">Start Time</label>
+        <input type="datetime-local" @bind="startTimeLocal" class="form-control mb-2" />
 
         <label>End Time</label>
-        <input type="datetime-local" @bind="endTimeLocal" />
+        <input type="datetime-local" @bind="endTimeLocal" class="form-control mb-3" />
 
         <div class="status-badge @currentSale.status.ToLower()">
             @currentSale.status
         </div>
 
-        <div class="form-actions">
+        <div class="form-actions mt-3">
             <button class="btn-primary" @onclick="SaveFlashSale">
                 @(isEdit ? "Update" : "Create")
             </button>
@@ -100,10 +99,8 @@
                 </button>
             }
         </div>
-
     </div>
 
-    <!-- RIGHT: Flash Sale List -->
     <div class="flash-sale-list card">
         <h3>Existing Flash Sales</h3>
 
@@ -127,11 +124,12 @@
                         </button>
                         <button class="btn-stat" style="background-color: #5ff4ef; color: #005f5f; border: none; margin-left: 5px;"
                                 @onclick='() => Nav.NavigateTo($"/admin/flash-sale-allocation/{sale.flash_sale_id}")'>
-                             Results
+                            Results
                         </button>
-                    
+
                         <button @onclick="() => EditSale(sale)">Edit</button>
                         <button class="delete-btn" @onclick="() => AskDelete(sale)">Delete</button>
+
                         @if (showDeleteConfirm && salePendingDelete == sale)
                         {
                             <div class="delete-confirm">
@@ -140,8 +138,6 @@
                                 <button class="btn-secondary" @onclick="CancelDelete">No</button>
                             </div>
                         }
-
-
                     </div>
                 </div>
             }
@@ -157,39 +153,68 @@
     private FlashSaleBL currentSale = new();
     private bool isEdit;
 
+    // _allAvailableCategories holds ALL categories (Parent + Child)
+    private List<CategoryBL> _allAvailableCategories = new();
+
+    // categories holds ONLY what we show in the first dropdown
     private List<CategoryBL> categories = new();
-    private int selectedCategoryId = -1;
+
+    private List<CategoryBL> subCategories = new();
     private List<ProductBL> filteredProducts = new();
+
+    private int selectedCategoryId = -1;
+    private int selectedSubCategoryId = -1;
 
     private DateTime startTimeLocal;
     private DateTime endTimeLocal;
 
     private FlashSaleBL salePendingDelete;
     private bool showDeleteConfirm;
-
-    private int selectedSubCategoryId = -1;
-    private List<CategoryBL> subCategories = new();
-
-
-
     private string errorMessage = "";
 
     protected override async Task OnInitializedAsync()
     {
+        // 1. Ensure Data Loads
         await ProductCatalogService.LoadProductsAsync();
-
         allProducts = ProductCatalogService.MasterProductList.ToList();
 
+        // 2. Load Sales
         flashSales = FlashSaleService.GetAllFlashSales();
 
-        // categories = allProducts
-        // .Where(p => p.category != null && p.category.parent_category_id == 0)
-        // .Select(p => p.category)
-        // .GroupBy(c => c.category_id)
-        // .Select(g => g.First())
-        // .ToList();
+        // 3. LOAD ALL CATEGORIES
+        var sourceCats = ProductCatalogService.MasterCategoryList?.ToList() ?? new List<CategoryBL>();
 
-        categories = ProductCatalogService.MasterCategoryList.ToList();
+        // Fallback: Extract from products if Master List is empty
+        if (!sourceCats.Any() && allProducts.Any())
+        {
+            sourceCats = allProducts
+                .Where(p => p.category != null)
+                .Select(p => p.category)
+                .GroupBy(c => c.category_id)
+                .Select(g => g.First())
+                .ToList();
+        }
+
+        _allAvailableCategories = sourceCats;
+
+        // 4. SMART FILTER: Show only true "Parents"
+        // FIX: Added 'Count()' with parentheses because it is a method in your LinkedList
+        var parents = _allAvailableCategories
+            .Where(c => c.parent_category_id == 0 || (c.subcategories != null && c.subcategories.Count() > 0))
+            .ToList();
+
+        if (parents.Any())
+        {
+            categories = parents;
+        }
+        else
+        {
+            // If the structure is completely flat, show everything unique by name
+            categories = _allAvailableCategories
+                .GroupBy(c => c.name)
+                .Select(g => g.First())
+                .ToList();
+        }
 
         ResetForm();
     }
@@ -197,7 +222,6 @@
     private void SaveFlashSale()
     {
         errorMessage = "";
-
         if (string.IsNullOrWhiteSpace(currentSale.title))
             errorMessage = "Title is required.";
         else if (string.IsNullOrWhiteSpace(currentSale.description))
@@ -225,14 +249,8 @@
         ResetForm();
     }
 
-
-
     private void EditSale(FlashSaleBL sale)
     {
-        filteredProducts = allProducts
-    .Where(p => selectedProductIds.Contains(p.product_id))
-    .ToList();
-
         currentSale = sale;
         startTimeLocal = sale.startTime;
         endTimeLocal = sale.endTime;
@@ -241,9 +259,11 @@
         foreach (var p in sale.fs_items)
             selectedProductIds.Add(p.product_id);
 
-        selectedCategoryId = -1;
-        filteredProducts.Clear();
+        filteredProducts = allProducts
+            .Where(p => selectedProductIds.Contains(p.product_id))
+            .ToList();
 
+        selectedCategoryId = -1;
         isEdit = true;
     }
 
@@ -267,16 +287,9 @@
         showDeleteConfirm = false;
     }
 
-    private void DeleteSale(FlashSaleBL sale)
-    {
-        FlashSaleService.DeleteFlashSale(sale.flash_sale_id);
-        flashSales = FlashSaleService.GetAllFlashSales();
-    }
-
     private void ResetForm()
     {
         currentSale = new FlashSaleBL();
-
         selectedProductIds.Clear();
 
         startTimeLocal = DateTime.Now;
@@ -286,9 +299,12 @@
         currentSale.endTime = endTimeLocal;
         currentSale.UpdateStatus();
 
+        filteredProducts.Clear();
+        subCategories.Clear();
         isEdit = false;
+        selectedCategoryId = -1;
+        selectedSubCategoryId = -1;
     }
-
 
     private void ToggleProduct(ProductBL product, ChangeEventArgs e)
     {
@@ -305,41 +321,62 @@
         else
         {
             selectedProductIds.Remove(product.product_id);
-            currentSale.fs_items.Remove(product);
+            var node = currentSale.fs_items.head;
+            while (node != null)
+            {
+                if (node.Data.product_id == product.product_id)
+                {
+                    currentSale.fs_items.Remove(node.Data);
+                    break;
+                }
+                node = node.Next;
+            }
         }
     }
 
+    // --- UPDATED CATEGORY LOGIC ---
     private void OnCategoryChanged(ChangeEventArgs e)
     {
-        selectedCategoryId = int.Parse(e.Value.ToString());
+        if (int.TryParse(e.Value.ToString(), out int id))
+        {
+            selectedCategoryId = id;
 
-        var parentCategory = categories
-            .FirstOrDefault(c => c.category_id == selectedCategoryId);
+            // Search in _allAvailableCategories (which includes fallback data)
+            subCategories = _allAvailableCategories
+                .Where(c => c.parent_category_id == selectedCategoryId)
+                .ToList();
 
-        subCategories = parentCategory != null
-            ? parentCategory.subcategories.ToList()
-            : new List<CategoryBL>();
-
-        filteredProducts.Clear();
+            // If no subcategories, load products directly from the selected category
+            if (!subCategories.Any())
+            {
+                var parentCat = _allAvailableCategories.FirstOrDefault(c => c.category_id == selectedCategoryId);
+                filteredProducts = parentCat?.products?.ToList() ?? new List<ProductBL>();
+            }
+            else
+            {
+                filteredProducts.Clear();
+            }
+            selectedSubCategoryId = -1;
+        }
     }
-
 
     private void OnSubCategoryChanged(ChangeEventArgs e)
     {
-        selectedSubCategoryId = int.Parse(e.Value.ToString());
-
-        if (selectedSubCategoryId == -1)
+        if (int.TryParse(e.Value.ToString(), out int id))
         {
-            filteredProducts.Clear();
-            return;
+            selectedSubCategoryId = id;
+
+            if (selectedSubCategoryId == -1)
+            {
+                filteredProducts.Clear();
+                return;
+            }
+
+            var subCategory = subCategories.FirstOrDefault(sc => sc.category_id == selectedSubCategoryId);
+
+            filteredProducts = subCategory != null
+                ? subCategory.products?.ToList() ?? new List<ProductBL>()
+                : new List<ProductBL>();
         }
-
-        var subCategory = subCategories
-            .FirstOrDefault(sc => sc.category_id == selectedSubCategoryId);
-
-        filteredProducts = subCategory != null
-            ? subCategory.products.ToList()
-            : new List<ProductBL>();
     }
-
 }
