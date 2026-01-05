@@ -56,7 +56,6 @@
 
         if (user != null)
         {
-            // Use sessionStorage ONLY
             await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", user.username);
             await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "userRole", user.role);
             await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "userId", user.user_id.ToString());

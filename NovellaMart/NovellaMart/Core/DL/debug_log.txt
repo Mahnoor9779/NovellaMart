@@ -1,0 +1,12 @@
+[1/5/2026 8:53:34 AM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:53:34 AM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:53:59 AM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\orders.json
+[1/5/2026 8:53:59 AM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\orders.json
+[1/5/2026 8:53:59 AM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:53:59 AM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:58:15 AM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:58:15 AM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:59:05 AM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\orders.json
+[1/5/2026 8:59:05 AM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\orders.json
+[1/5/2026 8:59:05 AM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 8:59:05 AM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\cart.json

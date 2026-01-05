@@ -100,7 +100,6 @@
     {
         if (firstRender)
         {
-            // Change 'localStorage' to 'sessionStorage'
             currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
             userRole = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole");
             StateHasChanged();
@@ -114,9 +113,6 @@
         {
             searchQuery = ""; 
             searchResults.Clear();
-            // Ensure products are loaded (if not already)
-            // But usually products are loaded on Shop/Home. 
-            // We can assume they might be loaded, or trigger load.
              _ = CatalogService.LoadProductsAsync();
         }
     }
@@ -135,30 +131,25 @@
             searchResults.Clear();
             return;
         }
-
-        // AVL RANGE SEARCH
-        // We define a Prefix range.
-        // Min: "Query"
-        // Max: "Query" + char.MaxValue (lexically last possibiliby)
-        // Note: Our AVL stores ProductBL. We need dummy products for comparison.
         
-        var minP = new ProductBL(0, searchQuery, "", new string[0], 0, 0, null);
+        // SUBSTRING SEARCH (using AVL Tree Inorder Traversal)
         
-        // Construct max string: e.g. "Lip" -> "Lip~" (tilde is > most alphabet chars) or use logical next.
-        // Simple trick: Query + "zzzz" or iterate.
-        // A robust prefix max is "Query" + char.MaxValue
-        var maxP = new ProductBL(0, searchQuery + char.MaxValue, "", new string[0], 0, 0, null);
-
         searchResults.Clear();
-        CatalogService.NameTree.GetRange(
-            CatalogService.NameTree.Root, 
-            minP, 
-            maxP, 
-            searchResults, 
-            CatalogService.NameComparator
-        );
+        var allProducts = CatalogService.NameTree.Inorder();
         
-        // Limit results
+        if (allProducts != null)
+        {
+            foreach (var p in allProducts)
+            {
+                if (p != null && !string.IsNullOrEmpty(p.name) && 
+                    p.name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
+                {
+                    searchResults.Add(p);
+                    if (searchResults.Count >= 5) break;
+                }
+            }
+        }
+        
         searchResults = searchResults.Take(5).ToList();
     }
 
