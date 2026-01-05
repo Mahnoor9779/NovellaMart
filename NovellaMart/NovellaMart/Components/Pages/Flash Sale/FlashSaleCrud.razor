@@ -58,9 +58,9 @@
                 {
                     <div class="product-select-row">
                         <input class="product-checkbox"
-                               type="checkbox"
-                               checked="@selectedProductIds.Contains(product.product_id)"
-                               @onchange="e => ToggleProduct(product, e)" />
+                        type="checkbox"
+                        checked="@selectedProductIds.Contains(product.product_id)"
+                        @onchange="e => ToggleProduct(product, e)" />
 
                         <div class="product-text">
                             <span class="product-name">@product.name</span>
@@ -123,7 +123,7 @@
                             Stats
                         </button>
                         <button class="btn-stat" style="background-color: #5ff4ef; color: #005f5f; border: none; margin-left: 5px;"
-                                @onclick='() => Nav.NavigateTo($"/admin/flash-sale-allocation/{sale.flash_sale_id}")'>
+                        @onclick='() => Nav.NavigateTo($"/admin/flash-sale-allocation/{sale.flash_sale_id}")'>
                             Results
                         </button>
 
@@ -172,48 +172,47 @@
     private bool showDeleteConfirm;
     private string errorMessage = "";
 
+    private Dictionary<string, List<string>> SubCatMap = new()
+    {
+        { "Skincare", new() { "Cleansers", "Serums", "Moisturizers", "Sunscreen", "Masks" } },
+        { "Cosmetics", new() { "Face", "Eyes", "Lips", "Nails", "Tools" } },
+        { "Woman Wear", new() { "Dresses", "Tops", "Bottoms", "Outerwear", "Activewear" } },
+        { "Accessories", new() { "Jewellery", "Watches", "Bags", "Eyewear", "Scarves" } }
+    };
+
     protected override async Task OnInitializedAsync()
     {
-        // 1. Ensure Data Loads
+        // 1. Ensure product data is fully loaded from the JSON source
         await ProductCatalogService.LoadProductsAsync();
         allProducts = ProductCatalogService.MasterProductList.ToList();
 
-        // 2. Load Sales
+        // 2. Load existing sales for the admin list
         flashSales = FlashSaleService.GetAllFlashSales();
 
-        // 3. LOAD ALL CATEGORIES
-        var sourceCats = ProductCatalogService.MasterCategoryList?.ToList() ?? new List<CategoryBL>();
-
-        // Fallback: Extract from products if Master List is empty
-        if (!sourceCats.Any() && allProducts.Any())
-        {
-            sourceCats = allProducts
-                .Where(p => p.category != null)
-                .Select(p => p.category)
-                .GroupBy(c => c.category_id)
-                .Select(g => g.First())
-                .ToList();
-        }
-
-        _allAvailableCategories = sourceCats;
-
-        // 4. SMART FILTER: Show only true "Parents"
-        // FIX: Added 'Count()' with parentheses because it is a method in your LinkedList
-        var parents = _allAvailableCategories
-            .Where(c => c.parent_category_id == 0 || (c.subcategories != null && c.subcategories.Count() > 0))
+        // 3. EXTRACT CATEGORIES DIRECTLY FROM PRODUCTS
+        // This handles the case where categories are only defined inside product objects
+        _allAvailableCategories = allProducts
+            .Where(p => p.category != null)
+            .Select(p => p.category)
+            .GroupBy(c => c.name)
+            .Select(g => g.First())
             .ToList();
 
-        if (parents.Any())
+        // 4. FILTER FOR MAIN ROOTS (The 4 keys in your SubCatMap)
+        // This populates your 'categories' list for the first dropdown
+        var rootNames = SubCatMap.Keys.ToList();
+        categories = _allAvailableCategories
+            .Where(c => rootNames.Any(r => r.Equals(c.name, StringComparison.OrdinalIgnoreCase)))
+            .ToList();
+
+        // 5. If extraction fails, manually seed root objects from SubCatMap keys
+        if (!categories.Any())
         {
-            categories = parents;
-        }
-        else
-        {
-            // If the structure is completely flat, show everything unique by name
-            categories = _allAvailableCategories
-                .GroupBy(c => c.name)
-                .Select(g => g.First())
-                .ToList();
+            categories = rootNames.Select(name => new CategoryBL
+                {
+                    name = name,
+                    category_id = name.GetHashCode()
+                }).ToList();
         }
 
         ResetForm();
@@ -340,22 +339,35 @@
         if (int.TryParse(e.Value.ToString(), out int id))
         {
             selectedCategoryId = id;
+            var selectedCategory = categories.FirstOrDefault(c => c.category_id == id);
+            string selectedCatName = selectedCategory?.name ?? "";
 
-            // Search in _allAvailableCategories (which includes fallback data)
-            subCategories = _allAvailableCategories
-                .Where(c => c.parent_category_id == selectedCategoryId)
+            // Filter the global product list to find unique subcategories belonging to this root
+            subCategories = allProducts
+                .Where(p => p.tags != null && p.tags.FindNode(selectedCatName))
+                .Select(p => p.category)
+                .Where(c => c.name != selectedCatName)
+                .GroupBy(c => c.name)
+                .Select(g => g.First())
                 .ToList();
 
-            // If no subcategories, load products directly from the selected category
-            if (!subCategories.Any())
+            // If data structure is missing sub-links, generate from SubCatMap
+            if (!subCategories.Any() && !string.IsNullOrEmpty(selectedCatName))
             {
-                var parentCat = _allAvailableCategories.FirstOrDefault(c => c.category_id == selectedCategoryId);
-                filteredProducts = parentCat?.products?.ToList() ?? new List<ProductBL>();
+                if (SubCatMap.ContainsKey(selectedCatName))
+                {
+                    subCategories = SubCatMap[selectedCatName]
+                        .Select(name => new CategoryBL
+                            {
+                                name = name,
+                                category_id = name.GetHashCode(),
+                                parent_category_id = selectedCategoryId
+                            })
+                        .ToList();
+                }
             }
-            else
-            {
-                filteredProducts.Clear();
-            }
+
+            filteredProducts.Clear();
             selectedSubCategoryId = -1;
         }
     }
@@ -365,18 +377,25 @@
         if (int.TryParse(e.Value.ToString(), out int id))
         {
             selectedSubCategoryId = id;
-
-            if (selectedSubCategoryId == -1)
-            {
-                filteredProducts.Clear();
-                return;
-            }
+            if (selectedSubCategoryId == -1) { filteredProducts.Clear(); return; }
 
             var subCategory = subCategories.FirstOrDefault(sc => sc.category_id == selectedSubCategoryId);
 
-            filteredProducts = subCategory != null
-                ? subCategory.products?.ToList() ?? new List<ProductBL>()
-                : new List<ProductBL>();
+            if (subCategory != null)
+            {
+                // If the subcategory has products attached, use them
+                if (subCategory.products != null && subCategory.products.Count() > 0)
+                {
+                    filteredProducts = subCategory.products.ToList();
+                }
+                else
+                {
+                    // Otherwise, filter the global product list by tag name
+                    filteredProducts = allProducts
+                        .Where(p => p.tags != null && p.tags.FindNode(subCategory.name))
+                        .ToList();
+                }
+            }
         }
     }
 }

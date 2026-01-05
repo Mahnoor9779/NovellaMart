@@ -323,5 +323,16 @@ namespace NovellaMart.Core.BL.Services
             }
             if(keysToRelease.Count > 0) SaveRuntimeState(); // PERSISTENCE
         }
+
+        public void MarkAsOrdered(int userId, int productId)
+        {
+            string key = $"{userId}_{productId}";
+            if (_userRequestStatus.ContainsKey(key))
+            {
+                _userRequestStatus[key] = "Ordered"; // This prevents stock return in ReleaseExpiredAllocations
+                _inCheckoutProcess.Remove(key);
+                SaveRuntimeState();
+            }
+        }
     }
 }

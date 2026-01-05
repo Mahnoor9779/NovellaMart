@@ -155,8 +155,11 @@
     protected override void OnInitialized()
     {
         currentSale = CrudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id);
-        if (currentSale != null) LiveSaleService.SetActiveSale(currentSale);
 
+        if (currentSale != null)
+        {
+            LiveSaleService.SetActiveSale(currentSale);
+        }
         _refreshTimer = new System.Timers.Timer(1000);
         _refreshTimer.Elapsed += (s, e) => InvokeAsync(StateHasChanged);
         _refreshTimer.Start();

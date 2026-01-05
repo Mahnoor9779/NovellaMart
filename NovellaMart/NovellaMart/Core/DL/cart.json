@@ -1,65 +1,7 @@
 {
   "cart_id": 0,
   "customer": null,
-  "items": [
-    {
-      "Product": {
-        "product_id": 1,
-        "name": "Gentle Foam Cleanser",
-        "description": "Deep cleaning foam for all skin types.",
-        "images": [
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=1",
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=101"
-        ],
-        "price": 1500,
-        "stock": 50,
-        "category": {
-          "category_id": 11,
-          "name": "Cleansers",
-          "parent_category_id": 1,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Skincare",
-          "Cleansers",
-          "Face"
-        ]
-      },
-      "Quantity": 2
-    },
-    {
-      "Product": {
-        "product_id": 61,
-        "name": "Mascara",
-        "description": "Volume and length mascara.",
-        "images": [
-          "https://loremflickr.com/500/500/cosmetics,eyes?lock=61",
-          "https://loremflickr.com/500/500/cosmetics,eyes?lock=161"
-        ],
-        "price": 1500,
-        "stock": 70,
-        "category": {
-          "category_id": 22,
-          "name": "Eyes",
-          "parent_category_id": 2,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Cosmetics",
-          "Eyes",
-          "Mascara",
-          "Trending"
-        ]
-      },
-      "Quantity": 6
-    }
-  ],
+  "items": [],
   "AppliedPromoCode": null,
   "DiscountAmount": 0
 }

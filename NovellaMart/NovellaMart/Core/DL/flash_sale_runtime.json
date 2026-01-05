@@ -1,8 +1,63 @@
 {
   "ProductQueues": {
-    "107": {
+    "12": {
       "arr": [
-        null,
+        {
+          "request_id": 639032078080560903,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 100,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T11:03:28.0518987+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 12,
+            "name": "Vitamin C Serum",
+            "description": "Glow boosting and anti-aging.",
+            "images": [
+              "https://loremflickr.com/500/500/skincare,serum?lock=12",
+              "https://loremflickr.com/500/500/skincare,serum?lock=112"
+            ],
+            "price": 2800,
+            "stock": 34,
+            "category": {
+              "category_id": 12,
+              "name": "Serums",
+              "parent_category_id": 1,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Skincare",
+              "Serums",
+              "Glow"
+            ]
+          },
+          "requestTime": "2026-01-05T11:03:28.0560914+05:00",
+          "allocated": true
+        },
         null,
         null,
         null,
@@ -58,9 +113,232 @@
       "capacity": 50,
       "size": 0
     },
-    "103": {
+    "13": {
       "arr": [
+        {
+          "request_id": 639032078091841699,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 100,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T11:03:29.184155+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 13,
+            "name": "Retinol Night Serum",
+            "description": "Reduces fine lines overnight.",
+            "images": [
+              "https://loremflickr.com/500/500/skincare,serum?lock=13",
+              "https://loremflickr.com/500/500/skincare,serum?lock=113"
+            ],
+            "price": 3000,
+            "stock": 28,
+            "category": {
+              "category_id": 12,
+              "name": "Serums",
+              "parent_category_id": 1,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Skincare",
+              "Serums",
+              "Anti-Aging"
+            ]
+          },
+          "requestTime": "2026-01-05T11:03:29.1841707+05:00",
+          "allocated": true
+        },
+        {
+          "request_id": 639032078145857147,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 100,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T11:03:34.5857032+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 13,
+            "name": "Retinol Night Serum",
+            "description": "Reduces fine lines overnight.",
+            "images": [
+              "https://loremflickr.com/500/500/skincare,serum?lock=13",
+              "https://loremflickr.com/500/500/skincare,serum?lock=113"
+            ],
+            "price": 3000,
+            "stock": 28,
+            "category": {
+              "category_id": 12,
+              "name": "Serums",
+              "parent_category_id": 1,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Skincare",
+              "Serums",
+              "Anti-Aging"
+            ]
+          },
+          "requestTime": "2026-01-05T11:03:34.5857154+05:00",
+          "allocated": true
+        },
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "front": -1,
+      "rear": -1,
+      "capacity": 50,
+      "size": 0
+    },
+    "14": {
+      "arr": [
+        {
+          "request_id": 639032078107815117,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 100,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T11:03:30.7814924+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 14,
+            "name": "Niacinamide Serum",
+            "description": "Minimizes pores and oil.",
+            "images": [
+              "https://loremflickr.com/500/500/skincare,serum?lock=14",
+              "https://loremflickr.com/500/500/skincare,serum?lock=114"
+            ],
+            "price": 2200,
+            "stock": 49,
+            "category": {
+              "category_id": 12,
+              "name": "Serums",
+              "parent_category_id": 1,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Skincare",
+              "Serums",
+              "Pores"
+            ]
+          },
+          "requestTime": "2026-01-05T11:03:30.7815126+05:00",
+          "allocated": true
+        },
         null,
         null,
         null,
@@ -116,123 +394,7 @@
       "capacity": 50,
       "size": 0
     },
-    "104": {
-      "arr": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "front": -1,
-      "rear": -1,
-      "capacity": 50,
-      "size": 0
-    },
-    "105": {
-      "arr": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "front": -1,
-      "rear": -1,
-      "capacity": 50,
-      "size": 0
-    },
-    "109": {
+    "18": {
       "arr": [
         null,
         null,
@@ -291,16 +453,195 @@
       "size": 0
     }
   },
-  "UserRequestStatus": {},
-  "AllocationExpiry": {},
-  "InCheckoutProcess": [],
-  "ActivityLogs": [
-    "[1:36 AM] Sale Finalized and Persisted to File.",
-    "[1:36 AM] Sale Finalized and Persisted to File.",
-    "[1:36 AM] Sale Finalized and Persisted to File.",
-    "[1:36 AM] Sale Finalized and Persisted to File.",
-    "[1:36 AM] Sale Finalized and Persisted to File.",
-    "[1:35 AM] Sale Finalized and Persisted to File."
+  "UserRequestStatus": {
+    "100_12": "Allocated",
+    "100_13": "Allocated",
+    "100_14": "Allocated"
+  },
+  "AllocationExpiry": {
+    "100_12": "2026-01-05T11:11:18.5817217+05:00",
+    "100_13": "2026-01-05T11:11:18.582327+05:00",
+    "100_14": "2026-01-05T11:11:18.5823698+05:00"
+  },
+  "InCheckoutProcess": [
+    "100_12"
   ],
-  "ActiveRequests": {}
+  "ActivityLogs": [
+    "[11:09 AM] Sale Finalized and Persisted to File.",
+    "[11:03:34 AM] User 100 joined queue for Retinol Night Serum",
+    "[11:03:33 AM] User 100 LEFT queue for Product 13",
+    "[11:03:30 AM] User 100 joined queue for Niacinamide Serum",
+    "[11:03:29 AM] User 100 joined queue for Retinol Night Serum",
+    "[11:03:28 AM] User 100 joined queue for Vitamin C Serum"
+  ],
+  "ActiveRequests": {
+    "100_12": {
+      "request_id": 639032078080560903,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 100,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T11:03:28.0518987+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 12,
+        "name": "Vitamin C Serum",
+        "description": "Glow boosting and anti-aging.",
+        "images": [
+          "https://loremflickr.com/500/500/skincare,serum?lock=12",
+          "https://loremflickr.com/500/500/skincare,serum?lock=112"
+        ],
+        "price": 2800,
+        "stock": 34,
+        "category": {
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Serums",
+          "Glow"
+        ]
+      },
+      "requestTime": "2026-01-05T11:03:28.0560914+05:00",
+      "allocated": true
+    },
+    "100_13": {
+      "request_id": 639032078145857147,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 100,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T11:03:34.5857032+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 13,
+        "name": "Retinol Night Serum",
+        "description": "Reduces fine lines overnight.",
+        "images": [
+          "https://loremflickr.com/500/500/skincare,serum?lock=13",
+          "https://loremflickr.com/500/500/skincare,serum?lock=113"
+        ],
+        "price": 3000,
+        "stock": 28,
+        "category": {
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Serums",
+          "Anti-Aging"
+        ]
+      },
+      "requestTime": "2026-01-05T11:03:34.5857154+05:00",
+      "allocated": true
+    },
+    "100_14": {
+      "request_id": 639032078107815117,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 100,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T11:03:30.7814924+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 14,
+        "name": "Niacinamide Serum",
+        "description": "Minimizes pores and oil.",
+        "images": [
+          "https://loremflickr.com/500/500/skincare,serum?lock=14",
+          "https://loremflickr.com/500/500/skincare,serum?lock=114"
+        ],
+        "price": 2200,
+        "stock": 49,
+        "category": {
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Serums",
+          "Pores"
+        ]
+      },
+      "requestTime": "2026-01-05T11:03:30.7815126+05:00",
+      "allocated": true
+    }
+  }
 }

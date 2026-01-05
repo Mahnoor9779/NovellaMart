@@ -1,112 +1,111 @@
 [
   {
-    "flash_sale_id": 2,
-    "title": "Summer Sale",
-    "description": "Sale from all previous year stock.",
-    "discount": 15,
-    "startTime": "2026-01-05T01:37:18.5608074+05:00",
-    "endTime": "2026-01-06T02:37:00",
+    "flash_sale_id": 1,
+    "title": "Winter Sale!",
+    "description": "Upto 50% Off",
+    "discount": 50,
+    "startTime": "2026-01-05T11:02:24.1094858+05:00",
+    "endTime": "2026-01-05T12:02:24.1094862+05:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 101,
-        "name": "Floral Summer Dress",
-        "description": "Light breezy cotton dress.",
+        "product_id": 12,
+        "name": "Vitamin C Serum",
+        "description": "Glow boosting and anti-aging.",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=101",
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=201"
+          "https://loremflickr.com/500/500/skincare,serum?lock=12",
+          "https://loremflickr.com/500/500/skincare,serum?lock=112"
         ],
-        "price": 4500,
-        "stock": 25,
+        "price": 2800,
+        "stock": 34,
         "category": {
-          "category_id": 31,
-          "name": "Dresses",
-          "parent_category_id": 3,
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Dresses",
-          "Summer",
-          "Trending"
+          "Skincare",
+          "Serums",
+          "Glow"
         ]
       },
       {
-        "product_id": 102,
-        "name": "Evening Gown",
-        "description": "Elegant black maxi dress.",
+        "product_id": 13,
+        "name": "Retinol Night Serum",
+        "description": "Reduces fine lines overnight.",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=102",
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=202"
+          "https://loremflickr.com/500/500/skincare,serum?lock=13",
+          "https://loremflickr.com/500/500/skincare,serum?lock=113"
         ],
-        "price": 12000,
-        "stock": 15,
+        "price": 3000,
+        "stock": 28,
         "category": {
-          "category_id": 31,
-          "name": "Dresses",
-          "parent_category_id": 3,
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Dresses",
-          "Formal"
+          "Skincare",
+          "Serums",
+          "Anti-Aging"
         ]
       },
       {
-        "product_id": 103,
-        "name": "Bodycon Dress",
-        "description": "Fitted party dress.",
+        "product_id": 14,
+        "name": "Niacinamide Serum",
+        "description": "Minimizes pores and oil.",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=103",
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=203"
+          "https://loremflickr.com/500/500/skincare,serum?lock=14",
+          "https://loremflickr.com/500/500/skincare,serum?lock=114"
         ],
-        "price": 5500,
-        "stock": 30,
+        "price": 2200,
+        "stock": 49,
         "category": {
-          "category_id": 31,
-          "name": "Dresses",
-          "parent_category_id": 3,
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Dresses",
-          "Party"
+          "Skincare",
+          "Serums",
+          "Pores"
         ]
       },
       {
-        "product_id": 104,
-        "name": "Midi Dress",
-        "description": "Casual everyday wear.",
+        "product_id": 18,
+        "name": "Rosehip Oil Serum",
+        "description": "Natural radiance booster.",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=104",
-          "https://loremflickr.com/500/500/woman%20wear,dress?lock=204"
+          "https://loremflickr.com/500/500/skincare,serum?lock=18",
+          "https://loremflickr.com/500/500/skincare,serum?lock=118"
         ],
-        "price": 4000,
-        "stock": 35,
+        "price": 2100,
+        "stock": 55,
         "category": {
-          "category_id": 31,
-          "name": "Dresses",
-          "parent_category_id": 3,
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Dresses",
-          "Casual"
+          "Skincare",
+          "Serums",
+          "Oil"
         ]
       }
     ],
@@ -221,12 +220,122 @@
     "allocation_heap": {
       "heap": [
         {
-          "Item1": null,
-          "Item2": 0
+          "Item1": {
+            "request_id": 639032078107815117,
+            "customer": {
+              "contact": "",
+              "Addresses": [],
+              "OrderHistory": [],
+              "Cart": {
+                "cart_id": 0,
+                "customer": null,
+                "items": [],
+                "AppliedPromoCode": null,
+                "DiscountAmount": 0
+              },
+              "user_id": 100,
+              "username": "",
+              "email": "",
+              "password": "",
+              "role": "Customer",
+              "firstName": "",
+              "lastName": "",
+              "profilePicture": "",
+              "createdAt": "2026-01-05T11:03:30.7814924+05:00",
+              "isActive": true,
+              "phoneNumber": "",
+              "address": "",
+              "city": "",
+              "zipCode": ""
+            },
+            "product": {
+              "product_id": 14,
+              "name": "Niacinamide Serum",
+              "description": "Minimizes pores and oil.",
+              "images": [
+                "https://loremflickr.com/500/500/skincare,serum?lock=14",
+                "https://loremflickr.com/500/500/skincare,serum?lock=114"
+              ],
+              "price": 2200,
+              "stock": 49,
+              "category": {
+                "category_id": 12,
+                "name": "Serums",
+                "parent_category_id": 1,
+                "subcategories": [],
+                "categoryTree": {
+                  "Root": null
+                }
+              },
+              "tags": [
+                "Skincare",
+                "Serums",
+                "Pores"
+              ]
+            },
+            "requestTime": "2026-01-05T11:03:30.7815126+05:00",
+            "allocated": true
+          },
+          "Item2": -639032078107815126
         },
         {
-          "Item1": null,
-          "Item2": 0
+          "Item1": {
+            "request_id": 639032078145857147,
+            "customer": {
+              "contact": "",
+              "Addresses": [],
+              "OrderHistory": [],
+              "Cart": {
+                "cart_id": 0,
+                "customer": null,
+                "items": [],
+                "AppliedPromoCode": null,
+                "DiscountAmount": 0
+              },
+              "user_id": 100,
+              "username": "",
+              "email": "",
+              "password": "",
+              "role": "Customer",
+              "firstName": "",
+              "lastName": "",
+              "profilePicture": "",
+              "createdAt": "2026-01-05T11:03:34.5857032+05:00",
+              "isActive": true,
+              "phoneNumber": "",
+              "address": "",
+              "city": "",
+              "zipCode": ""
+            },
+            "product": {
+              "product_id": 13,
+              "name": "Retinol Night Serum",
+              "description": "Reduces fine lines overnight.",
+              "images": [
+                "https://loremflickr.com/500/500/skincare,serum?lock=13",
+                "https://loremflickr.com/500/500/skincare,serum?lock=113"
+              ],
+              "price": 3000,
+              "stock": 28,
+              "category": {
+                "category_id": 12,
+                "name": "Serums",
+                "parent_category_id": 1,
+                "subcategories": [],
+                "categoryTree": {
+                  "Root": null
+                }
+              },
+              "tags": [
+                "Skincare",
+                "Serums",
+                "Anti-Aging"
+              ]
+            },
+            "requestTime": "2026-01-05T11:03:34.5857154+05:00",
+            "allocated": true
+          },
+          "Item2": -639032078145857154
         },
         {
           "Item1": null,
