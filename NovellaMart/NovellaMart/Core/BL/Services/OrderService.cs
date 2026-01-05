@@ -11,7 +11,7 @@ namespace NovellaMart.Core.BL.Services
     public class OrderService
     {
         private readonly CartService _cartService;
-        private const string FilePath = "Core/DL/orders.json"; // Ensure path is correct
+        private const string FilePath = "orders"; // FileHandler adds extension & path
         private static MyLinkedList<OrderBL> _allOrders;
         private readonly ProductCatalogService _catalogService;
 
@@ -81,7 +81,7 @@ namespace NovellaMart.Core.BL.Services
             return 350;
         }
 
-        public OrderBL PlaceOrder(string firstName, string lastName, string addressStr, string city, string email, string paymentMethod, double shippingCost)
+        public OrderBL PlaceOrder(int userId, string firstName, string lastName, string addressStr, string city, string email, string paymentMethod, double shippingCost)
         {
             var cart = _cartService.GetCart();
             if (cart.items.head == null) return null; // Cannot place empty order
@@ -90,6 +90,7 @@ namespace NovellaMart.Core.BL.Services
             AddressBL shippingAddress = new AddressBL(0, null, addressStr, city, "00000", "Pakistan");
 
             CustomerBL customer = new CustomerBL();
+            customer.user_id = userId; // Store the User ID
             customer.firstName = firstName;
             customer.lastName = lastName;
             customer.email = email;

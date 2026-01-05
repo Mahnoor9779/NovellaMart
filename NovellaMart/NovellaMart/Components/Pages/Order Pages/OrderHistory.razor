@@ -1,4 +1,5 @@
 ﻿@page "/orders"
+@page "/my-orders"
 @rendermode InteractiveServer
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
@@ -43,6 +44,9 @@
 
     <main class="profile-content">
         <div class="page-title">
+            <div style="font-size: 0.8rem; color: #888; margin-bottom: 5px;">
+                Debug: Authenticated as <strong>@username</strong> | Filtering orders for: <strong>@(string.IsNullOrEmpty(email) ? "(No Email Found)" : email)</strong>
+            </div>
             <h1 style="color: black;">Your Orders</h1>
             <div class="title-underline"></div>
             <p class="title-subtext">Track your past purchases and status.</p>

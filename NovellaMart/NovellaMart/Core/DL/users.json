@@ -94,5 +94,21 @@
     "address": "Hakeem Garhi, Sharaqpur Sharif, District Sheikhupura",
     "city": "SHEIKHUPURA",
     "zipCode": "39460"
+  },
+  {
+    "user_id": 999,
+    "username": "uncle",
+    "email": "sgdhfwg@gmail.com",
+    "password": "123",
+    "role": "Member",
+    "firstName": "uncle",
+    "lastName": "1",
+    "profilePicture": "",
+    "createdAt": "2026-01-05T21:44:26.882322+05:00",
+    "isActive": true,
+    "phoneNumber": "",
+    "address": "",
+    "city": "",
+    "zipCode": ""
   }
 ]

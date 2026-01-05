@@ -97,7 +97,8 @@
     "orderTime": "2025-12-29T16:31:41.492971+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "tulipkardo123@gmail.com"
   },
   {
     "order_id": 639028631196756372,
@@ -224,7 +225,8 @@
     "orderTime": "2026-01-01T11:18:39.6757106+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "sgdhfwg@gmail.com"
   },
   {
     "order_id": 639028792700474982,
@@ -295,7 +297,8 @@
     "orderTime": "2026-01-01T15:47:50.0475964+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "tulipkardo123@gmail.com"
   },
   {
     "order_id": 639030497881925581,
@@ -394,7 +397,8 @@
     "orderTime": "2026-01-03T15:09:48.1928342+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030554304318524,
@@ -465,7 +469,8 @@
     "orderTime": "2026-01-03T16:43:50.4319367+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030565875198722,
@@ -618,7 +623,8 @@
     "orderTime": "2026-01-03T17:03:07.5199397+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030581946945255,
@@ -689,7 +695,8 @@
     "orderTime": "2026-01-03T17:29:54.6946661+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030597109193336,
@@ -841,7 +848,8 @@
     "orderTime": "2026-01-03T17:55:10.9194473+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030619711103728,
@@ -912,7 +920,8 @@
     "orderTime": "2026-01-03T18:32:51.1104501+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030645104606911,
@@ -983,7 +992,8 @@
     "orderTime": "2026-01-03T19:15:10.4607021+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "aatikayousuf127@gmail.com"
   },
   {
     "order_id": 639030704582583687,
@@ -1055,7 +1065,8 @@
     "orderTime": "2026-01-03T20:54:18.2583735+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "tulipkardo123@gmail.com"
   },
   {
     "order_id": 639032000393663567,
@@ -1127,7 +1138,8 @@
     "orderTime": "2026-01-05T08:53:59.3665039+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "tulipkardo123@gmail.com"
   },
   {
     "order_id": 639032003451574033,
@@ -1199,6 +1211,522 @@
     "orderTime": "2026-01-05T08:59:05.1574062+05:00",
     "status": "Confirmed",
     "orderType": "Cash On Delivery",
-    "flash_reservation_id": 0
+    "flash_reservation_id": 0,
+    "customer_email": "admin@yahoo.com"
+  },
+  {
+    "order_id": 639032461931984409,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "sgdhfwg@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "aliza",
+      "lastName": "1",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T21:43:13.1984362+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "409 E Block",
+      "city": "Faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 31,
+          "name": "SPF 50 Sun Cream",
+          "description": "High protection UVA/UVB.",
+          "images": [
+            "https://loremflickr.com/500/500/skincare,sunscreen?lock=31",
+            "https://loremflickr.com/500/500/skincare,sunscreen?lock=131"
+          ],
+          "price": 2000,
+          "stock": 59,
+          "category": {
+            "category_id": 14,
+            "name": "Sunscreen",
+            "parent_category_id": 1,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Skincare",
+            "Sunscreen",
+            "SPF 50",
+            "Trending"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2200,
+    "orderTime": "2026-01-05T21:43:13.198444+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "sgdhfwg@gmail.com"
+  },
+  {
+    "order_id": 639032462668823279,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "sgdhfwg@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "uncle",
+      "lastName": "1",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T21:44:26.882322+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "409 E Block",
+      "city": "Faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 91,
+          "name": "Makeup Brushes Set",
+          "description": "10 piece professional set.",
+          "images": [
+            "https://loremflickr.com/500/500/cosmetics,tools?lock=91",
+            "https://loremflickr.com/500/500/cosmetics,tools?lock=191"
+          ],
+          "price": 3500,
+          "stock": 24,
+          "category": {
+            "category_id": 25,
+            "name": "Tools",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Tools",
+            "Brushes",
+            "Trending"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 3700,
+    "orderTime": "2026-01-05T21:44:26.8823301+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "sgdhfwg@gmail.com"
+  },
+  {
+    "order_id": 639032466551053438,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "sgdhfwg@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "aliza",
+      "lastName": "2",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T21:50:55.1053352+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "409 E Block",
+      "city": "Faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 11,
+          "name": "Hyaluronic Acid Serum",
+          "description": "Deep hydration for plump skin.",
+          "images": [
+            "https://loremflickr.com/500/500/skincare,serum?lock=11",
+            "https://loremflickr.com/500/500/skincare,serum?lock=111"
+          ],
+          "price": 2500,
+          "stock": 40,
+          "category": {
+            "category_id": 12,
+            "name": "Serums",
+            "parent_category_id": 1,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Skincare",
+            "Serums",
+            "Hydrating"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2700,
+    "orderTime": "2026-01-05T21:50:55.1053651+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "sgdhfwg@gmail.com"
+  },
+  {
+    "order_id": 639032473507176116,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "sgdhfwg@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "umama",
+      "lastName": "1",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T22:02:30.7175688+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 wellness",
+      "city": "peshawar",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 52,
+          "name": "Concealer Stick",
+          "description": "Hides dark circles.",
+          "images": [
+            "https://loremflickr.com/500/500/cosmetics,face?lock=52",
+            "https://loremflickr.com/500/500/cosmetics,face?lock=152"
+          ],
+          "price": 1800,
+          "stock": 49,
+          "category": {
+            "category_id": 21,
+            "name": "Face",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Face",
+            "Concealer"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2600,
+    "orderTime": "2026-01-05T22:02:30.7176134+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "sgdhfwg@gmail.com"
+  },
+  {
+    "order_id": 639032481816098190,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "tulipkardo123@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "mahnoor",
+      "lastName": "shabbir",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T22:16:21.6098144+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "409 E Block",
+      "city": "Faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 105,
+          "name": "Wrap Dress",
+          "description": "Flattering wrap style.",
+          "images": [
+            "https://loremflickr.com/500/500/woman%20wear,dress?lock=105",
+            "https://loremflickr.com/500/500/woman%20wear,dress?lock=205"
+          ],
+          "price": 4800,
+          "stock": 19,
+          "category": {
+            "category_id": 31,
+            "name": "Dresses",
+            "parent_category_id": 3,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Woman Wear",
+            "Dresses",
+            "Work"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 5000,
+    "orderTime": "2026-01-05T22:16:21.6098211+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "tulipkardo123@gmail.com"
+  },
+  {
+    "order_id": 639032482555853654,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "sgdhfwg@gmail.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "uncle",
+      "lastName": "1",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T22:17:35.5853618+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "409 E Block",
+      "city": "Faisalabad",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 31,
+          "name": "SPF 50 Sun Cream",
+          "description": "High protection UVA/UVB.",
+          "images": [
+            "https://loremflickr.com/500/500/skincare,sunscreen?lock=31",
+            "https://loremflickr.com/500/500/skincare,sunscreen?lock=131"
+          ],
+          "price": 2000,
+          "stock": 59,
+          "category": {
+            "category_id": 14,
+            "name": "Sunscreen",
+            "parent_category_id": 1,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Skincare",
+            "Sunscreen",
+            "SPF 50",
+            "Trending"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2200,
+    "orderTime": "2026-01-05T22:17:35.5853672+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "sgdhfwg@gmail.com"
+  },
+  {
+    "order_id": 639032483132316765,
+    "customer": {
+      "contact": "",
+      "Addresses": [],
+      "OrderHistory": [],
+      "Cart": {
+        "cart_id": 0,
+        "customer": null,
+        "items": [],
+        "AppliedPromoCode": null,
+        "DiscountAmount": 0
+      },
+      "user_id": 0,
+      "username": "",
+      "email": "admin@novellamart.com",
+      "password": "",
+      "role": "Customer",
+      "firstName": "admin",
+      "lastName": "2",
+      "profilePicture": "",
+      "createdAt": "2026-01-05T22:18:33.231672+05:00",
+      "isActive": true,
+      "phoneNumber": "",
+      "address": "",
+      "city": "",
+      "zipCode": ""
+    },
+    "address": {
+      "address_id": 0,
+      "customer": null,
+      "street": "123 wellness",
+      "city": "peshawar",
+      "postalCode": "00000",
+      "country": "Pakistan"
+    },
+    "items": [
+      {
+        "Product": {
+          "product_id": 71,
+          "name": "Matte Lipstick",
+          "description": "Long lasting red matte.",
+          "images": [
+            "https://loremflickr.com/500/500/cosmetics,lips?lock=71",
+            "https://loremflickr.com/500/500/cosmetics,lips?lock=171"
+          ],
+          "price": 1800,
+          "stock": 49,
+          "category": {
+            "category_id": 23,
+            "name": "Lips",
+            "parent_category_id": 2,
+            "subcategories": [],
+            "categoryTree": {
+              "Root": null
+            }
+          },
+          "tags": [
+            "Cosmetics",
+            "Lips",
+            "Lipstick",
+            "Trending"
+          ]
+        },
+        "Quantity": 1
+      }
+    ],
+    "totalAmount": 2600,
+    "orderTime": "2026-01-05T22:18:33.2316781+05:00",
+    "status": "Confirmed",
+    "orderType": "Cash On Delivery",
+    "flash_reservation_id": 0,
+    "customer_email": "admin@novellamart.com"
   }
 ]

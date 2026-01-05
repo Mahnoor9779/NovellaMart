@@ -24,7 +24,8 @@ namespace NovellaMart.Core.BL.Model_Classes
         // 1. Default Constructor
         public UserBL()
         {
-            user_id = 0;
+            // Generate a random 6-digit ID (Simple approach)
+            user_id = new Random().Next(100000, 999999);
             username = "";
             email = "";
             password = "";

@@ -223,13 +223,36 @@
 
     private int currentUserId;
 
+    private string filePath = "Core/DL/users.json";
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             // Get the ID of the person currently logged in
             var storedId = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
-            int.TryParse(storedId, out currentUserId);
+            if (int.TryParse(storedId, out currentUserId))
+            {
+                 // Load User Data to Pre-fill Form
+                 if (System.IO.File.Exists(filePath))
+                 {
+                     var json = await System.IO.File.ReadAllTextAsync(filePath);
+                     var users = System.Text.Json.JsonSerializer.Deserialize<List<UserBL>>(json);
+                     var myUser = users?.FirstOrDefault(u => u.user_id == currentUserId);
+
+                     if (myUser != null)
+                     {
+                         model.FirstName = myUser.firstName;
+                         model.LastName = myUser.lastName;
+                         model.Email = myUser.email;
+                         model.Phone = myUser.phoneNumber;
+                         model.Address = myUser.address;
+                         model.City = myUser.city;
+                         model.Zip = myUser.zipCode;
+                         StateHasChanged();
+                     }
+                 }
+            }
         }
     }
 
@@ -261,6 +284,7 @@
         await Task.Delay(1500);
 
         placedOrder = OrderService.PlaceOrder(
+            currentUserId,
             model.FirstName, model.LastName, model.Address,
             model.City, model.Email, model.PaymentMethod, shippingCost
         );
