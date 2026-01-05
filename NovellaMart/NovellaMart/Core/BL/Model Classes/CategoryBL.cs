@@ -9,10 +9,13 @@ namespace NovellaMart.Core.BL.Model_Classes
         public int category_id { get; set; }
         public string name { get; set; }
         public int parent_category_id { get; set; }
+
         public MyLinkedList<CategoryBL> subcategories { get; set; }
-        
+
+        // JsonIgnore prevents infinite loops when serializing products that contain categories
         [JsonIgnore]
         public MyLinkedList<ProductBL> products { get; set; }
+
         public AVLTreeGeneric<CategoryBL> categoryTree { get; set; }
 
         public CategoryBL()
@@ -34,13 +37,5 @@ namespace NovellaMart.Core.BL.Model_Classes
             products = new MyLinkedList<ProductBL>();
             categoryTree = new AVLTreeGeneric<CategoryBL>();
         }
-
-        //public void insertSubcategory(CategoryBL c)
-        //{
-        //    subcategories.InsertAtEnd(c);
-        //    categoryTree.Insert(this, (a, b) => a.category_id.CompareTo(b.category_id));
-        //}
-
-        
     }
 }

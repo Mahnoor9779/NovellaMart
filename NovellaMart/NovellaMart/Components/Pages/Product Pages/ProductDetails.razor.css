@@ -1,0 +1,253 @@
+﻿/* =========================================
+   1. GRID LAYOUT (Strict 50/50 Split)
+   ========================================= */
+.product-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Forces exactly two equal columns */
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start; /* Aligns tops of cards */
+}
+
+/* =========================================
+   2. CARD PANELS (The White Boxes)
+   ========================================= */
+.card-panel {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* Soft premium shadow */
+    height: 100%; /* Makes them try to fill height */
+}
+
+/* =========================================
+   3. LEFT PANEL: IMAGE
+   ========================================= */
+.main-image-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces square container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-product-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Prevents stretching/cutting */
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+    .thumbnail.active, .thumbnail:hover {
+        border-color: #d64d7d;
+        opacity: 1;
+    }
+
+/* =========================================
+   4. RIGHT PANEL: DETAILS
+   ========================================= */
+.info-header {
+    margin-bottom: 20px;
+}
+
+.category-tag {
+    background: #f8f9fa;
+    color: #666;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+/* Price Row */
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.price-tag {
+    font-size: 1.8rem;
+    color: #d64d7d;
+    font-weight: 700;
+}
+
+.stock-badge {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.in-stock {
+    color: #28a745;
+}
+
+.out-stock {
+    color: #dc3545;
+}
+
+.description-text {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+
+/* =========================================
+   5. BUTTONS & CONTROLS
+   ========================================= */
+.controls-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Quantity */
+.quantity-box {
+    display: inline-flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 30px;
+    padding: 5px;
+    width: fit-content;
+}
+
+    .quantity-box button {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: none;
+        background: white;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .quantity-box span {
+        width: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+/* Action Buttons Grid */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* TWO EQUAL BUTTONS */
+    gap: 15px; /* Space between buttons */
+}
+
+.btn-action {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%; /* Fill the grid cell */
+}
+
+/* Add to Cart (Pink) */
+.btn-add {
+    background-color: #d64d7d !important; /* Force Pink */
+    color: white !important;
+}
+
+    .btn-add:hover {
+        background-color: #c23e6e !important;
+        transform: translateY(-2px);
+    }
+
+/* Buy Now (Black) - FIXING THE WHITE BUTTON ISSUE */
+.btn-buy {
+    background-color: #333333 !important; /* Force Black */
+    color: white !important;
+}
+
+    .btn-buy:hover {
+        background-color: #000000 !important;
+        transform: translateY(-2px);
+    }
+
+/* Undo (Yellow) */
+.btn-undo {
+    background-color: #ffc107 !important;
+    color: #333 !important;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animations & Responsive */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,193,7,0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255,193,7,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255,193,7,0);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid-layout {
+        grid-template-columns: 1fr; /* Stack vertically on tablet/mobile */
+        gap: 30px;
+    }
+}

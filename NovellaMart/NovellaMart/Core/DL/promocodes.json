@@ -10,5 +10,11 @@
     "Code": "WINTER26",
     "DiscountPercentage": 10,
     "IsActive": true
+  },
+  {
+    "Id": 140092542,
+    "Code": "MAHNOOR9779",
+    "DiscountPercentage": 90,
+    "IsActive": true
   }
 ]

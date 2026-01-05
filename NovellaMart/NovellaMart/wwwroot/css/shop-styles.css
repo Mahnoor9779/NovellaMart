@@ -2,20 +2,19 @@
    GLOBAL VARIABLES & RESET
    ========================================= */
 :root {
-    --nm-primary: #f17fb2;    /* Pink */
-    --nm-secondary: #f1ee56;  /* Yellow */
-    --nm-accent: #5ff4ef;     /* Cyan */
+    --nm-primary: #d64d7d; /* NEW PINK */
+    --nm-secondary: #f1ee56; /* Yellow */
+    --nm-accent: #5ff4ef; /* Cyan */
     --nm-dark: #333333;
     --nm-light: #fbfbfe;
     --nm-border: #e9ecef;
-    --nm-text-muted: #6c757d;
 }
 
 .shop-container {
     padding: 40px 0;
     max-width: 1400px;
     margin: 0 auto;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 /* =========================================
@@ -51,8 +50,13 @@
 }
 
 @media (max-width: 992px) {
-    .shop-layout { grid-template-columns: 1fr; }
-    .filters-sidebar { display: none; }
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        display: none;
+    }
 }
 
 /* =========================================
@@ -66,7 +70,9 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
-.filter-group { margin-bottom: 35px; }
+.filter-group {
+    margin-bottom: 35px;
+}
 
 .filter-title {
     font-weight: 700;
@@ -94,71 +100,18 @@
     cursor: pointer;
 }
 
-.sub-cat-btn:hover {
-    background: #fff5fa;
-    color: var(--nm-primary);
-    padding-left: 18px; 
-}
+    .sub-cat-btn:hover {
+        background: #fff5fa;
+        color: var(--nm-primary);
+        padding-left: 18px;
+    }
 
-.sub-cat-btn.active {
-    background: var(--nm-primary);
-    color: white;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(241, 127, 178, 0.4);
-}
-
-.price-inputs {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-}
-
-.price-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 0.9rem;
-}
-
-.btn-filter-apply {
-    width: 100%;
-    background: var(--nm-dark);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.btn-filter-apply:hover { background: #000; }
-
-.btn-reset {
-    width: 100%;
-    background: white;
-    border: 1px solid #ff4d4d;
-    color: #ff4d4d;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.2s;
-}
-
-.btn-reset:hover { background: #ff4d4d; color: white; }
-
-.color-options { display: flex; gap: 10px; flex-wrap: wrap; }
-.color-circle {
-    width: 28px; height: 28px; border-radius: 50%;
-    cursor: pointer; border: 1px solid #ddd;
-    display: flex; align-items: center; justify-content: center;
-    transition: transform 0.2s;
-}
-.color-circle:hover { transform: scale(1.15); }
-.color-circle.selected { border: 2px solid var(--nm-primary); }
+    .sub-cat-btn.active {
+        background: var(--nm-primary);
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(214, 77, 125, 0.4);
+    }
 
 /* =========================================
    PRODUCT GRID & CARD UI
@@ -181,35 +134,38 @@
     border-top: 4px solid var(--nm-accent);
 }
 
-.product-card:hover {
-    box-shadow: 0 10px 25px rgba(241, 127, 178, 0.15);
-    transform: translateY(-5px);
-    border-top-color: var(--nm-primary);
-}
+    .product-card:hover {
+        box-shadow: 0 10px 25px rgba(214, 77, 125, 0.15);
+        transform: translateY(-5px);
+        border-top-color: var(--nm-primary);
+    }
 
+/* FULL IMAGE STYLING */
 .img-wrapper {
-    height: 220px;
-    background: #fbfbfe;
+    height: 320px; /* Fixed Portrait Height */
+    background: #fff;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    border-bottom: 1px dashed var(--nm-accent);
+    padding: 0; /* Full Bleed */
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .product-img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    transition: transform 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the box */
+    object-position: center top;
+    transition: transform 0.5s ease;
 }
 
 .product-card:hover .product-img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
+/* Action Buttons */
 .product-actions {
     position: absolute;
     top: 10px;
@@ -240,12 +196,12 @@
     cursor: pointer;
 }
 
-.btn-action:hover {
-    background: var(--nm-primary);
-    color: white;
-}
+    .btn-action:hover {
+        background: var(--nm-primary);
+        color: white;
+    }
 
-/* Product Info */
+/* Product Content */
 .product-info {
     padding: 15px;
     text-align: center;
@@ -276,17 +232,19 @@
     height: 2.8em;
 }
 
-.p-name:hover { color: var(--nm-primary); }
+    .p-name:hover {
+        color: var(--nm-primary);
+    }
 
 .p-price {
     color: #000;
     font-weight: 800;
     font-size: 1.1rem;
     margin-bottom: 12px;
-    margin-top: auto; /* Push price to bottom of available space before button */
+    margin-top: auto;
 }
 
-/* FIXED ADD TO CART BUTTON */
+/* Add To Cart */
 .btn-add-to-cart {
     width: 100%;
     background-color: var(--nm-primary);
@@ -305,17 +263,16 @@
     gap: 8px;
 }
 
-.btn-add-to-cart:hover:not(:disabled) {
-    background-color: #d15c92;
-    box-shadow: 0 4px 12px rgba(241, 127, 178, 0.3);
-    transform: translateY(-2px);
-}
+    .btn-add-to-cart:hover:not(:disabled) {
+        background-color: #c23e6e; /* Darker version of primary */
+        box-shadow: 0 4px 12px rgba(214, 77, 125, 0.3);
+        transform: translateY(-2px);
+    }
 
-.btn-add-to-cart.btn-success {
-    background-color: #28a745 !important;
-    cursor: default;
-    pointer-events: none;
-}
+    .btn-add-to-cart.btn-undo-state {
+        background-color: #ffc107;
+        color: black;
+    }
 
 /* Pagination */
 .pagination {
@@ -326,16 +283,22 @@
 }
 
 .page-btn {
-    width: 40px; height: 40px; border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     border: 1px solid var(--nm-border);
-    background: white; color: var(--nm-dark);
-    font-weight: 600; cursor: pointer; transition: 0.2s;
-    display: flex; align-items: center; justify-content: center;
+    background: white;
+    color: var(--nm-dark);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.page-btn:hover, .page-btn.active {
-    background: var(--nm-primary);
-    color: white;
-    border-color: var(--nm-primary);
-    box-shadow: 0 4px 10px rgba(241, 127, 178, 0.3);
-}
+    .page-btn:hover, .page-btn.active {
+        background: var(--nm-primary);
+        color: white;
+        border-color: var(--nm-primary);
+    }

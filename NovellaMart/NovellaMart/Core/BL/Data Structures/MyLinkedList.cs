@@ -31,6 +31,7 @@ namespace NovellaMart.Core.BL.Data_Structures
                 currentNode = nextNode;
             }
             head = null;
+            size = 0;
         }
 
         public void InsertAtHead(type value)

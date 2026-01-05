@@ -1,178 +1,162 @@
 ﻿@page "/product/{ProductId:int}"
 @rendermode InteractiveServer
-
 @using NovellaMart.Core.BL.Model_Classes
 @using NovellaMart.Core.BL.Services
-@inject ProductService ProductService
-@inject CartService CartService
+@inject NovellaMart.Core.BL.Services.ProductCatalogService CatalogService
+@inject NovellaMart.Core.BL.Services.CartService CartService
 @inject NavigationManager NavManager
 
-@if (product == null)
+<PageTitle>@(_product?.name ?? "Product Details") - NovellaMart</PageTitle>
+
+@if (_isLoading)
 {
-    <p class="loading-text">Loading product...</p>
+    <div class="loading-container">
+        <div class="spinner-border text-pink" role="status"></div>
+        <p>Loading...</p>
+    </div>
+}
+else if (_product == null)
+{
+    <div class="not-found-container">
+        <h3>Product Not Found</h3>
+        <a href="/shop" class="btn-theme mt-3">Back to Shop</a>
+    </div>
 }
 else
 {
-    <div class="product-details-wrapper">
+    <div class="container my-5">
+        <div class="product-grid-layout fade-in">
 
-        <!-- LEFT: Image Gallery -->
-        <div class="product-images-panel">
-            <div class="product-image-frame">
-                @if (product.images.Length > 0)
-                {
-                    <img src="@product.images[selectedImage]" alt="@product.name" />
-                }
-            </div>
-
-            <div class="thumbnail-row">
-                @for (int i = 0; i < product.images.Length; i++)
-                {
-                    int localIndex = i;
-                    <img src="@product.images[i]"
-                         class="thumbnail @(i == selectedImage ? "active-thumb" : "")"
-                         @onclick="() => selectedImage = localIndex" />
-                }
-            </div>
-        </div>
-
-        <!-- RIGHT: Product Info -->
-        <div class="product-info-card">
-            <h1 class="product-title">@product.name</h1>
-
-
-
-            <span class="product-category">@product.category?.name</span>
-
-            <p class="product-desc">@product.description</p>
-
-            <div class="price-stock">
-                <span class="price">Rs. @product.price</span>
-                <span class="stock @(product.stock > 0 ? "in-stock" : "out-stock")">
-                    @(product.stock > 0 ? "In Stock" : "Out of Stock")
-                </span>
-            </div>
-
-            <div class="quantity-selector">
-                <button @onclick="() => ChangeQty(-1)">-</button>
-                <span>@quantity</span>
-                <button @onclick="() => ChangeQty(1)">+</button>
-            </div>
-
-            <!-- Updated Add to Cart Button with Undo Logic -->
-            @if (showUndo)
-            {
-                 <button class="btn-add-cart btn-undo-mode" @onclick="UndoAdd">
-                    <span><i class="fas fa-undo"></i> Undo Addition</span>
-                </button>
-            }
-            else
-            {
-                <button class="btn-add-cart @(isAdded ? "btn-success-anim" : "")"
-                        @onclick="AddToCart"
-                        disabled="@(product.stock == 0 || isAdded)">
-                    @if (isAdded)
+            <div class="card-panel image-panel">
+                <div class="main-image-frame">
+                    @if (_product.images != null && _product.images.Length > 0)
                     {
-                        <span><i class="fas fa-check-circle"></i> Added Successfully</span>
+                        <img src="@_product.images[_selectedImageIndex]" alt="@_product.name" class="main-product-img" />
+                    }
+                </div>
+
+                @if (_product.images != null && _product.images.Length > 1)
+                {
+                    <div class="thumbnail-row">
+                        @for (int i = 0; i < _product.images.Length; i++)
+                        {
+                            int localIndex = i;
+                            <img src="@_product.images[i]"
+                                 class="thumbnail @(i == _selectedImageIndex ? "active" : "")"
+                                 @onclick="() => _selectedImageIndex = localIndex" />
+                        }
+                    </div>
+                }
+            </div>
+
+            <div class="card-panel info-panel">
+                <div class="info-header">
+                    <span class="category-tag">@_product.category?.name</span>
+                    <h1 class="product-title">@_product.name</h1>
+                </div>
+
+                <div class="price-row">
+                    <span class="price-tag">PKR @_product.price.ToString("N0")</span>
+                    @if (_product.stock > 0)
+                    {
+                        <span class="stock-badge in-stock"><i class="fas fa-check-circle"></i> In Stock</span>
                     }
                     else
                     {
-                        <span><i class="fas fa-shopping-cart"></i> Add to Cart</span>
+                        <span class="stock-badge out-stock"><i class="fas fa-times-circle"></i> Out of Stock</span>
                     }
-                </button>
-            }
+                </div>
 
-            <button class="btn-buy-now" @onclick="BuyNow">
-                Buy Now
-            </button>
+                <p class="description-text">@_product.description</p>
+
+                <div class="controls-area">
+                    <div class="quantity-box">
+                        <button @onclick="() => ChangeQty(-1)" disabled="@(_quantity <= 1)">-</button>
+                        <span>@_quantity</span>
+                        <button @onclick="() => ChangeQty(1)" disabled="@(_quantity >= _product.stock)">+</button>
+                    </div>
+
+                    <div class="action-buttons">
+                        @if (_showUndo)
+                        {
+                            <button class="btn-action btn-undo" @onclick="UndoAdd">
+                                <i class="fas fa-undo"></i> Undo
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn-action btn-add" @onclick="AddToCart" disabled="@(_product.stock == 0 || _isAdded)">
+                                @if (_isAdded)
+                                {
+                                    <span><i class="fas fa-check"></i> Added</span>
+                                }
+                                else
+                                {
+
+                                    <span><i class="fas fa-shopping-bag"></i> Add to Cart</span>
+                                }
+                            </button>
+                        }
+
+                        <button class="btn-action btn-buy" @onclick="BuyNow" disabled="@(_product.stock == 0)">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 }
 
-<style>
-    /* Local style for the success animation */
-    .btn-success-anim {
-        background-color: #28a745 !important; /* Green */
-        color: white !important;
-        border-color: #28a745 !important;
-        transition: all 0.3s ease;
-        transform: scale(1.02);
-    }
-    .btn-undo-mode {
-        background-color: #ffc107 !important; /* Yellow/Warning Color for Undo */
-        color: #333 !important;
-        border-color: #ffc107 !important;
-        /* Animation */
-        animation: pulse 2s infinite;
-    }
-    @@keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
-        70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
-    }
-</style>
-
 @code {
-    [Parameter]
-    public int ProductId { get; set; }
+    [Parameter] public int ProductId { get; set; }
+    private ProductBL? _product;
+    private int _selectedImageIndex = 0;
+    private int _quantity = 1;
+    private bool _isAdded = false;
+    private bool _showUndo = false;
+    private bool _isLoading = true;
 
-    private ProductBL product;
-    private int selectedImage = 0;
-    private int quantity = 1;
-    private bool isAdded = false;
-    private bool showUndo = false;
-
-    protected override void OnInitialized()
+    protected override async Task OnParametersSetAsync()
     {
-        product = ProductService.GetProductById(ProductId);
-        CheckUndoState();
+        _isLoading = true;
+        try
+        {
+            await CatalogService.LoadProductsAsync();
+            _product = CatalogService.FindProductById(ProductId);
+            if (_product != null) { CheckUndoState(); ResetLocalState(); }
+        }
+        finally { _isLoading = false; }
     }
+
+    private void ResetLocalState() { _selectedImageIndex = 0; _quantity = 1; _isAdded = false; }
 
     private void CheckUndoState()
     {
-        // Verify if the last action was adding THIS product
-        if (CartService.CanUndo())
+        if (_product != null && CartService.CanUndo())
         {
             var lastAction = CartService.PeekLastAction();
-            if (lastAction != null && lastAction.Type == "Add" && lastAction.ProductId == product.product_id)
-            {
-                showUndo = true;
-            }
+            if (lastAction != null && lastAction.Type == "Add" && lastAction.ProductId == _product.product_id) _showUndo = true;
         }
     }
 
-    private void ChangeQty(int value)
-    {
-        if (quantity + value > 0)
-            quantity += value;
-    }
+    private void ChangeQty(int value) { if (_quantity + value > 0) _quantity += value; }
 
     private async Task AddToCart()
     {
-        // 1. Add to Cart Logic
-        await CartService.AddToCart(product, quantity);
-
-        // 2. Update Local State
-        showUndo = true;
-        isAdded = true; // Trigger success animation momentarily
-        StateHasChanged();
-
-        // 3. Timeout for Undo Button
+        if (_product == null) return;
+        await CartService.AddToCart(_product, _quantity);
+        _showUndo = true; _isAdded = true; StateHasChanged();
         await Task.Delay(3500);
-        showUndo = false;
-        StateHasChanged();
+        _showUndo = false; _isAdded = false; StateHasChanged();
     }
 
-    private void UndoAdd()
-    {
-        CartService.UndoLastAction();
-        showUndo = false;
-        isAdded = false;
-        StateHasChanged();
-    }
+    private void UndoAdd() { CartService.UndoLastAction(); _showUndo = false; _isAdded = false; StateHasChanged(); }
 
     private async Task BuyNow()
     {
-        await CartService.AddToCart(product, quantity);
+        if (_product == null) return;
+        await CartService.AddToCart(_product, _quantity);
         NavManager.NavigateTo("/cart");
     }
 }

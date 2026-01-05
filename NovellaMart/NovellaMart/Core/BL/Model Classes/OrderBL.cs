@@ -8,18 +8,30 @@ namespace NovellaMart.Core.BL.Model_Classes
         public long order_id { get; set; }
         public CustomerBL customer { get; set; }
         public AddressBL address { get; set; }
-        public MyLinkedList<CartItemBL> items { get; set; }   // products + quantities in a single list
+        public MyLinkedList<CartItemBL> items { get; set; }   // Products list
         public double totalAmount { get; set; }
         public DateTime orderTime { get; set; }
-        public string status { get; set; }           // PENDING, PACKED, SHIPPED, DELIVERED, CANCELLED
-        public string orderType { get; set; }        // NORMAL, FLASH_SALE
-        public long flash_reservation_id { get; set; } // 0 if N/A
+        public string status { get; set; }            // PENDING, CONFIRMED, SHIPPED, DELIVERED
+        public string orderType { get; set; }         // Cash On Delivery, Card Payment
+        public long flash_reservation_id { get; set; }
+
+        // --- COMPATIBILITY HELPER ---
+        // This allows 'order.customer_email' to work even though email is inside 'customer'
+        public string customer_email
+        {
+            get => customer?.email;
+            set
+            {
+                if (customer == null) customer = new CustomerBL();
+                customer.email = value;
+            }
+        }
 
         public OrderBL()
         {
-            order_id = 0;
-            customer = null;
-            address = null;
+            order_id = DateTime.Now.Ticks; // Generate unique ID by default
+            customer = new CustomerBL();
+            address = new AddressBL();
             items = new MyLinkedList<CartItemBL>();
             totalAmount = 0.0;
             orderTime = DateTime.Now;
@@ -28,17 +40,16 @@ namespace NovellaMart.Core.BL.Model_Classes
             flash_reservation_id = 0;
         }
 
-        public OrderBL(long order_id, CustomerBL customer, AddressBL address, double totalAmount)
+        // Constructor for quick creation
+        public OrderBL(long id, CustomerBL cust, AddressBL addr, double total)
         {
-            this.order_id = order_id;
-            this.customer = customer;
-            this.address = address;
+            order_id = id;
+            customer = cust;
+            address = addr;
             items = new MyLinkedList<CartItemBL>();
-            this.totalAmount = totalAmount;
+            totalAmount = total;
             orderTime = DateTime.Now;
-            status = "PENDING";
-            orderType = "NORMAL";
-            flash_reservation_id = 0;
+            status = "Confirmed";
         }
     }
 }

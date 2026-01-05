@@ -5,6 +5,7 @@ using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.DL;
 using NovellaMart.Core.BL.Data_Structures;
 
+//FlashSale Crud Service
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleCrudService

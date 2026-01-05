@@ -63,7 +63,7 @@
             if (user.role == "Admin")
                 Nav.NavigateTo("/admin", forceLoad: true);
             else
-                Nav.NavigateTo("/profile", forceLoad: true);
+                Nav.NavigateTo("/", forceLoad: true);
         }
         else { loginError = "Invalid Credentials"; }
     }
