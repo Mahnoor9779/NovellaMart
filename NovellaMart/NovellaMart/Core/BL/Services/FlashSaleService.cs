@@ -32,7 +32,6 @@ namespace NovellaMart.Core.BL.Services
                 _allocationExpiry = loadedData.AllocationExpiry ?? new Dictionary<string, DateTime>();
                 _inCheckoutProcess = loadedData.InCheckoutProcess ?? new HashSet<string>();
                 _activityLogs = loadedData.ActivityLogs ?? new List<string>();
-                _activityLogs = loadedData.ActivityLogs ?? new List<string>();
                 _activeRequests = loadedData.ActiveRequests ?? new Dictionary<string, CustomerRequestBL>();
                 _loadedFlashSaleId = loadedData.ActiveFlashSaleId;
             }
@@ -53,8 +52,6 @@ namespace NovellaMart.Core.BL.Services
                 ProductQueues = _productQueues,
                 UserRequestStatus = _userRequestStatus,
                 AllocationExpiry = _allocationExpiry,
-                InCheckoutProcess = _inCheckoutProcess,
-                ActivityLogs = _activityLogs,
                 InCheckoutProcess = _inCheckoutProcess,
                 ActivityLogs = _activityLogs,
                 ActiveRequests = _activeRequests,

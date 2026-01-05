@@ -9,6 +9,8 @@ namespace NovellaMart.Core.BL.Data_Structures
         public AVLNodeGeneric<type> Right;
         public int Height;
 
+        public AVLNodeGeneric() { }
+
         public AVLNodeGeneric(type val)
         {
             Data = val;

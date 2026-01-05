@@ -20,6 +20,7 @@ namespace NovellaMart.Core.BL.Services
             if (flashSales == null)
             {
                 flashSales = FileHandler.LoadData<List<FlashSaleBL>>(FILE_NAME) ?? new List<FlashSaleBL>();
+                Console.WriteLine($"[DEBUG] Loaded {flashSales.Count} flash sales from {FILE_NAME}");
 
                 foreach (var sale in flashSales)
                 {

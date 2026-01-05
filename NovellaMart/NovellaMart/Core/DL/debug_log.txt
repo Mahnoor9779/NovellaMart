@@ -1165,3 +1165,64 @@ Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String 
 [1/5/2026 10:44:09 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
 [1/5/2026 10:47:23 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
 [1/5/2026 10:47:23 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 11:01:27 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:01:27 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:05:41 PM] [DL Error] Failed to load flash_sales.json: Each parameter in the deserialization constructor on type 'NovellaMart.Core.BL.Data_Structures.HeapPriorityQueue`1[NovellaMart.Core.BL.Model_Classes.CustomerRequestBL]' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+Stack Trace:    at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at NovellaMart.Core.DL.FileHandler.LoadData[T](String filename) in D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 104
+[1/5/2026 11:06:39 PM] [DL Error] Failed to load flash_sales.json: Each parameter in the deserialization constructor on type 'NovellaMart.Core.BL.Data_Structures.HeapPriorityQueue`1[NovellaMart.Core.BL.Model_Classes.CustomerRequestBL]' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+Stack Trace:    at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at NovellaMart.Core.DL.FileHandler.LoadData[T](String filename) in D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 104
+[1/5/2026 11:07:10 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:07:10 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:11:15 PM] [DL Error] Failed to load flash_sales.json: Each parameter in the deserialization constructor on type 'NovellaMart.Core.BL.Data_Structures.HeapPriorityQueue`1[NovellaMart.Core.BL.Model_Classes.CustomerRequestBL]' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+Stack Trace:    at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at NovellaMart.Core.DL.FileHandler.LoadData[T](String filename) in D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 104
+[1/5/2026 11:12:23 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:12:23 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:21:30 PM] [DEBUG] Loaded 1 flash sales from flash_sales.json
+[1/5/2026 11:21:30 PM] [DEBUG] GetAllFlashSales returning 1 items.
+[1/5/2026 11:21:30 PM] [DEBUG] GetAllFlashSales returning 1 items.
+[1/5/2026 11:22:05 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:22:05 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:22:05 PM] [DEBUG] GetAllFlashSales returning 2 items.
+[1/5/2026 11:22:22 PM] [DEBUG] GetAllFlashSales returning 2 items.
+[1/5/2026 11:22:23 PM] [DEBUG] GetAllFlashSales returning 2 items.
+[1/5/2026 11:22:41 PM] [DEBUG] GetAllFlashSales returning 2 items.
+[1/5/2026 11:22:41 PM] [DEBUG] GetAllFlashSales returning 2 items.
+[1/5/2026 11:23:06 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:23:06 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 11:23:06 PM] [DEBUG] GetAllFlashSales returning 3 items.

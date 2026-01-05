@@ -10,6 +10,8 @@ namespace NovellaMart.Core.BL.Data_Structures
         private int size;
         private int capacity;
 
+        public HeapPriorityQueue() : this(100) { }
+
         public HeapPriorityQueue(int initialCapacity = 100)
         {
             capacity = initialCapacity;

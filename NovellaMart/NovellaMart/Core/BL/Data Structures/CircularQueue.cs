@@ -10,6 +10,15 @@ namespace NovellaMart.Core.BL.Data_Structures
         public int capacity { get; set; }
         public int size { get; set; }
 
+        public CircularQueue()
+        {
+            capacity = 100;
+            arr = new type[capacity];
+            front = -1;
+            rear = -1;
+            size = 0;
+        }
+
         public CircularQueue(int queueCapacity)
         {
             if (queueCapacity <= 0)

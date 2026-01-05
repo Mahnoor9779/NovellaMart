@@ -8,6 +8,8 @@ namespace NovellaMart.Core.BL.Data_Structures
         public BinaryTreeNodeGeneric<type> Left;
         public BinaryTreeNodeGeneric<type> Right;
 
+        public BinaryTreeNodeGeneric() { }
+
         public BinaryTreeNodeGeneric(type val)
         {
             Data = val;

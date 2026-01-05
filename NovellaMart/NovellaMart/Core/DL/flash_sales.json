@@ -1,111 +1,36 @@
 [
   {
     "flash_sale_id": 1,
-    "title": "1",
-    "description": "ewfwf",
-    "discount": 23,
-    "startTime": "2026-01-05T22:42:38.7083644+05:00",
-    "endTime": "2026-01-05T23:00:00",
+    "title": "q",
+    "description": "q",
+    "discount": 12,
+    "startTime": "2026-01-05T23:11:15.8236467+05:00",
+    "endTime": "2026-01-06T00:11:15.8236469+05:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 6,
-        "name": "Oil Control Face Wash",
+        "product_id": 54,
+        "name": "Blush Palette",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=6",
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=106"
+          "https://loremflickr.com/500/500/cosmetics,face?lock=54",
+          "https://loremflickr.com/500/500/cosmetics,face?lock=154"
         ],
-        "price": 1400,
+        "price": 2800,
         "stock": 2,
         "category": {
-          "category_id": 11,
-          "name": "Cleansers",
-          "parent_category_id": 1,
+          "category_id": 21,
+          "name": "Face",
+          "parent_category_id": 2,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Cleansers",
-          "Oil Control"
-        ]
-      },
-      {
-        "product_id": 5,
-        "name": "Micellar Water",
-        "description": "",
-        "images": [
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=5",
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=105"
-        ],
-        "price": 900,
-        "stock": 3,
-        "category": {
-          "category_id": 11,
-          "name": "Cleansers",
-          "parent_category_id": 1,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Skincare",
-          "Cleansers",
-          "Water"
-        ]
-      },
-      {
-        "product_id": 4,
-        "name": "Exfoliating Scrub",
-        "description": "",
-        "images": [
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=4",
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=104"
-        ],
-        "price": 1600,
-        "stock": 3,
-        "category": {
-          "category_id": 11,
-          "name": "Cleansers",
-          "parent_category_id": 1,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Skincare",
-          "Cleansers",
-          "Scrub"
-        ]
-      },
-      {
-        "product_id": 7,
-        "name": "Creamy Face Soap",
-        "description": "",
-        "images": [
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=7",
-          "https://loremflickr.com/500/500/skincare,cleanser?lock=107"
-        ],
-        "price": 1100,
-        "stock": 2,
-        "category": {
-          "category_id": 11,
-          "name": "Cleansers",
-          "parent_category_id": 1,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Skincare",
-          "Cleansers",
-          "Soap"
+          "Cosmetics",
+          "Face",
+          "Blush"
         ]
       }
     ],
@@ -625,86 +550,635 @@
   },
   {
     "flash_sale_id": 2,
-    "title": "2",
-    "description": "2",
-    "discount": 12,
-    "startTime": "2026-01-05T22:43:38.3471137+05:00",
-    "endTime": "2026-01-05T23:43:38.3471138+05:00",
+    "title": "3",
+    "description": "3",
+    "discount": 31,
+    "startTime": "2026-01-05T23:21:30.7659764+05:00",
+    "endTime": "2026-01-06T00:21:30.7659766+05:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 114,
-        "name": "Knitted Sweater",
+        "product_id": 12,
+        "name": "Vitamin C Serum",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,top?lock=114",
-          "https://loremflickr.com/500/500/woman%20wear,top?lock=214"
+          "https://loremflickr.com/500/500/skincare,serum?lock=12",
+          "https://loremflickr.com/500/500/skincare,serum?lock=112"
         ],
-        "price": 4000,
-        "stock": 1,
+        "price": 2800,
+        "stock": 2,
         "category": {
-          "category_id": 32,
-          "name": "Tops",
-          "parent_category_id": 3,
+          "category_id": 12,
+          "name": "Serums",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Tops",
-          "Winter"
+          "Skincare",
+          "Serums",
+          "Glow"
         ]
-      },
-      {
-        "product_id": 113,
-        "name": "Crop Top",
-        "description": "",
-        "images": [
-          "https://loremflickr.com/500/500/woman%20wear,top?lock=113",
-          "https://loremflickr.com/500/500/woman%20wear,top?lock=213"
-        ],
-        "price": 1000,
-        "stock": 3,
-        "category": {
-          "category_id": 32,
-          "name": "Tops",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
+      }
+    ],
+    "request_queue": {
+      "arr": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "front": -1,
+      "rear": -1,
+      "capacity": 100,
+      "size": 0
+    },
+    "allocation_heap": {
+      "heap": [
+        {
+          "Item1": null,
+          "Item2": 0
         },
-        "tags": [
-          "Woman Wear",
-          "Tops",
-          "Crop"
-        ]
-      },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        }
+      ],
+      "size": 0
+    }
+  },
+  {
+    "flash_sale_id": 3,
+    "title": "w",
+    "description": "w",
+    "discount": 11,
+    "startTime": "2026-01-05T23:22:41.5627344+05:00",
+    "endTime": "2026-01-06T00:22:41.5627346+05:00",
+    "status": "ACTIVE",
+    "fs_items": [
       {
-        "product_id": 115,
-        "name": "Graphic Tee",
+        "product_id": 176,
+        "name": "Wallet",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,top?lock=115",
-          "https://loremflickr.com/500/500/woman%20wear,top?lock=215"
+          "https://loremflickr.com/500/500/accessories,bag?lock=176",
+          "https://loremflickr.com/500/500/accessories,bag?lock=276"
         ],
         "price": 1500,
         "stock": 1,
         "category": {
-          "category_id": 32,
-          "name": "Tops",
-          "parent_category_id": 3,
+          "category_id": 43,
+          "name": "Bags",
+          "parent_category_id": 4,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Tops",
-          "Graphic"
+          "Accessories",
+          "Bags",
+          "Small"
+        ]
+      },
+      {
+        "product_id": 177,
+        "name": "Laptop Bag",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/accessories,bag?lock=177",
+          "https://loremflickr.com/500/500/accessories,bag?lock=277"
+        ],
+        "price": 7000,
+        "stock": 1,
+        "category": {
+          "category_id": 43,
+          "name": "Bags",
+          "parent_category_id": 4,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Accessories",
+          "Bags",
+          "Work"
+        ]
+      },
+      {
+        "product_id": 178,
+        "name": "Beach Bag",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/accessories,bag?lock=178",
+          "https://loremflickr.com/500/500/accessories,bag?lock=278"
+        ],
+        "price": 3000,
+        "stock": 2,
+        "category": {
+          "category_id": 43,
+          "name": "Bags",
+          "parent_category_id": 4,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Accessories",
+          "Bags",
+          "Summer"
         ]
       }
     ],

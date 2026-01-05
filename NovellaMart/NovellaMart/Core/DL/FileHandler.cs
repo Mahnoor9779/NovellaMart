@@ -105,7 +105,9 @@ namespace NovellaMart.Core.DL
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[DL Error] Failed to load {filename}: {ex.Message}");
+                string errorMsg = $"[{DateTime.Now}] [DL Error] Failed to load {filename}: {ex.Message}\nStack Trace: {ex.StackTrace}\n";
+                Console.WriteLine(errorMsg);
+                try { File.AppendAllText(Path.Combine(FolderPath, "debug_log.txt"), errorMsg); } catch { }
                 return default(T);
             }
         }
