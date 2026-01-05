@@ -314,7 +314,30 @@
             if (!selectedProductIds.Contains(product.product_id))
             {
                 selectedProductIds.Add(product.product_id);
-                currentSale.fs_items.InsertAtEnd(product);
+
+                // 1. Get the actual master stock from the loaded catalog [cite: 238-239]
+                var masterProduct = allProducts.FirstOrDefault(p => p.product_id == product.product_id);
+                int totalAvailable = masterProduct?.stock ?? 0;
+
+                // 2. Determine the upper limit for the random generator (Max 5 or totalAvailable)
+                int upperLimit = Math.Min(3, totalAvailable);
+
+                // 3. Randomly generate stock between 1 and the upperLimit
+                Random rand = new Random();
+                int flashSaleStock = upperLimit > 0 ? rand.Next(1, upperLimit + 1) : 0;
+
+                // 4. Create a copy for the sale to protect the master product's data
+                var saleItem = new ProductBL
+                    {
+                        product_id = product.product_id,
+                        name = product.name,
+                        images = product.images,
+                        price = product.price,
+                        stock = flashSaleStock, // Randomly assigned 1-5
+                        category = product.category,
+                        tags = product.tags
+                    };
+                currentSale.fs_items.InsertAtEnd(saleItem);
             }
         }
         else

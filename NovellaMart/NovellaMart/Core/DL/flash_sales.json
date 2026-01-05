@@ -4,108 +4,108 @@
     "title": "Winter Sale!",
     "description": "Upto 50% Off",
     "discount": 50,
-    "startTime": "2026-01-05T11:02:24.1094858+05:00",
-    "endTime": "2026-01-05T12:02:24.1094862+05:00",
+    "startTime": "2026-01-05T13:12:22.9209018+05:00",
+    "endTime": "2026-01-05T14:12:22.9209021+05:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 12,
-        "name": "Vitamin C Serum",
-        "description": "Glow boosting and anti-aging.",
+        "product_id": 131,
+        "name": "Trench Coat",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=12",
-          "https://loremflickr.com/500/500/skincare,serum?lock=112"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
         ],
-        "price": 2800,
-        "stock": 34,
+        "price": 9000,
+        "stock": 1,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Glow"
+          "Woman Wear",
+          "Outerwear",
+          "Classic"
         ]
       },
       {
-        "product_id": 13,
-        "name": "Retinol Night Serum",
-        "description": "Reduces fine lines overnight.",
+        "product_id": 132,
+        "name": "Denim Jacket",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=13",
-          "https://loremflickr.com/500/500/skincare,serum?lock=113"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
         ],
-        "price": 3000,
-        "stock": 28,
+        "price": 4500,
+        "stock": 1,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Anti-Aging"
+          "Woman Wear",
+          "Outerwear",
+          "Casual"
         ]
       },
       {
-        "product_id": 14,
-        "name": "Niacinamide Serum",
-        "description": "Minimizes pores and oil.",
+        "product_id": 133,
+        "name": "Leather Jacket",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=14",
-          "https://loremflickr.com/500/500/skincare,serum?lock=114"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
         ],
-        "price": 2200,
-        "stock": 49,
+        "price": 7500,
+        "stock": 1,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Pores"
+          "Woman Wear",
+          "Outerwear",
+          "Edgy"
         ]
       },
       {
-        "product_id": 18,
-        "name": "Rosehip Oil Serum",
-        "description": "Natural radiance booster.",
+        "product_id": 134,
+        "name": "Blazer",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=18",
-          "https://loremflickr.com/500/500/skincare,serum?lock=118"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
         ],
-        "price": 2100,
-        "stock": 55,
+        "price": 6000,
+        "stock": 3,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Oil"
+          "Woman Wear",
+          "Outerwear",
+          "Work"
         ]
       }
     ],
@@ -221,7 +221,7 @@
       "heap": [
         {
           "Item1": {
-            "request_id": 639032078107815117,
+            "request_id": 639032156464954442,
             "customer": {
               "contact": "",
               "Addresses": [],
@@ -233,7 +233,7 @@
                 "AppliedPromoCode": null,
                 "DiscountAmount": 0
               },
-              "user_id": 100,
+              "user_id": 1,
               "username": "",
               "email": "",
               "password": "",
@@ -241,7 +241,7 @@
               "firstName": "",
               "lastName": "",
               "profilePicture": "",
-              "createdAt": "2026-01-05T11:03:30.7814924+05:00",
+              "createdAt": "2026-01-05T13:14:06.4954304+05:00",
               "isActive": true,
               "phoneNumber": "",
               "address": "",
@@ -249,38 +249,38 @@
               "zipCode": ""
             },
             "product": {
-              "product_id": 14,
-              "name": "Niacinamide Serum",
-              "description": "Minimizes pores and oil.",
+              "product_id": 134,
+              "name": "Blazer",
+              "description": "",
               "images": [
-                "https://loremflickr.com/500/500/skincare,serum?lock=14",
-                "https://loremflickr.com/500/500/skincare,serum?lock=114"
+                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
               ],
-              "price": 2200,
-              "stock": 49,
+              "price": 6000,
+              "stock": 3,
               "category": {
-                "category_id": 12,
-                "name": "Serums",
-                "parent_category_id": 1,
+                "category_id": 34,
+                "name": "Outerwear",
+                "parent_category_id": 3,
                 "subcategories": [],
                 "categoryTree": {
                   "Root": null
                 }
               },
               "tags": [
-                "Skincare",
-                "Serums",
-                "Pores"
+                "Woman Wear",
+                "Outerwear",
+                "Work"
               ]
             },
-            "requestTime": "2026-01-05T11:03:30.7815126+05:00",
+            "requestTime": "2026-01-05T13:14:06.4954449+05:00",
             "allocated": true
           },
-          "Item2": -639032078107815126
+          "Item2": -639032156464954449
         },
         {
           "Item1": {
-            "request_id": 639032078145857147,
+            "request_id": 639032156464954442,
             "customer": {
               "contact": "",
               "Addresses": [],
@@ -292,7 +292,7 @@
                 "AppliedPromoCode": null,
                 "DiscountAmount": 0
               },
-              "user_id": 100,
+              "user_id": 1,
               "username": "",
               "email": "",
               "password": "",
@@ -300,7 +300,7 @@
               "firstName": "",
               "lastName": "",
               "profilePicture": "",
-              "createdAt": "2026-01-05T11:03:34.5857032+05:00",
+              "createdAt": "2026-01-05T13:14:06.4954304+05:00",
               "isActive": true,
               "phoneNumber": "",
               "address": "",
@@ -308,34 +308,34 @@
               "zipCode": ""
             },
             "product": {
-              "product_id": 13,
-              "name": "Retinol Night Serum",
-              "description": "Reduces fine lines overnight.",
+              "product_id": 134,
+              "name": "Blazer",
+              "description": "",
               "images": [
-                "https://loremflickr.com/500/500/skincare,serum?lock=13",
-                "https://loremflickr.com/500/500/skincare,serum?lock=113"
+                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
               ],
-              "price": 3000,
-              "stock": 28,
+              "price": 6000,
+              "stock": 3,
               "category": {
-                "category_id": 12,
-                "name": "Serums",
-                "parent_category_id": 1,
+                "category_id": 34,
+                "name": "Outerwear",
+                "parent_category_id": 3,
                 "subcategories": [],
                 "categoryTree": {
                   "Root": null
                 }
               },
               "tags": [
-                "Skincare",
-                "Serums",
-                "Anti-Aging"
+                "Woman Wear",
+                "Outerwear",
+                "Work"
               ]
             },
-            "requestTime": "2026-01-05T11:03:34.5857154+05:00",
+            "requestTime": "2026-01-05T13:14:06.4954449+05:00",
             "allocated": true
           },
-          "Item2": -639032078145857154
+          "Item2": -639032156464954449
         },
         {
           "Item1": null,

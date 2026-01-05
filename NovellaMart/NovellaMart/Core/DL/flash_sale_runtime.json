@@ -1,9 +1,9 @@
 {
   "ProductQueues": {
-    "12": {
+    "131": {
       "arr": [
         {
-          "request_id": 639032078080560903,
+          "request_id": 639032155980209326,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -23,7 +23,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T11:03:28.0518987+05:00",
+            "createdAt": "2026-01-05T13:13:18.0162633+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -31,33 +31,369 @@
             "zipCode": ""
           },
           "product": {
-            "product_id": 12,
-            "name": "Vitamin C Serum",
-            "description": "Glow boosting and anti-aging.",
+            "product_id": 131,
+            "name": "Trench Coat",
+            "description": "",
             "images": [
-              "https://loremflickr.com/500/500/skincare,serum?lock=12",
-              "https://loremflickr.com/500/500/skincare,serum?lock=112"
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
             ],
-            "price": 2800,
-            "stock": 34,
+            "price": 9000,
+            "stock": 1,
             "category": {
-              "category_id": 12,
-              "name": "Serums",
-              "parent_category_id": 1,
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
               "subcategories": [],
               "categoryTree": {
                 "Root": null
               }
             },
             "tags": [
-              "Skincare",
-              "Serums",
-              "Glow"
+              "Woman Wear",
+              "Outerwear",
+              "Classic"
             ]
           },
-          "requestTime": "2026-01-05T11:03:28.0560914+05:00",
-          "allocated": true
+          "requestTime": "2026-01-05T13:13:18.0209343+05:00",
+          "allocated": false
         },
+        {
+          "request_id": 639032156445026266,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 1,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T13:14:04.502614+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 131,
+            "name": "Trench Coat",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
+            ],
+            "price": 9000,
+            "stock": 1,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Classic"
+            ]
+          },
+          "requestTime": "2026-01-05T13:14:04.5026271+05:00",
+          "allocated": false
+        },
+        {
+          "request_id": 639032156489805644,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 1,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T13:14:08.9805471+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 131,
+            "name": "Trench Coat",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
+            ],
+            "price": 9000,
+            "stock": 1,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Classic"
+            ]
+          },
+          "requestTime": "2026-01-05T13:14:08.9805653+05:00",
+          "allocated": false
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "front": -1,
+      "rear": -1,
+      "capacity": 50,
+      "size": 0
+    },
+    "132": {
+      "arr": [
+        {
+          "request_id": 639032155989693725,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 100,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T13:13:18.9693555+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 132,
+            "name": "Denim Jacket",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+            ],
+            "price": 4500,
+            "stock": 1,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Casual"
+            ]
+          },
+          "requestTime": "2026-01-05T13:13:18.9693731+05:00",
+          "allocated": false
+        },
+        {
+          "request_id": 639032156455646683,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 1,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T13:14:05.5646551+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 132,
+            "name": "Denim Jacket",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+            ],
+            "price": 4500,
+            "stock": 1,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Casual"
+            ]
+          },
+          "requestTime": "2026-01-05T13:14:05.5646688+05:00",
+          "allocated": false
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "front": -1,
+      "rear": -1,
+      "capacity": 50,
+      "size": 0
+    },
+    "133": {
+      "arr": [
+        null,
         null,
         null,
         null,
@@ -113,10 +449,10 @@
       "capacity": 50,
       "size": 0
     },
-    "13": {
+    "134": {
       "arr": [
         {
-          "request_id": 639032078091841699,
+          "request_id": 639032156009683776,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -136,7 +472,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T11:03:29.184155+05:00",
+            "createdAt": "2026-01-05T13:13:20.9683618+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -144,35 +480,35 @@
             "zipCode": ""
           },
           "product": {
-            "product_id": 13,
-            "name": "Retinol Night Serum",
-            "description": "Reduces fine lines overnight.",
+            "product_id": 134,
+            "name": "Blazer",
+            "description": "",
             "images": [
-              "https://loremflickr.com/500/500/skincare,serum?lock=13",
-              "https://loremflickr.com/500/500/skincare,serum?lock=113"
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
             ],
-            "price": 3000,
-            "stock": 28,
+            "price": 6000,
+            "stock": 3,
             "category": {
-              "category_id": 12,
-              "name": "Serums",
-              "parent_category_id": 1,
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
               "subcategories": [],
               "categoryTree": {
                 "Root": null
               }
             },
             "tags": [
-              "Skincare",
-              "Serums",
-              "Anti-Aging"
+              "Woman Wear",
+              "Outerwear",
+              "Work"
             ]
           },
-          "requestTime": "2026-01-05T11:03:29.1841707+05:00",
-          "allocated": true
+          "requestTime": "2026-01-05T13:13:20.9683784+05:00",
+          "allocated": false
         },
         {
-          "request_id": 639032078145857147,
+          "request_id": 639032156464954442,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -184,7 +520,7 @@
               "AppliedPromoCode": null,
               "DiscountAmount": 0
             },
-            "user_id": 100,
+            "user_id": 1,
             "username": "",
             "email": "",
             "password": "",
@@ -192,7 +528,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T11:03:34.5857032+05:00",
+            "createdAt": "2026-01-05T13:14:06.4954304+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -200,91 +536,35 @@
             "zipCode": ""
           },
           "product": {
-            "product_id": 13,
-            "name": "Retinol Night Serum",
-            "description": "Reduces fine lines overnight.",
+            "product_id": 134,
+            "name": "Blazer",
+            "description": "",
             "images": [
-              "https://loremflickr.com/500/500/skincare,serum?lock=13",
-              "https://loremflickr.com/500/500/skincare,serum?lock=113"
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
             ],
-            "price": 3000,
-            "stock": 28,
+            "price": 6000,
+            "stock": 3,
             "category": {
-              "category_id": 12,
-              "name": "Serums",
-              "parent_category_id": 1,
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
               "subcategories": [],
               "categoryTree": {
                 "Root": null
               }
             },
             "tags": [
-              "Skincare",
-              "Serums",
-              "Anti-Aging"
+              "Woman Wear",
+              "Outerwear",
+              "Work"
             ]
           },
-          "requestTime": "2026-01-05T11:03:34.5857154+05:00",
+          "requestTime": "2026-01-05T13:14:06.4954449+05:00",
           "allocated": true
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "front": -1,
-      "rear": -1,
-      "capacity": 50,
-      "size": 0
-    },
-    "14": {
-      "arr": [
         {
-          "request_id": 639032078107815117,
+          "request_id": 639032156528167868,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -296,7 +576,7 @@
               "AppliedPromoCode": null,
               "DiscountAmount": 0
             },
-            "user_id": 100,
+            "user_id": 1,
             "username": "",
             "email": "",
             "password": "",
@@ -304,7 +584,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T11:03:30.7814924+05:00",
+            "createdAt": "2026-01-05T13:14:12.816772+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -312,93 +592,33 @@
             "zipCode": ""
           },
           "product": {
-            "product_id": 14,
-            "name": "Niacinamide Serum",
-            "description": "Minimizes pores and oil.",
+            "product_id": 134,
+            "name": "Blazer",
+            "description": "",
             "images": [
-              "https://loremflickr.com/500/500/skincare,serum?lock=14",
-              "https://loremflickr.com/500/500/skincare,serum?lock=114"
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
             ],
-            "price": 2200,
-            "stock": 49,
+            "price": 6000,
+            "stock": 3,
             "category": {
-              "category_id": 12,
-              "name": "Serums",
-              "parent_category_id": 1,
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
               "subcategories": [],
               "categoryTree": {
                 "Root": null
               }
             },
             "tags": [
-              "Skincare",
-              "Serums",
-              "Pores"
+              "Woman Wear",
+              "Outerwear",
+              "Work"
             ]
           },
-          "requestTime": "2026-01-05T11:03:30.7815126+05:00",
-          "allocated": true
+          "requestTime": "2026-01-05T13:14:12.8167874+05:00",
+          "allocated": false
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "front": -1,
-      "rear": -1,
-      "capacity": 50,
-      "size": 0
-    },
-    "18": {
-      "arr": [
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -454,29 +674,37 @@
     }
   },
   "UserRequestStatus": {
-    "100_12": "Allocated",
-    "100_13": "Allocated",
-    "100_14": "Allocated"
+    "100_131": "Expired",
+    "100_132": "Expired",
+    "100_134": "Expired",
+    "1_131": "Rejected",
+    "1_132": "Rejected",
+    "1_134": "Expired"
   },
   "AllocationExpiry": {
-    "100_12": "2026-01-05T11:11:18.5817217+05:00",
-    "100_13": "2026-01-05T11:11:18.582327+05:00",
-    "100_14": "2026-01-05T11:11:18.5823698+05:00"
+    "100_131": "2026-01-05T13:16:42.4037307+05:00",
+    "100_132": "2026-01-05T13:16:42.4042232+05:00",
+    "100_134": "2026-01-05T13:16:42.4042397+05:00",
+    "1_134": "2026-01-05T13:16:42.4042414+05:00"
   },
-  "InCheckoutProcess": [
-    "100_12"
-  ],
+  "InCheckoutProcess": [],
   "ActivityLogs": [
-    "[11:09 AM] Sale Finalized and Persisted to File.",
-    "[11:03:34 AM] User 100 joined queue for Retinol Night Serum",
-    "[11:03:33 AM] User 100 LEFT queue for Product 13",
-    "[11:03:30 AM] User 100 joined queue for Niacinamide Serum",
-    "[11:03:29 AM] User 100 joined queue for Retinol Night Serum",
-    "[11:03:28 AM] User 100 joined queue for Vitamin C Serum"
+    "[1:26 PM] Sale Finalized and Persisted to File.",
+    "[1:14 PM] Sale Finalized and Persisted to File.",
+    "[1:14:12 PM] User 1 joined queue for Blazer",
+    "[1:14:12 PM] User 1 LEFT queue for Product 134",
+    "[1:14:08 PM] User 1 joined queue for Trench Coat",
+    "[1:14:08 PM] User 1 LEFT queue for Product 131",
+    "[1:14:06 PM] User 1 joined queue for Blazer",
+    "[1:14:05 PM] User 1 joined queue for Denim Jacket",
+    "[1:14:04 PM] User 1 joined queue for Trench Coat",
+    "[1:13:21 PM] User 100 joined queue for Blazer",
+    "[1:13:18 PM] User 100 joined queue for Denim Jacket",
+    "[1:13:18 PM] User 100 joined queue for Trench Coat"
   ],
   "ActiveRequests": {
-    "100_12": {
-      "request_id": 639032078080560903,
+    "100_131": {
+      "request_id": 639032155980209326,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -496,7 +724,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T11:03:28.0518987+05:00",
+        "createdAt": "2026-01-05T13:13:18.0162633+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -504,35 +732,35 @@
         "zipCode": ""
       },
       "product": {
-        "product_id": 12,
-        "name": "Vitamin C Serum",
-        "description": "Glow boosting and anti-aging.",
+        "product_id": 131,
+        "name": "Trench Coat",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=12",
-          "https://loremflickr.com/500/500/skincare,serum?lock=112"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
         ],
-        "price": 2800,
-        "stock": 34,
+        "price": 9000,
+        "stock": 1,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Glow"
+          "Woman Wear",
+          "Outerwear",
+          "Classic"
         ]
       },
-      "requestTime": "2026-01-05T11:03:28.0560914+05:00",
-      "allocated": true
+      "requestTime": "2026-01-05T13:13:18.0209343+05:00",
+      "allocated": false
     },
-    "100_13": {
-      "request_id": 639032078145857147,
+    "100_132": {
+      "request_id": 639032155989693725,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -552,7 +780,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T11:03:34.5857032+05:00",
+        "createdAt": "2026-01-05T13:13:18.9693555+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -560,35 +788,35 @@
         "zipCode": ""
       },
       "product": {
-        "product_id": 13,
-        "name": "Retinol Night Serum",
-        "description": "Reduces fine lines overnight.",
+        "product_id": 132,
+        "name": "Denim Jacket",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=13",
-          "https://loremflickr.com/500/500/skincare,serum?lock=113"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
         ],
-        "price": 3000,
-        "stock": 28,
+        "price": 4500,
+        "stock": 1,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Anti-Aging"
+          "Woman Wear",
+          "Outerwear",
+          "Casual"
         ]
       },
-      "requestTime": "2026-01-05T11:03:34.5857154+05:00",
-      "allocated": true
+      "requestTime": "2026-01-05T13:13:18.9693731+05:00",
+      "allocated": false
     },
-    "100_14": {
-      "request_id": 639032078107815117,
+    "100_134": {
+      "request_id": 639032156009683776,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -608,7 +836,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T11:03:30.7814924+05:00",
+        "createdAt": "2026-01-05T13:13:20.9683618+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -616,32 +844,200 @@
         "zipCode": ""
       },
       "product": {
-        "product_id": 14,
-        "name": "Niacinamide Serum",
-        "description": "Minimizes pores and oil.",
+        "product_id": 134,
+        "name": "Blazer",
+        "description": "",
         "images": [
-          "https://loremflickr.com/500/500/skincare,serum?lock=14",
-          "https://loremflickr.com/500/500/skincare,serum?lock=114"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
         ],
-        "price": 2200,
-        "stock": 49,
+        "price": 6000,
+        "stock": 3,
         "category": {
-          "category_id": 12,
-          "name": "Serums",
-          "parent_category_id": 1,
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Skincare",
-          "Serums",
-          "Pores"
+          "Woman Wear",
+          "Outerwear",
+          "Work"
         ]
       },
-      "requestTime": "2026-01-05T11:03:30.7815126+05:00",
-      "allocated": true
+      "requestTime": "2026-01-05T13:13:20.9683784+05:00",
+      "allocated": false
+    },
+    "1_131": {
+      "request_id": 639032156489805644,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 1,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T13:14:08.9805471+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 131,
+        "name": "Trench Coat",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
+        ],
+        "price": 9000,
+        "stock": 1,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Classic"
+        ]
+      },
+      "requestTime": "2026-01-05T13:14:08.9805653+05:00",
+      "allocated": false
+    },
+    "1_132": {
+      "request_id": 639032156455646683,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 1,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T13:14:05.5646551+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 132,
+        "name": "Denim Jacket",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+        ],
+        "price": 4500,
+        "stock": 1,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Casual"
+        ]
+      },
+      "requestTime": "2026-01-05T13:14:05.5646688+05:00",
+      "allocated": false
+    },
+    "1_134": {
+      "request_id": 639032156528167868,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 1,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T13:14:12.816772+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 134,
+        "name": "Blazer",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
+        ],
+        "price": 6000,
+        "stock": 3,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Work"
+        ]
+      },
+      "requestTime": "2026-01-05T13:14:12.8167874+05:00",
+      "allocated": false
     }
   }
 }

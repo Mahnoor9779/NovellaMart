@@ -1,0 +1,5009 @@
+[
+  {
+    "product_id": 1,
+    "name": "Gentle Foam Cleanser",
+    "description": "Deep cleaning foam for all skin types.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=1",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=101"
+    ],
+    "price": 1500,
+    "stock": 50,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Face"
+    ]
+  },
+  {
+    "product_id": 2,
+    "name": "Purifying Gel Wash",
+    "description": "Removes oil and dirt effectively.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=2",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=102"
+    ],
+    "price": 1200,
+    "stock": 30,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Gel"
+    ]
+  },
+  {
+    "product_id": 3,
+    "name": "Hydrating Milk Cleanser",
+    "description": "Softens skin while cleaning.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=3",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=103"
+    ],
+    "price": 1800,
+    "stock": 25,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Hydrating"
+    ]
+  },
+  {
+    "product_id": 4,
+    "name": "Exfoliating Scrub",
+    "description": "Gentle beads remove dead skin.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=4",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=104"
+    ],
+    "price": 1600,
+    "stock": 40,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Scrub"
+    ]
+  },
+  {
+    "product_id": 5,
+    "name": "Micellar Water",
+    "description": "Makeup remover and cleanser in one.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=5",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=105"
+    ],
+    "price": 900,
+    "stock": 100,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Water"
+    ]
+  },
+  {
+    "product_id": 6,
+    "name": "Oil Control Face Wash",
+    "description": "Best for oily and acne-prone skin.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=6",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=106"
+    ],
+    "price": 1400,
+    "stock": 60,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Oil Control"
+    ]
+  },
+  {
+    "product_id": 7,
+    "name": "Creamy Face Soap",
+    "description": "Rich lather for a luxurious feel.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=7",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=107"
+    ],
+    "price": 1100,
+    "stock": 45,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Soap"
+    ]
+  },
+  {
+    "product_id": 8,
+    "name": "Charcoal Detox Cleanser",
+    "description": "Detoxifies pores deeply.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=8",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=108"
+    ],
+    "price": 1700,
+    "stock": 35,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Charcoal"
+    ]
+  },
+  {
+    "product_id": 9,
+    "name": "Green Tea Cleanser",
+    "description": "Soothing antioxidant wash.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=9",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=109"
+    ],
+    "price": 1550,
+    "stock": 55,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Green Tea"
+    ]
+  },
+  {
+    "product_id": 10,
+    "name": "Vitamin C Face Wash",
+    "description": "Brightens complexion instantly.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=10",
+      "https://loremflickr.com/500/500/skincare,cleanser?lock=110"
+    ],
+    "price": 1900,
+    "stock": 20,
+    "category": {
+      "category_id": 11,
+      "name": "Cleansers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Cleansers",
+      "Vitamin C"
+    ]
+  },
+  {
+    "product_id": 11,
+    "name": "Hyaluronic Acid Serum",
+    "description": "Deep hydration for plump skin.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=11",
+      "https://loremflickr.com/500/500/skincare,serum?lock=111"
+    ],
+    "price": 2500,
+    "stock": 40,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Hydrating"
+    ]
+  },
+  {
+    "product_id": 12,
+    "name": "Vitamin C Serum",
+    "description": "Glow boosting and anti-aging.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=12",
+      "https://loremflickr.com/500/500/skincare,serum?lock=112"
+    ],
+    "price": 2800,
+    "stock": 35,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Glow"
+    ]
+  },
+  {
+    "product_id": 13,
+    "name": "Retinol Night Serum",
+    "description": "Reduces fine lines overnight.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=13",
+      "https://loremflickr.com/500/500/skincare,serum?lock=113"
+    ],
+    "price": 3000,
+    "stock": 30,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Anti-Aging"
+    ]
+  },
+  {
+    "product_id": 14,
+    "name": "Niacinamide Serum",
+    "description": "Minimizes pores and oil.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=14",
+      "https://loremflickr.com/500/500/skincare,serum?lock=114"
+    ],
+    "price": 2200,
+    "stock": 50,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Pores"
+    ]
+  },
+  {
+    "product_id": 15,
+    "name": "Peptide Complex",
+    "description": "Restores skin elasticity.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=15",
+      "https://loremflickr.com/500/500/skincare,serum?lock=115"
+    ],
+    "price": 3200,
+    "stock": 25,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Repair"
+    ]
+  },
+  {
+    "product_id": 16,
+    "name": "Salicylic Acid Serum",
+    "description": "Fights acne and blemishes.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=16",
+      "https://loremflickr.com/500/500/skincare,serum?lock=116"
+    ],
+    "price": 2400,
+    "stock": 45,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Acne"
+    ]
+  },
+  {
+    "product_id": 17,
+    "name": "Snail Mucin Essence",
+    "description": "Repairing and soothing.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=17",
+      "https://loremflickr.com/500/500/skincare,serum?lock=117"
+    ],
+    "price": 2900,
+    "stock": 30,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Snail Mucin"
+    ]
+  },
+  {
+    "product_id": 18,
+    "name": "Rosehip Oil Serum",
+    "description": "Natural radiance booster.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=18",
+      "https://loremflickr.com/500/500/skincare,serum?lock=118"
+    ],
+    "price": 2100,
+    "stock": 55,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Oil"
+    ]
+  },
+  {
+    "product_id": 19,
+    "name": "Collagen Booster",
+    "description": "Firming and lifting effect.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=19",
+      "https://loremflickr.com/500/500/skincare,serum?lock=119"
+    ],
+    "price": 3500,
+    "stock": 20,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Collagen"
+    ]
+  },
+  {
+    "product_id": 20,
+    "name": "Tea Tree Serum",
+    "description": "Calms irritated skin.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,serum?lock=20",
+      "https://loremflickr.com/500/500/skincare,serum?lock=120"
+    ],
+    "price": 2000,
+    "stock": 60,
+    "category": {
+      "category_id": 12,
+      "name": "Serums",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Serums",
+      "Tea Tree"
+    ]
+  },
+  {
+    "product_id": 21,
+    "name": "Daily Moisture Cream",
+    "description": "Lightweight daily hydration.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=21",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=121"
+    ],
+    "price": 1800,
+    "stock": 50,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Daily"
+    ]
+  },
+  {
+    "product_id": 22,
+    "name": "Rich Night Cream",
+    "description": "Deep nourishment while sleeping.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=22",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=122"
+    ],
+    "price": 2200,
+    "stock": 40,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Night"
+    ]
+  },
+  {
+    "product_id": 23,
+    "name": "Gel Moisturizer",
+    "description": "Oil-free water gel.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=23",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=123"
+    ],
+    "price": 2000,
+    "stock": 45,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Gel"
+    ]
+  },
+  {
+    "product_id": 24,
+    "name": "Shea Butter Cream",
+    "description": "Intense moisture for dry skin.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=24",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=124"
+    ],
+    "price": 1900,
+    "stock": 35,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Dry Skin"
+    ]
+  },
+  {
+    "product_id": 25,
+    "name": "Aloe Soothing Gel",
+    "description": "Cools and calms skin.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=25",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=125"
+    ],
+    "price": 1500,
+    "stock": 70,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Aloe"
+    ]
+  },
+  {
+    "product_id": 26,
+    "name": "Anti-Aging Cream",
+    "description": "Reduces wrinkles and lines.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=26",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=126"
+    ],
+    "price": 3000,
+    "stock": 25,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Anti-Aging"
+    ]
+  },
+  {
+    "product_id": 27,
+    "name": "Tinted Moisturizer",
+    "description": "Hydration with sheer coverage.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=27",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=127"
+    ],
+    "price": 2400,
+    "stock": 30,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Tinted"
+    ]
+  },
+  {
+    "product_id": 28,
+    "name": "Brightening Cream",
+    "description": "Evens out skin tone.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=28",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=128"
+    ],
+    "price": 2600,
+    "stock": 30,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Brightening"
+    ]
+  },
+  {
+    "product_id": 29,
+    "name": "Sensitive Skin Lotion",
+    "description": "Fragrance-free and gentle.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=29",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=129"
+    ],
+    "price": 2100,
+    "stock": 50,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Sensitive"
+    ]
+  },
+  {
+    "product_id": 30,
+    "name": "Matte Finish Moisturizer",
+    "description": "Controls shine all day.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=30",
+      "https://loremflickr.com/500/500/skincare,moisturizer?lock=130"
+    ],
+    "price": 2300,
+    "stock": 40,
+    "category": {
+      "category_id": 13,
+      "name": "Moisturizers",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Moisturizers",
+      "Matte"
+    ]
+  },
+  {
+    "product_id": 31,
+    "name": "SPF 50 Sun Cream",
+    "description": "High protection UVA/UVB.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=31",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=131"
+    ],
+    "price": 2000,
+    "stock": 60,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "SPF 50",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 32,
+    "name": "Invisible Sun Gel",
+    "description": "No white cast, clear finish.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=32",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=132"
+    ],
+    "price": 2200,
+    "stock": 50,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Invisible"
+    ]
+  },
+  {
+    "product_id": 33,
+    "name": "Mineral Sunscreen",
+    "description": "Zinc oxide based protection.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=33",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=133"
+    ],
+    "price": 2500,
+    "stock": 40,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Mineral"
+    ]
+  },
+  {
+    "product_id": 34,
+    "name": "Tinted Sunblock",
+    "description": "Sun protection with coverage.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=34",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=134"
+    ],
+    "price": 2400,
+    "stock": 35,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Tinted"
+    ]
+  },
+  {
+    "product_id": 35,
+    "name": "Sun Stick SPF 50",
+    "description": "Easy reapplication stick.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=35",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=135"
+    ],
+    "price": 1800,
+    "stock": 55,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Stick"
+    ]
+  },
+  {
+    "product_id": 36,
+    "name": "Kids Sunscreen",
+    "description": "Gentle formula for children.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=36",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=136"
+    ],
+    "price": 2100,
+    "stock": 45,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Kids"
+    ]
+  },
+  {
+    "product_id": 37,
+    "name": "Sport Sun Spray",
+    "description": "Water resistant for active use.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=37",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=137"
+    ],
+    "price": 1900,
+    "stock": 50,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Sport"
+    ]
+  },
+  {
+    "product_id": 38,
+    "name": "Matte Sunscreen",
+    "description": "Non-greasy finish.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=38",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=138"
+    ],
+    "price": 2300,
+    "stock": 40,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Matte"
+    ]
+  },
+  {
+    "product_id": 39,
+    "name": "After Sun Aloe",
+    "description": "Cooling relief after exposure.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=39",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=139"
+    ],
+    "price": 1500,
+    "stock": 60,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "After Sun"
+    ]
+  },
+  {
+    "product_id": 40,
+    "name": "Daily SPF Lotion",
+    "description": "Moisturizer with SPF 30.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=40",
+      "https://loremflickr.com/500/500/skincare,sunscreen?lock=140"
+    ],
+    "price": 1700,
+    "stock": 55,
+    "category": {
+      "category_id": 14,
+      "name": "Sunscreen",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Sunscreen",
+      "Daily"
+    ]
+  },
+  {
+    "product_id": 41,
+    "name": "Clay Mask",
+    "description": "Purifies pores and oil.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=41",
+      "https://loremflickr.com/500/500/skincare,mask?lock=141"
+    ],
+    "price": 1800,
+    "stock": 40,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Clay"
+    ]
+  },
+  {
+    "product_id": 42,
+    "name": "Sheet Mask Set",
+    "description": "Pack of 5 hydrating sheets.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=42",
+      "https://loremflickr.com/500/500/skincare,mask?lock=142"
+    ],
+    "price": 1500,
+    "stock": 70,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Sheet Mask"
+    ]
+  },
+  {
+    "product_id": 43,
+    "name": "Sleeping Mask",
+    "description": "Overnight intense hydration.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=43",
+      "https://loremflickr.com/500/500/skincare,mask?lock=143"
+    ],
+    "price": 2200,
+    "stock": 30,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Night"
+    ]
+  },
+  {
+    "product_id": 44,
+    "name": "Charcoal Peel-Off",
+    "description": "Removes blackheads.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=44",
+      "https://loremflickr.com/500/500/skincare,mask?lock=144"
+    ],
+    "price": 1600,
+    "stock": 50,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Peel-Off"
+    ]
+  },
+  {
+    "product_id": 45,
+    "name": "Gold Mask",
+    "description": "Anti-aging luxury treatment.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=45",
+      "https://loremflickr.com/500/500/skincare,mask?lock=145"
+    ],
+    "price": 2500,
+    "stock": 25,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Gold"
+    ]
+  },
+  {
+    "product_id": 46,
+    "name": "Bubble Mask",
+    "description": "Oxygenating fizz mask.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=46",
+      "https://loremflickr.com/500/500/skincare,mask?lock=146"
+    ],
+    "price": 1900,
+    "stock": 35,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Bubble"
+    ]
+  },
+  {
+    "product_id": 47,
+    "name": "Eye Patches",
+    "description": "Reduces puffiness under eyes.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=47",
+      "https://loremflickr.com/500/500/skincare,mask?lock=147"
+    ],
+    "price": 1400,
+    "stock": 60,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Eye"
+    ]
+  },
+  {
+    "product_id": 48,
+    "name": "Lip Mask",
+    "description": "Softens dry lips.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=48",
+      "https://loremflickr.com/500/500/skincare,mask?lock=148"
+    ],
+    "price": 1000,
+    "stock": 80,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Lip"
+    ]
+  },
+  {
+    "product_id": 49,
+    "name": "Exfoliating Mask",
+    "description": "AHA/BHA peeling mask.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=49",
+      "https://loremflickr.com/500/500/skincare,mask?lock=149"
+    ],
+    "price": 2400,
+    "stock": 30,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Exfoliating"
+    ]
+  },
+  {
+    "product_id": 50,
+    "name": "Soothing Gel Mask",
+    "description": "Calms redness immediately.",
+    "images": [
+      "https://loremflickr.com/500/500/skincare,mask?lock=50",
+      "https://loremflickr.com/500/500/skincare,mask?lock=150"
+    ],
+    "price": 2000,
+    "stock": 45,
+    "category": {
+      "category_id": 15,
+      "name": "Masks",
+      "parent_category_id": 1,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Skincare",
+      "Masks",
+      "Soothing"
+    ]
+  },
+  {
+    "product_id": 51,
+    "name": "Liquid Foundation",
+    "description": "Full coverage matte finish.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=51",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=151"
+    ],
+    "price": 3500,
+    "stock": 40,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Foundation"
+    ]
+  },
+  {
+    "product_id": 52,
+    "name": "Concealer Stick",
+    "description": "Hides dark circles.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=52",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=152"
+    ],
+    "price": 1800,
+    "stock": 50,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Concealer"
+    ]
+  },
+  {
+    "product_id": 53,
+    "name": "Setting Powder",
+    "description": "Translucent loose powder.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=53",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=153"
+    ],
+    "price": 2200,
+    "stock": 45,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Powder"
+    ]
+  },
+  {
+    "product_id": 54,
+    "name": "Blush Palette",
+    "description": "3 shades of pink and coral.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=54",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=154"
+    ],
+    "price": 2800,
+    "stock": 30,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Blush"
+    ]
+  },
+  {
+    "product_id": 55,
+    "name": "Highlighter",
+    "description": "Liquid glow highlighter.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=55",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=155"
+    ],
+    "price": 1500,
+    "stock": 60,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Highlighter"
+    ]
+  },
+  {
+    "product_id": 56,
+    "name": "Primer",
+    "description": "Pore minimizing primer.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=56",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=156"
+    ],
+    "price": 2000,
+    "stock": 40,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Primer"
+    ]
+  },
+  {
+    "product_id": 57,
+    "name": "Contour Kit",
+    "description": "Sculpt and define face.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=57",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=157"
+    ],
+    "price": 3000,
+    "stock": 25,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Contour"
+    ]
+  },
+  {
+    "product_id": 58,
+    "name": "BB Cream",
+    "description": "Light coverage skincare makeup.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=58",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=158"
+    ],
+    "price": 1900,
+    "stock": 55,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "BB Cream"
+    ]
+  },
+  {
+    "product_id": 59,
+    "name": "Setting Spray",
+    "description": "Long lasting makeup lock.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=59",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=159"
+    ],
+    "price": 1600,
+    "stock": 65,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Spray"
+    ]
+  },
+  {
+    "product_id": 60,
+    "name": "Bronzer",
+    "description": "Sun kissed glow powder.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,face?lock=60",
+      "https://loremflickr.com/500/500/cosmetics,face?lock=160"
+    ],
+    "price": 2400,
+    "stock": 35,
+    "category": {
+      "category_id": 21,
+      "name": "Face",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Face",
+      "Bronzer"
+    ]
+  },
+  {
+    "product_id": 61,
+    "name": "Mascara",
+    "description": "Volume and length mascara.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=61",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=161"
+    ],
+    "price": 1500,
+    "stock": 70,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Mascara",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 62,
+    "name": "Liquid Eyeliner",
+    "description": "Waterproof jet black liner.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=62",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=162"
+    ],
+    "price": 1200,
+    "stock": 60,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Eyeliner"
+    ]
+  },
+  {
+    "product_id": 63,
+    "name": "Eyeshadow Palette",
+    "description": "12 neutral shades.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=63",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=163"
+    ],
+    "price": 4000,
+    "stock": 25,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Palette"
+    ]
+  },
+  {
+    "product_id": 64,
+    "name": "Brow Pencil",
+    "description": "Precise brow definer.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=64",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=164"
+    ],
+    "price": 900,
+    "stock": 80,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Brows"
+    ]
+  },
+  {
+    "product_id": 65,
+    "name": "False Lashes",
+    "description": "Natural look lashes.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=65",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=165"
+    ],
+    "price": 800,
+    "stock": 90,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Lashes"
+    ]
+  },
+  {
+    "product_id": 66,
+    "name": "Brow Gel",
+    "description": "Tinted brow setting gel.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=66",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=166"
+    ],
+    "price": 1100,
+    "stock": 55,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Brows"
+    ]
+  },
+  {
+    "product_id": 67,
+    "name": "Gel Eyeliner Pot",
+    "description": "Long wear pot liner.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=67",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=167"
+    ],
+    "price": 1300,
+    "stock": 45,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Eyeliner"
+    ]
+  },
+  {
+    "product_id": 68,
+    "name": "Eye Primer",
+    "description": "Keeps shadow in place.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=68",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=168"
+    ],
+    "price": 1400,
+    "stock": 40,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Primer"
+    ]
+  },
+  {
+    "product_id": 69,
+    "name": "Glitter Shadow",
+    "description": "Sparkling liquid shadow.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=69",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=169"
+    ],
+    "price": 1600,
+    "stock": 50,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Glitter"
+    ]
+  },
+  {
+    "product_id": 70,
+    "name": "Kajal",
+    "description": "Intense black kohl.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=70",
+      "https://loremflickr.com/500/500/cosmetics,eyes?lock=170"
+    ],
+    "price": 700,
+    "stock": 100,
+    "category": {
+      "category_id": 22,
+      "name": "Eyes",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Eyes",
+      "Kajal"
+    ]
+  },
+  {
+    "product_id": 71,
+    "name": "Matte Lipstick",
+    "description": "Long lasting red matte.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=71",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=171"
+    ],
+    "price": 1800,
+    "stock": 50,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Lipstick",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 72,
+    "name": "Lip Gloss",
+    "description": "High shine clear gloss.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=72",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=172"
+    ],
+    "price": 1200,
+    "stock": 60,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Gloss"
+    ]
+  },
+  {
+    "product_id": 73,
+    "name": "Lip Liner",
+    "description": "Defines lip shape.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=73",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=173"
+    ],
+    "price": 800,
+    "stock": 70,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Liner"
+    ]
+  },
+  {
+    "product_id": 74,
+    "name": "Lip Tint",
+    "description": "Natural stain effect.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=74",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=174"
+    ],
+    "price": 1500,
+    "stock": 55,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Tint"
+    ]
+  },
+  {
+    "product_id": 75,
+    "name": "Lip Balm",
+    "description": "Moisturizing balm.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=75",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=175"
+    ],
+    "price": 600,
+    "stock": 100,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Balm"
+    ]
+  },
+  {
+    "product_id": 76,
+    "name": "Liquid Lipstick",
+    "description": "Transfer proof formula.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=76",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=176"
+    ],
+    "price": 2000,
+    "stock": 40,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Liquid"
+    ]
+  },
+  {
+    "product_id": 77,
+    "name": "Lip Plumper",
+    "description": "Volumizing lip gloss.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=77",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=177"
+    ],
+    "price": 1600,
+    "stock": 35,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Plumper"
+    ]
+  },
+  {
+    "product_id": 78,
+    "name": "Lip Scrub",
+    "description": "Exfoliating sugar scrub.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=78",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=178"
+    ],
+    "price": 900,
+    "stock": 65,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Scrub"
+    ]
+  },
+  {
+    "product_id": 79,
+    "name": "Satin Lipstick",
+    "description": "Creamy comfortable wear.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=79",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=179"
+    ],
+    "price": 1700,
+    "stock": 45,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Satin"
+    ]
+  },
+  {
+    "product_id": 80,
+    "name": "Lip Oil",
+    "description": "Nourishing glossy oil.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=80",
+      "https://loremflickr.com/500/500/cosmetics,lips?lock=180"
+    ],
+    "price": 1400,
+    "stock": 50,
+    "category": {
+      "category_id": 23,
+      "name": "Lips",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Lips",
+      "Oil"
+    ]
+  },
+  {
+    "product_id": 81,
+    "name": "Nail Polish Red",
+    "description": "Classic red lacquer.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=81",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=181"
+    ],
+    "price": 800,
+    "stock": 60,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Polish"
+    ]
+  },
+  {
+    "product_id": 82,
+    "name": "Gel Top Coat",
+    "description": "No UV light needed.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=82",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=182"
+    ],
+    "price": 1000,
+    "stock": 50,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Top Coat"
+    ]
+  },
+  {
+    "product_id": 83,
+    "name": "Nail Strengthener",
+    "description": "Hardens brittle nails.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=83",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=183"
+    ],
+    "price": 1200,
+    "stock": 40,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Care"
+    ]
+  },
+  {
+    "product_id": 84,
+    "name": "Nail Polish Remover",
+    "description": "Acetone free remover.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=84",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=184"
+    ],
+    "price": 500,
+    "stock": 80,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Remover"
+    ]
+  },
+  {
+    "product_id": 85,
+    "name": "Cuticle Oil",
+    "description": "Hydrates cuticles.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=85",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=185"
+    ],
+    "price": 700,
+    "stock": 60,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Oil"
+    ]
+  },
+  {
+    "product_id": 86,
+    "name": "Glitter Polish",
+    "description": "Sparkling nail effect.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=86",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=186"
+    ],
+    "price": 900,
+    "stock": 45,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Glitter"
+    ]
+  },
+  {
+    "product_id": 87,
+    "name": "French Manicure Kit",
+    "description": "DIY french tips.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=87",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=187"
+    ],
+    "price": 1500,
+    "stock": 30,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Kit"
+    ]
+  },
+  {
+    "product_id": 88,
+    "name": "Matte Top Coat",
+    "description": "Transforms shine to matte.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=88",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=188"
+    ],
+    "price": 1100,
+    "stock": 40,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Matte"
+    ]
+  },
+  {
+    "product_id": 89,
+    "name": "Press-on Nails",
+    "description": "Instant salon look.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=89",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=189"
+    ],
+    "price": 1300,
+    "stock": 50,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Artificial"
+    ]
+  },
+  {
+    "product_id": 90,
+    "name": "Nail Art Stickers",
+    "description": "Fun designs for nails.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=90",
+      "https://loremflickr.com/500/500/cosmetics,nails?lock=190"
+    ],
+    "price": 400,
+    "stock": 100,
+    "category": {
+      "category_id": 24,
+      "name": "Nails",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Nails",
+      "Art"
+    ]
+  },
+  {
+    "product_id": 91,
+    "name": "Makeup Brushes Set",
+    "description": "10 piece professional set.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=91",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=191"
+    ],
+    "price": 3500,
+    "stock": 25,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Brushes",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 92,
+    "name": "Beauty Sponge",
+    "description": "For flawless blending.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=92",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=192"
+    ],
+    "price": 600,
+    "stock": 80,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Sponge"
+    ]
+  },
+  {
+    "product_id": 93,
+    "name": "Eyelash Curler",
+    "description": "Dramatic curl tool.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=93",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=193"
+    ],
+    "price": 800,
+    "stock": 50,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Lashes"
+    ]
+  },
+  {
+    "product_id": 94,
+    "name": "Tweezers",
+    "description": "Precision hair removal.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=94",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=194"
+    ],
+    "price": 400,
+    "stock": 90,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Tweezers"
+    ]
+  },
+  {
+    "product_id": 95,
+    "name": "Jade Roller",
+    "description": "Facial massage tool.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=95",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=195"
+    ],
+    "price": 1500,
+    "stock": 40,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Roller"
+    ]
+  },
+  {
+    "product_id": 96,
+    "name": "Makeup Mirror",
+    "description": "LED lighted mirror.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=96",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=196"
+    ],
+    "price": 4000,
+    "stock": 20,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Mirror"
+    ]
+  },
+  {
+    "product_id": 97,
+    "name": "Brush Cleaner",
+    "description": "Silicone cleaning mat.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=97",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=197"
+    ],
+    "price": 500,
+    "stock": 60,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Cleaner"
+    ]
+  },
+  {
+    "product_id": 98,
+    "name": "Cosmetic Bag",
+    "description": "Travel makeup organizer.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=98",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=198"
+    ],
+    "price": 1200,
+    "stock": 45,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Bag"
+    ]
+  },
+  {
+    "product_id": 99,
+    "name": "Cotton Pads",
+    "description": "Pack of 100 soft pads.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=99",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=199"
+    ],
+    "price": 300,
+    "stock": 100,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Cotton"
+    ]
+  },
+  {
+    "product_id": 100,
+    "name": "Pencil Sharpener",
+    "description": "Dual size sharpener.",
+    "images": [
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=100",
+      "https://loremflickr.com/500/500/cosmetics,tools?lock=200"
+    ],
+    "price": 200,
+    "stock": 100,
+    "category": {
+      "category_id": 25,
+      "name": "Tools",
+      "parent_category_id": 2,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Cosmetics",
+      "Tools",
+      "Sharpener"
+    ]
+  },
+  {
+    "product_id": 101,
+    "name": "Floral Summer Dress",
+    "description": "Light breezy cotton dress.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=101",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=201"
+    ],
+    "price": 4500,
+    "stock": 25,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Summer",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 102,
+    "name": "Evening Gown",
+    "description": "Elegant black maxi dress.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=102",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=202"
+    ],
+    "price": 12000,
+    "stock": 15,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Formal"
+    ]
+  },
+  {
+    "product_id": 103,
+    "name": "Bodycon Dress",
+    "description": "Fitted party dress.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=103",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=203"
+    ],
+    "price": 5500,
+    "stock": 30,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Party"
+    ]
+  },
+  {
+    "product_id": 104,
+    "name": "Midi Dress",
+    "description": "Casual everyday wear.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=104",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=204"
+    ],
+    "price": 4000,
+    "stock": 35,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 105,
+    "name": "Wrap Dress",
+    "description": "Flattering wrap style.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=105",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=205"
+    ],
+    "price": 4800,
+    "stock": 20,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Work"
+    ]
+  },
+  {
+    "product_id": 106,
+    "name": "Shirt Dress",
+    "description": "Button down chic.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=106",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=206"
+    ],
+    "price": 5000,
+    "stock": 25,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 107,
+    "name": "Mini Dress",
+    "description": "Short and stylish.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=107",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=207"
+    ],
+    "price": 3500,
+    "stock": 40,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Mini"
+    ]
+  },
+  {
+    "product_id": 108,
+    "name": "Velvet Dress",
+    "description": "Luxurious winter dress.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=108",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=208"
+    ],
+    "price": 8000,
+    "stock": 15,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Winter"
+    ]
+  },
+  {
+    "product_id": 109,
+    "name": "Boho Maxi",
+    "description": "Bohemian print long dress.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=109",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=209"
+    ],
+    "price": 6000,
+    "stock": 20,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Boho"
+    ]
+  },
+  {
+    "product_id": 110,
+    "name": "Denim Dress",
+    "description": "Classic jean material.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=110",
+      "https://loremflickr.com/500/500/woman%20wear,dress?lock=210"
+    ],
+    "price": 5200,
+    "stock": 30,
+    "category": {
+      "category_id": 31,
+      "name": "Dresses",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Dresses",
+      "Denim"
+    ]
+  },
+  {
+    "product_id": 111,
+    "name": "Cotton T-Shirt",
+    "description": "Basic white tee.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=111",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=211"
+    ],
+    "price": 1200,
+    "stock": 60,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Basics"
+    ]
+  },
+  {
+    "product_id": 112,
+    "name": "Silk Blouse",
+    "description": "Office wear elegant top.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=112",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=212"
+    ],
+    "price": 3500,
+    "stock": 30,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Work"
+    ]
+  },
+  {
+    "product_id": 113,
+    "name": "Crop Top",
+    "description": "Trendy summer cut.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=113",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=213"
+    ],
+    "price": 1000,
+    "stock": 50,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Crop"
+    ]
+  },
+  {
+    "product_id": 114,
+    "name": "Knitted Sweater",
+    "description": "Warm wool pullover.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=114",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=214"
+    ],
+    "price": 4000,
+    "stock": 25,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Winter"
+    ]
+  },
+  {
+    "product_id": 115,
+    "name": "Graphic Tee",
+    "description": "Printed design shirt.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=115",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=215"
+    ],
+    "price": 1500,
+    "stock": 55,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Graphic"
+    ]
+  },
+  {
+    "product_id": 116,
+    "name": "Off-Shoulder Top",
+    "description": "Chic shoulder baring.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=116",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=216"
+    ],
+    "price": 2000,
+    "stock": 40,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Party"
+    ]
+  },
+  {
+    "product_id": 117,
+    "name": "Tank Top",
+    "description": "Sleeveless summer essential.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=117",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=217"
+    ],
+    "price": 900,
+    "stock": 70,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Basics"
+    ]
+  },
+  {
+    "product_id": 118,
+    "name": "Tunic",
+    "description": "Long style shirt.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=118",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=218"
+    ],
+    "price": 2500,
+    "stock": 35,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 119,
+    "name": "Hoodie",
+    "description": "Cozy casual wear.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=119",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=219"
+    ],
+    "price": 3000,
+    "stock": 45,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 120,
+    "name": "Denim Shirt",
+    "description": "Button up jean shirt.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=120",
+      "https://loremflickr.com/500/500/woman%20wear,top?lock=220"
+    ],
+    "price": 2800,
+    "stock": 30,
+    "category": {
+      "category_id": 32,
+      "name": "Tops",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Tops",
+      "Denim"
+    ]
+  },
+  {
+    "product_id": 121,
+    "name": "Skinny Jeans",
+    "description": "Fitted denim pants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=121",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=221"
+    ],
+    "price": 3500,
+    "stock": 40,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Jeans",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 122,
+    "name": "Wide Leg Trousers",
+    "description": "Comfortable loose fit.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=122",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=222"
+    ],
+    "price": 3200,
+    "stock": 35,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Trousers"
+    ]
+  },
+  {
+    "product_id": 123,
+    "name": "Leggings",
+    "description": "Stretchy black leggings.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=123",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=223"
+    ],
+    "price": 1500,
+    "stock": 60,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 124,
+    "name": "Pencil Skirt",
+    "description": "Office wear skirt.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=124",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=224"
+    ],
+    "price": 2500,
+    "stock": 30,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Work"
+    ]
+  },
+  {
+    "product_id": 125,
+    "name": "Denim Shorts",
+    "description": "Summer casual shorts.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=125",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=225"
+    ],
+    "price": 1800,
+    "stock": 50,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Summer"
+    ]
+  },
+  {
+    "product_id": 126,
+    "name": "Cargo Pants",
+    "description": "Utility style pants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=126",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=226"
+    ],
+    "price": 3800,
+    "stock": 25,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Trendy"
+    ]
+  },
+  {
+    "product_id": 127,
+    "name": "Pleated Skirt",
+    "description": "Midi length flowy skirt.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=127",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=227"
+    ],
+    "price": 2800,
+    "stock": 30,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Skirt"
+    ]
+  },
+  {
+    "product_id": 128,
+    "name": "Joggers",
+    "description": "Casual sweatpants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=128",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=228"
+    ],
+    "price": 2200,
+    "stock": 45,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 129,
+    "name": "Mom Jeans",
+    "description": "High waisted relaxed fit.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=129",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=229"
+    ],
+    "price": 3600,
+    "stock": 35,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Jeans"
+    ]
+  },
+  {
+    "product_id": 130,
+    "name": "Palazzo Pants",
+    "description": "Very wide leg flowy pants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=130",
+      "https://loremflickr.com/500/500/woman%20wear,bottoms?lock=230"
+    ],
+    "price": 3000,
+    "stock": 30,
+    "category": {
+      "category_id": 33,
+      "name": "Bottoms",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Bottoms",
+      "Summer"
+    ]
+  },
+  {
+    "product_id": 131,
+    "name": "Trench Coat",
+    "description": "Classic beige long coat.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
+    ],
+    "price": 9000,
+    "stock": 19,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Classic"
+    ]
+  },
+  {
+    "product_id": 132,
+    "name": "Denim Jacket",
+    "description": "Versatile jean jacket.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+    ],
+    "price": 4500,
+    "stock": 34,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 133,
+    "name": "Leather Jacket",
+    "description": "Faux leather biker style.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+    ],
+    "price": 7500,
+    "stock": 24,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Edgy"
+    ]
+  },
+  {
+    "product_id": 134,
+    "name": "Blazer",
+    "description": "Professional tailored blazer.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
+    ],
+    "price": 6000,
+    "stock": 29,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Work"
+    ]
+  },
+  {
+    "product_id": 135,
+    "name": "Puffer Jacket",
+    "description": "Warm insulated winter jacket.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=135",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=235"
+    ],
+    "price": 8500,
+    "stock": 20,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Winter"
+    ]
+  },
+  {
+    "product_id": 136,
+    "name": "Cardigan",
+    "description": "Soft knitted open sweater.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=136",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=236"
+    ],
+    "price": 3200,
+    "stock": 40,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 137,
+    "name": "Raincoat",
+    "description": "Waterproof hooded coat.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=137",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=237"
+    ],
+    "price": 5000,
+    "stock": 30,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Rain"
+    ]
+  },
+  {
+    "product_id": 138,
+    "name": "Bomber Jacket",
+    "description": "Sporty zip-up jacket.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=138",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=238"
+    ],
+    "price": 5500,
+    "stock": 25,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Trendy"
+    ]
+  },
+  {
+    "product_id": 139,
+    "name": "Faux Fur Coat",
+    "description": "Glamorous warm coat.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=139",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=239"
+    ],
+    "price": 11000,
+    "stock": 10,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Luxury"
+    ]
+  },
+  {
+    "product_id": 140,
+    "name": "Vest",
+    "description": "Sleeveless puffer layer.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=140",
+      "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=240"
+    ],
+    "price": 4000,
+    "stock": 35,
+    "category": {
+      "category_id": 34,
+      "name": "Outerwear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Outerwear",
+      "Layering"
+    ]
+  },
+  {
+    "product_id": 141,
+    "name": "Yoga Leggings",
+    "description": "High stretch workout pants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=141",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=241"
+    ],
+    "price": 3000,
+    "stock": 50,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Gym"
+    ]
+  },
+  {
+    "product_id": 142,
+    "name": "Sports Bra",
+    "description": "High impact support.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=142",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=242"
+    ],
+    "price": 2000,
+    "stock": 60,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Support"
+    ]
+  },
+  {
+    "product_id": 143,
+    "name": "Running Shorts",
+    "description": "Breathable athletic shorts.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=143",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=243"
+    ],
+    "price": 1800,
+    "stock": 55,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Running"
+    ]
+  },
+  {
+    "product_id": 144,
+    "name": "Tracksuit Set",
+    "description": "Matching jacket and pants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=144",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=244"
+    ],
+    "price": 6000,
+    "stock": 30,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Set"
+    ]
+  },
+  {
+    "product_id": 145,
+    "name": "Gym Tank",
+    "description": "Sweat wicking top.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=145",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=245"
+    ],
+    "price": 1500,
+    "stock": 65,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Gym"
+    ]
+  },
+  {
+    "product_id": 146,
+    "name": "Tennis Skirt",
+    "description": "Skirt with built in shorts.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=146",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=246"
+    ],
+    "price": 2500,
+    "stock": 40,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Tennis"
+    ]
+  },
+  {
+    "product_id": 147,
+    "name": "Compression Tights",
+    "description": "Muscle support leggings.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=147",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=247"
+    ],
+    "price": 3500,
+    "stock": 35,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Running"
+    ]
+  },
+  {
+    "product_id": 148,
+    "name": "Zip Hoodie",
+    "description": "Athletic warm up jacket.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=148",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=248"
+    ],
+    "price": 3200,
+    "stock": 45,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Layer"
+    ]
+  },
+  {
+    "product_id": 149,
+    "name": "Crop Leggings",
+    "description": "3/4 length yoga pants.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=149",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=249"
+    ],
+    "price": 2800,
+    "stock": 50,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Yoga"
+    ]
+  },
+  {
+    "product_id": 150,
+    "name": "Performance Tee",
+    "description": "Quick dry t-shirt.",
+    "images": [
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=150",
+      "https://loremflickr.com/500/500/woman%20wear,activewear?lock=250"
+    ],
+    "price": 1600,
+    "stock": 60,
+    "category": {
+      "category_id": 35,
+      "name": "Activewear",
+      "parent_category_id": 3,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Woman Wear",
+      "Activewear",
+      "Gym"
+    ]
+  },
+  {
+    "product_id": 151,
+    "name": "Gold Necklace",
+    "description": "18k gold plated chain.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=151",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=251"
+    ],
+    "price": 3500,
+    "stock": 30,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Gold",
+      "Trending"
+    ]
+  },
+  {
+    "product_id": 152,
+    "name": "Silver Hoop Earrings",
+    "description": "Classic large hoops.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=152",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=252"
+    ],
+    "price": 1500,
+    "stock": 50,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Earrings"
+    ]
+  },
+  {
+    "product_id": 153,
+    "name": "Pearl Bracelet",
+    "description": "Freshwater pearl strand.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=153",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=253"
+    ],
+    "price": 2000,
+    "stock": 40,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Pearl"
+    ]
+  },
+  {
+    "product_id": 154,
+    "name": "Stud Earrings",
+    "description": "Diamond simulant studs.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=154",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=254"
+    ],
+    "price": 1200,
+    "stock": 60,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Earrings"
+    ]
+  },
+  {
+    "product_id": 155,
+    "name": "Choker",
+    "description": "Velvet black choker.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=155",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=255"
+    ],
+    "price": 800,
+    "stock": 70,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Trendy"
+    ]
+  },
+  {
+    "product_id": 156,
+    "name": "Anklet",
+    "description": "Gold chain ankle bracelet.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=156",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=256"
+    ],
+    "price": 1000,
+    "stock": 45,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Anklet"
+    ]
+  },
+  {
+    "product_id": 157,
+    "name": "Statement Ring",
+    "description": "Large gemstone ring.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=157",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=257"
+    ],
+    "price": 1800,
+    "stock": 35,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Ring"
+    ]
+  },
+  {
+    "product_id": 158,
+    "name": "Bangle Set",
+    "description": "Stack of 6 bracelets.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=158",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=258"
+    ],
+    "price": 1400,
+    "stock": 55,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Bangles"
+    ]
+  },
+  {
+    "product_id": 159,
+    "name": "Pendant Necklace",
+    "description": "Heart shaped locket.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=159",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=259"
+    ],
+    "price": 2200,
+    "stock": 40,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Necklace"
+    ]
+  },
+  {
+    "product_id": 160,
+    "name": "Ear Cuff",
+    "description": "No piercing needed.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=160",
+      "https://loremflickr.com/500/500/accessories,jewellery?lock=260"
+    ],
+    "price": 600,
+    "stock": 80,
+    "category": {
+      "category_id": 41,
+      "name": "Jewellery",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Jewellery",
+      "Trendy"
+    ]
+  },
+  {
+    "product_id": 161,
+    "name": "Rose Gold Watch",
+    "description": "Elegant metal band.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=161",
+      "https://loremflickr.com/500/500/accessories,watch?lock=261"
+    ],
+    "price": 8500,
+    "stock": 20,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Elegant"
+    ]
+  },
+  {
+    "product_id": 162,
+    "name": "Leather Strap Watch",
+    "description": "Classic brown leather.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=162",
+      "https://loremflickr.com/500/500/accessories,watch?lock=262"
+    ],
+    "price": 6000,
+    "stock": 25,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Classic"
+    ]
+  },
+  {
+    "product_id": 163,
+    "name": "Digital Watch",
+    "description": "Sporty waterproof watch.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=163",
+      "https://loremflickr.com/500/500/accessories,watch?lock=263"
+    ],
+    "price": 3000,
+    "stock": 40,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Sport"
+    ]
+  },
+  {
+    "product_id": 164,
+    "name": "Minimalist Watch",
+    "description": "Clean dial design.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=164",
+      "https://loremflickr.com/500/500/accessories,watch?lock=264"
+    ],
+    "price": 5000,
+    "stock": 30,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Minimal"
+    ]
+  },
+  {
+    "product_id": 165,
+    "name": "Smart Band",
+    "description": "Fitness tracker.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=165",
+      "https://loremflickr.com/500/500/accessories,watch?lock=265"
+    ],
+    "price": 4500,
+    "stock": 35,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Smart"
+    ]
+  },
+  {
+    "product_id": 166,
+    "name": "Silver Mesh Watch",
+    "description": "Modern stainless steel.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=166",
+      "https://loremflickr.com/500/500/accessories,watch?lock=266"
+    ],
+    "price": 7000,
+    "stock": 20,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Modern"
+    ]
+  },
+  {
+    "product_id": 167,
+    "name": "Gold Chain Watch",
+    "description": "Jewellery style watch.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=167",
+      "https://loremflickr.com/500/500/accessories,watch?lock=267"
+    ],
+    "price": 9000,
+    "stock": 15,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Gold"
+    ]
+  },
+  {
+    "product_id": 168,
+    "name": "Vintage Watch",
+    "description": "Retro face design.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=168",
+      "https://loremflickr.com/500/500/accessories,watch?lock=268"
+    ],
+    "price": 5500,
+    "stock": 20,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Vintage"
+    ]
+  },
+  {
+    "product_id": 169,
+    "name": "Silicone Watch",
+    "description": "Soft touch band.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=169",
+      "https://loremflickr.com/500/500/accessories,watch?lock=269"
+    ],
+    "price": 2500,
+    "stock": 50,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 170,
+    "name": "Diamond Accent Watch",
+    "description": "Luxury timepiece.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,watch?lock=170",
+      "https://loremflickr.com/500/500/accessories,watch?lock=270"
+    ],
+    "price": 15000,
+    "stock": 5,
+    "category": {
+      "category_id": 42,
+      "name": "Watches",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Watches",
+      "Luxury"
+    ]
+  },
+  {
+    "product_id": 171,
+    "name": "Leather Handbag",
+    "description": "Structured tote.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=171",
+      "https://loremflickr.com/500/500/accessories,bag?lock=271"
+    ],
+    "price": 12000,
+    "stock": 15,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Leather"
+    ]
+  },
+  {
+    "product_id": 172,
+    "name": "Canvas Tote",
+    "description": "Casual shopper bag.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=172",
+      "https://loremflickr.com/500/500/accessories,bag?lock=272"
+    ],
+    "price": 2500,
+    "stock": 50,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 173,
+    "name": "Crossbody Bag",
+    "description": "Hands free purse.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=173",
+      "https://loremflickr.com/500/500/accessories,bag?lock=273"
+    ],
+    "price": 4500,
+    "stock": 30,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Daily"
+    ]
+  },
+  {
+    "product_id": 174,
+    "name": "Evening Clutch",
+    "description": "Sparkling party bag.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=174",
+      "https://loremflickr.com/500/500/accessories,bag?lock=274"
+    ],
+    "price": 3500,
+    "stock": 25,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Party"
+    ]
+  },
+  {
+    "product_id": 175,
+    "name": "Backpack",
+    "description": "Stylish travel bag.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=175",
+      "https://loremflickr.com/500/500/accessories,bag?lock=275"
+    ],
+    "price": 5500,
+    "stock": 30,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Travel"
+    ]
+  },
+  {
+    "product_id": 176,
+    "name": "Wallet",
+    "description": "Compact leather wallet.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=176",
+      "https://loremflickr.com/500/500/accessories,bag?lock=276"
+    ],
+    "price": 1500,
+    "stock": 60,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Small"
+    ]
+  },
+  {
+    "product_id": 177,
+    "name": "Laptop Bag",
+    "description": "Protective case bag.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=177",
+      "https://loremflickr.com/500/500/accessories,bag?lock=277"
+    ],
+    "price": 7000,
+    "stock": 20,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Work"
+    ]
+  },
+  {
+    "product_id": 178,
+    "name": "Beach Bag",
+    "description": "Large straw tote.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=178",
+      "https://loremflickr.com/500/500/accessories,bag?lock=278"
+    ],
+    "price": 3000,
+    "stock": 40,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Summer"
+    ]
+  },
+  {
+    "product_id": 179,
+    "name": "Duffle Bag",
+    "description": "Gym and weekend bag.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=179",
+      "https://loremflickr.com/500/500/accessories,bag?lock=279"
+    ],
+    "price": 6000,
+    "stock": 25,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Sport"
+    ]
+  },
+  {
+    "product_id": 180,
+    "name": "Belt Bag",
+    "description": "Trendy fanny pack.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,bag?lock=180",
+      "https://loremflickr.com/500/500/accessories,bag?lock=280"
+    ],
+    "price": 2000,
+    "stock": 50,
+    "category": {
+      "category_id": 43,
+      "name": "Bags",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Bags",
+      "Trendy"
+    ]
+  },
+  {
+    "product_id": 181,
+    "name": "Aviator Sunglasses",
+    "description": "Classic metal frame.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=181",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=281"
+    ],
+    "price": 3500,
+    "stock": 40,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Classic"
+    ]
+  },
+  {
+    "product_id": 182,
+    "name": "Cat Eye Glasses",
+    "description": "Retro chic style.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=182",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=282"
+    ],
+    "price": 3000,
+    "stock": 35,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Retro"
+    ]
+  },
+  {
+    "product_id": 183,
+    "name": "Round Sunglasses",
+    "description": "Vintage circle frames.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=183",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=283"
+    ],
+    "price": 2500,
+    "stock": 45,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Vintage"
+    ]
+  },
+  {
+    "product_id": 184,
+    "name": "Oversized Shades",
+    "description": "Celebrity style glasses.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=184",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=284"
+    ],
+    "price": 2800,
+    "stock": 30,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Glam"
+    ]
+  },
+  {
+    "product_id": 185,
+    "name": "Blue Light Glasses",
+    "description": "Screen protection.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=185",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=285"
+    ],
+    "price": 2000,
+    "stock": 60,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Tech"
+    ]
+  },
+  {
+    "product_id": 186,
+    "name": "Wayfarer",
+    "description": "Timeless black frames.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=186",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=286"
+    ],
+    "price": 3200,
+    "stock": 40,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Classic"
+    ]
+  },
+  {
+    "product_id": 187,
+    "name": "Rimless Glasses",
+    "description": "Lightweight design.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=187",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=287"
+    ],
+    "price": 4000,
+    "stock": 25,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Modern"
+    ]
+  },
+  {
+    "product_id": 188,
+    "name": "Sport Sunglasses",
+    "description": "Wraparound protection.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=188",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=288"
+    ],
+    "price": 2200,
+    "stock": 50,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Sport"
+    ]
+  },
+  {
+    "product_id": 189,
+    "name": "Reading Glasses",
+    "description": "Magnifying lenses.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=189",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=289"
+    ],
+    "price": 1200,
+    "stock": 55,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Reading"
+    ]
+  },
+  {
+    "product_id": 190,
+    "name": "Mirrored Sunglasses",
+    "description": "Reflective lens.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,glasses?lock=190",
+      "https://loremflickr.com/500/500/accessories,glasses?lock=290"
+    ],
+    "price": 2600,
+    "stock": 35,
+    "category": {
+      "category_id": 44,
+      "name": "Eyewear",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Eyewear",
+      "Trendy"
+    ]
+  },
+  {
+    "product_id": 191,
+    "name": "Silk Scarf",
+    "description": "Luxurious square scarf.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=191",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=291"
+    ],
+    "price": 2500,
+    "stock": 30,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Silk"
+    ]
+  },
+  {
+    "product_id": 192,
+    "name": "Wool Scarf",
+    "description": "Warm winter wrap.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=192",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=292"
+    ],
+    "price": 3000,
+    "stock": 40,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Winter"
+    ]
+  },
+  {
+    "product_id": 193,
+    "name": "Bandana",
+    "description": "Cotton paisley print.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=193",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=293"
+    ],
+    "price": 800,
+    "stock": 80,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Casual"
+    ]
+  },
+  {
+    "product_id": 194,
+    "name": "Cashmere Wrap",
+    "description": "Soft premium shawl.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=194",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=294"
+    ],
+    "price": 8000,
+    "stock": 15,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Luxury"
+    ]
+  },
+  {
+    "product_id": 195,
+    "name": "Infinity Scarf",
+    "description": "Loop knitted scarf.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=195",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=295"
+    ],
+    "price": 2200,
+    "stock": 35,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Winter"
+    ]
+  },
+  {
+    "product_id": 196,
+    "name": "Printed Stole",
+    "description": "Lightweight pattern scarf.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=196",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=296"
+    ],
+    "price": 1800,
+    "stock": 45,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Summer"
+    ]
+  },
+  {
+    "product_id": 197,
+    "name": "Chiffon Hijab",
+    "description": "Elegant headscarf.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=197",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=297"
+    ],
+    "price": 1500,
+    "stock": 60,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Hijab"
+    ]
+  },
+  {
+    "product_id": 198,
+    "name": "Pashmina",
+    "description": "Fine wool blend.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=198",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=298"
+    ],
+    "price": 4500,
+    "stock": 25,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Formal"
+    ]
+  },
+  {
+    "product_id": 199,
+    "name": "Neck Scarf",
+    "description": "Small satin tie.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=199",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=299"
+    ],
+    "price": 1000,
+    "stock": 55,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Chic"
+    ]
+  },
+  {
+    "product_id": 200,
+    "name": "Faux Fur Collar",
+    "description": "Add on jacket collar.",
+    "images": [
+      "https://loremflickr.com/500/500/accessories,scarf?lock=200",
+      "https://loremflickr.com/500/500/accessories,scarf?lock=300"
+    ],
+    "price": 3500,
+    "stock": 30,
+    "category": {
+      "category_id": 45,
+      "name": "Scarves",
+      "parent_category_id": 4,
+      "subcategories": [],
+      "categoryTree": {
+        "Root": null
+      }
+    },
+    "tags": [
+      "Accessories",
+      "Scarves",
+      "Winter"
+    ]
+  }
+]

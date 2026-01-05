@@ -131,6 +131,28 @@ namespace NovellaMart.Core.BL.Services
             foreach (var productId in _productQueues.Keys)
             {
                 var bufferQueue = _productQueues[productId];
+                var addedInThisPass = new HashSet<string>();
+
+                while (!bufferQueue.IsEmpty())
+                {
+                    var request = bufferQueue.Dequeue();
+                    if (request == null) continue;
+
+                    string statusKey = $"{request.customer.user_id}_{productId}";
+
+                    // ONLY add to heap if the user is STILL "Queued" in the dictionary
+                    // and hasn't been added to the heap yet in this loop.
+                    if (_userRequestStatus.TryGetValue(statusKey, out var currentStatus)
+                        && currentStatus == "Queued"
+                        && !addedInThisPass.Contains(statusKey))
+                    {
+                        long priorityValue = request.requestTime.Ticks;
+                        _activeSale.allocation_heap.Enqueue(request, priorityValue);
+                        addedInThisPass.Add(statusKey);
+                    }
+                }
+
+                // 2. Allocation Loop
 
                 // Find the live product reference to update master stock
                 ProductBL liveProduct = null;
@@ -143,22 +165,6 @@ namespace NovellaMart.Core.BL.Services
 
                 if (liveProduct == null) continue;
 
-                // 1. Move from Circular Buffer to Heap (Priority Sorting)
-                while (!bufferQueue.IsEmpty())
-                {
-                    var request = bufferQueue.Dequeue();
-                    string statusKey = $"{request.customer.user_id}_{productId}";
-
-                    if (_userRequestStatus.ContainsKey(statusKey))
-                    {
-                        // Priority logic: Earliest Join Time gets priority
-                        // Heap is a Max-Heap, so we use MaxValue - Ticks
-                        long priorityValue = request.requestTime.Ticks;
-                        _activeSale.allocation_heap.Enqueue(request, priorityValue);
-                    }
-                }
-
-                // 2. Allocation Loop
                 while (liveProduct.stock > 0 && !_activeSale.allocation_heap.IsEmpty())
                 {
                     var winner = _activeSale.allocation_heap.Dequeue();
@@ -226,14 +232,16 @@ namespace NovellaMart.Core.BL.Services
             return 0;
         }
 
-        public int GetTotalQueueCount()
+        public int GetTotalQueueCount(int productId)
         {
-            int total = 0;
-            foreach (var queue in _productQueues.Values)
-            {
-                total += queue.Size();
-            }
-            return total;
+            //int total = 0;
+            //foreach (var queue in _productQueues.Values)
+            //{
+            //    total += queue.Size();
+            //}
+            //return total;
+            return _userRequestStatus.Count(x =>
+                x.Key.EndsWith($"_{productId}") && x.Value == "Queued");
         }
 
         public int GetQueueCount(int productId)
@@ -304,6 +312,10 @@ namespace NovellaMart.Core.BL.Services
 
             foreach (var key in keysToRelease)
             {
+                // FIX: If the user already bought it, don't return the stock!
+                if (_userRequestStatus.ContainsKey(key) && _userRequestStatus[key] == "Ordered")
+                    continue;
+
                 var parts = key.Split('_');
                 int productId = int.Parse(parts[1]);
 

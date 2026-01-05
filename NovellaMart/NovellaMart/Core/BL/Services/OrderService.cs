@@ -1,7 +1,10 @@
 ﻿using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.BL.Data_Structures;
+using NovellaMart.Core.BL.Services;
 using NovellaMart.Core.DL;
 using System.Text.Json;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace NovellaMart.Core.BL.Services
 {
@@ -10,10 +13,12 @@ namespace NovellaMart.Core.BL.Services
         private readonly CartService _cartService;
         private const string FilePath = "Core/DL/orders.json"; // Ensure path is correct
         private static MyLinkedList<OrderBL> _allOrders;
+        private readonly ProductCatalogService _catalogService;
 
-        public OrderService(CartService cartService)
+        public OrderService(CartService cartService, ProductCatalogService catalogService)
         {
             _cartService = cartService;
+            _catalogService = catalogService;
 
             if (_allOrders == null)
             {
@@ -108,20 +113,32 @@ namespace NovellaMart.Core.BL.Services
                 cartNode = cartNode.Next;
             }
 
-            // 4. Save Order
-            _allOrders.InsertAtEnd(newOrder);
-            FileHandler.SaveData(FilePath, _allOrders);
-
-            // 5. Clear Purchased Items from Cart
+            // 4. Clear Purchased Items from Cart
             var orderNode = newOrder.items.head;
             while (orderNode != null)
             {
                 int productId = orderNode.Data.Product.product_id;
+                int purchasedQty = orderNode.Data.Quantity;
+
+                // 1. Locate the product in the master list to permanently reduce stock
+                // Assuming CatalogService is available or using a shared static list
+                var masterProduct = _catalogService.MasterProductList.FirstOrDefault(p => p.product_id == productId);
+
+                if (masterProduct != null)
+                {
+                    masterProduct.stock -= purchasedQty; // Decrement master stock
+                }
                 _cartService.RemoveItem(productId);
                 orderNode = orderNode.Next;
             }
 
+            // 5. Persist the updated stock and the new order [cite: 165]
+            FileHandler.SaveData("sample-data/products.json", _catalogService.MasterProductList);
+            _allOrders.InsertAtEnd(newOrder);
+            FileHandler.SaveData(FilePath, _allOrders);
+
             return newOrder;
+        
         }
 
         public MyLinkedList<OrderBL> GetOrdersByEmail(string email)
