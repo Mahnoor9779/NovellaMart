@@ -128,75 +128,93 @@ namespace NovellaMart.Core.BL.Services
         // NEW: Call this method when the Sale Ends to process the priority heap
         public void FinalizeAllocations()
         {
+            if (_activeSale == null) return;
+
             foreach (var productId in _productQueues.Keys)
             {
                 var bufferQueue = _productQueues[productId];
-                var addedInThisPass = new HashSet<string>();
 
+                // 1. DRAIN THE QUEUE: Move people from the Circular Queue to the Status Dictionary
                 while (!bufferQueue.IsEmpty())
                 {
                     var request = bufferQueue.Dequeue();
                     if (request == null) continue;
-
                     string statusKey = $"{request.customer.user_id}_{productId}";
 
-                    // ONLY add to heap if the user is STILL "Queued" in the dictionary
-                    // and hasn't been added to the heap yet in this loop.
-                    if (_userRequestStatus.TryGetValue(statusKey, out var currentStatus)
-                        && currentStatus == "Queued"
-                        && !addedInThisPass.Contains(statusKey))
+                    if (!_userRequestStatus.ContainsKey(statusKey) || _userRequestStatus[statusKey] == "Queued")
                     {
-                        long priorityValue = request.requestTime.Ticks;
-                        _activeSale.allocation_heap.Enqueue(request, priorityValue);
-                        addedInThisPass.Add(statusKey);
+                        _userRequestStatus[statusKey] = "Rejected"; // Mark as Rejected so they are eligible for the Heap
+                        _activeRequests[statusKey] = request;
                     }
                 }
 
-                // 2. Allocation Loop
-
-                // Find the live product reference to update master stock
-                ProductBL liveProduct = null;
-                var node = _activeSale.fs_items.head;
-                while (node != null)
+                // 2. FORCE RE-STATUS: Also convert any existing "Queued" entries to "Rejected"
+                var queuedKeys = _userRequestStatus.Where(x => x.Value == "Queued" && x.Key.EndsWith($"_{productId}")).ToList();
+                foreach (var key in queuedKeys)
                 {
-                    if (node.Data.product_id == productId) { liveProduct = node.Data; break; }
-                    node = node.Next;
+                    _userRequestStatus[key.Key] = "Rejected";
                 }
 
-                if (liveProduct == null) continue;
-
-                while (liveProduct.stock > 0 && !_activeSale.allocation_heap.IsEmpty())
-                {
-                    var winner = _activeSale.allocation_heap.Dequeue();
-                    string winnerKey = $"{winner.customer.user_id}_{productId}";
-
-                    liveProduct.stock--;
-                    winner.allocated = true;
-                    _userRequestStatus[winnerKey] = "Allocated"; // Update status, don't remove
-
-                    _allocationExpiry[winnerKey] = DateTime.Now.AddMinutes(2);
-                }
-
-                // 3. Cleanup Losers
-                while (!_activeSale.allocation_heap.IsEmpty())
-                {
-                    var loser = _activeSale.allocation_heap.Dequeue();
-                    string loserKey = $"{loser.customer.user_id}_{productId}";
-
-                    // This ensures they stay in the dropdown but show as Rejected
-                    _userRequestStatus[loserKey] = "Rejected";
-                }
-
+                // 3. Run the assignment
+                PerformStockAssignment(productId);
             }
-            if (_activeSale != null)
+
+            // 3. Global Sale Status Management
+            if (DateTime.Now >= _activeSale.endTime)
             {
                 _activeSale.status = "ENDED";
-                _crudService.UpdateFlashSale(_activeSale); 
-                SaveRuntimeState(); // PERSISTENCE
-                AddLog($"[{DateTime.Now.ToShortTimeString()}] Sale Finalized and Persisted to File.");
+                _crudService.UpdateFlashSale(_activeSale);
             }
+
+            SaveRuntimeState();
         }
 
+        public void PerformStockAssignment(int productId)
+        {
+            // 1. Locate the product node in the custom Linked List to check live stock
+            ProductBL liveProduct = null;
+            var node = _activeSale.fs_items.head;
+            while (node != null)
+            {
+                if (node.Data.product_id == productId) { liveProduct = node.Data; break; }
+                node = node.Next;
+            }
+
+            // If no stock is available (none left, or none returned from expiry), stop.
+            if (liveProduct == null || liveProduct.stock <= 0) return;
+
+            // 2. REFILL HEAP: Prepare the priority queue for this specific assignment pass
+            while (!_activeSale.allocation_heap.IsEmpty()) _activeSale.allocation_heap.Dequeue();
+
+            // Find everyone currently "Rejected". 
+            // CRITICAL: This excludes "Expired" users, meaning they never get re-added to the heap.
+            var eligibleKeys = _userRequestStatus
+                .Where(x => x.Key.EndsWith($"_{productId}") && x.Value == "Rejected")
+                .ToList();
+
+            foreach (var entry in eligibleKeys)
+            {
+                if (_activeRequests.TryGetValue(entry.Key, out var request))
+                {
+                    // Enqueue into Heap using join time Ticks (Fairness Engine)
+                    _activeSale.allocation_heap.Enqueue(request, request.requestTime.Ticks);
+                }
+            }
+
+            // 3. ALLOCATION LOOP: Assign stock until product is empty or heap is empty
+            while (liveProduct.stock > 0 && !_activeSale.allocation_heap.IsEmpty())
+            {
+                var winner = _activeSale.allocation_heap.Dequeue();
+                string key = $"{winner.customer.user_id}_{productId}";
+
+                liveProduct.stock--;
+                winner.allocated = true;
+                _userRequestStatus[key] = "Allocated";
+                _allocationExpiry[key] = DateTime.Now.AddMinutes(2); // Give them their checkout window
+
+                AddLog($"[{DateTime.Now.ToShortTimeString()}] Product {productId} assigned to User {winner.customer.user_id}");
+            }
+        }
 
         // --- UNJOIN LOGIC ---
         public void LeaveFlashSaleQueue(int userId, int productId)
@@ -240,15 +258,12 @@ namespace NovellaMart.Core.BL.Services
             //    total += queue.Size();
             //}
             //return total;
-            return _userRequestStatus.Count(x =>
-                x.Key.EndsWith($"_{productId}") && x.Value == "Queued");
+            return _userRequestStatus.Count(x => x.Value == "Queued");
         }
 
         public int GetQueueCount(int productId)
         {
-            if (_productQueues.ContainsKey(productId))
-                return _productQueues[productId].Size();
-            return 0;
+            return _userRequestStatus.Count(x => x.Key.EndsWith($"_{productId}") && x.Value == "Queued");
         }
 
         public List<string> GetActivityLogs()
@@ -258,13 +273,15 @@ namespace NovellaMart.Core.BL.Services
 
         public List<CustomerRequestBL> GetQueueSnapshot(int productId)
         {
-            // Return ALL users associated with this product ID regardless of status
             return _userRequestStatus
-                .Where(x => x.Key.EndsWith($"_{productId}")) // Removed "&& x.Value == 'Queued'"
+                .Where(x => x.Key.EndsWith($"_{productId}"))
                 .Select(x => {
                     if (_activeRequests.TryGetValue(x.Key, out var storedRequest))
                     {
-                        // Ensure the status matches the current dictionary value
+                        // CRITICAL: We must ensure the object's internal allocated 
+                        // state matches the Dictionary's "Ordered" or "Allocated" state
+                        var currentStatus = x.Value;
+                        storedRequest.allocated = (currentStatus == "Allocated" || currentStatus == "Ordered");
                         return storedRequest;
                     }
                     return null;
@@ -341,8 +358,8 @@ namespace NovellaMart.Core.BL.Services
             string key = $"{userId}_{productId}";
             if (_userRequestStatus.ContainsKey(key))
             {
-                _userRequestStatus[key] = "Ordered"; // This prevents stock return in ReleaseExpiredAllocations
-                _inCheckoutProcess.Remove(key);
+                _userRequestStatus[key] = "Ordered";
+                _inCheckoutProcess.Remove(key); // Unlock the checkout
                 SaveRuntimeState();
             }
         }

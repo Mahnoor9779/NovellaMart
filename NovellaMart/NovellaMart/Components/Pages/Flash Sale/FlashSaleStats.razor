@@ -112,13 +112,17 @@
                                                             @{
                                                                 var status = LiveQueueService.GetUserStatus(request.customer.user_id, p.product_id);
                                                             }
-                                                            @if (status == "Allocated")
+                                                            @if (status == "Ordered")
+                                                            {
+                                                                <span class="badge rounded-pill bg-info">Ordered (Verified)</span>
+                                                            }
+                                                            else if (status == "Allocated")
                                                             {
                                                                 <span class="badge rounded-pill bg-success">Allocated</span>
                                                             }
                                                             else if (status == "Expired")
                                                             {
-                                                                <span class="badge rounded-pill bg-secondary text-white">Expired (Stock Returned)</span>
+                                                                <span class="badge rounded-pill bg-secondary text-white">Expired</span>
                                                             }
                                                             else if (status == "Rejected")
                                                             {
@@ -182,21 +186,70 @@
         _refreshTimer.Start();
     }
 
+    // private async Task FinalizeAllocations()
+    // {
+    //     1. Force a check for any users who just timed out (Returns stock to liveProduct.stock)
+    //     LiveQueueService.ReleaseExpiredAllocations();
+
+    //     2. NEW: Put "Rejected" users back into the priority buffer so they can be re-evaluated
+    //     foreach (var pNode in currentSale.fs_items.ToList())
+    //     {
+    //         var allParticipants = LiveQueueService.GetQueueSnapshot(pNode.product_id);
+    //         foreach (var participant in allParticipants)
+    //         {
+    //             If they were rejected, join them back to the temporary queue for this button click
+    //             if (LiveQueueService.GetUserStatus(participant.customer.user_id, pNode.product_id) == "Rejected")
+    //             {
+    //                 LiveQueueService.JoinFlashSaleQueue(participant.customer, pNode.product_id);
+    //             }
+    //         }
+    //     }
+
+    //     3. Run the service logic to assign the newly returned stock to the priority heap
+    //     LiveQueueService.FinalizeAllocations();
+
+    //     4. Update status only if time is actually up
+    //     if (currentSale != null && DateTime.Now >= currentSale.endTime)
+    //     {
+    //         currentSale.status = "ENDED";
+    //         SaleDataService.UpdateFlashSale(currentSale);
+    //     }
+
+    //     await InvokeAsync(StateHasChanged);
+    // }
+
+    // private async Task FinalizeAllocations()
+    // {
+    //     1. Release stock from those who failed to checkout (Problem 4 fix)
+    //     LiveQueueService.ReleaseExpiredAllocations();
+
+    //     2. Loop through each product and try to fill empty slots with Rejected users
+    //     if (currentSale?.fs_items != null)
+    //     {
+    //         var node = currentSale.fs_items.head;
+    //         while (node != null)
+    //         {
+    //             Call the new targeted reallocation method
+    //             LiveQueueService.ManualReallocate(node.Data.product_id);
+    //             node = node.Next;
+    //         }
+    //     }
+
+    //     3. Only end the sale if the timer has actually hit 0
+    //     if (currentSale != null && DateTime.Now >= currentSale.endTime)
+    //     {
+    //         currentSale.status = "ENDED";
+    //         SaleDataService.UpdateFlashSale(currentSale);
+    //     }
+
+    //     await InvokeAsync(StateHasChanged);
+    // }
+
     private async Task FinalizeAllocations()
     {
-        // 1. One last check for any expired users before we lock the sale
+        Console.WriteLine("Manual Allocation Triggered"); // Check browser console (F12)
         LiveQueueService.ReleaseExpiredAllocations();
-
-        // 2. Run the service logic to move users from Queue to Heap to Allocated status
         LiveQueueService.FinalizeAllocations();
-
-        if (currentSale != null)
-        {
-            currentSale.status = "ENDED";
-            // Ensure the ENDED status and updated stock are saved to the JSON file
-            SaleDataService.UpdateFlashSale(currentSale);
-        }
-
         await InvokeAsync(StateHasChanged);
     }
 

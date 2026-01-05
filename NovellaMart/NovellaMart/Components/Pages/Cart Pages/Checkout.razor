@@ -6,6 +6,8 @@
 @inject CartService CartService
 @inject OrderService OrderService
 @inject NavigationManager NavManager
+@inject FlashSaleService LiveSaleService  
+@inject IJSRuntime JSRuntime
 
 <div class="page-title">
     <h1>Checkout</h1>
@@ -219,6 +221,18 @@
     private OrderBL placedOrder;
     private double shippingCost = 0;
 
+    private int currentUserId;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Get the ID of the person currently logged in
+            var storedId = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
+            int.TryParse(storedId, out currentUserId);
+        }
+    }
+
     private void UpdateCityAndShipping()
     {
         if (!string.IsNullOrWhiteSpace(model.City))
@@ -253,6 +267,13 @@
 
         if (placedOrder != null)
         {
+            // NEW: Mark each item in the order as successfully purchased in the Flash Service
+            var itemNode = placedOrder.items.head;
+            while (itemNode != null)
+            {
+                LiveSaleService.MarkAsOrdered(currentUserId, itemNode.Data.Product.product_id);
+                itemNode = itemNode.Next;
+            }
             NavManager.NavigateTo($"/order-confirmation/{placedOrder.order_id}");
         }
         else

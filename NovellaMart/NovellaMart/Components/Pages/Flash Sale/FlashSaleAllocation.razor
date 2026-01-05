@@ -18,8 +18,14 @@
         @foreach (var product in CrudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id)?.fs_items?.ToList() ?? new())
         {
             bool isExpanded = expandedProductId == product.product_id;
+
+            // Get everyone who was successfully chosen (Allocated OR Ordered)
             var allocations = LiveSaleService.GetQueueSnapshotAllocation(product.product_id);
-            var winners = allocations.Where(a => a.allocated).ToList();
+            var successfulUsers = allocations.Where(a =>
+            {
+                var status = LiveSaleService.GetUserStatus(a.customer.user_id, product.product_id);
+                return status == "Allocated" || status == "Ordered";
+            }).ToList();
 
             <div class="col-12 mb-3">
                 <div class="checkout-card p-0 overflow-hidden shadow-sm @(isExpanded ? "admin-card-expanded" : "admin-card-default")"
@@ -35,7 +41,7 @@
                             </div>
                             <div>
                                 <h6 class="mb-0 fw-bold" style="color: #333;">@product.name</h6>
-                                <span class="badge bg-light text-muted border">Winners: @winners.Count</span>
+                                <span class="badge bg-light text-muted border">Winners: @successfulUsers.Count</span>
                             </div>
                         </div>
 
@@ -58,7 +64,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if (!winners.Any())
+                                        @if (!successfulUsers.Any())
                                         {
                                             <tr>
                                                 <td colspan="4">
@@ -72,7 +78,7 @@
                                         else
                                         {
                                             int rank = 1;
-                                            @foreach (var req in winners)
+                                            @foreach (var req in successfulUsers)
                                             {
                                                 <tr>
                                                     <td class="col-serial">
@@ -86,9 +92,21 @@
                                                     </td>
                                                     <td class="join-time-text">@req.requestTime.ToLongTimeString()</td>
                                                     <td class="col-status">
-                                                        <span class="badge rounded-pill status-badge-allocated">
-                                                            <i class="fas fa-check me-1"></i> Allocated
-                                                        </span>
+                                                        @{
+                                                            var status = LiveSaleService.GetUserStatus(req.customer.user_id, product.product_id);
+                                                        }
+                                                        @if (status == "Ordered")
+                                                        {
+                                                            <span class="badge rounded-pill bg-info">
+                                                                <i class="fas fa-shopping-cart me-1"></i> Ordered
+                                                            </span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="badge rounded-pill status-badge-allocated">
+                                                                <i class="fas fa-check me-1"></i> Allocated
+                                                            </span>
+                                                        }
                                                     </td>
                                                 </tr>
                                                 rank++;

@@ -249,3 +249,823 @@ Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String 
 [1/5/2026 1:26:12 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
 [1/5/2026 1:26:12 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
 [1/5/2026 1:26:12 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:47:24 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:47:24 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:47:37 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:47:37 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:47:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:47:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:47 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:48:47 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:49:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:49:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:49:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:49:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:49:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:49:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 2:51:17 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:51:17 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:51:17 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 2:51:17 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 2:51:24 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 2:51:24 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 2:51:24 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 2:51:24 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 2:51:25 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 2:51:25 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 2:51:25 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:51:25 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:51:44 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 2:51:44 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:01:26 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:01:26 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:01:26 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:01:26 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:01:26 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:01:26 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:02:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:02:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:02:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:02:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:02:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:02:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:02:55 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:02:55 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:13 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:13 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:14 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:14 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:15 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:15 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:03:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:03:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:03:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:03:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:04:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:30 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:30 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:30 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 3:04:30 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:04:30 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 3:04:31 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:04:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:48 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:48 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:48 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:48 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:54 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:04:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 3:04:54 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:04:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 3:04:54 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:04:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:04:54 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:01 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:01 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:01 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:01 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:06 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:06 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:06 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 3:06:06 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:06:06 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 3:06:06 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:06:06 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:06 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:26 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:26 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:26 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:26 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:06:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 3:06:33 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:06:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 3:06:33 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:06:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:06:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:08:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:08:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:31:40 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:31:40 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:31:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:31:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:31:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:31:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:31:53 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:31:53 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:07 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:07 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:09 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:09 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:30 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:30 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:32 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:32:32 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:35:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:35:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:35:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:35:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:35:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 3:35:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 3:35:39 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:35:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 3:35:39 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 3:35:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:35:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:02 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:02 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:39:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:39:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:39:05 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:39:05 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:05 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:39:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 3:39:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 3:39:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:11 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:19:11 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:19:19 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:19 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:47 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:19:47 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:15 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:15 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:16 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:16 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:40 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:40 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:40 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:20:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:20:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:57 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:57 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:20:57 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:20:57 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:21:03 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:21:03 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:21:03 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 5:21:03 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 5:21:03 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 5:21:03 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 5:21:03 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:21:03 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:12 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:12 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:12 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:22:12 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:22:18 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:22:18 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 5:22:18 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 5:22:18 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 5:22:18 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 5:22:18 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 5:22:18 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:18 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:22:45 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:22:45 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:45 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:22:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:22:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:22:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:23:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:23:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:23:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:16 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:47:16 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:47:25 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:25 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:26 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:26 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:47:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:08 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:08 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:09 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:09 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:31 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:31 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:39 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:39 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:46 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:46 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:48:53 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:48:53 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:56:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 5:56:11 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:11 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:12 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:12 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:28 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:28 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:29 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:29 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:56:54 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:19 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:33 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:34 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:35 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:35 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:35 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:35 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 5:57:35 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:30 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 6:06:30 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 6:06:38 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:38 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:38 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:38 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:47 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:47 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:47 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:47 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:48 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:51 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:51 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:53 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:54 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:54 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:54 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 6:06:54 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:16:43 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 7:16:43 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 7:16:57 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:16:57 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:17:10 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:17:10 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:17:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 7:17:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 7:20:32 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 7:20:32 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 7:20:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:20:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:20:52 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:20:52 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:22 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:22 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:40 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:40 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:42 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:21:42 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:22:40 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:22:40 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:11 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:11 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:11 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:11 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:17 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:17 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:17 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 7:23:17 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:23:17 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 7:23:17 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:23:17 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:17 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:44 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:44 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:44 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:44 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:23:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 7:23:50 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:23:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 7:23:50 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:23:50 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:23:50 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:24:15 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:24:15 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:24:15 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:24:15 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:24:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:24:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:24:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 7:24:20 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:24:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 7:24:20 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:24:20 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:24:20 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:24:41 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:24:41 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:25:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:25:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:25:27 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:25:27 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:25:27 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:25:27 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:25:32 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:25:32 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:25:32 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 7:25:32 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:25:32 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 7:25:32 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:25:32 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:25:32 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:04 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:04 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:21 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:21 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:44 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:44 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:44 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:27:44 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:27:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:27:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\cart.json
+[1/5/2026 7:27:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data/products.json
+[1/5/2026 7:27:49 PM] [DL Error] Failed to save sample-data/products.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\sample-data\products.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:27:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core/DL/orders.json
+[1/5/2026 7:27:49 PM] [DL Error] Failed to save Core/DL/orders.json: Could not find a part of the path 'D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\Core\DL\orders.json'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
+[1/5/2026 7:27:49 PM] Attempting to save to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 7:27:49 PM] [DL Success] Saved to: D:\UET CS3\DSA\DSAL\Finals Project\DSA-Finals\DSA-Finals\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json

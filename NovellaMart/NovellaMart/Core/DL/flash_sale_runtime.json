@@ -3,7 +3,7 @@
     "131": {
       "arr": [
         {
-          "request_id": 639032155980209326,
+          "request_id": 639032376412602554,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -23,7 +23,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T13:13:18.0162633+05:00",
+            "createdAt": "2026-01-05T19:20:41.2602269+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -39,7 +39,7 @@
               "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
             ],
             "price": 9000,
-            "stock": 1,
+            "stock": 0,
             "category": {
               "category_id": 34,
               "name": "Outerwear",
@@ -55,11 +55,11 @@
               "Classic"
             ]
           },
-          "requestTime": "2026-01-05T13:13:18.0209343+05:00",
-          "allocated": false
+          "requestTime": "2026-01-05T19:20:41.2602572+05:00",
+          "allocated": true
         },
         {
-          "request_id": 639032156445026266,
+          "request_id": 639032376811643618,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -79,7 +79,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T13:14:04.502614+05:00",
+            "createdAt": "2026-01-05T19:21:21.1643452+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -95,7 +95,7 @@
               "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
             ],
             "price": 9000,
-            "stock": 1,
+            "stock": 0,
             "category": {
               "category_id": 34,
               "name": "Outerwear",
@@ -111,11 +111,11 @@
               "Classic"
             ]
           },
-          "requestTime": "2026-01-05T13:14:04.5026271+05:00",
-          "allocated": false
+          "requestTime": "2026-01-05T19:21:21.1643626+05:00",
+          "allocated": true
         },
         {
-          "request_id": 639032156489805644,
+          "request_id": 639032377007846368,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -127,7 +127,7 @@
               "AppliedPromoCode": null,
               "DiscountAmount": 0
             },
-            "user_id": 1,
+            "user_id": 4,
             "username": "",
             "email": "",
             "password": "",
@@ -135,7 +135,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T13:14:08.9805471+05:00",
+            "createdAt": "2026-01-05T19:21:40.7846178+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -151,7 +151,7 @@
               "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
             ],
             "price": 9000,
-            "stock": 1,
+            "stock": 0,
             "category": {
               "category_id": 34,
               "name": "Outerwear",
@@ -167,8 +167,8 @@
               "Classic"
             ]
           },
-          "requestTime": "2026-01-05T13:14:08.9805653+05:00",
-          "allocated": false
+          "requestTime": "2026-01-05T19:21:40.7846377+05:00",
+          "allocated": true
         },
         null,
         null,
@@ -226,7 +226,7 @@
     "132": {
       "arr": [
         {
-          "request_id": 639032155989693725,
+          "request_id": 639032376423441359,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -246,7 +246,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T13:13:18.9693555+05:00",
+            "createdAt": "2026-01-05T19:20:42.3441038+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -278,11 +278,11 @@
               "Casual"
             ]
           },
-          "requestTime": "2026-01-05T13:13:18.9693731+05:00",
+          "requestTime": "2026-01-05T19:20:42.3441366+05:00",
           "allocated": false
         },
         {
-          "request_id": 639032156455646683,
+          "request_id": 639032376817845797,
           "customer": {
             "contact": "",
             "Addresses": [],
@@ -302,7 +302,7 @@
             "firstName": "",
             "lastName": "",
             "profilePicture": "",
-            "createdAt": "2026-01-05T13:14:05.5646551+05:00",
+            "createdAt": "2026-01-05T19:21:21.7845717+05:00",
             "isActive": true,
             "phoneNumber": "",
             "address": "",
@@ -334,10 +334,65 @@
               "Casual"
             ]
           },
-          "requestTime": "2026-01-05T13:14:05.5646688+05:00",
+          "requestTime": "2026-01-05T19:21:21.7845802+05:00",
           "allocated": false
         },
-        null,
+        {
+          "request_id": 639032377015121947,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 4,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T19:21:41.5118937+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 132,
+            "name": "Denim Jacket",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+            ],
+            "price": 4500,
+            "stock": 1,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Casual"
+            ]
+          },
+          "requestTime": "2026-01-05T19:21:41.5121954+05:00",
+          "allocated": true
+        },
         null,
         null,
         null,
@@ -393,9 +448,174 @@
     },
     "133": {
       "arr": [
-        null,
-        null,
-        null,
+        {
+          "request_id": 639032376528477422,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 100,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T19:20:52.8477334+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 133,
+            "name": "Leather Jacket",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+            ],
+            "price": 7500,
+            "stock": 0,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Edgy"
+            ]
+          },
+          "requestTime": "2026-01-05T19:20:52.8477426+05:00",
+          "allocated": false
+        },
+        {
+          "request_id": 639032376824981130,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 1,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T19:21:22.4980943+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 133,
+            "name": "Leather Jacket",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+            ],
+            "price": 7500,
+            "stock": 0,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Edgy"
+            ]
+          },
+          "requestTime": "2026-01-05T19:21:22.4981137+05:00",
+          "allocated": false
+        },
+        {
+          "request_id": 639032377022834892,
+          "customer": {
+            "contact": "",
+            "Addresses": [],
+            "OrderHistory": [],
+            "Cart": {
+              "cart_id": 0,
+              "customer": null,
+              "items": [],
+              "AppliedPromoCode": null,
+              "DiscountAmount": 0
+            },
+            "user_id": 4,
+            "username": "",
+            "email": "",
+            "password": "",
+            "role": "Customer",
+            "firstName": "",
+            "lastName": "",
+            "profilePicture": "",
+            "createdAt": "2026-01-05T19:21:42.2834734+05:00",
+            "isActive": true,
+            "phoneNumber": "",
+            "address": "",
+            "city": "",
+            "zipCode": ""
+          },
+          "product": {
+            "product_id": 133,
+            "name": "Leather Jacket",
+            "description": "",
+            "images": [
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+            ],
+            "price": 7500,
+            "stock": 0,
+            "category": {
+              "category_id": 34,
+              "name": "Outerwear",
+              "parent_category_id": 3,
+              "subcategories": [],
+              "categoryTree": {
+                "Root": null
+              }
+            },
+            "tags": [
+              "Woman Wear",
+              "Outerwear",
+              "Edgy"
+            ]
+          },
+          "requestTime": "2026-01-05T19:21:42.2834896+05:00",
+          "allocated": true
+        },
         null,
         null,
         null,
@@ -451,174 +671,9 @@
     },
     "134": {
       "arr": [
-        {
-          "request_id": 639032156009683776,
-          "customer": {
-            "contact": "",
-            "Addresses": [],
-            "OrderHistory": [],
-            "Cart": {
-              "cart_id": 0,
-              "customer": null,
-              "items": [],
-              "AppliedPromoCode": null,
-              "DiscountAmount": 0
-            },
-            "user_id": 100,
-            "username": "",
-            "email": "",
-            "password": "",
-            "role": "Customer",
-            "firstName": "",
-            "lastName": "",
-            "profilePicture": "",
-            "createdAt": "2026-01-05T13:13:20.9683618+05:00",
-            "isActive": true,
-            "phoneNumber": "",
-            "address": "",
-            "city": "",
-            "zipCode": ""
-          },
-          "product": {
-            "product_id": 134,
-            "name": "Blazer",
-            "description": "",
-            "images": [
-              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
-            ],
-            "price": 6000,
-            "stock": 3,
-            "category": {
-              "category_id": 34,
-              "name": "Outerwear",
-              "parent_category_id": 3,
-              "subcategories": [],
-              "categoryTree": {
-                "Root": null
-              }
-            },
-            "tags": [
-              "Woman Wear",
-              "Outerwear",
-              "Work"
-            ]
-          },
-          "requestTime": "2026-01-05T13:13:20.9683784+05:00",
-          "allocated": false
-        },
-        {
-          "request_id": 639032156464954442,
-          "customer": {
-            "contact": "",
-            "Addresses": [],
-            "OrderHistory": [],
-            "Cart": {
-              "cart_id": 0,
-              "customer": null,
-              "items": [],
-              "AppliedPromoCode": null,
-              "DiscountAmount": 0
-            },
-            "user_id": 1,
-            "username": "",
-            "email": "",
-            "password": "",
-            "role": "Customer",
-            "firstName": "",
-            "lastName": "",
-            "profilePicture": "",
-            "createdAt": "2026-01-05T13:14:06.4954304+05:00",
-            "isActive": true,
-            "phoneNumber": "",
-            "address": "",
-            "city": "",
-            "zipCode": ""
-          },
-          "product": {
-            "product_id": 134,
-            "name": "Blazer",
-            "description": "",
-            "images": [
-              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
-            ],
-            "price": 6000,
-            "stock": 3,
-            "category": {
-              "category_id": 34,
-              "name": "Outerwear",
-              "parent_category_id": 3,
-              "subcategories": [],
-              "categoryTree": {
-                "Root": null
-              }
-            },
-            "tags": [
-              "Woman Wear",
-              "Outerwear",
-              "Work"
-            ]
-          },
-          "requestTime": "2026-01-05T13:14:06.4954449+05:00",
-          "allocated": true
-        },
-        {
-          "request_id": 639032156528167868,
-          "customer": {
-            "contact": "",
-            "Addresses": [],
-            "OrderHistory": [],
-            "Cart": {
-              "cart_id": 0,
-              "customer": null,
-              "items": [],
-              "AppliedPromoCode": null,
-              "DiscountAmount": 0
-            },
-            "user_id": 1,
-            "username": "",
-            "email": "",
-            "password": "",
-            "role": "Customer",
-            "firstName": "",
-            "lastName": "",
-            "profilePicture": "",
-            "createdAt": "2026-01-05T13:14:12.816772+05:00",
-            "isActive": true,
-            "phoneNumber": "",
-            "address": "",
-            "city": "",
-            "zipCode": ""
-          },
-          "product": {
-            "product_id": 134,
-            "name": "Blazer",
-            "description": "",
-            "images": [
-              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-              "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
-            ],
-            "price": 6000,
-            "stock": 3,
-            "category": {
-              "category_id": 34,
-              "name": "Outerwear",
-              "parent_category_id": 3,
-              "subcategories": [],
-              "categoryTree": {
-                "Root": null
-              }
-            },
-            "tags": [
-              "Woman Wear",
-              "Outerwear",
-              "Work"
-            ]
-          },
-          "requestTime": "2026-01-05T13:14:12.8167874+05:00",
-          "allocated": false
-        },
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -674,93 +729,52 @@
     }
   },
   "UserRequestStatus": {
-    "100_131": "Expired",
+    "100_131": "Ordered",
     "100_132": "Expired",
-    "100_134": "Expired",
-    "1_131": "Rejected",
-    "1_132": "Rejected",
-    "1_134": "Expired"
+    "100_133": "Expired",
+    "1_131": "Ordered",
+    "1_132": "Expired",
+    "1_133": "Expired",
+    "4_131": "Ordered",
+    "4_132": "Ordered",
+    "4_133": "Ordered"
   },
   "AllocationExpiry": {
-    "100_131": "2026-01-05T13:16:42.4037307+05:00",
-    "100_132": "2026-01-05T13:16:42.4042232+05:00",
-    "100_134": "2026-01-05T13:16:42.4042397+05:00",
-    "1_134": "2026-01-05T13:16:42.4042414+05:00"
+    "100_132": "2026-01-05T19:24:40.9062178+05:00",
+    "100_131": "2026-01-05T19:24:40.9058829+05:00",
+    "1_131": "2026-01-05T19:24:40.9059789+05:00",
+    "4_131": "2026-01-05T19:24:40.9059867+05:00",
+    "1_132": "2026-01-05T19:24:40.9064514+05:00",
+    "100_133": "2026-01-05T19:24:40.9064932+05:00",
+    "4_132": "2026-01-05T19:27:04.552211+05:00",
+    "1_133": "2026-01-05T19:27:04.5522795+05:00",
+    "4_133": "2026-01-05T19:29:21.8669201+05:00"
   },
   "InCheckoutProcess": [],
   "ActivityLogs": [
-    "[1:26 PM] Sale Finalized and Persisted to File.",
-    "[1:14 PM] Sale Finalized and Persisted to File.",
-    "[1:14:12 PM] User 1 joined queue for Blazer",
-    "[1:14:12 PM] User 1 LEFT queue for Product 134",
-    "[1:14:08 PM] User 1 joined queue for Trench Coat",
-    "[1:14:08 PM] User 1 LEFT queue for Product 131",
-    "[1:14:06 PM] User 1 joined queue for Blazer",
-    "[1:14:05 PM] User 1 joined queue for Denim Jacket",
-    "[1:14:04 PM] User 1 joined queue for Trench Coat",
-    "[1:13:21 PM] User 100 joined queue for Blazer",
-    "[1:13:18 PM] User 100 joined queue for Denim Jacket",
-    "[1:13:18 PM] User 100 joined queue for Trench Coat"
+    "[7:27 PM] Product 133 assigned to User 4",
+    "[7:25 PM] Product 133 assigned to User 1",
+    "[7:25 PM] Product 132 assigned to User 4",
+    "[7:22 PM] Product 133 assigned to User 100",
+    "[7:22 PM] Product 132 assigned to User 1",
+    "[7:22 PM] Product 132 assigned to User 100",
+    "[7:22 PM] Product 131 assigned to User 4",
+    "[7:22 PM] Product 131 assigned to User 1",
+    "[7:22 PM] Product 131 assigned to User 100",
+    "[7:21:42 PM] User 4 joined queue for Leather Jacket",
+    "[7:21:41 PM] User 4 joined queue for Denim Jacket",
+    "[7:21:40 PM] User 4 joined queue for Trench Coat",
+    "[7:21:22 PM] User 1 joined queue for Leather Jacket",
+    "[7:21:21 PM] User 1 joined queue for Denim Jacket",
+    "[7:21:21 PM] User 1 joined queue for Trench Coat",
+    "[7:20:52 PM] User 100 joined queue for Leather Jacket",
+    "[7:20:41 PM] User 100 joined queue for Trench Coat",
+    "[7:17 PM] Product 132 assigned to User 100",
+    "[7:16:57 PM] User 100 joined queue for Denim Jacket"
   ],
   "ActiveRequests": {
-    "100_131": {
-      "request_id": 639032155980209326,
-      "customer": {
-        "contact": "",
-        "Addresses": [],
-        "OrderHistory": [],
-        "Cart": {
-          "cart_id": 0,
-          "customer": null,
-          "items": [],
-          "AppliedPromoCode": null,
-          "DiscountAmount": 0
-        },
-        "user_id": 100,
-        "username": "",
-        "email": "",
-        "password": "",
-        "role": "Customer",
-        "firstName": "",
-        "lastName": "",
-        "profilePicture": "",
-        "createdAt": "2026-01-05T13:13:18.0162633+05:00",
-        "isActive": true,
-        "phoneNumber": "",
-        "address": "",
-        "city": "",
-        "zipCode": ""
-      },
-      "product": {
-        "product_id": 131,
-        "name": "Trench Coat",
-        "description": "",
-        "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
-        ],
-        "price": 9000,
-        "stock": 1,
-        "category": {
-          "category_id": 34,
-          "name": "Outerwear",
-          "parent_category_id": 3,
-          "subcategories": [],
-          "categoryTree": {
-            "Root": null
-          }
-        },
-        "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "Classic"
-        ]
-      },
-      "requestTime": "2026-01-05T13:13:18.0209343+05:00",
-      "allocated": false
-    },
     "100_132": {
-      "request_id": 639032155989693725,
+      "request_id": 639032376423441359,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -780,7 +794,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T13:13:18.9693555+05:00",
+        "createdAt": "2026-01-05T19:20:42.3441038+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -812,11 +826,11 @@
           "Casual"
         ]
       },
-      "requestTime": "2026-01-05T13:13:18.9693731+05:00",
+      "requestTime": "2026-01-05T19:20:42.3441366+05:00",
       "allocated": false
     },
-    "100_134": {
-      "request_id": 639032156009683776,
+    "100_131": {
+      "request_id": 639032376412602554,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -836,7 +850,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T13:13:20.9683618+05:00",
+        "createdAt": "2026-01-05T19:20:41.2602269+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -844,15 +858,15 @@
         "zipCode": ""
       },
       "product": {
-        "product_id": 134,
-        "name": "Blazer",
+        "product_id": 131,
+        "name": "Trench Coat",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
         ],
-        "price": 6000,
-        "stock": 3,
+        "price": 9000,
+        "stock": 0,
         "category": {
           "category_id": 34,
           "name": "Outerwear",
@@ -865,14 +879,70 @@
         "tags": [
           "Woman Wear",
           "Outerwear",
-          "Work"
+          "Classic"
         ]
       },
-      "requestTime": "2026-01-05T13:13:20.9683784+05:00",
+      "requestTime": "2026-01-05T19:20:41.2602572+05:00",
+      "allocated": true
+    },
+    "100_133": {
+      "request_id": 639032376528477422,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 100,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T19:20:52.8477334+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 133,
+        "name": "Leather Jacket",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+        ],
+        "price": 7500,
+        "stock": 0,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Edgy"
+        ]
+      },
+      "requestTime": "2026-01-05T19:20:52.8477426+05:00",
       "allocated": false
     },
     "1_131": {
-      "request_id": 639032156489805644,
+      "request_id": 639032376811643618,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -892,7 +962,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T13:14:08.9805471+05:00",
+        "createdAt": "2026-01-05T19:21:21.1643452+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -908,7 +978,7 @@
           "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
         ],
         "price": 9000,
-        "stock": 1,
+        "stock": 0,
         "category": {
           "category_id": 34,
           "name": "Outerwear",
@@ -924,11 +994,11 @@
           "Classic"
         ]
       },
-      "requestTime": "2026-01-05T13:14:08.9805653+05:00",
-      "allocated": false
+      "requestTime": "2026-01-05T19:21:21.1643626+05:00",
+      "allocated": true
     },
     "1_132": {
-      "request_id": 639032156455646683,
+      "request_id": 639032376817845797,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -948,7 +1018,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T13:14:05.5646551+05:00",
+        "createdAt": "2026-01-05T19:21:21.7845717+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -980,11 +1050,11 @@
           "Casual"
         ]
       },
-      "requestTime": "2026-01-05T13:14:05.5646688+05:00",
+      "requestTime": "2026-01-05T19:21:21.7845802+05:00",
       "allocated": false
     },
-    "1_134": {
-      "request_id": 639032156528167868,
+    "1_133": {
+      "request_id": 639032376824981130,
       "customer": {
         "contact": "",
         "Addresses": [],
@@ -1004,7 +1074,7 @@
         "firstName": "",
         "lastName": "",
         "profilePicture": "",
-        "createdAt": "2026-01-05T13:14:12.816772+05:00",
+        "createdAt": "2026-01-05T19:21:22.4980943+05:00",
         "isActive": true,
         "phoneNumber": "",
         "address": "",
@@ -1012,15 +1082,15 @@
         "zipCode": ""
       },
       "product": {
-        "product_id": 134,
-        "name": "Blazer",
+        "product_id": 133,
+        "name": "Leather Jacket",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
         ],
-        "price": 6000,
-        "stock": 3,
+        "price": 7500,
+        "stock": 0,
         "category": {
           "category_id": 34,
           "name": "Outerwear",
@@ -1033,11 +1103,179 @@
         "tags": [
           "Woman Wear",
           "Outerwear",
-          "Work"
+          "Edgy"
         ]
       },
-      "requestTime": "2026-01-05T13:14:12.8167874+05:00",
+      "requestTime": "2026-01-05T19:21:22.4981137+05:00",
       "allocated": false
+    },
+    "4_131": {
+      "request_id": 639032377007846368,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 4,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T19:21:40.7846178+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 131,
+        "name": "Trench Coat",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
+        ],
+        "price": 9000,
+        "stock": 0,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Classic"
+        ]
+      },
+      "requestTime": "2026-01-05T19:21:40.7846377+05:00",
+      "allocated": true
+    },
+    "4_132": {
+      "request_id": 639032377015121947,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 4,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T19:21:41.5118937+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 132,
+        "name": "Denim Jacket",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+        ],
+        "price": 4500,
+        "stock": 1,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Casual"
+        ]
+      },
+      "requestTime": "2026-01-05T19:21:41.5121954+05:00",
+      "allocated": true
+    },
+    "4_133": {
+      "request_id": 639032377022834892,
+      "customer": {
+        "contact": "",
+        "Addresses": [],
+        "OrderHistory": [],
+        "Cart": {
+          "cart_id": 0,
+          "customer": null,
+          "items": [],
+          "AppliedPromoCode": null,
+          "DiscountAmount": 0
+        },
+        "user_id": 4,
+        "username": "",
+        "email": "",
+        "password": "",
+        "role": "Customer",
+        "firstName": "",
+        "lastName": "",
+        "profilePicture": "",
+        "createdAt": "2026-01-05T19:21:42.2834734+05:00",
+        "isActive": true,
+        "phoneNumber": "",
+        "address": "",
+        "city": "",
+        "zipCode": ""
+      },
+      "product": {
+        "product_id": 133,
+        "name": "Leather Jacket",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
+          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+        ],
+        "price": 7500,
+        "stock": 0,
+        "category": {
+          "category_id": 34,
+          "name": "Outerwear",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Outerwear",
+          "Edgy"
+        ]
+      },
+      "requestTime": "2026-01-05T19:21:42.2834896+05:00",
+      "allocated": true
     }
   }
 }

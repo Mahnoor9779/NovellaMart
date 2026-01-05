@@ -122,8 +122,8 @@ namespace NovellaMart.Core.BL.Services
 
                 // 1. Locate the product in the master list to permanently reduce stock
                 // Assuming CatalogService is available or using a shared static list
-                var masterProduct = _catalogService.MasterProductList.FirstOrDefault(p => p.product_id == productId);
 
+                var masterProduct = _catalogService.MasterProductList.FirstOrDefault(p => p.product_id == productId);
                 if (masterProduct != null)
                 {
                     masterProduct.stock -= purchasedQty; // Decrement master stock
@@ -134,6 +134,7 @@ namespace NovellaMart.Core.BL.Services
 
             // 5. Persist the updated stock and the new order [cite: 165]
             FileHandler.SaveData("sample-data/products.json", _catalogService.MasterProductList);
+
             _allOrders.InsertAtEnd(newOrder);
             FileHandler.SaveData(FilePath, _allOrders);
 

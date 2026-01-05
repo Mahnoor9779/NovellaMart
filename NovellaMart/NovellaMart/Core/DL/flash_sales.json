@@ -1,11 +1,11 @@
 [
   {
-    "flash_sale_id": 1,
-    "title": "Winter Sale!",
+    "flash_sale_id": 2,
+    "title": "Winter Sale",
     "description": "Upto 50% Off",
     "discount": 50,
-    "startTime": "2026-01-05T13:12:22.9209018+05:00",
-    "endTime": "2026-01-05T14:12:22.9209021+05:00",
+    "startTime": "2026-01-05T19:17:18.8324071+05:00",
+    "endTime": "2026-01-05T20:17:18.8324073+05:00",
     "status": "ACTIVE",
     "fs_items": [
       {
@@ -17,7 +17,7 @@
           "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
         ],
         "price": 9000,
-        "stock": 1,
+        "stock": 3,
         "category": {
           "category_id": 34,
           "name": "Outerwear",
@@ -42,7 +42,7 @@
           "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
         ],
         "price": 4500,
-        "stock": 1,
+        "stock": 2,
         "category": {
           "category_id": 34,
           "name": "Outerwear",
@@ -92,7 +92,7 @@
           "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
         ],
         "price": 6000,
-        "stock": 3,
+        "stock": 2,
         "category": {
           "category_id": 34,
           "name": "Outerwear",
@@ -220,122 +220,12 @@
     "allocation_heap": {
       "heap": [
         {
-          "Item1": {
-            "request_id": 639032156464954442,
-            "customer": {
-              "contact": "",
-              "Addresses": [],
-              "OrderHistory": [],
-              "Cart": {
-                "cart_id": 0,
-                "customer": null,
-                "items": [],
-                "AppliedPromoCode": null,
-                "DiscountAmount": 0
-              },
-              "user_id": 1,
-              "username": "",
-              "email": "",
-              "password": "",
-              "role": "Customer",
-              "firstName": "",
-              "lastName": "",
-              "profilePicture": "",
-              "createdAt": "2026-01-05T13:14:06.4954304+05:00",
-              "isActive": true,
-              "phoneNumber": "",
-              "address": "",
-              "city": "",
-              "zipCode": ""
-            },
-            "product": {
-              "product_id": 134,
-              "name": "Blazer",
-              "description": "",
-              "images": [
-                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
-              ],
-              "price": 6000,
-              "stock": 3,
-              "category": {
-                "category_id": 34,
-                "name": "Outerwear",
-                "parent_category_id": 3,
-                "subcategories": [],
-                "categoryTree": {
-                  "Root": null
-                }
-              },
-              "tags": [
-                "Woman Wear",
-                "Outerwear",
-                "Work"
-              ]
-            },
-            "requestTime": "2026-01-05T13:14:06.4954449+05:00",
-            "allocated": true
-          },
-          "Item2": -639032156464954449
+          "Item1": null,
+          "Item2": 0
         },
         {
-          "Item1": {
-            "request_id": 639032156464954442,
-            "customer": {
-              "contact": "",
-              "Addresses": [],
-              "OrderHistory": [],
-              "Cart": {
-                "cart_id": 0,
-                "customer": null,
-                "items": [],
-                "AppliedPromoCode": null,
-                "DiscountAmount": 0
-              },
-              "user_id": 1,
-              "username": "",
-              "email": "",
-              "password": "",
-              "role": "Customer",
-              "firstName": "",
-              "lastName": "",
-              "profilePicture": "",
-              "createdAt": "2026-01-05T13:14:06.4954304+05:00",
-              "isActive": true,
-              "phoneNumber": "",
-              "address": "",
-              "city": "",
-              "zipCode": ""
-            },
-            "product": {
-              "product_id": 134,
-              "name": "Blazer",
-              "description": "",
-              "images": [
-                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-                "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
-              ],
-              "price": 6000,
-              "stock": 3,
-              "category": {
-                "category_id": 34,
-                "name": "Outerwear",
-                "parent_category_id": 3,
-                "subcategories": [],
-                "categoryTree": {
-                  "Root": null
-                }
-              },
-              "tags": [
-                "Woman Wear",
-                "Outerwear",
-                "Work"
-              ]
-            },
-            "requestTime": "2026-01-05T13:14:06.4954449+05:00",
-            "allocated": true
-          },
-          "Item2": -639032156464954449
+          "Item1": null,
+          "Item2": 0
         },
         {
           "Item1": null,
