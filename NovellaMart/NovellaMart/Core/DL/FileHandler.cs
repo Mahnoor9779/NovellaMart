@@ -43,10 +43,14 @@ namespace NovellaMart.Core.DL
         // Generic Save Method
         public static void SaveData<T>(string filename, T data)
         {
+            // --- DEBUG LOGGING ---
+            string logPath = Path.Combine(FolderPath, "debug_log.txt");
             try
             {
                 if (!filename.EndsWith(".json")) filename += ".json";
                 string fullPath = Path.Combine(FolderPath, filename);
+                
+                File.AppendAllText(logPath, $"[{DateTime.Now}] Attempting to save to: {fullPath}\n");
 
                 var options = new JsonSerializerOptions
                 {
@@ -63,11 +67,15 @@ namespace NovellaMart.Core.DL
                 string jsonString = JsonSerializer.Serialize(data, options);
                 File.WriteAllText(fullPath, jsonString);
 
-                Console.WriteLine($"[DL Success] Saved to: {fullPath}");
+                string successMsg = $"[{DateTime.Now}] [DL Success] Saved to: {fullPath}\n";
+                Console.WriteLine(successMsg);
+                File.AppendAllText(logPath, successMsg);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[DL Error] Failed to save {filename}: {ex.Message}");
+                string errorMsg = $"[{DateTime.Now}] [DL Error] Failed to save {filename}: {ex.Message}\nStack Trace: {ex.StackTrace}\n";
+                Console.WriteLine(errorMsg);
+                try { File.AppendAllText(logPath, errorMsg); } catch { }
             }
         }
 

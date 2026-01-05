@@ -1,4 +1,4 @@
-@page "/orders"
+@page "/orders-old"
 @using System.IO
 @using System.Text.Json
 @using NovellaMart
@@ -12,7 +12,6 @@
 <PageTitle>My Orders - NovellaMart</PageTitle>
 
 <div class="profile-wrapper">
-    <!-- SIDEBAR (Replicated from Profile.razor for consistency) -->
     <aside class="sidebar">
         <div class="sidebar-user">
             <img src="@GetProfileImage(50)" class="sidebar-avatar" />
@@ -112,8 +111,6 @@
     private bool isLoading = true;
 
     private MyLinkedList<OrderBL> myOrders;
-    // Keeping users.json path for consistency if needed for extra user details, 
-    // but we use session for primary email retrieval.
     private string userFilePath = "Core/DL/users.json"; 
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -130,10 +127,8 @@
         string currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
         if (string.IsNullOrEmpty(currentUser)) { Nav.NavigateTo("/login"); return; }
         
-        username = currentUser; // Default
+        username = currentUser; 
         
-        // 1. Fetch User Details to get Email
-        // (Reusing logic from Profile.razor to get full user object)
         if (File.Exists(userFilePath))
         {
             var json = await File.ReadAllTextAsync(userFilePath);
@@ -149,14 +144,12 @@
             }
         }
 
-        // 2. Fetch Orders using Email
         if (!string.IsNullOrEmpty(email))
         {
             myOrders = OrderService.GetOrdersByEmail(email);
         }
         else 
         {
-            // Fallback if no email found (shouldn't happen for valid users)
             myOrders = new MyLinkedList<OrderBL>();
         }
 

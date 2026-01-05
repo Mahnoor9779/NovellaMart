@@ -81,7 +81,7 @@
                 <div class="icon-box" style="background: #f3e5f5; color: #ab47bc;">👥</div>
                 <div>
                     <h5 class="text-muted mb-1">Customers</h5>
-                    <h3 class="fw-bold mb-0">324</h3>
+                    <h3 class="fw-bold mb-0">@TotalCustomers</h3>
                 </div>
             </div>
         </div>
@@ -175,6 +175,7 @@
 
     private int TotalProducts = 0;
     private int TotalOrders = 0;
+    private int TotalCustomers = 0;
     private double TotalRevenue = 0;
     private List<OrderBL> RecentOrders = new();
     private List<PromoCodeBL> PromoList = new();
@@ -187,6 +188,19 @@
         await ProductService.LoadProductsAsync();
         Console.WriteLine($"DEBUG ADMIN: Loaded Products. Count: {ProductService.MasterProductList.Count()}");
         TotalProducts = ProductService.MasterProductList.Count(); // Fix: use .Count() method
+
+        try
+        {
+            var allUsers = NovellaMart.Core.DL.FileHandler.LoadData<List<UserBL>>("users.json");
+            if (allUsers != null)
+            {
+                TotalCustomers = allUsers.Count(u => u.role != "Admin");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Admin Dashboard] Error loading users: {ex.Message}");
+        }
 
         var ordersList = OrderService.GetAllOrders();
         Console.WriteLine($"DEBUG ADMIN: Loaded Orders. Count: {ordersList.Count()}");
