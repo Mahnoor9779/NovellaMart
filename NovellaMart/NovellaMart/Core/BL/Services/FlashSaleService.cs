@@ -16,6 +16,7 @@ namespace NovellaMart.Core.BL.Services
         private List<string> _activityLogs;
         private readonly FlashSaleCrudService _crudService;
         private Dictionary<string, CustomerRequestBL> _activeRequests;
+        private int _loadedFlashSaleId = 0;
 
         public FlashSaleService(FlashSaleCrudService crudService)
         {
@@ -31,7 +32,9 @@ namespace NovellaMart.Core.BL.Services
                 _allocationExpiry = loadedData.AllocationExpiry ?? new Dictionary<string, DateTime>();
                 _inCheckoutProcess = loadedData.InCheckoutProcess ?? new HashSet<string>();
                 _activityLogs = loadedData.ActivityLogs ?? new List<string>();
+                _activityLogs = loadedData.ActivityLogs ?? new List<string>();
                 _activeRequests = loadedData.ActiveRequests ?? new Dictionary<string, CustomerRequestBL>();
+                _loadedFlashSaleId = loadedData.ActiveFlashSaleId;
             }
             else
             {
@@ -52,7 +55,10 @@ namespace NovellaMart.Core.BL.Services
                 AllocationExpiry = _allocationExpiry,
                 InCheckoutProcess = _inCheckoutProcess,
                 ActivityLogs = _activityLogs,
-                ActiveRequests = _activeRequests
+                InCheckoutProcess = _inCheckoutProcess,
+                ActivityLogs = _activityLogs,
+                ActiveRequests = _activeRequests,
+                ActiveFlashSaleId = _activeSale?.flash_sale_id ?? 0
             };
             NovellaMart.Core.DL.FileHandler.SaveData("flash_sale_runtime.json", data);
         }
@@ -67,9 +73,17 @@ namespace NovellaMart.Core.BL.Services
                 return;
             }
 
+            // If we are loading the same sale that was saved, don't wipe data
+            bool isResuming = (_activeSale == null && sale.flash_sale_id == _loadedFlashSaleId);
+
             _activeSale = sale;
-            _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
-            _userRequestStatus = new Dictionary<string, string>();
+
+            // Only reset if it's a completely new sale
+            if (!isResuming)
+            {
+                _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
+                _userRequestStatus = new Dictionary<string, string>();
+            }
 
             if (_activeSale.fs_items == null) return;
 

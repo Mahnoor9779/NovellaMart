@@ -15,5 +15,6 @@ namespace NovellaMart.Core.BL.Model_Classes
         public List<string> ActivityLogs { get; set; } = new();
         // We also need ActiveRequests because UserRequestStatus keys (strings) map to these objects
         public Dictionary<string, CustomerRequestBL> ActiveRequests { get; set; } = new(); 
+        public int ActiveFlashSaleId { get; set; } // Tracks which sale this data belongs to 
     }
 }

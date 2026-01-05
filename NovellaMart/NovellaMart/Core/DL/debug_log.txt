@@ -1159,3 +1159,9 @@ Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String 
    at NovellaMart.Core.DL.FileHandler.SaveData[T](String filename, T data) in D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\FileHandler.cs:line 68
 [1/5/2026 10:18:33 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\orders.json
 [1/5/2026 10:18:33 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\orders.json
+[1/5/2026 10:43:33 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 10:43:33 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 10:44:09 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 10:44:09 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sales.json
+[1/5/2026 10:47:23 PM] Attempting to save to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json
+[1/5/2026 10:47:23 PM] [DL Success] Saved to: D:\Data\Semester 3\DSA\Final Project\Repo1.0\NovellaMart\NovellaMart\Core\DL\flash_sale_runtime.json

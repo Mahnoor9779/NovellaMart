@@ -1,76 +1,650 @@
 [
   {
-    "flash_sale_id": 2,
-    "title": "Winter Sale",
-    "description": "Upto 50% Off",
-    "discount": 50,
-    "startTime": "2026-01-05T19:17:18.8324071+05:00",
-    "endTime": "2026-01-05T20:17:18.8324073+05:00",
+    "flash_sale_id": 1,
+    "title": "1",
+    "description": "ewfwf",
+    "discount": 23,
+    "startTime": "2026-01-05T22:42:38.7083644+05:00",
+    "endTime": "2026-01-05T23:00:00",
     "status": "ACTIVE",
     "fs_items": [
       {
-        "product_id": 131,
-        "name": "Trench Coat",
+        "product_id": 6,
+        "name": "Oil Control Face Wash",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=131",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=231"
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=6",
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=106"
         ],
-        "price": 9000,
+        "price": 1400,
+        "stock": 2,
+        "category": {
+          "category_id": 11,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Oil Control"
+        ]
+      },
+      {
+        "product_id": 5,
+        "name": "Micellar Water",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=5",
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=105"
+        ],
+        "price": 900,
         "stock": 3,
         "category": {
-          "category_id": 34,
-          "name": "Outerwear",
-          "parent_category_id": 3,
+          "category_id": 11,
+          "name": "Cleansers",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "Classic"
+          "Skincare",
+          "Cleansers",
+          "Water"
         ]
       },
       {
-        "product_id": 132,
-        "name": "Denim Jacket",
+        "product_id": 4,
+        "name": "Exfoliating Scrub",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=132",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=232"
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=4",
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=104"
         ],
-        "price": 4500,
+        "price": 1600,
+        "stock": 3,
+        "category": {
+          "category_id": 11,
+          "name": "Cleansers",
+          "parent_category_id": 1,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Skincare",
+          "Cleansers",
+          "Scrub"
+        ]
+      },
+      {
+        "product_id": 7,
+        "name": "Creamy Face Soap",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=7",
+          "https://loremflickr.com/500/500/skincare,cleanser?lock=107"
+        ],
+        "price": 1100,
         "stock": 2,
         "category": {
-          "category_id": 34,
-          "name": "Outerwear",
-          "parent_category_id": 3,
+          "category_id": 11,
+          "name": "Cleansers",
+          "parent_category_id": 1,
           "subcategories": [],
           "categoryTree": {
             "Root": null
           }
         },
         "tags": [
-          "Woman Wear",
-          "Outerwear",
-          "Casual"
+          "Skincare",
+          "Cleansers",
+          "Soap"
         ]
-      },
+      }
+    ],
+    "request_queue": {
+      "arr": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "front": -1,
+      "rear": -1,
+      "capacity": 100,
+      "size": 0
+    },
+    "allocation_heap": {
+      "heap": [
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        },
+        {
+          "Item1": null,
+          "Item2": 0
+        }
+      ],
+      "size": 0
+    }
+  },
+  {
+    "flash_sale_id": 2,
+    "title": "2",
+    "description": "2",
+    "discount": 12,
+    "startTime": "2026-01-05T22:43:38.3471137+05:00",
+    "endTime": "2026-01-05T23:43:38.3471138+05:00",
+    "status": "ACTIVE",
+    "fs_items": [
       {
-        "product_id": 133,
-        "name": "Leather Jacket",
+        "product_id": 114,
+        "name": "Knitted Sweater",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=133",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=233"
+          "https://loremflickr.com/500/500/woman%20wear,top?lock=114",
+          "https://loremflickr.com/500/500/woman%20wear,top?lock=214"
         ],
-        "price": 7500,
+        "price": 4000,
         "stock": 1,
         "category": {
-          "category_id": 34,
-          "name": "Outerwear",
+          "category_id": 32,
+          "name": "Tops",
           "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
@@ -79,23 +653,23 @@
         },
         "tags": [
           "Woman Wear",
-          "Outerwear",
-          "Edgy"
+          "Tops",
+          "Winter"
         ]
       },
       {
-        "product_id": 134,
-        "name": "Blazer",
+        "product_id": 113,
+        "name": "Crop Top",
         "description": "",
         "images": [
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=134",
-          "https://loremflickr.com/500/500/woman%20wear,outerwear?lock=234"
+          "https://loremflickr.com/500/500/woman%20wear,top?lock=113",
+          "https://loremflickr.com/500/500/woman%20wear,top?lock=213"
         ],
-        "price": 6000,
-        "stock": 2,
+        "price": 1000,
+        "stock": 3,
         "category": {
-          "category_id": 34,
-          "name": "Outerwear",
+          "category_id": 32,
+          "name": "Tops",
           "parent_category_id": 3,
           "subcategories": [],
           "categoryTree": {
@@ -104,8 +678,33 @@
         },
         "tags": [
           "Woman Wear",
-          "Outerwear",
-          "Work"
+          "Tops",
+          "Crop"
+        ]
+      },
+      {
+        "product_id": 115,
+        "name": "Graphic Tee",
+        "description": "",
+        "images": [
+          "https://loremflickr.com/500/500/woman%20wear,top?lock=115",
+          "https://loremflickr.com/500/500/woman%20wear,top?lock=215"
+        ],
+        "price": 1500,
+        "stock": 1,
+        "category": {
+          "category_id": 32,
+          "name": "Tops",
+          "parent_category_id": 3,
+          "subcategories": [],
+          "categoryTree": {
+            "Root": null
+          }
+        },
+        "tags": [
+          "Woman Wear",
+          "Tops",
+          "Graphic"
         ]
       }
     ],
