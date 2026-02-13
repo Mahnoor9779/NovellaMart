@@ -1,7 +1,6 @@
 ﻿using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.BL.Data_Structures;
 
-//FlashSaleBL Sale Service
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleService
@@ -12,7 +11,6 @@ namespace NovellaMart.Core.BL.Services
         private Dictionary<string, DateTime> _allocationExpiry;
         private HashSet<string> _inCheckoutProcess = new();
 
-        // In-memory logs only (No File Handling)
         private List<string> _activityLogs;
         private readonly FlashSaleCrudService _crudService;
         private Dictionary<string, CustomerRequestBL> _activeRequests;
@@ -22,7 +20,6 @@ namespace NovellaMart.Core.BL.Services
         {
             _crudService = crudService;
             
-            // Try loading state from file
             var loadedData = NovellaMart.Core.DL.FileHandler.LoadData<FlashSaleRuntimeData>("flash_sale_runtime.json");
             
             if (loadedData != null)
@@ -64,18 +61,15 @@ namespace NovellaMart.Core.BL.Services
         {
             if (sale == null) return;
 
-            // FIX: Only re-initialize if it's a NEW or DIFFERENT sale
             if (_activeSale != null && _activeSale.flash_sale_id == sale.flash_sale_id)
             {
                 return;
             }
 
-            // If we are loading the same sale that was saved, don't wipe data
             bool isResuming = (_activeSale == null && sale.flash_sale_id == _loadedFlashSaleId);
 
             _activeSale = sale;
 
-            // Only reset if it's a completely new sale
             if (!isResuming)
             {
                 _productQueues = new Dictionary<int, CircularQueue<CustomerRequestBL>>();
@@ -136,7 +130,6 @@ namespace NovellaMart.Core.BL.Services
             return "Queued";
         }
 
-        // NEW: Call this method when the Sale Ends to process the priority heap
         public void FinalizeAllocations()
         {
             if (_activeSale == null) return;
@@ -145,7 +138,6 @@ namespace NovellaMart.Core.BL.Services
             {
                 var bufferQueue = _productQueues[productId];
 
-                // 1. DRAIN THE QUEUE: Move people from the Circular Queue to the Status Dictionary
                 while (!bufferQueue.IsEmpty())
                 {
                     var request = bufferQueue.Dequeue();
@@ -154,23 +146,20 @@ namespace NovellaMart.Core.BL.Services
 
                     if (!_userRequestStatus.ContainsKey(statusKey) || _userRequestStatus[statusKey] == "Queued")
                     {
-                        _userRequestStatus[statusKey] = "Rejected"; // Mark as Rejected so they are eligible for the Heap
+                        _userRequestStatus[statusKey] = "Rejected";
                         _activeRequests[statusKey] = request;
                     }
                 }
 
-                // 2. FORCE RE-STATUS: Also convert any existing "Queued" entries to "Rejected"
                 var queuedKeys = _userRequestStatus.Where(x => x.Value == "Queued" && x.Key.EndsWith($"_{productId}")).ToList();
                 foreach (var key in queuedKeys)
                 {
                     _userRequestStatus[key.Key] = "Rejected";
                 }
 
-                // 3. Run the assignment
                 PerformStockAssignment(productId);
             }
 
-            // 3. Global Sale Status Management
             if (DateTime.Now >= _activeSale.endTime)
             {
                 _activeSale.status = "ENDED";
@@ -182,7 +171,6 @@ namespace NovellaMart.Core.BL.Services
 
         public void PerformStockAssignment(int productId)
         {
-            // 1. Locate the product node in the custom Linked List to check live stock
             ProductBL liveProduct = null;
             var node = _activeSale.fs_items.head;
             while (node != null)
@@ -191,14 +179,10 @@ namespace NovellaMart.Core.BL.Services
                 node = node.Next;
             }
 
-            // If no stock is available (none left, or none returned from expiry), stop.
             if (liveProduct == null || liveProduct.stock <= 0) return;
 
-            // 2. REFILL HEAP: Prepare the priority queue for this specific assignment pass
             while (!_activeSale.allocation_heap.IsEmpty()) _activeSale.allocation_heap.Dequeue();
 
-            // Find everyone currently "Rejected". 
-            // CRITICAL: This excludes "Expired" users, meaning they never get re-added to the heap.
             var eligibleKeys = _userRequestStatus
                 .Where(x => x.Key.EndsWith($"_{productId}") && x.Value == "Rejected")
                 .ToList();
@@ -207,12 +191,10 @@ namespace NovellaMart.Core.BL.Services
             {
                 if (_activeRequests.TryGetValue(entry.Key, out var request))
                 {
-                    // Enqueue into Heap using join time Ticks (Fairness Engine)
                     _activeSale.allocation_heap.Enqueue(request, request.requestTime.Ticks);
                 }
             }
 
-            // 3. ALLOCATION LOOP: Assign stock until product is empty or heap is empty
             while (liveProduct.stock > 0 && !_activeSale.allocation_heap.IsEmpty())
             {
                 var winner = _activeSale.allocation_heap.Dequeue();
@@ -221,13 +203,12 @@ namespace NovellaMart.Core.BL.Services
                 liveProduct.stock--;
                 winner.allocated = true;
                 _userRequestStatus[key] = "Allocated";
-                _allocationExpiry[key] = DateTime.Now.AddMinutes(2); // Give them their checkout window
+                _allocationExpiry[key] = DateTime.Now.AddMinutes(2);
 
                 AddLog($"[{DateTime.Now.ToShortTimeString()}] Product {productId} assigned to User {winner.customer.user_id}");
             }
         }
 
-        // --- UNJOIN LOGIC ---
         public void LeaveFlashSaleQueue(int userId, int productId)
         {
             string statusKey = $"{userId}_{productId}";
@@ -245,7 +226,6 @@ namespace NovellaMart.Core.BL.Services
         {
             _activityLogs.Insert(0, message);
             if (_activityLogs.Count > 50) _activityLogs.RemoveAt(_activityLogs.Count - 1);
-            // File saving removed
         }
 
         public string GetUserStatus(int userId, int productId)
@@ -263,12 +243,6 @@ namespace NovellaMart.Core.BL.Services
 
         public int GetTotalQueueCount(int productId)
         {
-            //int total = 0;
-            //foreach (var queue in _productQueues.Values)
-            //{
-            //    total += queue.Size();
-            //}
-            //return total;
             return _userRequestStatus.Count(x => x.Value == "Queued");
         }
 
@@ -289,8 +263,6 @@ namespace NovellaMart.Core.BL.Services
                 .Select(x => {
                     if (_activeRequests.TryGetValue(x.Key, out var storedRequest))
                     {
-                        // CRITICAL: We must ensure the object's internal allocated 
-                        // state matches the Dictionary's "Ordered" or "Allocated" state
                         var currentStatus = x.Value;
                         storedRequest.allocated = (currentStatus == "Allocated" || currentStatus == "Ordered");
                         return storedRequest;
@@ -303,13 +275,11 @@ namespace NovellaMart.Core.BL.Services
 
         public List<CustomerRequestBL> GetQueueSnapshotAllocation(int productId)
         {
-            // Ensure this returns everyone, including winners
             return _userRequestStatus
                 .Where(x => x.Key.EndsWith($"_{productId}"))
                 .Select(x => {
                     if (_activeRequests.TryGetValue(x.Key, out var storedRequest))
                     {
-                        // Sync the allocated boolean based on the dictionary status
                         storedRequest.allocated = (_userRequestStatus[x.Key] == "Allocated");
                         return storedRequest;
                     }
@@ -323,7 +293,7 @@ namespace NovellaMart.Core.BL.Services
         {
             string key = $"{userId}_{productId}";
             _inCheckoutProcess.Add(key);
-            SaveRuntimeState(); // PERSISTENCE
+            SaveRuntimeState();
         }
 
         public bool IsAlreadyInCheckout(int userId, int productId)
@@ -340,14 +310,12 @@ namespace NovellaMart.Core.BL.Services
 
             foreach (var key in keysToRelease)
             {
-                // FIX: If the user already bought it, don't return the stock!
                 if (_userRequestStatus.ContainsKey(key) && _userRequestStatus[key] == "Ordered")
                     continue;
 
                 var parts = key.Split('_');
                 int productId = int.Parse(parts[1]);
 
-                // 1. Return stock
                 var node = _activeSale?.fs_items?.head;
                 while (node != null)
                 {
@@ -355,13 +323,11 @@ namespace NovellaMart.Core.BL.Services
                     node = node.Next;
                 }
 
-                // 2. IMPORTANT: Clear the checkout lock so the next winner isn't blocked
                 _inCheckoutProcess.Remove(key);
 
-                // 3. Mark as Expired
                 _userRequestStatus[key] = "Expired";
             }
-            if(keysToRelease.Count > 0) SaveRuntimeState(); // PERSISTENCE
+            if(keysToRelease.Count > 0) SaveRuntimeState();
         }
 
         public void MarkAsOrdered(int userId, int productId)
@@ -370,7 +336,7 @@ namespace NovellaMart.Core.BL.Services
             if (_userRequestStatus.ContainsKey(key))
             {
                 _userRequestStatus[key] = "Ordered";
-                _inCheckoutProcess.Remove(key); // Unlock the checkout
+                _inCheckoutProcess.Remove(key);
                 SaveRuntimeState();
             }
         }

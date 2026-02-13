@@ -1,8 +1,4 @@
-﻿/* =========================================
-   15. ORDER HISTORY PAGE
-   ========================================= */
-
-.orders-container {
+﻿.orders-container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
@@ -13,13 +9,13 @@
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     padding: 2rem;
-    border-top: 5px solid var(--nm-secondary); /* Yellow Top Bar */
+    border-top: 5px solid var(--nm-secondary);
 }
 
 .orders-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 10px; /* Space between rows */
+    border-spacing: 0 10px;
 }
 
     .orders-table th {
@@ -39,13 +35,11 @@
         border-bottom: 1px solid #f9f9f9;
     }
 
-    /* Row Hover Effect */
     .orders-table tbody tr:hover td {
-        background-color: #fffde7; /* Very Light Yellow Hover */
+        background-color: #fffde7;
         cursor: pointer;
     }
 
-    /* Rounded Row Ends */
     .orders-table td:first-child {
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -58,7 +52,6 @@
         border-right: 1px solid #f9f9f9;
     }
 
-/* Status Badges */
 .status-badge {
     padding: 6px 12px;
     border-radius: 20px;
@@ -83,7 +76,6 @@
     color: #c62828; /* Red */
 }
 
-/* Action Button */
 .btn-view-order {
     background-color: white;
     border: 2px solid var(--nm-primary);
@@ -113,9 +105,6 @@
         margin-bottom: 1rem;
         color: var(--nm-secondary);
     }
-/* =========================================
-   16. FLASH SALE QUEUE COMPONENT
-   ========================================= */
 
 .flash-queue-container {
     max-width: 1100px;
@@ -123,7 +112,6 @@
     padding: 2rem 1rem;
 }
 
-/* Header with Timer */
 .sale-header-card {
     background: linear-gradient(135deg, #222, #333);
     color: white;
@@ -134,14 +122,14 @@
     overflow: hidden;
     margin-bottom: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border-bottom: 5px solid var(--nm-secondary); /* Yellow bottom bar */
+    border-bottom: 5px solid var(--nm-secondary);
 }
 
 .sale-status-badge {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: #d32f2f; /* Standard Red for "LIVE" */
+    background: #d32f2f;
     color: white;
     padding: 5px 12px;
     border-radius: 20px;
@@ -168,16 +156,14 @@
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Layout: Product Left | Stats Right */
 .queue-layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 2rem;
 }
 
-/* Product Card Flash Mode */
 .product-card.flash-mode {
-    border: 2px solid var(--nm-accent); /* Cyan Border */
+    border: 2px solid var(--nm-accent);
     position: relative;
     padding: 2rem;
     display: flex;
@@ -210,7 +196,6 @@
     font-weight: 800;
 }
 
-/* Stock Bar */
 .stock-indicator {
     margin-top: 1rem;
 }
@@ -228,7 +213,6 @@
     background: linear-gradient(90deg, var(--nm-primary), var(--nm-accent));
 }
 
-/* Join Button */
 .btn-join-queue {
     background: var(--nm-primary);
     color: white;
@@ -248,7 +232,6 @@
         transform: scale(0.98);
     }
 
-/* Queue Ticket (After Joining) */
 .queue-ticket {
     background: #fff5fa;
     border: 2px dashed var(--nm-primary);
@@ -275,7 +258,6 @@
     font-size: 0.9rem;
 }
 
-/* Stats Side */
 .queue-stats-section {
     background: white;
     border-radius: 16px;

@@ -8,15 +8,13 @@ namespace NovellaMart.Core.BL.Model_Classes
         public long order_id { get; set; }
         public CustomerBL customer { get; set; }
         public AddressBL address { get; set; }
-        public MyLinkedList<CartItemBL> items { get; set; }   // Products list
+        public MyLinkedList<CartItemBL> items { get; set; }
         public double totalAmount { get; set; }
         public DateTime orderTime { get; set; }
         public string status { get; set; }            // PENDING, CONFIRMED, SHIPPED, DELIVERED
         public string orderType { get; set; }         // Cash On Delivery, Card Payment
         public long flash_reservation_id { get; set; }
 
-        // --- COMPATIBILITY HELPER ---
-        // This allows 'order.customer_email' to work even though email is inside 'customer'
         public string customer_email
         {
             get => customer?.email;
@@ -29,7 +27,7 @@ namespace NovellaMart.Core.BL.Model_Classes
 
         public OrderBL()
         {
-            order_id = DateTime.Now.Ticks; // Generate unique ID by default
+            order_id = DateTime.Now.Ticks;
             customer = new CustomerBL();
             address = new AddressBL();
             items = new MyLinkedList<CartItemBL>();
@@ -40,7 +38,6 @@ namespace NovellaMart.Core.BL.Model_Classes
             flash_reservation_id = 0;
         }
 
-        // Constructor for quick creation
         public OrderBL(long id, CustomerBL cust, AddressBL addr, double total)
         {
             order_id = id;

@@ -115,11 +115,11 @@
 </div>
 
 @code {
-    private string username = "Guest", role = "Member", email = ""; // Added email here
+    private string username = "Guest", role = "Member", email = "";
     private int userId;
     private List<NotificationBL> userNotifications = new();
     private System.Timers.Timer? _badgeTimer;
-    private string filePath = "Core/DL/users.json"; // Path to your users file
+    private string filePath = "Core/DL/users.json";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -128,7 +128,6 @@
             string currentUser = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
             if (string.IsNullOrEmpty(currentUser)) { Nav.NavigateTo("/login"); return; }
 
-            // 1. Load User Data (including Email) from JSON
             await LoadUserData();
 
             username = currentUser;
@@ -167,20 +166,18 @@
     private async Task LoadNotifications()
     {
         userNotifications.Clear();
-        // Use the class-level userId assigned in OnAfterRenderAsync
         if (userId != 0)
         {
             var activeSale = LiveSaleService.GetActiveSale();
             var node = activeSale?.fs_items?.head;
             while (node != null)
             {
-                // Check if user is allocated for this product
                 if (LiveSaleService.GetUserStatus(userId, node.Data.product_id) == "Allocated")
                 {
                     userNotifications.Add(new NotificationBL
                         {
                             ProductId = node.Data.product_id,
-                            ExpiryTime = DateTime.Now.AddMinutes(2) // Standardize expiry time
+                            ExpiryTime = DateTime.Now.AddMinutes(2)
                         });
                 }
                 node = node.Next;

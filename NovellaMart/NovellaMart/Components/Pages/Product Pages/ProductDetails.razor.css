@@ -1,32 +1,26 @@
-﻿/* =========================================
-   1. GRID LAYOUT (Strict 50/50 Split)
-   ========================================= */
+﻿
 .product-grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Forces exactly two equal columns */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     max-width: 1300px;
     margin: 0 auto;
-    align-items: start; /* Aligns tops of cards */
+    align-items: start;
 }
 
-/* =========================================
-   2. CARD PANELS (The White Boxes)
-   ========================================= */
+
 .card-panel {
     background: #ffffff;
     border-radius: 16px;
     padding: 40px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* Soft premium shadow */
-    height: 100%; /* Makes them try to fill height */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    height: 100%; 
 }
 
-/* =========================================
-   3. LEFT PANEL: IMAGE
-   ========================================= */
+
 .main-image-frame {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Forces square container */
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +34,7 @@
 .main-product-img {
     max-width: 90%;
     max-height: 90%;
-    object-fit: contain; /* Prevents stretching/cutting */
+    object-fit: contain;
 }
 
 .thumbnail-row {
@@ -65,9 +59,6 @@
         opacity: 1;
     }
 
-/* =========================================
-   4. RIGHT PANEL: DETAILS
-   ========================================= */
 .info-header {
     margin-bottom: 20px;
 }
@@ -90,7 +81,6 @@
     line-height: 1.2;
 }
 
-/* Price Row */
 .price-row {
     display: flex;
     align-items: center;
@@ -129,16 +119,12 @@
     min-height: 60px;
 }
 
-/* =========================================
-   5. BUTTONS & CONTROLS
-   ========================================= */
 .controls-area {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Quantity */
 .quantity-box {
     display: inline-flex;
     align-items: center;
@@ -166,11 +152,10 @@
         font-weight: bold;
     }
 
-/* Action Buttons Grid */
 .action-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* TWO EQUAL BUTTONS */
-    gap: 15px; /* Space between buttons */
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
 }
 
 .btn-action {
@@ -186,12 +171,11 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 100%; /* Fill the grid cell */
+    width: 100%;
 }
 
-/* Add to Cart (Pink) */
 .btn-add {
-    background-color: #d64d7d !important; /* Force Pink */
+    background-color: #d64d7d !important;
     color: white !important;
 }
 
@@ -200,9 +184,8 @@
         transform: translateY(-2px);
     }
 
-/* Buy Now (Black) - FIXING THE WHITE BUTTON ISSUE */
 .btn-buy {
-    background-color: #333333 !important; /* Force Black */
+    background-color: #333333 !important;
     color: white !important;
 }
 
@@ -211,14 +194,12 @@
         transform: translateY(-2px);
     }
 
-/* Undo (Yellow) */
 .btn-undo {
     background-color: #ffc107 !important;
     color: #333 !important;
     animation: pulse 1.5s infinite;
 }
 
-/* Animations & Responsive */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -247,7 +228,7 @@
 
 @media (max-width: 900px) {
     .product-grid-layout {
-        grid-template-columns: 1fr; /* Stack vertically on tablet/mobile */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 }

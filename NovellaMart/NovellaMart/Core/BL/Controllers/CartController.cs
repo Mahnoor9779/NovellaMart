@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NovellaMart.Core.BL.Services; // Needs to see the Service
+using NovellaMart.Core.BL.Services;
 using NovellaMart.Core.BL.Model_Classes;
 
-namespace NovellaMart.Core.BL.Controllers // NEW NAMESPACE
+namespace NovellaMart.Core.BL.Controllers 
 {
     [Route("api/[controller]")]
     [ApiController]

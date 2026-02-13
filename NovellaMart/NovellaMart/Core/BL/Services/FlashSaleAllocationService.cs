@@ -1,7 +1,6 @@
 ﻿
 using NovellaMart.Core.BL.Model_Classes;
 
-//FlashSale Allocation Service
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleAllocationService
@@ -15,7 +14,6 @@ namespace NovellaMart.Core.BL.Services
             _crudService = crudService;
         }
 
-        // Get products for a SPECIFIC sale
         public List<ProductBL> GetSaleProducts(int saleId)
         {
             var sale = _crudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == saleId);
@@ -29,7 +27,6 @@ namespace NovellaMart.Core.BL.Services
             return list;
         }
 
-        // Get results from the allocation heap
         public List<CustomerRequestBL> GetAllocationsForProduct(int saleId, int productId)
         {
             return _flashSaleService.GetQueueSnapshotAllocation(productId);

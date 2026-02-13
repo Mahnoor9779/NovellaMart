@@ -15,16 +15,13 @@ namespace NovellaMart.Core.BL.Model_Classes
         public DateTime createdAt { get; set; }
         public bool isActive { get; set; }
 
-        // Contact Fields
         public string phoneNumber { get; set; } = "";
         public string address { get; set; } = "";
         public string city { get; set; } = "";
         public string zipCode { get; set; } = "";
 
-        // 1. Default Constructor
         public UserBL()
         {
-            // Generate a random 6-digit ID (Simple approach)
             user_id = new Random().Next(100000, 999999);
             username = "";
             email = "";
@@ -37,7 +34,6 @@ namespace NovellaMart.Core.BL.Model_Classes
             isActive = true;
         }
 
-        // 2. 👇 ADD THIS CONSTRUCTOR BACK (This fixes the AdminBL error)
         public UserBL(int user_id, string username, string email, string password,
                       string role, string firstName, string lastName, string profilePicture)
         {

@@ -25,7 +25,7 @@ namespace NovellaMart.Core.BL.Model_Classes
             images = new string[0];
             price = 0;
             stock = 0;
-            this.category = new CategoryBL(); // Initialize to avoid null reference
+            this.category = new CategoryBL();
             tags = new MyLinkedList<string>();
         }
 

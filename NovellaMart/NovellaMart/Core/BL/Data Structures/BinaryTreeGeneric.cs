@@ -17,7 +17,6 @@ namespace DSA
             return Root == null;
         }
 
-        // Insert in level order
         public void Insert(type val)
         {
             BinaryTreeNodeGeneric<type> newNode = new BinaryTreeNodeGeneric<type>(val);

@@ -1,8 +1,4 @@
-﻿/* =========================================
-17. FLASH SALE CRUD PAGE 
-   ========================================= */
-/* Layout */
-
+﻿
 .flash-sale-layout
 {
     display: flex;
@@ -10,16 +6,15 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Responsive */
+    flex-wrap: wrap;
 }
 
-/* Card Base */
 .card {
     background: #fff;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(241, 127, 178, 0.1); /* Pink Soft Shadow */
-    border: 1px solid rgba(241, 238, 86, 0.3); /* Subtle Yellow Outline */
+    box-shadow: 0 10px 30px rgba(241, 127, 178, 0.1);
+    border: 1px solid rgba(241, 238, 86, 0.3);
     flex: 1;
     min-width: 300px;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -30,7 +25,6 @@
         box-shadow: 0 15px 40px rgba(241, 127, 178, 0.25);
     }
 
-/* Flash Sale Form */
 .flash-sale-form {
     flex: 1 1 45%;
     display: flex;
@@ -97,7 +91,6 @@
 
 
 
-/* Flash Sale List */
 .flash-sale-list {
     flex: 1 1 50%;
     display: flex;
@@ -127,7 +120,6 @@
         color: #333;
     }
 
-/* Row Actions */
 .row-actions button {
     padding: 0.4rem 0.8rem;
     border-radius: 8px;
@@ -155,13 +147,11 @@
         background-color: #e03f3f;
     }
 
-/* Danger Text */
 .danger {
     color: #ff4d4d;
     font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .flash-sale-layout {
         flex-direction: column;

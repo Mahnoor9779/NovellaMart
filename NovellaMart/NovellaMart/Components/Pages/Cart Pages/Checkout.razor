@@ -15,14 +15,11 @@
     <p class="title-subtext">Finish your order to get your premium care.</p>
 </div>
 
-<!-- FIX: EditForm must wrap the layout container, not be inside it -->
 <EditForm Model="@model" OnValidSubmit="HandleCheckout">
     <DataAnnotationsValidator />
 
-    <!-- This DIV applies the Grid Layout (Side-by-Side) -->
     <div class="checkout-layout">
 
-        <!-- LEFT COLUMN: Shipping & Payment -->
         <div class="details-side">
 
             <div class="checkout-card accent-cyan">
@@ -139,7 +136,6 @@
             </div>
         </div>
 
-        <!-- RIGHT COLUMN: Order Summary -->
         <div class="summary-side">
             <div class="checkout-card accent-yellow">
                 <h3 style="margin-top:0; font-size: 1.2rem; font-weight: 700;">Order Summary</h3>
@@ -229,11 +225,9 @@
     {
         if (firstRender)
         {
-            // Get the ID of the person currently logged in
             var storedId = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
             if (int.TryParse(storedId, out currentUserId))
             {
-                 // Load User Data to Pre-fill Form
                  if (System.IO.File.Exists(filePath))
                  {
                      var json = await System.IO.File.ReadAllTextAsync(filePath);
@@ -291,7 +285,6 @@
 
         if (placedOrder != null)
         {
-            // NEW: Mark each item in the order as successfully purchased in the Flash Service
             var itemNode = placedOrder.items.head;
             while (itemNode != null)
             {

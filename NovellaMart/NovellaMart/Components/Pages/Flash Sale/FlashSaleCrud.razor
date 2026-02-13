@@ -153,10 +153,8 @@
     private FlashSaleBL currentSale = new();
     private bool isEdit;
 
-    // _allAvailableCategories holds ALL categories (Parent + Child)
     private List<CategoryBL> _allAvailableCategories = new();
 
-    // categories holds ONLY what we show in the first dropdown
     private List<CategoryBL> categories = new();
 
     private List<CategoryBL> subCategories = new();
@@ -182,15 +180,11 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // 1. Ensure product data is fully loaded from the JSON source
         await ProductCatalogService.LoadProductsAsync();
         allProducts = ProductCatalogService.MasterProductList.ToList();
 
-        // 2. Load existing sales for the admin list
         flashSales = FlashSaleService.GetAllFlashSales();
 
-        // 3. EXTRACT CATEGORIES DIRECTLY FROM PRODUCTS
-        // This handles the case where categories are only defined inside product objects
         _allAvailableCategories = allProducts
             .Where(p => p.category != null)
             .Select(p => p.category)
@@ -198,14 +192,11 @@
             .Select(g => g.First())
             .ToList();
 
-        // 4. FILTER FOR MAIN ROOTS (The 4 keys in your SubCatMap)
-        // This populates your 'categories' list for the first dropdown
         var rootNames = SubCatMap.Keys.ToList();
         categories = _allAvailableCategories
             .Where(c => rootNames.Any(r => r.Equals(c.name, StringComparison.OrdinalIgnoreCase)))
             .ToList();
 
-        // 5. If extraction fails, manually seed root objects from SubCatMap keys
         if (!categories.Any())
         {
             categories = rootNames.Select(name => new CategoryBL
@@ -315,25 +306,21 @@
             {
                 selectedProductIds.Add(product.product_id);
 
-                // 1. Get the actual master stock from the loaded catalog [cite: 238-239]
                 var masterProduct = allProducts.FirstOrDefault(p => p.product_id == product.product_id);
                 int totalAvailable = masterProduct?.stock ?? 0;
 
-                // 2. Determine the upper limit for the random generator (Max 5 or totalAvailable)
                 int upperLimit = Math.Min(3, totalAvailable);
 
-                // 3. Randomly generate stock between 1 and the upperLimit
                 Random rand = new Random();
                 int flashSaleStock = upperLimit > 0 ? rand.Next(1, upperLimit + 1) : 0;
 
-                // 4. Create a copy for the sale to protect the master product's data
                 var saleItem = new ProductBL
                     {
                         product_id = product.product_id,
                         name = product.name,
                         images = product.images,
                         price = product.price,
-                        stock = flashSaleStock, // Randomly assigned 1-5
+                        stock = flashSaleStock,
                         category = product.category,
                         tags = product.tags
                     };
@@ -356,7 +343,6 @@
         }
     }
 
-    // --- UPDATED CATEGORY LOGIC ---
     private void OnCategoryChanged(ChangeEventArgs e)
     {
         if (int.TryParse(e.Value.ToString(), out int id))
@@ -365,7 +351,6 @@
             var selectedCategory = categories.FirstOrDefault(c => c.category_id == id);
             string selectedCatName = selectedCategory?.name ?? "";
 
-            // Filter the global product list to find unique subcategories belonging to this root
             subCategories = allProducts
                 .Where(p => p.tags != null && p.tags.FindNode(selectedCatName))
                 .Select(p => p.category)
@@ -374,7 +359,6 @@
                 .Select(g => g.First())
                 .ToList();
 
-            // If data structure is missing sub-links, generate from SubCatMap
             if (!subCategories.Any() && !string.IsNullOrEmpty(selectedCatName))
             {
                 if (SubCatMap.ContainsKey(selectedCatName))
@@ -406,14 +390,12 @@
 
             if (subCategory != null)
             {
-                // If the subcategory has products attached, use them
                 if (subCategory.products != null && subCategory.products.Count() > 0)
                 {
                     filteredProducts = subCategory.products.ToList();
                 }
                 else
                 {
-                    // Otherwise, filter the global product list by tag name
                     filteredProducts = allProducts
                         .Where(p => p.tags != null && p.tags.FindNode(subCategory.name))
                         .ToList();

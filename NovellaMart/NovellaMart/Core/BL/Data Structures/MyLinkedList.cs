@@ -178,17 +178,6 @@ namespace NovellaMart.Core.BL.Data_Structures
             return size;
         }
 
-        //public int Count()
-        //{
-        //    int count = 0;
-        //    LinkedListNode<type> tempNode = head;
-        //    while (tempNode != null)
-        //    {
-        //        count = count + 1;
-        //        tempNode = tempNode.Next;
-        //    }
-        //    return count;
-        //}
 
         public void Display()
         {
@@ -244,7 +233,6 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        // ICollection<type> Implementation
         public void Add(type item)
         {
             InsertAtEnd(item);
@@ -271,7 +259,6 @@ namespace NovellaMart.Core.BL.Data_Structures
 
         public bool IsReadOnly => false;
 
-        // Explicit implementation to avoid conflict with existing Count() method
         int ICollection<type>.Count => size;
     }
 }

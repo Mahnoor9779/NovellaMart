@@ -120,7 +120,6 @@
                     </button>
 
                     @{
-                        // Logic to show exactly 3 pages sliding window
                         int startPage = currentPage - 1;
                         int endPage = currentPage + 1;
 
@@ -194,7 +193,6 @@
 @code {
     [Parameter] public string? Category { get; set; }
 
-    // CUSTOM DATA STRUCTURES
     private MyLinkedList<ProductBL> FilteredList = new MyLinkedList<ProductBL>();
     private MyLinkedList<ProductBL> PagedProducts = new MyLinkedList<ProductBL>();
     private MyLinkedList<string> CurrentSubCategories = new MyLinkedList<string>();

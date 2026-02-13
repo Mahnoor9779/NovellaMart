@@ -1,9 +1,7 @@
-﻿/* Container for the Admin Page (Full Width) */
-.orders-container {
+﻿.orders-container {
     padding: 1rem 0;
 }
 
-/* The Main Card (Matches Profile Card) */
 .orders-card {
     background: white;
     border-radius: 16px;
@@ -12,11 +10,10 @@
     border: 1px solid #f0f0f0;
 }
 
-/* Table Layout */
 .orders-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 12px; /* Adds the gap between rows */
+    border-spacing: 0 12px;
 }
 
     .orders-table th {
@@ -37,7 +34,6 @@
         vertical-align: middle;
     }
 
-    /* Row Styling (Alternating look via spacing) */
     .orders-table tr td:first-child {
         border-left: 1px solid #f8f9fa;
         border-top-left-radius: 12px;
@@ -50,7 +46,6 @@
         border-bottom-right-radius: 12px;
     }
 
-/* Status Badge (Green/Yellow/Red) */
 .status-badge {
     padding: 0.5rem 1.2rem;
     border-radius: 30px;
@@ -78,14 +73,12 @@
     color: #fa5252;
 }
 
-/* Highlighted Column for Amounts (Pink) */
 .col-subtotal {
     font-weight: 700;
-    color: var(--nm-primary); /* Uses your Pink Variable */
+    color: var(--nm-primary);
     font-size: 1.1rem;
 }
 
-/* Action Button (Matches the Details Button) */
 .btn-view-order {
     background-color: #f8f9fa;
     color: var(--nm-primary);
@@ -105,12 +98,10 @@
         box-shadow: 0 4px 10px rgba(214, 77, 125, 0.2);
     }
 
-/* Padding Override for first column */
 .pl-large {
     padding-left: 2rem !important;
 }
 
-/* Empty State UI */
 .empty-history {
     text-align: center;
     padding: 5rem 2rem;

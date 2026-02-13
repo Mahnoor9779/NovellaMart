@@ -19,7 +19,6 @@
     <div class="orders-container">
         <div class="orders-card">
             @{
-                // travese the full Linked List for the Admin view
                 var allOrders = OrderService.GetAllOrders();
                 var currentNode = allOrders?.head;
             }

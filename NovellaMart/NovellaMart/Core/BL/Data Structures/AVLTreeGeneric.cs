@@ -221,19 +221,16 @@ namespace NovellaMart.Core.BL.Data_Structures
         {
             if (node == null) return;
 
-            // 1. If current node is larger than min, go Left to search for smaller values
             if (compare(node.Data, min) > 0)
             {
                 GetRange(node.Left, min, max, result, compare);
             }
 
-            // 2. If current node is within the range, add it to result
             if (compare(node.Data, min) >= 0 && compare(node.Data, max) <= 0)
             {
                 result.Add(node.Data);
             }
 
-            // 3. If current node is smaller than max, go Right to search for larger values
             if (compare(node.Data, max) < 0)
             {
                 GetRange(node.Right, min, max, result, compare);

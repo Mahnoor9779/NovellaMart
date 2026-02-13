@@ -1,8 +1,5 @@
 using NovellaMart.Core.BL.Model_Classes;
-using NovellaMart.Core.BL.Data_Structures; // Assuming MyLinkedList is here or we use List for simplicity in new services if consistent with project pattern. 
-// Project uses MyLinkedList heavily, but for new simple admin features List<T> is easier unless DSA requirement enforces custom list everywhere. 
-// Looking at ProductService, it uses MyLinkedList. I will use MyLinkedList to map to the project's DSA theme, 
-// using FileHandler for persistence.
+using NovellaMart.Core.BL.Data_Structures;
 using NovellaMart.Core.DL;
 using System;
 
@@ -34,8 +31,7 @@ namespace NovellaMart.Core.BL.Services
 
         public void CreatePromoCode(string code, int discount)
         {
-            // Simple ID generation based on ticks or count
-            int newId = (int)(DateTime.Now.Ticks % int.MaxValue); // Simplified for this context
+            int newId = (int)(DateTime.Now.Ticks % int.MaxValue);
             var newPromo = new PromoCodeBL(newId, code.ToUpper(), discount);
             _promoCodes.InsertAtEnd(newPromo);
             Save();

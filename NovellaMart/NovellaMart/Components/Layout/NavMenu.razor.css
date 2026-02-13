@@ -1,4 +1,3 @@
-/* 1. Top Announcement Bar */
 .top-announcement {
     background-color: var(--nm-primary);
     color: white;
@@ -9,7 +8,6 @@
     width: 100%;
 }
 
-/* 2. Main Navbar Container */
 .navbar-custom {
     background-color: #ffffff;
     height: 80px;
@@ -18,7 +16,6 @@
     position: sticky;
     top: 0;
     z-index: 1050;
-    /* Bootstrap Header Z-Index */
     display: flex;
     justify-content: center;
 }
@@ -33,7 +30,6 @@
     height: 100%;
 }
 
-/* 3. Logo Styling */
 .brand-logo {
     color: var(--nm-primary) !important;
     font-size: 1.6rem;
@@ -44,13 +40,11 @@
     z-index: 20;
 }
 
-/* 4. CENTER MENU */
 .center-menu-container {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* Keeps it dead center */
     z-index: 10;
 }
 
@@ -68,11 +62,6 @@
     padding: 0 !important;
 }
 
-/* =========================================================
-   HOVER EFFECTS FIX
-   We use ::deep to penetrate the <NavLink> component 
-   ========================================================= */
-
 .center-menu ::deep .nav-link {
     color: var(--nm-text) !important;
     font-weight: 600;
@@ -87,7 +76,6 @@
     display: inline-block;
 }
 
-/* The Animated Pink Underline */
 .center-menu ::deep .nav-link::after {
     content: '';
     position: absolute;
@@ -99,21 +87,16 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* --- THE HOVER STATE --- */
 .center-menu ::deep .nav-link:hover {
     color: var(--nm-primary) !important;
-    /* Turns text pink */
     transform: translateY(-2px);
-    /* Lifts text slightly up */
 }
 
-/* Expands the underline on hover */
 .center-menu ::deep .nav-link:hover::after {
     width: 100%;
     left: 0;
 }
 
-/* --- ACTIVE STATE (When you are on that page) --- */
 .center-menu ::deep .nav-link.active {
     color: var(--nm-primary) !important;
 }
@@ -123,7 +106,6 @@
     left: 0;
 }
 
-/* 5. Right Icons */
 .nav-right {
     display: flex;
     align-items: center;
@@ -144,7 +126,6 @@
     transition: transform 0.2s;
 }
 
-/* Hover effect for icons */
 .btn-icon:hover {
     transform: scale(1.1);
     color: var(--nm-primary);
@@ -178,7 +159,6 @@
     color: var(--nm-text) !important;
 }
 
-/* MOBILE RESPONSIVENESS */
 @media (max-width: 992px) {
     .center-menu-container {
         display: none;

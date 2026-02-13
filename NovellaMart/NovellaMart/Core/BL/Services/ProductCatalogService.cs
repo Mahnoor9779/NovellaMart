@@ -38,21 +38,16 @@ namespace NovellaMart.Core.BL.Services
             return string.Compare(a.name, b.name, StringComparison.OrdinalIgnoreCase);
         }
 
-        // --- NEW ROBUST LOADING LOGIC ---
         public async Task LoadProductsAsync()
         {
-            // If a load is already running or finished, wait for THAT specific task.
-            // This prevents "race conditions" where the app thinks data is ready when it's actually empty.
             if (_loadingTask != null)
             {
                 await _loadingTask;
                 return;
             }
 
-            // Start the loading task and store it
             _loadingTask = LoadDataInternalAsync();
 
-            // Wait for it to finish
             await _loadingTask;
         }
 
@@ -60,7 +55,6 @@ namespace NovellaMart.Core.BL.Services
         {
             try
             {
-                // Double check to prevent re-populating if called manually later
                 if (MasterProductList.Count() > 0) return;
 
                 var rawData = await _http.GetFromJsonAsync<List<ProductDto>>("sample-data/products.json");
@@ -103,7 +97,6 @@ namespace NovellaMart.Core.BL.Services
             }
             catch (Exception ex)
             {
-                // If it fails, reset the task so we can try again later
                 _loadingTask = null;
                 Console.WriteLine($"Error loading products: {ex.Message}");
                 throw;
@@ -121,7 +114,6 @@ namespace NovellaMart.Core.BL.Services
             return null;
         }
 
-        // Helper Method for Search
         public ProductBL FindProductById(int id)
         {
             var node = MasterProductList.head;

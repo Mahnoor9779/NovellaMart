@@ -3,7 +3,7 @@
    ========================================= */
 
 .admin-container {
-    margin: 0 auto; /* center horizontally */
+    margin: 0 auto;
     display: block;
 }
 
@@ -41,7 +41,7 @@
     border-radius: 12px;
     transition: all 0.3s ease;
     overflow: hidden;
-    background: transparent; /* no color */
+    background: transparent;
 }
 
 .admin-card-default {
@@ -50,7 +50,7 @@
 
 .admin-card-expanded {
     border: 1px solid var(--nm-primary);
-    background: rgba(0,0,0,0.03); /* optional subtle highlight */
+    background: rgba(0,0,0,0.03);
 }
 
 
@@ -77,7 +77,6 @@
         transform: translateY(-2px);
     }
 
-/* Allocation Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -111,7 +110,6 @@ th, td {
         color: #9f1239;
     }
 
-/* Empty Drawer Styling */
 .empty-queue-container {
     padding: 40px 0;
     text-align: center;
@@ -134,16 +132,12 @@ th, td {
     letter-spacing: 0.5px;
 }
 
-    /* =========================================
-   ALLOCATION TABLE SPECIFIC SPACING
-   ========================================= */
-    /* Adjusting column widths to accommodate Request Time */
-    .admin-table-thead th:nth-child(2) {
-    width: 25%; /* Customer ID */
+.admin-table-thead th:nth-child(2) {
+    width: 25%;
 }
 
 .admin-table-thead th:nth-child(3) {
-    width: 25%; /* Request Time */
+    width: 25%; 
 }
 
 .join-time-text {
@@ -152,7 +146,6 @@ th, td {
     color: #636e72;
 }
 
-/* Ensure the status badge doesn't touch the right border */
 .status-badge-allocated {
     background-color: #ebfbee !important;
     color: #2f9e44 !important;

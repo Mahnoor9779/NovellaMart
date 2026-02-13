@@ -8,32 +8,25 @@ namespace NovellaMart.Core.BL.Services
 {
     public class CartService
     {
-        // Holds the state for the current user session
         private CartBL _activeCart = new CartBL();
         private const string CartFileName = "cart.json";
 
         public CartService()
         {
-            // Initialize Cart: Try to load from file first
             LoadCartFromFile();
 
-            // If file loading failed or returned null, ensure a fresh cart structure exists
-            // REMOVED: Mock Data Seeding
             if (_activeCart == null)
             {
                 _activeCart = new CartBL();
             }
 
-            // Double check list initialization
             if (_activeCart.items == null)
             {
                 _activeCart.items = new MyLinkedList<CartItemBL>();
             }
 
-            // No initial Save needed if empty; save on first add.
         }
 
-        // --- PERSISTENCE HELPER METHODS ---
 
         private void SaveCartToFile()
         {
@@ -47,7 +40,6 @@ namespace NovellaMart.Core.BL.Services
             {
                 _activeCart = loadedCart;
 
-                // Safety check: ensure the linked list is initialized if deserialization left it null
                 if (_activeCart.items == null)
                 {
                     _activeCart.items = new MyLinkedList<CartItemBL>();
@@ -55,9 +47,6 @@ namespace NovellaMart.Core.BL.Services
             }
         }
 
-        // --- BUSINESS LOGIC (With Auto-Save) ---
-
-        // Old ClearCart removed, new one is below with Undo logic.
 
         public CartBL GetCart()
         {
@@ -75,7 +64,6 @@ namespace NovellaMart.Core.BL.Services
                 current = current.Next;
             }
 
-            // --- DISCOUNT LOGIC ---
             if (_activeCart.AppliedPromoCode != null)
             {
                 double discount = (total * _activeCart.AppliedPromoCode.DiscountPercentage) / 100.0;
@@ -118,10 +106,10 @@ namespace NovellaMart.Core.BL.Services
                     }
                     else
                     {
-                        RemoveItem(productId); // RemoveItem handles its own saving
+                        RemoveItem(productId);
                         return;
                     }
-                    SaveCartToFile(); // Persist change
+                    SaveCartToFile();
                     return;
                 }
                 current = current.Next;
@@ -138,7 +126,7 @@ namespace NovellaMart.Core.BL.Services
                 if (current.Data.Product.product_id == productId)
                 {
                     _activeCart.items.DeleteAtIndex(index);
-                    SaveCartToFile(); // Persist change
+                    SaveCartToFile();
                     return;
                 }
                 current = current.Next;
@@ -146,7 +134,6 @@ namespace NovellaMart.Core.BL.Services
             }
         }
 
-        // Initialize StackArray with capacity 50
         private StackArray<CartAction> _undoStack = new StackArray<CartAction>(50);
 
         public async Task AddToCart(ProductBL product, int quantity = 1)
@@ -160,7 +147,6 @@ namespace NovellaMart.Core.BL.Services
                 if (current.Data.Product.product_id == product.product_id)
                 {
                     current.Data.Quantity += quantity;
-                    // Push "Add" Action (Undo will remove this quantity)
                     _undoStack.Push(new CartAction { Type = "Add", ProductId = product.product_id, Quantity = quantity });
                     SaveCartToFile();
                     return;
@@ -169,14 +155,12 @@ namespace NovellaMart.Core.BL.Services
             }
 
             _activeCart.items.InsertAtEnd(new CartItemBL(product, quantity));
-            // Push "Add" Action
             _undoStack.Push(new CartAction { Type = "Add", ProductId = product.product_id, Quantity = quantity });
             SaveCartToFile();
         }
 
         public void ClearCart()
         {
-            // DSA: Save items for Undo before clearing
             List<CartItemBL> itemsBackup = new List<CartItemBL>();
             var node = _activeCart.items.head;
             while (node != null)
@@ -185,11 +169,10 @@ namespace NovellaMart.Core.BL.Services
                 node = node.Next;
             }
 
-            // Push "Clear" Action
             _undoStack.Push(new CartAction { Type = "Clear", RestoredItems = itemsBackup });
 
             _activeCart.items = new MyLinkedList<CartItemBL>();
-            SaveCartToFile(); // Persist change
+            SaveCartToFile();
         }
 
         public void UndoLastAction()
@@ -200,12 +183,10 @@ namespace NovellaMart.Core.BL.Services
 
             if (action.Type == "Add")
             {
-                // Undo Add: Decrease quantity or remove item
                 UpdateQuantity(action.ProductId, -action.Quantity);
             }
             else if (action.Type == "Clear")
             {
-                // Undo Clear: Restore items
                 _activeCart.items = new MyLinkedList<CartItemBL>();
                 foreach (var item in action.RestoredItems)
                 {

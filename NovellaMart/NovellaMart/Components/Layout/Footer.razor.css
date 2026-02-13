@@ -2,7 +2,6 @@
     font-size: 0.95rem;
 }
 
-/* === Top Feature Section === */
 .footer-top {
     background-color: #ffffff;
     padding: 40px 0;
@@ -14,14 +13,12 @@
     color: var(--nm-primary); /* Theme pink color */
 }
 
-/* === Main Footer Section (Middle & Bottom) === */
 .footer-main,
 .footer-bottom {
-    background-color: #222222; /* Dark background for contrast */
+    background-color: #222222;
     color: #bbbbbb; /* Light gray text */
 }
 
-/* Brand Styling */
 .brand-icon {
     color: var(--nm-primary);
     font-size: 1.5rem;
@@ -32,7 +29,6 @@
     font-size: 1.5rem;
 }
 
-/* Social Buttons */
 .social-btn {
     width: 38px;
     height: 38px;
@@ -48,11 +44,10 @@
 }
 
     .social-btn:hover {
-        background-color: var(--nm-primary); /* Turn pink on hover */
+        background-color: var(--nm-primary)
         transform: translateY(-3px);
     }
 
-/* Footer Titles & Links */
 .footer-title {
     color: #ffffff;
     font-weight: 700;
@@ -73,10 +68,9 @@
 
     .footer-links a:hover {
         color: var(--nm-primary);
-        padding-left: 5px; /* Subtle shift effect */
+        padding-left: 5px;
     }
 
-/* Contact List */
 .footer-contact li {
     margin-bottom: 15px;
     display: flex;
@@ -90,7 +84,6 @@
     margin-top: 3px;
 }
 
-/* === Bottom Copyright Section === */
 .footer-bottom {
     border-top: 1px solid #333333;
 }

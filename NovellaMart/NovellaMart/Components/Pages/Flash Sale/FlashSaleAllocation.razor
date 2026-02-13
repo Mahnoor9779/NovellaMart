@@ -19,7 +19,6 @@
         {
             bool isExpanded = expandedProductId == product.product_id;
 
-            // Get everyone who was successfully chosen (Allocated OR Ordered)
             var allocations = LiveSaleService.GetQueueSnapshotAllocation(product.product_id);
             var successfulUsers = allocations.Where(a =>
             {
@@ -135,7 +134,6 @@
         var sale = CrudService.GetAllFlashSales().FirstOrDefault(s => s.flash_sale_id == Id);
         if (sale != null) saleTitle = sale.title;
 
-        // Refresh this page every 5 seconds to clear out expired winners
         _autoRefresh = new System.Timers.Timer(5000);
         _autoRefresh.Elapsed += async (s, e) => await InvokeAsync(StateHasChanged);
         _autoRefresh.Start();

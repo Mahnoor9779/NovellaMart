@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using System.Text.Json.Serialization; // Required for ReferenceHandler
+using System.Text.Json.Serialization;
 using System.IO;
 
 namespace NovellaMart.Core.DL
@@ -8,25 +8,20 @@ namespace NovellaMart.Core.DL
     {
         private static readonly string FolderPath = GetPathToDL();
 
-        // Helper to find the actual "Core/DL" folder in your source code
         private static string GetPathToDL()
         {
-            // Start from the execution directory (usually bin/Debug/net8.0/...)
             DirectoryInfo directoryInfo = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
 
-            // Traverse up until we find the .csproj file, which indicates the Project Root
             while (directoryInfo != null && directoryInfo.GetFiles("*.csproj").Length == 0)
             {
                 directoryInfo = directoryInfo.Parent;
             }
 
-            // If we found the project root, force the path to be Core/DL inside it
             if (directoryInfo != null)
             {
                 string projectRoot = directoryInfo.FullName;
                 string targetPath = Path.Combine(projectRoot, "Core", "DL");
 
-                // Create it if it doesn't exist yet
                 if (!Directory.Exists(targetPath))
                 {
                     Directory.CreateDirectory(targetPath);
@@ -34,16 +29,13 @@ namespace NovellaMart.Core.DL
                 return targetPath;
             }
 
-            // Fallback: If not found, use current execution directory
             string fallbackPath = Path.Combine(Directory.GetCurrentDirectory(), "Core", "DL");
             if (!Directory.Exists(fallbackPath)) Directory.CreateDirectory(fallbackPath);
             return fallbackPath;
         }
 
-        // Generic Save Method
         public static void SaveData<T>(string filename, T data)
         {
-            // --- DEBUG LOGGING ---
             string logPath = Path.Combine(FolderPath, "debug_log.txt");
             try
             {
@@ -55,12 +47,10 @@ namespace NovellaMart.Core.DL
                 var options = new JsonSerializerOptions
                 {
                     WriteIndented = true,
-                    IncludeFields = true, // Serialize public fields (like 'head')
+                    IncludeFields = true,
 
-                    // FIX 1: Handle Circular References (A -> B -> A)
                     ReferenceHandler = ReferenceHandler.IgnoreCycles,
 
-                    // FIX 2: Increase Depth Limit for Linked Lists (head.next.next...)
                     MaxDepth = int.MaxValue
                 };
 
@@ -79,7 +69,6 @@ namespace NovellaMart.Core.DL
             }
         }
 
-        // Generic Load Method
         public static T LoadData<T>(string filename)
         {
             try
@@ -98,7 +87,7 @@ namespace NovellaMart.Core.DL
                 {
                     IncludeFields = true,
                     ReferenceHandler = ReferenceHandler.IgnoreCycles,
-                    MaxDepth = int.MaxValue // Critical for deep structures
+                    MaxDepth = int.MaxValue
                 };
 
                 return JsonSerializer.Deserialize<T>(jsonString, options);

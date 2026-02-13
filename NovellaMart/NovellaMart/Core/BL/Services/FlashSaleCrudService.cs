@@ -5,7 +5,6 @@ using NovellaMart.Core.BL.Model_Classes;
 using NovellaMart.Core.DL;
 using NovellaMart.Core.BL.Data_Structures;
 
-//FlashSale Crud Service
 namespace NovellaMart.Core.BL.Services
 {
     public class FlashSaleCrudService
@@ -24,10 +23,8 @@ namespace NovellaMart.Core.BL.Services
 
                 foreach (var sale in flashSales)
                 {
-                    // Ensure status is fresh based on real time
                     sale.UpdateStatus();
 
-                    // Re-initialize any structures that might have deserialized as null
                     sale.fs_items ??= new MyLinkedList<ProductBL>();
                     sale.request_queue ??= new CircularQueue<CustomerRequestBL>(100);
                     sale.allocation_heap ??= new HeapPriorityQueue<CustomerRequestBL>();

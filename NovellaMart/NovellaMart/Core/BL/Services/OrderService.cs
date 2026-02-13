@@ -11,7 +11,7 @@ namespace NovellaMart.Core.BL.Services
     public class OrderService
     {
         private readonly CartService _cartService;
-        private const string FilePath = "orders"; // FileHandler adds extension & path
+        private const string FilePath = "orders";
         private static MyLinkedList<OrderBL> _allOrders;
         private readonly ProductCatalogService _catalogService;
 
@@ -22,14 +22,12 @@ namespace NovellaMart.Core.BL.Services
 
             if (_allOrders == null)
             {
-                // Try to load using your FileHandler
                 try
                 {
                     _allOrders = FileHandler.LoadData<MyLinkedList<OrderBL>>(FilePath);
                 }
                 catch
                 {
-                    // Fallback if file doesn't exist or handler fails
                     _allOrders = new MyLinkedList<OrderBL>();
                 }
 
@@ -64,7 +62,6 @@ namespace NovellaMart.Core.BL.Services
             if (string.IsNullOrWhiteSpace(city)) return 0;
             string lowerCity = city.Trim().ToLower();
 
-            // Lahore is Free
             if (lowerCity == "lahore") return 0;
 
             var cityRates = new Dictionary<string, double>
@@ -77,27 +74,24 @@ namespace NovellaMart.Core.BL.Services
 
             if (cityRates.ContainsKey(lowerCity)) return cityRates[lowerCity];
 
-            // Default rate for other cities
             return 350;
         }
 
         public OrderBL PlaceOrder(int userId, string firstName, string lastName, string addressStr, string city, string email, string paymentMethod, double shippingCost)
         {
             var cart = _cartService.GetCart();
-            if (cart.items.head == null) return null; // Cannot place empty order
+            if (cart.items.head == null) return null;
 
-            // 1. Create Address & Customer Objects
             AddressBL shippingAddress = new AddressBL(0, null, addressStr, city, "00000", "Pakistan");
 
             CustomerBL customer = new CustomerBL();
-            customer.user_id = userId; // Store the User ID
+            customer.user_id = userId;
             customer.firstName = firstName;
             customer.lastName = lastName;
             customer.email = email;
 
-            // 2. Create Order Object
             OrderBL newOrder = new OrderBL();
-            newOrder.order_id = DateTime.Now.Ticks; // Use Ticks for unique Long ID
+            newOrder.order_id = DateTime.Now.Ticks;
             newOrder.customer = customer;
             newOrder.address = shippingAddress;
             newOrder.totalAmount = _cartService.GetTotalAmount() + shippingCost;
@@ -105,7 +99,6 @@ namespace NovellaMart.Core.BL.Services
             newOrder.status = "Confirmed";
             newOrder.orderType = paymentMethod == "cod" ? "Cash On Delivery" : "Card Payment";
 
-            // 3. Deep Copy Items (Move from Cart to Order)
             newOrder.items = new MyLinkedList<CartItemBL>();
             var cartNode = cart.items.head;
             while (cartNode != null)
@@ -114,26 +107,21 @@ namespace NovellaMart.Core.BL.Services
                 cartNode = cartNode.Next;
             }
 
-            // 4. Clear Purchased Items from Cart
             var orderNode = newOrder.items.head;
             while (orderNode != null)
             {
                 int productId = orderNode.Data.Product.product_id;
                 int purchasedQty = orderNode.Data.Quantity;
 
-                // 1. Locate the product in the master list to permanently reduce stock
-                // Assuming CatalogService is available or using a shared static list
-
                 var masterProduct = _catalogService.MasterProductList.FirstOrDefault(p => p.product_id == productId);
                 if (masterProduct != null)
                 {
-                    masterProduct.stock -= purchasedQty; // Decrement master stock
+                    masterProduct.stock -= purchasedQty;
                 }
                 _cartService.RemoveItem(productId);
                 orderNode = orderNode.Next;
             }
 
-            // 5. Persist the updated stock and the new order [cite: 165]
             FileHandler.SaveData("sample-data/products.json", _catalogService.MasterProductList);
 
             _allOrders.InsertAtEnd(newOrder);
@@ -151,7 +139,6 @@ namespace NovellaMart.Core.BL.Services
             var current = _allOrders.head;
             while (current != null)
             {
-                // Safely check email match (case-insensitive)
                 string orderEmail = current.Data.customer?.email;
 
                 if (!string.IsNullOrEmpty(orderEmail) &&

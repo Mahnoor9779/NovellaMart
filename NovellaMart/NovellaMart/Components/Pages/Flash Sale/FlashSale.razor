@@ -103,7 +103,6 @@
 </div>
 
 <style>
-    /* Styling for the Leave Button */
     .btn-leave {
         margin-top: 0;
         font-size: 0.9rem;
@@ -132,7 +131,6 @@
     {
         if (firstRender)
         {
-            // FIX: Explicitly passing the string as an argument for the JS 'getItem' function
             var storedId = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", new object[] { "userId" });
 
             if (string.IsNullOrEmpty(storedId))
@@ -141,11 +139,10 @@
             }
             else
             {
-                // Parse to int to use with your services
                 if (int.TryParse(storedId, out int parsedId))
                 {
                     currentUserId = parsedId;
-                    StateHasChanged(); // Refresh UI to show "Join" or "Joined" status
+                    StateHasChanged();
                 }
             }
         }
@@ -182,7 +179,6 @@
         }
         else
         {
-            // Ensure this method in your service adds the user to the Circular Queue
             LiveSaleService.JoinFlashSaleQueue(new CustomerBL { user_id = currentUserId }, productId);
         }
         StateHasChanged();

@@ -31,7 +31,6 @@
             <li class="nav-item @(Nav.Uri.Contains("notifications") ? "active" : "")" @onclick='() => Nav.NavigateTo("/notifications")'>
                 <i class="fas fa-bell me-2"></i> Notifications
                 @{
-                    // Only count active WINNER notifications that aren't in checkout yet
                     var actionRequiredCount = userNotifications.Count(n =>
                     n.IsWinner &&
                     !LiveSaleService.IsAlreadyInCheckout(userId, n.ProductId) &&
@@ -114,15 +113,12 @@
             username = currentUser;
             role = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole") ?? "Member";
 
-            // Get and set the class-level userId
             string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
             int.TryParse(userIdStr, out userId);
 
-            // Now call the data loading methods
             await LoadUserData();
             await LoadNotifications();
 
-            // Refresh UI every second to handle badge updates and expiration
             _badgeTimer = new System.Timers.Timer(1000);
             _badgeTimer.Elapsed += async (s, e) => await InvokeAsync(StateHasChanged);
             _badgeTimer.Start();
@@ -137,7 +133,7 @@
         role = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userRole") ?? "Member";
 
         string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
-        int.TryParse(userIdStr, out userId); // Assign to the class field
+        int.TryParse(userIdStr, out userId);
 
         if (string.IsNullOrEmpty(username) || username == "Guest") { Nav.NavigateTo("/login"); }
     }
@@ -158,7 +154,6 @@
 
                 if (status == "Allocated")
                 {
-                    // Only add if they haven't already locked it into checkout
                     if (!LiveSaleService.IsAlreadyInCheckout(userId, product.product_id))
                     {
                         userNotifications.Add(new NotificationBL
@@ -177,7 +172,6 @@
                             Message = $"Sorry, the {product.name} is sold out. Better luck next time!",
                             ProductId = product.product_id,
                             IsWinner = false,
-                            // Rejected users don't need an expiry timer
                             ExpiryTime = DateTime.MaxValue
                         });
                 }
@@ -189,22 +183,18 @@
 
     private async Task ProceedToFlashCheckout(int productId)
     {
-        // Ensure we have the current userId
         if (userId == 0)
         {
             string userIdStr = await JSRuntime.InvokeAsync<string>("sessionStorage.getItem", "userId");
             int.TryParse(userIdStr, out userId);
         }
 
-        // Check if it's already in the cart/checkout process
         if (LiveSaleService.IsAlreadyInCheckout(userId, productId))
         {
-            // If already locked, just go to the page without adding again
             Nav.NavigateTo("/checkout");
             return;
         }
 
-        // Logic for new checkout attempt
         bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Once you proceed, this reservation is locked to your cart. If you do not finish checkout within the time limit, the item will be reallocated. Continue?");
         if (confirmed)
         {
