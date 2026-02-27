@@ -52,4 +52,4 @@ Data persistence is handled via an optimized **JSON-based storage system** (`pro
    ```bash
    git clone https://github.com/Mahnoor9779/NovellaMart
    cd NovellaMart
-👨‍💻 Authors & CreditsMahnoor - Lead Developer / Architect * Developed as a Data Structures & Algorithms Lab Project at the Department of Computer Science, UET Lahore.
+👨‍💻 Authors & Credits: Mahnoor - Lead Developer / Architect * Developed as a Data Structures & Algorithms Lab Project at the Department of Computer Science, UET Lahore.
