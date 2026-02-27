@@ -51,7 +51,7 @@ Markdown# 💎 NovellaMart: E-Commerce & Flash Sale Platform
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Mahnoor9779/NovellaMart.git](https://github.com/Mahnoor9779/NovellaMart.git)
+   git clone https://github.com/Mahnoor9779/NovellaMart
    cd NovellaMart
 Open the Project:
 Open the NovellaMart.sln file in Visual Studio 2022.Restore Dependencies:
