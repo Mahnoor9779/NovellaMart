@@ -1,4 +1,4 @@
-## 💎 NovellaMart: E-Commerce & Flash Sale Platform
+## NovellaMart: E-Commerce & Flash Sale Platform
 
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Blazor](https://img.shields.io/badge/blazor-%235C2D91.svg?style=for-the-badge&logo=blazor&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
@@ -8,27 +8,27 @@ What sets NovellaMart apart is its underlying architecture: it utilizes custom D
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🛒 Customer Experience
+### Customer Experience
 * **Advanced Catalog & Search:** Hierarchical category and sub-category navigation.
 * **Dynamic Filtering:** Filter products by specific price ranges and sort by price or newest arrivals.
 * **Distance-Based Delivery:** Automated shipping calculations based on user location.
 * **Smart Cart Management:** Add items, adjust quantities, and use a unique **"Undo"** feature to instantly restore accidentally deleted cart items.
 * **Promo Codes:** Integrated discount application during checkout.
 
-### ⚡ Flash Sale Engine
+### Flash Sale Engine
 * **Fair Allocation:** Users joining a flash sale are placed in a waiting queue. Products are allocated strictly on a mathematically fair, first-come-first-served basis using timestamp processing.
 * **Concurrency Control:** Prevents duplicate entries and overselling during high-traffic traffic bursts.
 
-### 🛡️ Admin Dashboard
+### Admin Dashboard
 * **Real-Time Monitoring:** View live revenue, total orders, and active users.
 * **Flash Sale Management:** Create new sales, set discounts, and monitor the live allocation logs (Allocated vs. Rejected).
 * **Order Lifecycle:** Track global order history and manage shipping statuses.
 
 ---
 
-## 🧠 Under the Hood: Data Structures & Algorithms
+## Under the Hood: Data Structures & Algorithms
 To ensure optimal performance and zero dependencies on heavy external databases, NovellaMart is powered entirely by custom-built data structures:
 
 * **Min-Priority Heap:** Allocates limited flash sale stock by sorting users based on exact request timestamps (`O(log k)`).
@@ -42,7 +42,7 @@ Data persistence is handled via an optimized **JSON-based storage system** (`pro
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 * [Visual Studio 2022](https://visualstudio.microsoft.com/) (or VS Code with C# Dev Kit)
